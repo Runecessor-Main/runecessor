@@ -1,0 +1,48 @@
+19/04/2019, 04:42: AM TRADE:  [The] trading with [Happy Shibe], 0 and 4.5m 
+19/04/2019, 04:43: AM TRADE:  [Happy Shibe] trading with [The], 11.3m and 0 
+19/04/2019, 04:50: AM TRADE:  [You] trading with [The], 0 and 1.5m 
+19/04/2019, 05:17: AM TRADE:  [Resourceful] trading with [Happy Shibe], 52k and 0 
+19/04/2019, 05:47: AM TRADE:  [Zin] trading with [Tyler Says], 16.5m and 5.2m 
+19/04/2019, 05:59: AM TRADE:  [Zin] trading with [Tyler Says], 16.5m and 22.1m 
+19/04/2019, 06:01: AM TRADE:  [Zin] trading with [Tyler Says], 15.7m and 0 
+19/04/2019, 06:05: AM TRADE:  [You] trading with [Zin], 0 and 12.9m 
+19/04/2019, 06:29: AM TRADE:  [You] trading with [The], 0 and 37.5m 
+19/04/2019, 06:29: AM TRADE:  [The] trading with [You], 0 and 37.5m 
+19/04/2019, 06:58: AM TRADE:  [Resourceful] trading with [Happy Shibe], 0 and 2.2m 
+19/04/2019, 07:06: AM TRADE:  [The] trading with [You], 0 and 455.5m 
+19/04/2019, 09:41: AM TRADE:  [Kosta] trading with [Majuri], 0 and 10.9m 
+19/04/2019, 09:43: AM TRADE:  [Kiing] trading with [Kosta], 2.1m and 0 
+19/04/2019, 10:01: AM TRADE:  [Majuri] trading with [Staxxie], 849k and 0 
+19/04/2019, 11:25: AM TRADE:  [Kosta] trading with [Majuri], 0 and 420k 
+19/04/2019, 11:30: AM TRADE:  [Kosta] trading with [Majuri], 0 and 4.5m 
+19/04/2019, 11:56: AM TRADE:  [Happy Shibe] trading with [Resourceful], 0 and 38.8m 
+19/04/2019, 01:46: PM TRADE:  [Resourceful] trading with [Happy Shibe], 19.5m and 0 
+19/04/2019, 03:07: PM TRADE:  [Leap] trading with [Staxxie], 1.2m and 0 
+19/04/2019, 03:37: PM TRADE:  [Marky] trading with [Arcane], 200k and 0 
+19/04/2019, 03:52: PM TRADE:  [Marky] trading with [Arcane], 4.5m and 3m 
+19/04/2019, 04:08: PM TRADE:  [Queen] trading with [Staxxie], 50m and 46.5m 
+19/04/2019, 04:13: PM TRADE:  [Leap] trading with [Staxxie], 479k and 0 
+19/04/2019, 04:30: PM TRADE:  [Queen] trading with [Staxxie], 1 and 270m 
+19/04/2019, 04:52: PM TRADE:  [Majuri] trading with [Staxxie], 10m and 4m 
+19/04/2019, 04:54: PM TRADE:  [Staxxie] trading with [Inject], 10m and 0 
+19/04/2019, 05:46: PM TRADE:  [Leap] trading with [Staxxie], 2.6m and 0 
+19/04/2019, 05:49: PM TRADE:  [Miss B] trading with [Inject], 156k and 0 
+19/04/2019, 05:52: PM TRADE:  [Majuri] trading with [Passiivine], 500k and 430k 
+19/04/2019, 07:18: PM TRADE:  [Bob] trading with [Miss B], 562.5m and 0 
+19/04/2019, 07:20: PM TRADE:  [Essex] trading with [Marky], 168.1m and 13.5m 
+19/04/2019, 07:21: PM TRADE:  [Passiivine] trading with [Staxxie], 20m and 16.5m 
+19/04/2019, 07:21: PM TRADE:  [Miss B] trading with [Bob], 0 and 1.5m 
+19/04/2019, 07:23: PM TRADE:  [Leap] trading with [Staxxie], 2.1m and 0 
+19/04/2019, 07:24: PM TRADE:  [Bob] trading with [Miss B], 0 and 564m 
+19/04/2019, 07:25: PM TRADE:  [Marky] trading with [Staxxie], 1.1m and 26.8m 
+19/04/2019, 07:28: PM TRADE:  [Staxxie] trading with [Passiivine], 9m and 450k 
+19/04/2019, 08:57: PM TRADE:  [Eguie] trading with [Marky], 0 and 200k 
+19/04/2019, 09:19: PM TRADE:  [Eguie] trading with [Froot Loops], 9.8m and 0 
+19/04/2019, 09:32: PM TRADE:  [Inject] trading with [Eguie], 2m and 4m 
+19/04/2019, 09:35: PM TRADE:  [Inject] trading with [Eguie], 37k and 0 
+19/04/2019, 09:36: PM TRADE:  [Eguie] trading with [Inject], 0 and 210k 
+19/04/2019, 10:04: PM PICKUP: [Staxxie] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+19/04/2019, 10:05: PM PICKUP: [Froot Loops] picked up in combat 8 secs ago that belongs to [Staxxie] 45m
+19/04/2019, 10:08: PM TRADE:  [Staxxie] trading with [Froot Loops], 0 and 2.5m 
+19/04/2019, 10:35: PM TRADE:  [Eguie] trading with [The], 0 and 2.2m 
+19/04/2019, 11:00: PM TRADE:  [Kosta] trading with [Kiing], 0 and 3m 

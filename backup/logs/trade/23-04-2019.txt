@@ -1,0 +1,51 @@
+23/04/2019, 10:28: AM TRADE:  [Happy Shibe] trading with [Zerk], 36.8m and 0 
+23/04/2019, 10:45: AM TRADE:  [Happy Shibe] trading with [Zerk], 644m and 0 
+23/04/2019, 11:31: AM TRADE:  [Elizabeth] trading with [Marky], 259k and 0 
+23/04/2019, 11:45: AM TRADE:  [Elizabeth] trading with [Marky], 340k and 0 
+23/04/2019, 01:42: PM TRADE:  [Zerk] trading with [Happy Shibe], 39.1m and 2k 
+23/04/2019, 01:43: PM TRADE:  [Happy Shibe] trading with [Zerk], 16.1m and 0 
+23/04/2019, 01:43: PM TRADE:  [Zerk] trading with [Happy Shibe], 750k and 0 
+23/04/2019, 01:58: PM TRADE:  [Queen] trading with [Leap], 0 and 2.5m 
+23/04/2019, 01:59: PM TRADE:  [Queen] trading with [Staxxie], 0 and 2.6m 
+23/04/2019, 02:01: PM TRADE:  [Happy Shibe] trading with [Resourceful], 15k and 9.8m 
+23/04/2019, 02:17: PM TRADE:  [Resourceful] trading with [Happy Shibe], 1m and 0 
+23/04/2019, 02:21: PM TRADE:  [Marky] trading with [Happy Shibe], 20m and 3.1m 
+23/04/2019, 02:25: PM TRADE:  [Marky] trading with [Elizabeth], 0 and 23k 
+23/04/2019, 03:01: PM TRADE:  [Zerk] trading with [94], 0 and 2m 
+23/04/2019, 03:06: PM PICKUP: [Zerk] picked up in combat 8 secs ago that belongs to [Nope not] 19k
+23/04/2019, 03:06: PM PICKUP: [Zerk] picked up in combat 10 secs ago that belongs to [Nope not] 26k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 7 secs ago that belongs to [Zerk] 180k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 9 secs ago that belongs to [Zerk] 34k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 18 secs ago that belongs to [Zerk] 37k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 19 secs ago that belongs to [Zerk] 38k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 19 secs ago that belongs to [Zerk] 71k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 20 secs ago that belongs to [Zerk] 62k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 21 secs ago that belongs to [Zerk] 51k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 21 secs ago that belongs to [Zerk] 39k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 25 secs ago that belongs to [Zerk] 28k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 25 secs ago that belongs to [Zerk] 18k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 26 secs ago that belongs to [Zerk] 15k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 27 secs ago that belongs to [Zerk] 12k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 28 secs ago that belongs to [Zerk] 15k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 28 secs ago that belongs to [Zerk] 15k
+23/04/2019, 03:24: PM PICKUP: [94] picked up in combat 29 secs ago that belongs to [Zerk] 12k
+23/04/2019, 03:25: PM TRADE:  [94] trading with [Zerk], 275k and 0 
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 6 secs ago that belongs to [Zerk] 11.2m
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 7 secs ago that belongs to [Zerk] 180k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 7 secs ago that belongs to [Zerk] 71k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 8 secs ago that belongs to [Zerk] 62k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 9 secs ago that belongs to [Zerk] 51k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 19 secs ago that belongs to [Zerk] 38k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 21 secs ago that belongs to [Zerk] 34k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 22 secs ago that belongs to [Zerk] 22k
+23/04/2019, 03:32: PM PICKUP: [94] picked up in combat 23 secs ago that belongs to [Zerk] 18k
+23/04/2019, 03:33: PM TRADE:  [Zerk] trading with [94], 0 and 11.5m 
+23/04/2019, 03:33: PM TRADE:  [Zerk] trading with [94], 71k and 0 
+23/04/2019, 04:37: PM TRADE:  [Inject] trading with [Miss B], 563.4m and 0 
+23/04/2019, 07:48: PM TRADE:  [Marky] trading with [Miss B], 1.5m and 0 
+23/04/2019, 07:57: PM TRADE:  [Marky] trading with [Miss B], 0 and 15m 
+23/04/2019, 08:22: PM TRADE:  [Miss B] trading with [Inject], 0 and 81k 
+23/04/2019, 08:28: PM TRADE:  [Inject] trading with [Staxxie], 12k and 10m 
+23/04/2019, 08:58: PM TRADE:  [Miss B] trading with [Marky], 562.5m and 0 
+23/04/2019, 09:39: PM TRADE:  [Marky] trading with [Elizabeth], 4k and 7.7m 
+23/04/2019, 10:12: PM STAKE: [Roxas] won vs [Marky], 17.5m  vs 541.3m 

@@ -1,0 +1,44 @@
+22/04/2019, 02:37: AM TRADE:  [Resourceful] trading with [Happy Shibe], 1.7m and 0 
+22/04/2019, 02:40: AM TRADE:  [Happy Shibe] trading with [Resourceful], 2.2m and 0 
+22/04/2019, 03:59: AM TRADE:  [Roxas] trading with [94], 15m and 1.5m 
+22/04/2019, 05:00: AM TRADE:  [Resourceful] trading with [Happy Shibe], 1.9m and 0 
+22/04/2019, 05:17: AM TRADE:  [Resourceful] trading with [Happy Shibe], 1m and 0 
+22/04/2019, 07:07: AM PICKUP: [Roxas] picked up an item that belongs to [Resourceful] 15k
+22/04/2019, 07:56: AM TRADE:  [Marijuana] trading with [94], 0 and 82.5m (15000 tokens)
+22/04/2019, 07:57: AM TRADE:  [94] trading with [Marijuana], 811.3m and 0 
+22/04/2019, 12:14: PM TRADE:  [Maladose] trading with [Queen], 12m and 11.2m 
+22/04/2019, 12:55: PM TRADE:  [Maladose] trading with [Queen], 45m and 15m 
+22/04/2019, 01:17: PM TRADE:  [Queen] trading with [Staxxie], 10m and 10.5m 
+22/04/2019, 01:22: PM TRADE:  [Miss B] trading with [Queen], 8.2m and 12m 
+22/04/2019, 01:22: PM TRADE:  [Queen] trading with [Staxxie], 19.1m and 16.5m 
+22/04/2019, 02:05: PM TRADE:  [Staxxie] trading with [Bob], 0 and 3.3m (600 tokens)
+22/04/2019, 02:06: PM TRADE:  [Queen] trading with [Staxxie], 0 and 2.8m 
+22/04/2019, 03:06: PM TRADE:  [Marijuana] trading with [Miss B], 100k and 32k 
+22/04/2019, 03:20: PM TRADE:  [Staxxie] trading with [Marijuana], 913k and 0 
+22/04/2019, 03:25: PM TRADE:  [Staxxie] trading with [Marijuana], 38.1m and 82k (15 tokens)
+22/04/2019, 03:40: PM TRADE:  [Miss B] trading with [Marijuana], 0 and 197.9m (14500 tokens)
+22/04/2019, 03:43: PM TRADE:  [Jotaru] trading with [Miss B], 0 and 197.9m (14500 tokens)
+22/04/2019, 04:07: PM PICKUP: [Staxxie] picked up in combat 6 secs ago that belongs to [Omfg Xbow] 40k
+22/04/2019, 04:07: PM PICKUP: [Staxxie] picked up in combat 7 secs ago that belongs to [Omfg Xbow] 32k
+22/04/2019, 04:07: PM PICKUP: [Staxxie] picked up in combat 8 secs ago that belongs to [Omfg Xbow] 39k
+22/04/2019, 04:07: PM PICKUP: [Staxxie] picked up in combat 9 secs ago that belongs to [Omfg Xbow] 38k
+22/04/2019, 04:07: PM PICKUP: [Staxxie] picked up in combat 9 secs ago that belongs to [Omfg Xbow] 26k
+22/04/2019, 04:07: PM PICKUP: [Staxxie] picked up in combat 10 secs ago that belongs to [Omfg Xbow] 19k
+22/04/2019, 04:46: PM TRADE:  [Staxxie] trading with [94], 2m and 243k 
+22/04/2019, 05:30: PM TRADE:  [Miss B] trading with [Staxxie], 8.5m and 15m 
+22/04/2019, 05:31: PM TRADE:  [Leap] trading with [Staxxie], 2.2m and 0 
+22/04/2019, 06:22: PM TRADE:  [Staxxie] trading with [Leap], 1.8m and 0 
+22/04/2019, 06:24: PM TRADE:  [Will Joffrey] trading with [Maladose], 0 and 12.2m 
+22/04/2019, 06:27: PM TRADE:  [Will Joffrey] trading with [Maladose], 0 and 1.5m 
+22/04/2019, 06:51: PM TRADE:  [Maladose] trading with [Will Joffrey], 5m and 330k 
+22/04/2019, 06:54: PM TRADE:  [Maladose] trading with [Will Joffrey], 734k and 0 
+22/04/2019, 06:59: PM TRADE:  [Will Joffrey] trading with [Maladose], 0 and 80k 
+22/04/2019, 07:00: PM TRADE:  [Maladose] trading with [Will Joffrey], 900k and 80k 
+22/04/2019, 07:00: PM TRADE:  [Will Joffrey] trading with [Maladose], 0 and 80k 
+22/04/2019, 07:03: PM PICKUP: [Will Joffrey] picked up in combat 7 secs ago that belongs to [Sketchy] 90k
+22/04/2019, 07:11: PM TRADE:  [Staxxie] trading with [Leap], 0 and 4.1m 
+22/04/2019, 07:52: PM TRADE:  [Miss B] trading with [Inject], 4.5m and 0 
+22/04/2019, 08:28: PM TRADE:  [Inject] trading with [Miss B], 0 and 564.7m 
+22/04/2019, 08:48: PM TRADE:  [Staxxie] trading with [Roxas], 20m and 0 
+22/04/2019, 08:49: PM TRADE:  [Tyler Says] trading with [Roxas], 5m and 2.8m 
+22/04/2019, 08:55: PM TRADE:  [Roxas] trading with [Staxxie], 0 and 1.8m 

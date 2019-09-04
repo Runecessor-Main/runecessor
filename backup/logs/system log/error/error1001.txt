@@ -1,0 +1,17 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 7 column 5 path $
+	at com.google.gson.JsonParser.parse(JsonParser.java:65)
+	at utility.JSONLoader.load(JSONLoader.java:46)
+	at game.npc.data.NpcSpawnCombatJSON.<init>(NpcSpawnCombatJSON.java:22)
+	at game.npc.NpcHandler.loadNpcData(NpcHandler.java:2947)
+	at core.benchmark.GameBenchmark.execute(GameBenchmark.java:69)
+	at core.Server.loadSystems(Server.java:559)
+	at core.Server.main(Server.java:224)
+Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 7 column 5 path $
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1573)
+	at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1423)
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:546)
+	at com.google.gson.stream.JsonReader.peek(JsonReader.java:429)
+	at com.google.gson.JsonParser.parse(JsonParser.java:60)
+	... 6 more

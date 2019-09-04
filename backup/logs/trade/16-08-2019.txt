@@ -1,0 +1,63 @@
+16/08/2019, 12:00: AM TRADE:  [S T O R Y] trading with [Ez], 27.7m and 10m 
+16/08/2019, 12:24: AM TRADE:  [Ez] trading with [S T O R Y], 30m and 31.3m 
+16/08/2019, 12:40: AM TRADE:  [Number 1] trading with [Gladiator], 100m and 0 
+16/08/2019, 12:47: AM TRADE:  [Number 1] trading with [Gladiator], 120m and 0 
+16/08/2019, 01:17: AM TRADE:  [Gladiator] trading with [Zynite], 4.5m and 4.5m 
+16/08/2019, 02:33: AM PICKUP: [Alk] picked up an item that belongs to [Ez] 409k
+16/08/2019, 06:19: AM TRADE:  [S T O R Y] trading with [Michael], 8.8k and 4m 
+16/08/2019, 06:33: AM TRADE:  [Gladiator] trading with [S T O R Y], 5k and 55k (10 tokens)
+16/08/2019, 06:54: AM TRADE:  [Alk] trading with [Hawk], 15m and 0 
+16/08/2019, 07:02: AM TRADE:  [Hawk] trading with [S T O R Y], 153k and 20m 
+16/08/2019, 07:29: AM TRADE:  [S T O R Y] trading with [Shorts], 990k and 0 
+16/08/2019, 07:32: AM TRADE:  [Hawk] trading with [Shorts], 8.1m and 72m 
+16/08/2019, 07:43: AM TRADE:  [Shorts] trading with [S T O R Y], 0 and 27.7m 
+16/08/2019, 07:56: AM TRADE:  [Shorts] trading with [Gf], 25m and 0 
+16/08/2019, 07:57: AM TRADE:  [Gf] trading with [Shorts], 25m and 0 
+16/08/2019, 08:19: AM TRADE:  [Esql] trading with [Shorts], 11k and 0 
+16/08/2019, 08:19: AM TRADE:  [Esql] trading with [Shorts], 0 and 22.5m 
+16/08/2019, 08:30: AM TRADE:  [S T O R Y] trading with [Mbox], 0 and 101.2m 
+16/08/2019, 08:31: AM TRADE:  [S T O R Y] trading with [Ez], 12m and 50m 
+16/08/2019, 08:50: AM TRADE:  [Officialmm] trading with [S T O R Y], 1.5m and 10m 
+16/08/2019, 08:51: AM TRADE:  [Shorts] trading with [Officialmm], 26m and 5.8m 
+16/08/2019, 08:52: AM TRADE:  [Officialmm] trading with [S T O R Y], 750k and 27.5m 
+16/08/2019, 08:53: AM TRADE:  [S T O R Y] trading with [Shorts], 0 and 10k 
+16/08/2019, 08:59: AM TRADE:  [Shorts] trading with [S T O R Y], 0 and 750k 
+16/08/2019, 09:22: AM TRADE:  [Officialmm] trading with [S T O R Y], 115.2m and 23.2m 
+16/08/2019, 09:26: AM TRADE:  [Officialmm] trading with [S T O R Y], 0 and 22m 
+16/08/2019, 11:34: AM TRADE:  [Officialmm] trading with [Monkley], 0 and 126k 
+16/08/2019, 05:55: PM TRADE:  [S T O R Y] trading with [Officialmm], 30m and 759k 
+16/08/2019, 07:32: PM TRADE:  [Oracle] trading with [S T O R Y], 8.2m and 0 
+16/08/2019, 07:37: PM TRADE:  [Mbox] trading with [S T O R Y], 8.2m and 0 
+16/08/2019, 07:55: PM TRADE:  [Gf] trading with [Shorts], 10.1m and 0 
+16/08/2019, 07:59: PM TRADE:  [Officialmm] trading with [Shorts], 0 and 735k 
+16/08/2019, 08:58: PM TRADE:  [S T O R Y] trading with [Officialmm], 6m and 189k 
+16/08/2019, 09:02: PM TRADE:  [Mag] trading with [Shorts], 7.5m and 0 
+16/08/2019, 09:07: PM TRADE:  [Shorts] trading with [S T O R Y], 0 and 750k 
+16/08/2019, 09:09: PM TRADE:  [S T O R Y] trading with [Officialmm], 19.6m and 2.2m 
+16/08/2019, 09:14: PM TRADE:  [Monkley] trading with [Officialmm], 2.4m and 0 
+16/08/2019, 09:17: PM TRADE:  [S T O R Y] trading with [Officialmm], 25m and 4m 
+16/08/2019, 09:18: PM TRADE:  [Officialmm] trading with [S T O R Y], 1.2m and 7.5m 
+16/08/2019, 09:21: PM TRADE:  [Valk] trading with [S T O R Y], 2.2m and 15m 
+16/08/2019, 09:26: PM TRADE:  [Officialmm] trading with [Monkley], 120k and 0 
+16/08/2019, 09:27: PM TRADE:  [Monkley] trading with [S T O R Y], 457k and 3.1m 
+16/08/2019, 09:28: PM TRADE:  [Monkley] trading with [Officialmm], 28.3m and 0 
+16/08/2019, 09:29: PM TRADE:  [Officialmm] trading with [Monkley], 0 and 3.7m 
+16/08/2019, 09:31: PM TRADE:  [Crystall777] trading with [S T O R Y], 1.6m and 29m 
+16/08/2019, 10:05: PM TRADE:  [Phantasye] trading with [S T O R Y], 0 and 1m 
+16/08/2019, 10:07: PM TRADE:  [Phantasye] trading with [S T O R Y], 2m and 0 
+16/08/2019, 10:07: PM TRADE:  [Phantasye] trading with [S T O R Y], 0 and 338k 
+16/08/2019, 10:08: PM TRADE:  [Phantasye] trading with [S T O R Y], 0 and 676k 
+16/08/2019, 10:09: PM TRADE:  [Phantasye] trading with [S T O R Y], 0 and 1.3m 
+16/08/2019, 10:10: PM TRADE:  [Phantasye] trading with [S T O R Y], 0 and 2.7m 
+16/08/2019, 10:10: PM TRADE:  [Phantasye] trading with [S T O R Y], 5.4m and 0 
+16/08/2019, 10:11: PM TRADE:  [Phantasye] trading with [S T O R Y], 0 and 43m 
+16/08/2019, 10:20: PM TRADE:  [Phantasye] trading with [Shorts], 0 and 2.4m 
+16/08/2019, 10:22: PM TRADE:  [Ez] trading with [Phantasye], 10m and 0 
+16/08/2019, 10:24: PM TRADE:  [Phantasye] trading with [Ez], 0 and 10m 
+16/08/2019, 10:46: PM TRADE:  [Seventeen] trading with [Alk], 850k and 8.5m 
+16/08/2019, 11:24: PM TRADE:  [Ez] trading with [Rngesus], 32.8m and 0 
+16/08/2019, 11:27: PM TRADE:  [Beast] trading with [S T O R Y], 4.5m and 0 
+16/08/2019, 11:30: PM TRADE:  [Rngesus] trading with [Ez], 0 and 2m 
+16/08/2019, 11:35: PM TRADE:  [Vote1] trading with [S T O R Y], 7.1m and 0 
+16/08/2019, 11:41: PM TRADE:  [Vote2] trading with [S T O R Y], 25.1m and 0 
+16/08/2019, 11:49: PM TRADE:  [Ohello] trading with [Shorts], 9.3m and 0 

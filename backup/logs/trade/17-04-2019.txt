@@ -1,0 +1,100 @@
+17/04/2019, 03:35: AM TRADE:  [The] trading with [Yo], 3m and 0 
+17/04/2019, 04:06: AM TRADE:  [The] trading with [Yo], 0 and 5.8m 
+17/04/2019, 05:19: AM TRADE:  [The] trading with [Yo], 0 and 1.3m 
+17/04/2019, 07:53: AM TRADE:  [Yo] trading with [The], 900k and 0 
+17/04/2019, 08:41: AM TRADE:  [2girls1jad] trading with [Nice Try], 10m and 0 
+17/04/2019, 08:44: AM TRADE:  [Yo] trading with [The], 4.4m and 0 
+17/04/2019, 10:35: AM TRADE:  [Eguie] trading with [Froot Loops], 0 and 1.9m 
+17/04/2019, 10:40: AM TRADE:  [Eguie] trading with [Happy Shibe], 1.5m and 142k 
+17/04/2019, 10:51: AM PICKUP: [Inject] picked up in combat 7 secs ago that belongs to [Drip] 500k
+17/04/2019, 10:51: AM PICKUP: [Inject] picked up in combat 8 secs ago that belongs to [Drip] 75k
+17/04/2019, 10:51: AM PICKUP: [Inject] picked up in combat 10 secs ago that belongs to [Drip] 112k
+17/04/2019, 10:51: AM PICKUP: [Inject] picked up in combat 10 secs ago that belongs to [Drip] 112k
+17/04/2019, 10:52: AM PICKUP: [Inject] picked up in combat 59 secs ago that belongs to [Drip] 1.8m
+17/04/2019, 10:52: AM PICKUP: [Passiivine] picked up an item that belongs to [Drip] 520k
+17/04/2019, 12:48: PM PICKUP: [Inject] picked up in combat 9 secs ago that belongs to [Maladose] 69k
+17/04/2019, 12:48: PM PICKUP: [Inject] picked up in combat 12 secs ago that belongs to [Maladose] 60k
+17/04/2019, 12:48: PM PICKUP: [Inject] picked up in combat 12 secs ago that belongs to [Maladose] 44k
+17/04/2019, 12:48: PM PICKUP: [Inject] picked up in combat 19 secs ago that belongs to [Maladose] 72k
+17/04/2019, 01:15: PM TRADE:  [Inject] trading with [Maladose], 142k and 0 
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 9 secs ago that belongs to [Essex] 3.7m
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 9 secs ago that belongs to [Essex] 3.7m
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 10 secs ago that belongs to [Essex] 3.7m
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 10 secs ago that belongs to [Essex] 1.5m
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 11 secs ago that belongs to [Essex] 955k
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 15 secs ago that belongs to [Essex] 559k
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 16 secs ago that belongs to [Essex] 60k
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 21 secs ago that belongs to [Essex] 40k
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 23 secs ago that belongs to [Essex] 16k
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 31 secs ago that belongs to [Essex] 10k
+17/04/2019, 02:30: PM PICKUP: [Inject] picked up in combat 39 secs ago that belongs to [Essex] 16k
+17/04/2019, 02:31: PM PICKUP: [Inject] picked up in combat 59 secs ago that belongs to [Essex] 16k
+17/04/2019, 02:35: PM TRADE:  [Bob] trading with [Marky], 1.8m (340 tokens) and 0 
+17/04/2019, 02:43: PM TRADE:  [Marky] trading with [Majuri], 0 and 375k 
+17/04/2019, 02:44: PM TRADE:  [Marky] trading with [Majuri], 0 and 375k 
+17/04/2019, 02:45: PM TRADE:  [Majuri] trading with [Marky], 15m and 11.2m 
+17/04/2019, 03:23: PM TRADE:  [Marky] trading with [Inject], 104k and 0 
+17/04/2019, 04:05: PM TRADE:  [Tyler Says] trading with [Majuri], 0 and 5m 
+17/04/2019, 04:07: PM TRADE:  [Arcane] trading with [Majuri], 0 and 8m 
+17/04/2019, 04:13: PM TRADE:  [Marky] trading with [Majuri], 0 and 1.1m 
+17/04/2019, 04:14: PM TRADE:  [Majuri] trading with [Marky], 200k and 0 
+17/04/2019, 04:15: PM TRADE:  [Majuri] trading with [Marky], 200k and 0 
+17/04/2019, 04:22: PM TRADE:  [Maladose] trading with [Andreas], 2.4m and 2.2m 
+17/04/2019, 04:45: PM TRADE:  [Maladose] trading with [Arcane], 528k and 1m 
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 9 secs ago that belongs to [Maladose] 3.7m
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 10 secs ago that belongs to [Maladose] 3.7m
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 13 secs ago that belongs to [Maladose] 3.7m
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 17 secs ago that belongs to [Maladose] 3.7m
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 18 secs ago that belongs to [Maladose] 3.7m
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 22 secs ago that belongs to [Maladose] 993k
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 24 secs ago that belongs to [Maladose] 197k
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 26 secs ago that belongs to [Maladose] 885k
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 28 secs ago that belongs to [Maladose] 142k
+17/04/2019, 05:34: PM PICKUP: [Passiivine] picked up in combat 30 secs ago that belongs to [Maladose] 114k
+17/04/2019, 05:35: PM PICKUP: [Passiivine] picked up in combat 32 secs ago that belongs to [Maladose] 36k
+17/04/2019, 05:37: PM TRADE:  [Passiivine] trading with [Majuri], 4.5m and 0 
+17/04/2019, 05:42: PM TRADE:  [Tyler Says] trading with [Zin], 356.2m and 0 
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 8 secs ago that belongs to [Andreas] 10m
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 10 secs ago that belongs to [Andreas] 3.7m
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 12 secs ago that belongs to [Andreas] 4.2m
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 15 secs ago that belongs to [Andreas] 3.1m
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 16 secs ago that belongs to [Andreas] 1.1m
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 17 secs ago that belongs to [Andreas] 621k
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 20 secs ago that belongs to [Andreas] 375k
+17/04/2019, 06:21: PM PICKUP: [Passiivine] picked up in combat 21 secs ago that belongs to [Andreas] 142k
+17/04/2019, 06:23: PM TRADE:  [Majuri] trading with [Passiivine], 0 and 13.6m 
+17/04/2019, 06:38: PM TRADE:  [Yo] trading with [The], 5.8m and 0 
+17/04/2019, 06:44: PM TRADE:  [Majuri] trading with [Passiivine], 0 and 12m 
+17/04/2019, 07:02: PM PICKUP: [Majuri] picked up in combat 9 secs ago that belongs to [Zelm] 67k
+17/04/2019, 07:02: PM PICKUP: [Majuri] picked up in combat 12 secs ago that belongs to [Zelm] 40k
+17/04/2019, 07:02: PM PICKUP: [Majuri] picked up in combat 15 secs ago that belongs to [Zelm] 147k
+17/04/2019, 07:32: PM TRADE:  [Tyler Says] trading with [Andreas], 0 and 11.2m 
+17/04/2019, 07:32: PM TRADE:  [Marky] trading with [Andreas], 0 and 11.2m 
+17/04/2019, 07:33: PM TRADE:  [Andreas] trading with [Marky], 0 and 11.2m 
+17/04/2019, 07:34: PM TRADE:  [Marky] trading with [Andreas], 0 and 11.2m 
+17/04/2019, 07:34: PM TRADE:  [Andreas] trading with [Marky], 17.5m and 0 
+17/04/2019, 07:35: PM TRADE:  [Marky] trading with [Andreas], 0 and 63.6m 
+17/04/2019, 07:36: PM TRADE:  [Andreas] trading with [Marky], 217k and 0 
+17/04/2019, 08:03: PM PICKUP: [Maladose] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+17/04/2019, 08:05: PM TRADE:  [Maladose] trading with [Miss B], 0 and 578k 
+17/04/2019, 08:34: PM TRADE:  [Bob] trading with [Maladose], 1.1m (200 tokens) and 0 
+17/04/2019, 08:35: PM TRADE:  [Marky] trading with [Passiivine], 10m and 16.5m 
+17/04/2019, 08:37: PM TRADE:  [Marky] trading with [Passiivine], 222k and 0 
+17/04/2019, 08:38: PM TRADE:  [Marky] trading with [Passiivine], 0 and 11.2m 
+17/04/2019, 08:43: PM TRADE:  [Miss B] trading with [Arcane], 1.6m and 0 
+17/04/2019, 08:43: PM TRADE:  [Arcane] trading with [Passiivine], 0 and 2m 
+17/04/2019, 08:43: PM TRADE:  [Arcane] trading with [Zelm], 0 and 2m 
+17/04/2019, 08:46: PM TRADE:  [Passiivine] trading with [Majuri], 0 and 50m 
+17/04/2019, 08:48: PM TRADE:  [Marky] trading with [Passiivine], 750k and 3m 
+17/04/2019, 08:52: PM TRADE:  [Marky] trading with [Passiivine], 11.2m and 0 
+17/04/2019, 08:53: PM TRADE:  [Marky] trading with [Passiivine], 0 and 11.2m 
+17/04/2019, 08:58: PM TRADE:  [Passiivine] trading with [Marky], 11.2m and 0 
+17/04/2019, 08:59: PM TRADE:  [Marky] trading with [Passiivine], 11.2m and 0 
+17/04/2019, 09:00: PM TRADE:  [Marky] trading with [Passiivine], 0 and 11.2m 
+17/04/2019, 09:07: PM PICKUP: [Marky] picked up an item that belongs to [Passiivine] 60k
+17/04/2019, 09:07: PM PICKUP: [Marky] picked up an item that belongs to [Passiivine] 30k
+17/04/2019, 09:27: PM TRADE:  [Majuri] trading with [The], 10m and 0 
+17/04/2019, 09:56: PM TRADE:  [Marky] trading with [Zin], 11.2m and 0 
+17/04/2019, 09:57: PM TRADE:  [Marky] trading with [Zin], 0 and 11.2m 
+17/04/2019, 09:58: PM TRADE:  [Marky] trading with [Zin], 0 and 222k 
+17/04/2019, 11:41: PM TRADE:  [Inject] trading with [Majuri], 63 and 567k 

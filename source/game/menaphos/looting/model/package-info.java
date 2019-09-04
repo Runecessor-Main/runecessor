@@ -1,0 +1,1 @@
+package game.menaphos.looting.model;

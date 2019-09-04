@@ -1,0 +1,26 @@
+14/05/2019, 04:20: AM TRADE:  [Same Old] trading with [Staxxie], 0 and 29.2m 
+14/05/2019, 04:49: AM TRADE:  [Andy] trading with [Inject], 0 and 4.5m 
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 12 secs ago that belongs to [Staxxie] 2.2m
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 14 secs ago that belongs to [Staxxie] 11k
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 21 secs ago that belongs to [Staxxie] 11k
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 22 secs ago that belongs to [Staxxie] 11k
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 28 secs ago that belongs to [Staxxie] 1.6m
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 33 secs ago that belongs to [Staxxie] 48k
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 43 secs ago that belongs to [Staxxie] 4m
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 46 secs ago that belongs to [Staxxie] 23k
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 49 secs ago that belongs to [Staxxie] 1.5m
+14/05/2019, 06:13: AM PICKUP: [Inject] picked up in combat 50 secs ago that belongs to [Staxxie] 1.5m
+14/05/2019, 06:14: AM PICKUP: [Inject] picked up an item that belongs to [Staxxie] 717k
+14/05/2019, 06:14: AM PICKUP: [Inject] picked up an item that belongs to [Staxxie] 340k
+14/05/2019, 06:14: AM PICKUP: [Inject] picked up an item that belongs to [Staxxie] 292k
+14/05/2019, 06:14: AM PICKUP: [Inject] picked up an item that belongs to [Staxxie] 143k
+14/05/2019, 06:14: AM PICKUP: [Inject] picked up an item that belongs to [Staxxie] 82k
+14/05/2019, 06:39: AM TRADE:  [Adam] trading with [Staxxie], 0 and 6.7m 
+14/05/2019, 08:34: AM TRADE:  [Adam] trading with [Miss B], 0 and 11.2m 
+14/05/2019, 09:46: AM TRADE:  [Adam] trading with [Roxas], 0 and 375k 
+14/05/2019, 10:02: AM TRADE:  [Adam] trading with [Roxas], 0 and 11.2m 
+14/05/2019, 10:03: AM TRADE:  [Adam] trading with [Miss B], 0 and 10m 
+14/05/2019, 04:49: PM TRADE:  [Andy] trading with [Inject], 0 and 1.5m 
+14/05/2019, 05:22: PM TRADE:  [Andy] trading with [Inject], 0 and 15k 
+14/05/2019, 07:11: PM TRADE:  [Zin] trading with [Andy], 0 and 24m 
+14/05/2019, 10:03: PM PICKUP: [Andy] picked up an item that belongs to [OTHER: Blood key spawn] 45m

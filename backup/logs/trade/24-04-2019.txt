@@ -1,0 +1,41 @@
+24/04/2019, 01:03: AM TRADE:  [Marky] trading with [Elizabeth], 646m and 21m 
+24/04/2019, 01:04: AM TRADE:  [Elizabeth] trading with [Marky], 646m and 0 
+24/04/2019, 02:33: AM TRADE:  [Roxas] trading with [Inject], 6.7k and 71k 
+24/04/2019, 02:42: AM PICKUP: [Inject] picked up an item that belongs to [Marky] 78k
+24/04/2019, 02:56: AM TRADE:  [94] trading with [Happy Shibe], 96k and 0 
+24/04/2019, 03:01: AM STAKE: [Roxas] won vs [Marky], 38m  vs 299.7m 
+24/04/2019, 03:05: AM TRADE:  [Roxas] trading with [Inject], 0 and 187k 
+24/04/2019, 03:24: AM PICKUP: [Eguie] picked up an item that belongs to [Marky] 10m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 11.2m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 10m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 77m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 20.4m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 14.6m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 12m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 12m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 4.5m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 3.7m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 3m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 3m
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 750k
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 187k
+24/04/2019, 03:25: AM PICKUP: [94] picked up an item that belongs to [Marky] 187k
+24/04/2019, 03:26: AM TRADE:  [94] trading with [Marky], 169.2m and 0 
+24/04/2019, 03:39: AM TRADE:  [94] trading with [Marky], 0 and 172m 
+24/04/2019, 03:39: AM TRADE:  [94] trading with [Marky], 0 and 589.8m 
+24/04/2019, 04:44: AM TRADE:  [Happy Shibe] trading with [Resourceful], 90k and 15.7m 
+24/04/2019, 04:48: AM TRADE:  [Resourceful] trading with [Happy Shibe], 5.6m and 0 
+24/04/2019, 04:52: AM TRADE:  [Happy Shibe] trading with [Zerk], 37.5m and 574.5m 
+24/04/2019, 04:53: AM TRADE:  [Zerk] trading with [Happy Shibe], 116.8m and 0 
+24/04/2019, 12:15: PM TRADE:  [Marky] trading with [Happy Shibe], 48.3m and 0 
+24/04/2019, 12:17: PM TRADE:  [Elizabeth] trading with [Happy Shibe], 1.7m and 0 
+24/04/2019, 12:19: PM TRADE:  [Happy Shibe] trading with [Marky], 0 and 7m 
+24/04/2019, 03:40: PM TRADE:  [Miss B] trading with [Happy Shibe], 0 and 1.1m 
+24/04/2019, 04:30: PM TRADE:  [Happy Shibe] trading with [Resourceful], 52k and 21.1m 
+24/04/2019, 04:40: PM TRADE:  [Resourceful] trading with [Happy Shibe], 200k and 0 
+24/04/2019, 05:05: PM TRADE:  [Miss B] trading with [94], 0 and 749.9m 
+24/04/2019, 05:47: PM TRADE:  [Roxas] trading with [Miss B], 20m and 7.5m 
+24/04/2019, 05:56: PM TRADE:  [Roxas] trading with [Miss B], 0 and 187k 
+24/04/2019, 06:34: PM TRADE:  [Roxas] trading with [94], 102.5m and 0 
+24/04/2019, 07:33: PM TRADE:  [Miss B] trading with [94], 0 and 36m 
+24/04/2019, 08:14: PM TRADE:  [Inject] trading with [Miss B], 0 and 11.2m 

@@ -1,0 +1,17 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Aug 22, 2019 5:19:29 PM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\.server\data\repositories\
+File Name: item-definitions
+Extension: .json
+--------------------------------------------------------
+Exception in thread "main" java.lang.NullPointerException
+	at game.content.phantasye.gambling.DiceNPCBase.<init>(DiceNPCBase.java:59)
+	at game.content.phantasye.gambling.DiceNPCBase.getInstance(DiceNPCBase.java:64)
+	at game.npc.CustomNpcMap.load(CustomNpcMap.java:98)
+	at core.Server.lambda$loadSystems$1(Server.java:545)
+	at core.benchmark.GameBenchmark.execute(GameBenchmark.java:69)
+	at core.Server.loadSystems(Server.java:546)
+	at core.Server.main(Server.java:214)

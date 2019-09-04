@@ -1,0 +1,22 @@
+28/04/2019, 03:15: AM TRADE:  [P K E R] trading with [Andy], 1.8m and 0 
+28/04/2019, 06:35: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 100.3m 
+28/04/2019, 06:36: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 29.3m 
+28/04/2019, 06:36: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 27m 
+28/04/2019, 06:37: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 26.2m 
+28/04/2019, 06:38: AM TRADE:  [Happy Shibe] trading with [Roxas], 27m and 0 
+28/04/2019, 06:39: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 20.2m 
+28/04/2019, 06:41: AM TRADE:  [Zerk] trading with [Roxas], 51.1m and 0 
+28/04/2019, 06:42: AM TRADE:  [Roxas] trading with [Resourceful], 0 and 26m 
+28/04/2019, 06:43: AM TRADE:  [Roxas] trading with [Gladiator], 0 and 234.1m 
+28/04/2019, 06:44: AM TRADE:  [Roxas] trading with [Gladiator], 0 and 625.4m 
+28/04/2019, 06:45: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 63m 
+28/04/2019, 06:46: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 14.9m 
+28/04/2019, 01:04: PM TRADE:  [Miss B] trading with [Inject], 0 and 180k 
+28/04/2019, 02:43: PM TRADE:  [Miss B] trading with [Inject], 0 and 1.4m 
+28/04/2019, 03:47: PM TRADE:  [Inject] trading with [Miss B], 0 and 2m 
+28/04/2019, 05:39: PM PICKUP: [Inject] picked up in combat 8 secs ago that belongs to [Saint Smoke] 2.8m
+28/04/2019, 05:40: PM PICKUP: [Inject] picked up in combat 13 secs ago that belongs to [Saint Smoke] 197k
+28/04/2019, 05:40: PM PICKUP: [Inject] picked up in combat 20 secs ago that belongs to [Saint Smoke] 93k
+28/04/2019, 05:40: PM PICKUP: [Inject] picked up in combat 22 secs ago that belongs to [Saint Smoke] 82k
+28/04/2019, 05:40: PM PICKUP: [Inject] picked up in combat 29 secs ago that belongs to [Saint Smoke] 80k
+28/04/2019, 08:20: PM TRADE:  [Inject] trading with [Miss B], 357k and 0 

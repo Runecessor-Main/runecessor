@@ -1,0 +1,27 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated array at line 27 column 13 path $[6]
+	at com.google.gson.internal.Streams.parse(Streams.java:60)
+	at com.google.gson.JsonParser.parse(JsonParser.java:84)
+	at com.google.gson.JsonParser.parse(JsonParser.java:59)
+	at utility.JSONLoader.load(JSONLoader.java:46)
+	at game.npc.data.NpcDefinitionNonCombatJSON.<init>(NpcDefinitionNonCombatJSON.java:21)
+	at game.npc.NpcHandler.loadDefinitions(NpcHandler.java:2964)
+	at game.npc.NpcHandler.loadNpcData(NpcHandler.java:2945)
+	at core.benchmark.GameBenchmark.execute(GameBenchmark.java:69)
+	at core.Server.loadSystems(Server.java:549)
+	at core.Server.main(Server.java:214)
+Caused by: com.google.gson.stream.MalformedJsonException: Unterminated array at line 27 column 13 path $[6]
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1567)
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:480)
+	at com.google.gson.stream.JsonReader.hasNext(JsonReader.java:418)
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:734)
+	at com.google.gson.internal.bind.TypeAdapters$29.read(TypeAdapters.java:718)
+	at com.google.gson.internal.Streams.parse(Streams.java:48)
+	... 9 more
+java.lang.ArrayIndexOutOfBoundsException: 770
+	at game.content.shop.ShopHandler.loadShopsContent(ShopHandler.java:138)
+	at game.content.shop.ShopHandler.loadShops(ShopHandler.java:111)
+	at core.benchmark.GameBenchmark.execute(GameBenchmark.java:69)
+	at core.Server.loadSystems(Server.java:550)
+	at core.Server.main(Server.java:214)

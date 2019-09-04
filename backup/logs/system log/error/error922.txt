@@ -1,0 +1,79 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+java.lang.ArrayIndexOutOfBoundsException: 23
+	at network.connection.NewHighScore.run(NewHighScore.java:58)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.ArrayIndexOutOfBoundsException: 23
+	at network.connection.NewHighScore.run(NewHighScore.java:58)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.ArrayIndexOutOfBoundsException: 23
+	at network.connection.NewHighScore.run(NewHighScore.java:58)
+	at java.lang.Thread.run(Unknown Source)
+java.sql.SQLException: No value specified for parameter 27
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkAllParametersSet(PreparedStatement.java:2205)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2185)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2115)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1158)
+	at network.connection.NewHighScore.run(NewHighScore.java:59)
+	at java.lang.Thread.run(Unknown Source)
+java.sql.SQLException: No value specified for parameter 27
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkAllParametersSet(PreparedStatement.java:2205)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2185)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2115)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1158)
+	at network.connection.NewHighScore.run(NewHighScore.java:59)
+	at java.lang.Thread.run(Unknown Source)
+java.sql.SQLException: No value specified for parameter 26
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkAllParametersSet(PreparedStatement.java:2205)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2185)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2115)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1158)
+	at network.connection.NewHighScore.run(NewHighScore.java:59)
+	at java.lang.Thread.run(Unknown Source)
+java.sql.SQLException: No value specified for parameter 26
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:897)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:886)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkAllParametersSet(PreparedStatement.java:2205)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2185)
+	at com.mysql.jdbc.PreparedStatement.fillSendPacket(PreparedStatement.java:2115)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1158)
+	at network.connection.NewHighScore.run(NewHighScore.java:59)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.ArrayIndexOutOfBoundsException: 23
+	at network.connection.NewHighScore.run(NewHighScore.java:58)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.ArrayIndexOutOfBoundsException: 23
+	at network.connection.NewHighScore.run(NewHighScore.java:58)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.ArrayIndexOutOfBoundsException: 23
+	at network.connection.NewHighScore.run(NewHighScore.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Traceback (innermost last):
+  File "<iostream>", line 29, in quest_button_2
+NameError: quest_name
+Traceback (innermost last):
+  File "<iostream>", line 29, in quest_button_2
+NameError: quest_name
+Traceback (innermost last):
+  File "<iostream>", line 29, in quest_button_2
+NameError: quest_name
+Traceback (innermost last):
+  File "<iostream>", line 29, in quest_button_2
+NameError: quest_name
+Traceback (innermost last):
+  File "<iostream>", line 29, in quest_button_2
+NameError: quest_name

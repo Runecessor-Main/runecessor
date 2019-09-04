@@ -1,0 +1,27 @@
+No reward: [17/04/2019, 03:28: AM] =Happy Shibe= killed Roxas with 0 damage at 3143, 3676, 0, with risk: 23.2m vs 0
+No reward: [17/04/2019, 10:51: AM] =Inject= killed Drip with 0 damage at 2993, 3945, 0, with risk: 2.6m vs 485k
+Reward: [17/04/2019, 12:47: PM] =Inject= killed Maladose with 0 damage at 3126, 3787, 0, with risk: 1.1m vs 186k
+Reward: [17/04/2019, 02:30: PM] =Inject= killed Essex with 0 damage at 3169, 3695, 0, with risk: 1.2m vs 8.6m
+Reward: [17/04/2019, 05:34: PM] =Passiivine= killed Maladose with 0 damage at 2923, 10167, 0, with risk: 521.5m vs 17.1m
+Reward: [17/04/2019, 06:21: PM] =Passiivine= killed Andreas with 0 damage at 3310, 3930, 0, with risk: 532.9m vs 8.7m
+Reward: [17/04/2019, 07:02: PM] =Majuri= killed Zelm with 0 damage at 3295, 3887, 0, with risk: 12.5m vs 216k
+No reward: [19/04/2019, 04:38: AM] =Happy Shibe= killed Btw with 0 damage at 3231, 3944, 0, with risk: 69.5m vs 73.3m
+No reward: [19/04/2019, 04:39: AM] =Happy Shibe= killed Btw with 0 damage at 3230, 3944, 0, with risk: 69.4m vs 0
+No reward: [19/04/2019, 10:05: PM] =Froot Loops= killed Staxxie with 0 damage at 3315, 3905, 0, with risk: 1.2m vs 45m
+Reward: [19/04/2019, 11:57: PM] =Fezo= killed Inject with 0 damage at 3305, 3935, 0, with risk: 5.7m vs 21.6m
+No reward: [20/04/2019, 07:47: AM] =Matt= killed S1ck with 0 damage at 3091, 3955, 0, with risk: 544k vs 5.6k
+No reward: [20/04/2019, 01:32: PM] =Maladose= killed Will Goffry with 0 damage at 3293, 3676, 0, with risk: 43.4m vs 1.7m
+No reward: [20/04/2019, 01:34: PM] =Maladose= killed Will Goffry with 0 damage at 3292, 3671, 0, with risk: 46.7m vs 0
+Reward: [23/04/2019, 03:24: PM] =94= killed Zerk with 0 damage at 3092, 3524, 0, with risk: 643k vs 416k
+Reward: [23/04/2019, 03:32: PM] =94= killed Zerk with 0 damage at 3088, 3529, 0, with risk: 412k vs 11.6m
+No reward: [24/04/2019, 02:30: AM] =Sweet Rngsus= killed Elizabeth with 0 damage at 2929, 10169, 0, with risk: 576k vs 0
+No reward: [27/04/2019, 09:29: AM] =Hcim Matt= killed Matt with 0 damage at 2925, 10165, 0, with risk: 39m vs 5.5m
+No reward: [27/04/2019, 02:41: PM] =Hcim Matt= killed Matt with 0 damage at 2925, 10163, 0, with risk: 59m vs 571k
+Reward: [28/04/2019, 05:39: PM] =Inject= killed Saint Smoke with 0 damage at 2916, 10211, 0, with risk: 143.6m vs 3.2m
+Reward: [14/05/2019, 06:13: AM] =Inject= killed Staxxie with 0 damage at 3312, 3726, 0, with risk: 86.3m vs 13.8m
+Reward: [15/05/2019, 08:21: AM] =Andy= killed Miss B with 0 damage at 2980, 3707, 0, with risk: 128.2m vs 2.4m
+Reward: [15/05/2019, 12:37: PM] =Andy= killed Miss B with 0 damage at 2920, 10181, 0, with risk: 128.6m vs 2.2m
+Reward: [15/08/2019, 10:19: AM] =Esql= killed Hawk with 0 damage at 3309, 3928, 0, with risk: 727k vs 852k
+Reward: [15/08/2019, 10:23: AM] =Esql= killed Hawk with 0 damage at 3305, 3935, 0, with risk: 499k vs 756k
+No reward: [17/08/2019, 08:55: PM] =Officialmm= killed Esql with 0 damage at 3125, 3688, 0, with risk: 49.9m vs 49.9m
+Reward: [18/08/2019, 08:32: AM] =Esql= killed Shorts with 0 damage at 3305, 3930, 0, with risk: 656k vs 897k

@@ -1,0 +1,11 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+java.io.FileNotFoundException: http://www.Runecessor.com/data.txt
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.URL.openStream(Unknown Source)
+	at utility.WebsiteRead.run(WebsiteRead.java:23)
+	at java.lang.Thread.run(Unknown Source)
+Traceback (innermost last):
+  File "<iostream>", line 86, in kill_npc_3481
+AttributeError: class 'game.content.skilling.Skilling' has no attribute 'getBaseExperience'

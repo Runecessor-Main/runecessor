@@ -1,0 +1,19 @@
+21/04/2019, 01:09: AM TRADE:  [Resourceful] trading with [Happy Shibe], 0 and 27.3m 
+21/04/2019, 04:40: AM TRADE:  [Resourceful] trading with [Happy Shibe], 8.8m and 0 
+21/04/2019, 05:02: AM TRADE:  [Roxas] trading with [Happy Shibe], 0 and 1.1m 
+21/04/2019, 05:27: AM TRADE:  [Happy Shibe] trading with [Roxas], 0 and 1.1m 
+21/04/2019, 07:20: AM TRADE:  [Staxxie] trading with [Roxas], 1 and 200.4m 
+21/04/2019, 08:01: AM PICKUP: [Zaiza] picked up an item that belongs to [Roxas] 15k
+21/04/2019, 08:03: AM PICKUP: [Roxas] picked up an item that belongs to [Zaiza] 15k
+21/04/2019, 08:03: AM PICKUP: [Roxas] picked up an item that belongs to [Zaiza] 15k
+21/04/2019, 09:32: AM TRADE:  [Leap] trading with [Staxxie], 16.3m and 0 
+21/04/2019, 09:38: AM TRADE:  [Staxxie] trading with [Leap], 16k and 0 
+21/04/2019, 10:49: AM TRADE:  [Staxxie] trading with [Maladose], 187k and 0 
+21/04/2019, 11:01: AM TRADE:  [Staxxie] trading with [Kosta], 101k and 0 
+21/04/2019, 11:02: AM TRADE:  [Happy Shibe] trading with [Resourceful], 2.1m and 0 
+21/04/2019, 11:05: AM TRADE:  [Happy Shibe] trading with [Resourceful], 0 and 1.1m 
+21/04/2019, 11:35: AM PICKUP: [Resourceful] picked up an item that belongs to [Leap] 15k
+21/04/2019, 11:35: AM PICKUP: [Resourceful] picked up an item that belongs to [Leap] 15k
+21/04/2019, 08:53: PM TRADE:  [Miss B] trading with [Inject], 11.2m and 0 
+21/04/2019, 10:04: PM TRADE:  [Inject] trading with [Staxxie], 0 and 16.5m 
+21/04/2019, 10:05: PM TRADE:  [Staxxie] trading with [Inject], 0 and 10m 

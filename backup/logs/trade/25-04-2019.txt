@@ -1,0 +1,12 @@
+25/04/2019, 12:09: AM TRADE:  [Roxas] trading with [Inject], 0 and 375k 
+25/04/2019, 12:22: AM PICKUP: [Inject] picked up an item that belongs to [Roxas] 57k
+25/04/2019, 12:33: AM TRADE:  [Roxas] trading with [Inject], 45m and 41.2m 
+25/04/2019, 12:44: AM TRADE:  [Inject] trading with [Roxas], 45m and 41.2m 
+25/04/2019, 01:16: AM TRADE:  [Inject] trading with [Roxas], 30m and 12m 
+25/04/2019, 01:21: AM TRADE:  [Roxas] trading with [Inject], 6.3m and 0 
+25/04/2019, 09:26: AM TRADE:  [Zerk] trading with [94], 0 and 45m 
+25/04/2019, 01:04: PM PICKUP: [Happy Shibe] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+25/04/2019, 05:35: PM TRADE:  [Miss B] trading with [Inject], 3m and 11.2m 
+25/04/2019, 05:45: PM TRADE:  [Miss B] trading with [Inject], 4.5m and 0 
+25/04/2019, 06:42: PM PICKUP: [Inject] picked up an item that belongs to [Miss B] 74k
+25/04/2019, 06:42: PM PICKUP: [Inject] picked up an item that belongs to [Miss B] 48k

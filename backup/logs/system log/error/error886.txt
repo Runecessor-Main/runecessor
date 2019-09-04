@@ -1,0 +1,10 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+java.lang.NullPointerException
+	at game.npc.data.NpcSpawnBossJSON.load(NpcSpawnBossJSON.java:31)
+	at utility.JSONLoader.load(JSONLoader.java:51)
+	at game.npc.data.NpcSpawnBossJSON.<init>(NpcSpawnBossJSON.java:21)
+	at game.npc.NpcHandler.loadNpcData(NpcHandler.java:2915)
+	at core.benchmark.GameBenchmark.execute(GameBenchmark.java:69)
+	at core.Server.loadSystems(Server.java:549)
+	at core.Server.main(Server.java:214)

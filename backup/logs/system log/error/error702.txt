@@ -1,0 +1,38 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Exception in thread "Thread-16" java.lang.NullPointerException
+	at game.content.interfaces.NpcDoubleItemsInterface$DoubleItemsLog.saveLog(NpcDoubleItemsInterface.java:250)
+	at game.content.miscellaneous.ServerShutDownUpdate.serverRestartContentUpdate(ServerShutDownUpdate.java:231)
+	at game.content.miscellaneous.ServerShutDownUpdate.run(ServerShutDownUpdate.java:84)
+	at java.lang.Thread.run(Unknown Source)
+java.lang.NullPointerException
+	at game.npc.NpcHandler.npcGameTick(NpcHandler.java:1673)
+	at core.Server$1.lambda$1(Server.java:366)
+	at com.google.common.collect.ImmutableList.forEach(ImmutableList.java:407)
+	at core.Server$1.execute(Server.java:366)
+	at core.maintick.Task.tick(Task.java:111)
+	at core.maintick.TaskScheduler.run(TaskScheduler.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Jan 11, 2019 5:53:40 AM core.maintick.TaskScheduler run
+SEVERE: Exception during task execution.
+java.lang.NullPointerException
+	at game.npc.NpcHandler.npcGameTick(NpcHandler.java:1673)
+	at core.Server$1.lambda$1(Server.java:366)
+	at com.google.common.collect.ImmutableList.forEach(ImmutableList.java:407)
+	at core.Server$1.execute(Server.java:366)
+	at core.maintick.Task.tick(Task.java:111)
+	at core.maintick.TaskScheduler.run(TaskScheduler.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+

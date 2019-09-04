@@ -1,0 +1,4 @@
+pure 7
+ranged 1
+main 21
+zerk 2

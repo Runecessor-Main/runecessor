@@ -1,0 +1,80 @@
+15/08/2019, 12:19: AM TRADE:  [S T O R Y] trading with [Gladiator], 660k and 5.2m 
+15/08/2019, 12:20: AM TRADE:  [Gladiator] trading with [S T O R Y], 0 and 5m 
+15/08/2019, 12:22: AM TRADE:  [Oracle] trading with [Zynite], 30m and 3m 
+15/08/2019, 12:23: AM TRADE:  [Alk] trading with [Zynite], 10m and 750k 
+15/08/2019, 12:34: AM TRADE:  [Zynite] trading with [Syke], 0 and 2.4m 
+15/08/2019, 12:42: AM TRADE:  [Zynite] trading with [Earfquake], 120m and 0 
+15/08/2019, 12:43: AM TRADE: Dicing [Zynite] trading with [Earfquake], 0 and 240m 
+15/08/2019, 12:45: AM TRADE:  [Zynite] trading with [Earfquake], 250m and 0 
+15/08/2019, 12:47: AM TRADE: Dicing [Zynite] trading with [Earfquake], 0 and 500m 
+15/08/2019, 12:50: AM TRADE:  [Earfquake] trading with [Zynite], 0 and 539.6m 
+15/08/2019, 01:26: AM TRADE:  [Alk] trading with [Oracle], 13m and 70m 
+15/08/2019, 01:27: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 10k 
+15/08/2019, 01:29: AM PICKUP: [Cumrag] picked up an item that belongs to [Oracle] 16k
+15/08/2019, 01:30: AM TRADE:  [S T O R Y] trading with [Alk], 7m and 1.1m 
+15/08/2019, 01:36: AM TRADE:  [S T O R Y] trading with [Gladiator], 5k and 22m 
+15/08/2019, 02:14: AM TRADE:  [S T O R Y] trading with [Shorts], 0 and 1.5m 
+15/08/2019, 02:54: AM TRADE:  [S T O R Y] trading with [Oracle], 64k and 0 
+15/08/2019, 03:04: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 1m 
+15/08/2019, 03:09: AM TRADE:  [Oracle] trading with [S T O R Y], 5.2m and 0 
+15/08/2019, 03:13: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 23m 
+15/08/2019, 03:13: AM TRADE:  [Oracle] trading with [Number 1], 1.1m and 7.5m 
+15/08/2019, 03:14: AM TRADE:  [Number 1] trading with [Seventeen], 21m and 7.4m 
+15/08/2019, 03:14: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 7.5m 
+15/08/2019, 03:17: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 1.6m 
+15/08/2019, 03:21: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 12.4m 
+15/08/2019, 03:21: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 5.2m 
+15/08/2019, 03:23: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 1.4m 
+15/08/2019, 03:23: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 750k 
+15/08/2019, 03:25: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 437k 
+15/08/2019, 03:28: AM TRADE:  [Number 1] trading with [Dutchtouch], 0 and 20.5m 
+15/08/2019, 04:18: AM TRADE:  [Number 1] trading with [Gladiator], 15k and 0 
+15/08/2019, 04:44: AM TRADE:  [S T O R Y] trading with [Oracle], 750k and 0 
+15/08/2019, 04:45: AM TRADE:  [Michael] trading with [Dougbolden], 27.8m and 0 
+15/08/2019, 04:56: AM TRADE:  [S T O R Y] trading with [Oracle], 0 and 7.5m 
+15/08/2019, 05:11: AM TRADE:  [Oracle] trading with [S T O R Y], 40.5m and 0 
+15/08/2019, 05:11: AM TRADE:  [S T O R Y] trading with [Mbox], 0 and 45m 
+15/08/2019, 05:19: AM TRADE:  [Mbox] trading with [S T O R Y], 4.5m and 0 
+15/08/2019, 05:25: AM TRADE:  [Number 1] trading with [Gladiator], 16.4m and 0 
+15/08/2019, 06:25: AM TRADE:  [Gladiator] trading with [S T O R Y], 2.5m and 369k 
+15/08/2019, 06:26: AM TRADE:  [Gladiator] trading with [Esql], 4.2m and 606k 
+15/08/2019, 06:55: AM TRADE:  [Gladiator] trading with [S T O R Y], 10.5m and 10m 
+15/08/2019, 07:04: AM TRADE:  [Gladiator] trading with [S T O R Y], 0 and 12m 
+15/08/2019, 07:05: AM TRADE:  [Gladiator] trading with [S T O R Y], 12m and 0 
+15/08/2019, 07:09: AM TRADE:  [S T O R Y] trading with [Number 1], 0 and 289.5m 
+15/08/2019, 07:10: AM TRADE:  [Number 1] trading with [S T O R Y], 0 and 277.5m 
+15/08/2019, 07:10: AM TRADE:  [Gladiator] trading with [S T O R Y], 0 and 12m 
+15/08/2019, 07:13: AM TRADE:  [S T O R Y] trading with [Gladiator], 28.5m and 0 
+15/08/2019, 07:15: AM TRADE:  [Gladiator] trading with [Mbox], 0 and 1.5m 
+15/08/2019, 07:16: AM TRADE:  [Gladiator] trading with [Mbox], 1.5m and 0 
+15/08/2019, 07:17: AM TRADE:  [Gladiator] trading with [S T O R Y], 28.5m and 0 
+15/08/2019, 07:57: AM TRADE:  [S T O R Y] trading with [Hawk], 6.9m and 6.9m 
+15/08/2019, 07:59: AM TRADE:  [S T O R Y] trading with [Gladiator], 3m and 0 
+15/08/2019, 08:32: AM TRADE:  [Hawk] trading with [Gladiator], 4m and 1.3m 
+15/08/2019, 08:34: AM TRADE:  [Hawk] trading with [Gladiator], 0 and 4m 
+15/08/2019, 08:44: AM TRADE:  [Hawk] trading with [Gladiator], 0 and 592k 
+15/08/2019, 09:34: AM TRADE:  [Hawk] trading with [Number 1], 0 and 15m 
+15/08/2019, 10:24: AM TRADE:  [Officialmm] trading with [Gladiator], 13.2m and 45.3m 
+15/08/2019, 10:27: AM TRADE:  [Esql] trading with [Gladiator], 60m and 5k 
+15/08/2019, 10:42: AM TRADE:  [Gladiator] trading with [Ez], 5k and 2.6m 
+15/08/2019, 11:32: AM TRADE:  [Esql] trading with [Officialmm], 30m and 2.2m 
+15/08/2019, 01:03: PM PICKUP: [Ez] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+15/08/2019, 02:07: PM TRADE:  [Alk] trading with [Officialmm], 6.7m and 15m 
+15/08/2019, 02:10: PM TRADE:  [Zynite] trading with [Gladiator], 8m and 1.1m 
+15/08/2019, 02:58: PM TRADE:  [Syke] trading with [Zynite], 9.4m and 0 
+15/08/2019, 02:58: PM TRADE:  [Syke] trading with [Zynite], 780k and 0 
+15/08/2019, 05:09: PM TRADE:  [Alk] trading with [S T O R Y], 9.2m and 6m 
+15/08/2019, 05:10: PM TRADE:  [Alk] trading with [S T O R Y], 0 and 7.5m 
+15/08/2019, 05:29: PM TRADE:  [S T O R Y] trading with [Alk], 0 and 750k 
+15/08/2019, 05:29: PM TRADE:  [S T O R Y] trading with [Oracle], 0 and 3.7m 
+15/08/2019, 05:29: PM TRADE:  [S T O R Y] trading with [Oracle], 0 and 2.2m 
+15/08/2019, 05:50: PM TRADE:  [Esql] trading with [S T O R Y], 562k and 6m 
+15/08/2019, 07:17: PM TRADE:  [S T O R Y] trading with [Mbox], 0 and 80.2m 
+15/08/2019, 07:49: PM TRADE:  [S T O R Y] trading with [Oracle], 36.6m and 0 
+15/08/2019, 08:24: PM TRADE:  [Officialmm] trading with [S T O R Y], 100m and 79.1m 
+15/08/2019, 08:43: PM TRADE:  [S T O R Y] trading with [Joshua12], 22m and 9.9m 
+15/08/2019, 08:54: PM TRADE:  [Joshua12] trading with [S T O R Y], 0 and 23.2m 
+15/08/2019, 10:04: PM PICKUP: [357mag] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+15/08/2019, 10:10: PM TRADE:  [Officialmm] trading with [S T O R Y], 3m and 750k 
+15/08/2019, 11:11: PM TRADE:  [S T O R Y] trading with [Oracle], 0 and 46.9m 
+15/08/2019, 11:12: PM TRADE:  [S T O R Y] trading with [Oracle], 0 and 6m 

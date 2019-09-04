@@ -1,0 +1,20 @@
+15/05/2019, 06:26: AM TRADE:  [Andy] trading with [Inject], 8m and 0 
+15/05/2019, 06:55: AM TRADE:  [Green] trading with [Andy], 562k and 0 
+15/05/2019, 08:21: AM PICKUP: [Andy] picked up in combat 7 secs ago that belongs to [Miss B] 2.2m
+15/05/2019, 08:21: AM PICKUP: [Andy] picked up in combat 8 secs ago that belongs to [Miss B] 2.1m
+15/05/2019, 08:21: AM PICKUP: [Andy] picked up in combat 10 secs ago that belongs to [Miss B] 16k
+15/05/2019, 08:21: AM PICKUP: [Andy] picked up in combat 13 secs ago that belongs to [Miss B] 214k
+15/05/2019, 08:22: AM PICKUP: [Andy] picked up in combat 59 secs ago that belongs to [Miss B] 16k
+15/05/2019, 08:24: AM TRADE:  [Andy] trading with [Miss B], 4.4m and 0 
+15/05/2019, 09:04: AM PICKUP: [Andy] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+15/05/2019, 12:37: PM PICKUP: [Andy] picked up in combat 7 secs ago that belongs to [Miss B] 2.1m
+15/05/2019, 12:38: PM PICKUP: [Andy] picked up in combat 9 secs ago that belongs to [Miss B] 750k
+15/05/2019, 12:38: PM PICKUP: [Andy] picked up in combat 10 secs ago that belongs to [Miss B] 300k
+15/05/2019, 12:38: PM PICKUP: [Andy] picked up in combat 13 secs ago that belongs to [Miss B] 50k
+15/05/2019, 12:38: PM PICKUP: [Andy] picked up in combat 16 secs ago that belongs to [Miss B] 187k
+15/05/2019, 12:38: PM PICKUP: [Andy] picked up in combat 17 secs ago that belongs to [Miss B] 16k
+15/05/2019, 12:38: PM PICKUP: [Andy] picked up in combat 20 secs ago that belongs to [Miss B] 118k
+15/05/2019, 12:39: PM TRADE:  [Andy] trading with [Miss B], 2.1m and 0 
+15/05/2019, 01:04: PM PICKUP: [Andy] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+15/05/2019, 06:29: PM TRADE:  [Roxas] trading with [Inject], 1.5m and 0 
+15/05/2019, 10:16: PM TRADE:  [Og Panda] trading with [Zin], 0 and 10m 

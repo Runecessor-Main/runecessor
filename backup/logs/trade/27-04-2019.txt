@@ -1,0 +1,26 @@
+27/04/2019, 12:22: AM TRADE:  [Ydna] trading with [Inject], 4k and 1.1m 
+27/04/2019, 12:27: AM TRADE:  [Ydna] trading with [Inject], 0 and 3.1m 
+27/04/2019, 12:51: AM TRADE:  [Roxas] trading with [Ydna], 3.8m and 2k 
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 7 secs ago that belongs to [Matt] 3.7m
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 11 secs ago that belongs to [Matt] 1.7m
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 12 secs ago that belongs to [Matt] 902k
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 12 secs ago that belongs to [Matt] 750k
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 13 secs ago that belongs to [Matt] 150k
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 13 secs ago that belongs to [Matt] 112k
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 14 secs ago that belongs to [Matt] 60k
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 15 secs ago that belongs to [Matt] 51k
+27/04/2019, 09:29: AM PICKUP: [Hcim Matt] picked up in combat 16 secs ago that belongs to [Matt] 37k
+27/04/2019, 01:04: PM PICKUP: [Matt] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 8 secs ago that belongs to [Matt] 300k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 9 secs ago that belongs to [Matt] 294k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 9 secs ago that belongs to [Matt] 75k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 10 secs ago that belongs to [Matt] 60k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 10 secs ago that belongs to [Matt] 51k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 11 secs ago that belongs to [Matt] 37k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 18 secs ago that belongs to [Matt] 62k
+27/04/2019, 02:41: PM PICKUP: [Hcim Matt] picked up in combat 19 secs ago that belongs to [Matt] 49k
+27/04/2019, 05:32: PM TRADE:  [Matt] trading with [Zin], 4.5m and 0 
+27/04/2019, 08:40: PM TRADE:  [Miss B] trading with [Inject], 0 and 525k 
+27/04/2019, 09:35: PM TRADE:  [Miss B] trading with [Inject], 0 and 550k 
+27/04/2019, 09:42: PM PICKUP: [Inject] picked up in combat 21 secs ago that belongs to [Omfg Xbow] 19k
+27/04/2019, 09:42: PM PICKUP: [Inject] picked up in combat 26 secs ago that belongs to [Omfg Xbow] 40k

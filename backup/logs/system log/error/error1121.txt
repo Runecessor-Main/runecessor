@@ -1,0 +1,6 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Exception in thread "main" java.lang.RuntimeException: No template exists to create the bots from.
+	at game.player.pet.PlayerPetManager.ensureAccountsExist(PlayerPetManager.java:130)
+	at core.Server.loadSystems(Server.java:640)
+	at core.Server.main(Server.java:214)

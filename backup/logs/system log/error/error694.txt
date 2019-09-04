@@ -1,0 +1,7 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Exception in thread "Thread-16" java.lang.NullPointerException
+	at game.content.interfaces.NpcDoubleItemsInterface$DoubleItemsLog.saveLog(NpcDoubleItemsInterface.java:250)
+	at game.content.miscellaneous.ServerShutDownUpdate.serverRestartContentUpdate(ServerShutDownUpdate.java:231)
+	at game.content.miscellaneous.ServerShutDownUpdate.run(ServerShutDownUpdate.java:84)
+	at java.lang.Thread.run(Unknown Source)

@@ -1,0 +1,392 @@
+[13/07/2019, 12:46: AM] CHAT: d
+[13/07/2019, 12:49: AM] CHAT: :addreward 1045
+[14/07/2019, 04:30: PM] CHAT: s
+[14/07/2019, 06:29: PM] CC 'Server': Yo bbe
+[14/07/2019, 06:29: PM] CHAT: do ::pp
+[14/07/2019, 06:29: PM] CHAT: do it
+[14/07/2019, 06:29: PM] CHAT: yh cuz its the pvp world
+[14/07/2019, 06:29: PM] CHAT: ill fix it dw
+[14/07/2019, 06:30: PM] CHAT: kk
+[14/07/2019, 06:30: PM] CHAT: ehmm
+[14/07/2019, 06:30: PM] CHAT:  do ::train
+[14/07/2019, 06:30: PM] CHAT: hmm
+[14/07/2019, 06:30: PM] CHAT: its an option
+[14/07/2019, 06:30: PM] CHAT: in settings
+[14/07/2019, 06:30: PM] CHAT: rock crabs
+[14/07/2019, 06:30: PM] CHAT: are fixed
+[14/07/2019, 06:31: PM] CHAT: so i was thinking
+[14/07/2019, 06:31: PM] CHAT: do add more quests
+[14/07/2019, 06:31: PM] CHAT: like runcessor quest 
+[14/07/2019, 06:31: PM] CHAT: somewhere in files idk why
+[14/07/2019, 06:31: PM] CHAT: so
+[14/07/2019, 06:31: PM] CHAT: i gunna make a quest
+[14/07/2019, 06:31: PM] CHAT: do ::getid cape
+[14/07/2019, 06:31: PM] CHAT: then look for it
+[14/07/2019, 06:32: PM] CHAT: are u listening?
+[14/07/2019, 06:32: PM] CHAT: kk so i wanna make a runecessor quest
+[14/07/2019, 06:32: PM] CHAT: but not like an easy one
+[14/07/2019, 06:32: PM] CHAT: first of all 
+[14/07/2019, 06:32: PM] CHAT: u need 99 firemaking
+[14/07/2019, 06:32: PM] CHAT: and 99 wc
+[14/07/2019, 06:32: PM] CHAT: so i was thinking
+[14/07/2019, 06:32: PM] CHAT: if u talk to a npc
+[14/07/2019, 06:32: PM] CHAT: the quest starts
+[14/07/2019, 06:33: PM] CHAT: so u gunna search for a magic tree
+[14/07/2019, 06:33: PM] CHAT: and cut it
+[14/07/2019, 06:33: PM] CHAT: untill u get a blood log from it
+[14/07/2019, 06:33: PM] CHAT: 1/500
+[14/07/2019, 06:33: PM] CHAT: chance to get it
+[14/07/2019, 06:33: PM] CHAT: then u gunna mine 
+[14/07/2019, 06:33: PM] CHAT: mine for a stone
+[14/07/2019, 06:33: PM] CHAT: 1/500 chance
+[14/07/2019, 06:33: PM] CHAT: after that
+[14/07/2019, 06:33: PM] CHAT: u gunna need to kill a couple of bosses
+[14/07/2019, 06:33: PM] CHAT: like zulrah etc
+[14/07/2019, 06:33: PM] CHAT: once u did that
+[14/07/2019, 06:34: PM] CHAT: u get a string
+[14/07/2019, 06:34: PM] CHAT: combine those and u get a special cape
+[14/07/2019, 06:34: PM] CHAT: the runecessor cape
+[14/07/2019, 06:34: PM] CHAT: + a title
+[14/07/2019, 06:34: PM] CHAT: what do you think?
+[14/07/2019, 06:35: PM] CHAT: ?
+[14/07/2019, 06:35: PM] CHAT: hellooooooo?
+[14/07/2019, 06:35: PM] CHAT: cool cool
+[14/07/2019, 06:35: PM] CHAT:  ::giveusd (amount) username
+[14/07/2019, 06:36: PM] CHAT: now i wanna try the combat
+[14/07/2019, 06:36: PM] CHAT: so i fixed the presets tab
+[14/07/2019, 06:36: PM] CHAT: could u open it
+[14/07/2019, 06:36: PM] CHAT: and spawn pure tribrid pls
+[14/07/2019, 06:37: PM] CHAT: ?
+[14/07/2019, 06:37: PM] CHAT: get the pure on
+[14/07/2019, 06:37: PM] CHAT: one
+[14/07/2019, 06:37: PM] CHAT: need to see if something works
+[14/07/2019, 06:38: PM] CHAT: u dont
+[14/07/2019, 06:38: PM] CHAT: i can add a command for it
+[14/07/2019, 06:38: PM] CHAT: kk
+[14/07/2019, 06:38: PM] CHAT: get the pure brid
+[14/07/2019, 06:38: PM] CHAT: ill add it
+[14/07/2019, 06:38: PM] CHAT: i think if u do
+[14/07/2019, 06:38: PM] CHAT: just do ::pnpc -1
+[14/07/2019, 06:39: PM] CHAT: omg
+[14/07/2019, 06:39: PM] CHAT: drop the d ticks
+[14/07/2019, 06:39: PM] CHAT: get pure tribrid
+[14/07/2019, 06:39: PM] CHAT: dropped the tokens?
+[14/07/2019, 06:40: PM] CHAT:  ::settitle 
+[14/07/2019, 06:40: PM] CHAT: wait
+[14/07/2019, 06:41: PM] CHAT: hmm
+[14/07/2019, 06:42: PM] CHAT: needs some work
+[14/07/2019, 06:42: PM] CHAT: its not bad
+[14/07/2019, 06:42: PM] CHAT: but just some settings
+[14/07/2019, 06:43: PM] CHAT: hmmm
+[14/07/2019, 06:44: PM] CHAT: kk so 
+[14/07/2019, 06:44: PM] CHAT: only the dumb shit is free
+[14/07/2019, 06:45: PM] CHAT: trade her
+[14/07/2019, 06:45: PM] CHAT: here
+[14/07/2019, 06:45: PM] CHAT: trade her
+[14/07/2019, 06:45: PM] CHAT: so what cool about this is
+[14/07/2019, 06:45: PM] CHAT: wildy is only pvp
+[14/07/2019, 06:45: PM] CHAT: nowhere else is pvp
+[14/07/2019, 06:45: PM] CHAT: so we got pkers
+[14/07/2019, 06:45: PM] CHAT: then we got skillers
+[14/07/2019, 06:45: PM] CHAT: cuz skilling u can train
+[14/07/2019, 06:45: PM] CHAT: and u got pvmers
+[14/07/2019, 06:46: PM] CHAT: 3 things ppl like doing the most
+[14/07/2019, 06:46: PM] CHAT: after that we have tournaments and events
+[14/07/2019, 06:46: PM] CHAT: and minigames
+[14/07/2019, 06:46: PM] CHAT: what ppl enjoy aswell
+[14/07/2019, 06:46: PM] CHAT: pk server get the most donated to 
+[14/07/2019, 06:46: PM] CHAT: and is most fun to play around with
+[14/07/2019, 06:46: PM] CHAT: u see
+[14/07/2019, 06:48: PM] CHAT: and skillign
+[14/07/2019, 06:48: PM] CHAT: yes
+[14/07/2019, 06:48: PM] CHAT: and skilling
+[14/07/2019, 06:48: PM] CHAT: and bossing
+[14/07/2019, 06:48: PM] CHAT: and tournaments
+[14/07/2019, 06:48: PM] CHAT: look
+[14/07/2019, 06:48: PM] CHAT: 150k bm if u win
+[14/07/2019, 06:48: PM] CHAT: they are
+[14/07/2019, 06:50: PM] CHAT: bm id is
+[14/07/2019, 06:50: PM] CHAT: 13307 1
+[14/07/2019, 06:50: PM] CHAT: 13307 *
+[14/07/2019, 06:50: PM] CHAT: bm pouch?
+[14/07/2019, 06:51: PM] CHAT: for what?
+[14/07/2019, 06:51: PM] CHAT: lmao
+[14/07/2019, 06:51: PM] CHAT: no1 is gunne get more then max bm stack
+[14/07/2019, 06:51: PM] CHAT: u know that right
+[14/07/2019, 06:51: PM] CHAT: 2147m isnt reachable for players
+[14/07/2019, 06:53: PM] CHAT: there is
+[14/07/2019, 06:53: PM] CHAT: and no lol
+[14/07/2019, 06:53: PM] CHAT: thats why it a pk server
+[14/07/2019, 06:53: PM] CHAT: u use gp to buy items
+[14/07/2019, 06:53: PM] CHAT: or stake
+[14/07/2019, 06:53: PM] CHAT: or gamble
+[14/07/2019, 06:54: PM] CHAT: yh
+[14/07/2019, 06:54: PM] CHAT: look
+[14/07/2019, 06:54: PM] CHAT: they are staff only
+[14/07/2019, 06:55: PM] CHAT: oh yh
+[14/07/2019, 06:55: PM] CHAT: staff only
+[14/07/2019, 06:55: PM] CHAT: ik
+[14/07/2019, 06:55: PM] CHAT: look
+[14/07/2019, 06:55: PM] CHAT: no
+[14/07/2019, 06:55: PM] CHAT: cuz mods
+[14/07/2019, 06:55: PM] CHAT: can trade
+[14/07/2019, 06:55: PM] CHAT: and sell shit
+[14/07/2019, 06:55: PM] CHAT: admins cant
+[14/07/2019, 06:56: PM] CHAT: we have many customs
+[14/07/2019, 06:56: PM] CHAT: but only staff can spawn em
+[14/07/2019, 06:56: PM] CHAT: like admins+
+[14/07/2019, 06:56: PM] CHAT: so lets keep it that way
+[14/07/2019, 06:57: PM] CHAT: timers?
+[14/07/2019, 06:57: PM] CHAT: where do u have a timer?
+[14/07/2019, 06:58: PM] CHAT: thats an imbued heart lmao
+[14/07/2019, 06:58: PM] CHAT: cuz u used it
+[14/07/2019, 06:58: PM] CHAT: this
+[14/07/2019, 06:58: PM] CHAT: trade him
+[14/07/2019, 06:58: PM] CHAT: this due
+[14/07/2019, 06:59: PM] CHAT: so
+[14/07/2019, 06:59: PM] CHAT: what do u think
+[14/07/2019, 06:59: PM] CHAT: pretty cool huh
+[14/07/2019, 07:00: PM] CHAT: needs some shit to be done
+[14/07/2019, 07:00: PM] CHAT: but all easy shit
+[14/07/2019, 07:00: PM] CHAT: this is edge
+[14/07/2019, 07:00: PM] CHAT: keep this one
+[14/07/2019, 07:00: PM] CHAT: its good
+[14/07/2019, 07:00: PM] CHAT: this is edge
+[14/07/2019, 07:00: PM] CHAT: what are u saying
+[14/07/2019, 07:01: PM] CHAT: yh its good
+[14/07/2019, 07:01: PM] CHAT: varrock is boring
+[14/07/2019, 07:01: PM] CHAT: btw wild is close to this
+[14/07/2019, 07:01: PM] CHAT: or we can make ge home?
+[14/07/2019, 07:01: PM] CHAT: it aint?
+[14/07/2019, 07:02: PM] CHAT: no
+[14/07/2019, 07:02: PM] CHAT: kk
+[14/07/2019, 07:02: PM] CHAT: 1 problem is
+[14/07/2019, 07:02: PM] CHAT: we have a pk server
+[14/07/2019, 07:02: PM] CHAT: so ppl will need to walk if they wanna pk
+[14/07/2019, 07:02: PM] CHAT: thats anoying af
+[14/07/2019, 07:03: PM] CHAT: edge is useable aswell
+[14/07/2019, 07:03: PM] CHAT: pk
+[14/07/2019, 07:03: PM] CHAT: no lol
+[14/07/2019, 07:03: PM] CHAT: thats gay af
+[14/07/2019, 07:03: PM] CHAT: imagine
+[14/07/2019, 07:03: PM] CHAT: players in wild
+[14/07/2019, 07:03: PM] CHAT: and pkers seems them
+[14/07/2019, 07:03: PM] CHAT: he first needs to come to here
+[14/07/2019, 07:03: PM] CHAT:  by doing ::home
+[14/07/2019, 07:03: PM] CHAT: bank
+[14/07/2019, 07:03: PM] CHAT: then do ::edge
+[14/07/2019, 07:04: PM] CHAT: better keep edge
+[14/07/2019, 07:04: PM] CHAT: and make varrock like the shops area
+[14/07/2019, 07:04: PM] CHAT: or something
+[14/07/2019, 07:04: PM] CHAT: or make varrock ::market?
+[14/07/2019, 07:04: PM] CHAT: where players can sell and buy items
+[14/07/2019, 07:04: PM] CHAT: from other players?
+[14/07/2019, 07:04: PM] CHAT: like a"second" home
+[14/07/2019, 07:05: PM] CHAT: yh
+[14/07/2019, 07:05: PM] CHAT: we ca
+[14/07/2019, 07:05: PM] CHAT: btw
+[14/07/2019, 07:05: PM] CHAT: isnt it already in this source?
+[14/07/2019, 07:05: PM] CHAT: let me search
+[14/07/2019, 07:05: PM] CHAT: sec
+[14/07/2019, 07:06: PM] CHAT: use item
+[14/07/2019, 07:06: PM] CHAT: on it
+[14/07/2019, 07:07: PM] CHAT: so i need to create our own player owned shop
+[14/07/2019, 07:07: PM] CHAT: cuz it aint added yet
+[14/07/2019, 07:07: PM] CHAT: but dw i can add it
+[14/07/2019, 07:08: PM] CHAT: tele to varrock again pls
+[14/07/2019, 07:09: PM] CHAT: this is for donators
+[14/07/2019, 07:09: PM] CHAT:  ::openbank
+[14/07/2019, 07:09: PM] CHAT: why tho
+[14/07/2019, 07:10: PM] CHAT: tf3
+[14/07/2019, 07:10: PM] CHAT: weird
+[14/07/2019, 07:10: PM] CHAT: yh
+[14/07/2019, 07:10: PM] CHAT: its ::newdzone
+[14/07/2019, 07:11: PM] CHAT: go to varrock
+[14/07/2019, 07:11: PM] CHAT: pls
+[14/07/2019, 07:12: PM] CHAT: so
+[14/07/2019, 07:12: PM] CHAT: no dont
+[14/07/2019, 07:12: PM] CHAT: u will ruin the pk
+[14/07/2019, 07:12: PM] CHAT: make this as market?
+[14/07/2019, 07:12: PM] CHAT: and edge as home
+[14/07/2019, 07:12: PM] CHAT: ?
+[14/07/2019, 07:12: PM] CHAT: player owner shops
+[14/07/2019, 07:12: PM] CHAT: can be here
+[14/07/2019, 07:12: PM] CHAT: and some npcs
+[14/07/2019, 07:12: PM] CHAT: itsn ot?
+[14/07/2019, 07:12: PM] CHAT: the bm items
+[14/07/2019, 07:13: PM] CHAT: and some pvm items u cant get from shops
+[14/07/2019, 07:13: PM] CHAT: u come and buy em here
+[14/07/2019, 07:13: PM] CHAT: waht do u need more to be bm price?
+[14/07/2019, 07:14: PM] CHAT: so this market
+[14/07/2019, 07:14: PM] CHAT: edge home?
+[14/07/2019, 07:16: PM] CHAT: sure
+[14/07/2019, 07:16: PM] CHAT: can do that
+[14/07/2019, 07:16: PM] CHAT: is there one at home?
+[14/07/2019, 07:16: PM] CHAT: here is one
+[14/07/2019, 07:17: PM] CHAT: wut?
+[14/07/2019, 07:17: PM] CHAT: i can add it
+[14/07/2019, 07:17: PM] CHAT: what do u want it to do?
+[14/07/2019, 07:17: PM] CHAT: mmm may think of something later for that
+[14/07/2019, 07:19: PM] CHAT: sure
+[14/07/2019, 07:19: PM] CHAT: stay lol
+[14/07/2019, 07:19: PM] CHAT: why wouldnt u keep em?
+[14/07/2019, 07:19: PM] CHAT: donators wont donate for items only
+[14/07/2019, 07:20: PM] CHAT: it isnt?
+[14/07/2019, 07:20: PM] CHAT: ohh ye
+[14/07/2019, 07:20: PM] CHAT: it was
+[14/07/2019, 07:21: PM] CHAT: orrr
+[14/07/2019, 07:21: PM] CHAT: u donate for tokens
+[14/07/2019, 07:21: PM] CHAT: and sell them to players?
+[14/07/2019, 07:22: PM] CHAT: so regular players who cant donate
+[14/07/2019, 07:22: PM] CHAT: can stil lbe donaters
+[14/07/2019, 07:22: PM] CHAT: if they pay bm
+[14/07/2019, 07:22: PM] CHAT: if we allow it or not
+[14/07/2019, 07:22: PM] CHAT: it will still happen
+[14/07/2019, 07:22: PM] CHAT: let the players decide
+[14/07/2019, 07:22: PM] CHAT: dont worry about prices to much
+[14/07/2019, 07:22: PM] CHAT: players set them up themself
+[14/07/2019, 07:22: PM] CHAT: no why would u
+[14/07/2019, 07:23: PM] CHAT: wut
+[14/07/2019, 07:23: PM] CHAT: dude
+[14/07/2019, 07:23: PM] CHAT: if a players have bm now
+[14/07/2019, 07:23: PM] CHAT: they wont be able to buy d tokens
+[14/07/2019, 07:23: PM] CHAT: cuz some1 needs to donate 
+[14/07/2019, 07:23: PM] CHAT: no matter what
+[14/07/2019, 07:23: PM] CHAT: imagine
+[14/07/2019, 07:24: PM] CHAT: us being reg players
+[14/07/2019, 07:24: PM] CHAT: u donate
+[14/07/2019, 07:24: PM] CHAT: like 10$
+[14/07/2019, 07:24: PM] CHAT: i wanna be donator
+[14/07/2019, 07:24: PM] CHAT: and u dont need the d tokens
+[14/07/2019, 07:24: PM] CHAT: so u could sell them
+[14/07/2019, 07:24: PM] CHAT: if u like
+[14/07/2019, 07:24: PM] CHAT: u see?
+[14/07/2019, 07:24: PM] CHAT: some1 needs donate to sell them
+[14/07/2019, 07:24: PM] CHAT: its not like u can buy d tokens from shop
+[14/07/2019, 07:24: PM] CHAT: all bm shops?
+[14/07/2019, 07:24: PM] CHAT: u just showed u
+[14/07/2019, 07:24: PM] CHAT: home
+[14/07/2019, 07:25: PM] CHAT: yh?
+[14/07/2019, 07:25: PM] CHAT: do u need more?
+[14/07/2019, 07:25: PM] CHAT: and this one
+[14/07/2019, 07:25: PM] CHAT: aswell
+[14/07/2019, 07:25: PM] CHAT: thats the whole point
+[14/07/2019, 07:25: PM] CHAT: of a pk server
+[14/07/2019, 07:25: PM] CHAT: u pay bm
+[14/07/2019, 07:25: PM] CHAT: for new items
+[14/07/2019, 07:25: PM] CHAT: better items
+[14/07/2019, 07:25: PM] CHAT: thats the whole point
+[14/07/2019, 07:26: PM] CHAT: why would u buy food?
+[14/07/2019, 07:26: PM] CHAT: it is useful?
+[14/07/2019, 07:26: PM] CHAT: it issss
+[14/07/2019, 07:26: PM] CHAT: sfor newer items
+[14/07/2019, 07:26: PM] CHAT: what do u want it to be more?
+[14/07/2019, 07:26: PM] CHAT: u mean regular gold?
+[14/07/2019, 07:26: PM] CHAT: ?
+[14/07/2019, 07:26: PM] CHAT: its not ingame
+[14/07/2019, 07:26: PM] CHAT: no use for it
+[14/07/2019, 07:26: PM] CHAT: gp is not needed
+[14/07/2019, 07:27: PM] CHAT: no1 uses gp in 2k19
+[14/07/2019, 07:27: PM] CHAT: items are?????????????
+[14/07/2019, 07:27: PM] CHAT: here
+[14/07/2019, 07:27: PM] CHAT: just the shitty items are free
+[14/07/2019, 07:27: PM] CHAT: to start with
+[14/07/2019, 07:27: PM] CHAT: yh
+[14/07/2019, 07:27: PM] CHAT: u dont earn gp anymore here?
+[14/07/2019, 07:27: PM] CHAT: u know that right
+[14/07/2019, 07:28: PM] CHAT: yh that why we have the d tokens lmao
+[14/07/2019, 07:28: PM] CHAT: players can sell other players d tokens
+[14/07/2019, 07:28: PM] CHAT: that need it
+[14/07/2019, 07:28: PM] CHAT: so they have bm 
+[14/07/2019, 07:28: PM] CHAT: to buy items they want
+[14/07/2019, 07:28: PM] CHAT: here
+[14/07/2019, 07:28: PM] CHAT: its litterly hhere
+[14/07/2019, 07:28: PM] CHAT: 15 d tokens
+[14/07/2019, 07:28: PM] CHAT: is 10k bm
+[14/07/2019, 07:29: PM] CHAT: wtf
+[14/07/2019, 07:29: PM] CHAT: are u talking about lol
+[14/07/2019, 07:29: PM] CHAT: tokens trading post?
+[14/07/2019, 07:29: PM] CHAT: what is that
+[14/07/2019, 07:29: PM] CHAT: its to sell d ticks?
+[14/07/2019, 07:30: PM] CHAT: sec
+[14/07/2019, 07:31: PM] CHAT: works for me
+[14/07/2019, 07:31: PM] CHAT: wait
+[14/07/2019, 07:31: PM] CHAT: look discord
+[14/07/2019, 07:32: PM] CHAT: now u can buy em
+[14/07/2019, 07:32: PM] CHAT: see
+[14/07/2019, 07:32: PM] CHAT: worked
+[14/07/2019, 07:33: PM] CHAT: thanks for the 6m nub
+[14/07/2019, 07:33: PM] CHAT: its 1k ea
+[14/07/2019, 07:33: PM] CHAT: u bought 1 d token
+[14/07/2019, 07:33: PM] CHAT: for 1k
+[14/07/2019, 07:33: PM] CHAT: so u have 6k d tokens
+[14/07/2019, 07:33: PM] CHAT: bought for 6m
+[14/07/2019, 07:33: PM] CHAT: 1k of bm
+[14/07/2019, 07:33: PM] CHAT: yh
+[14/07/2019, 07:34: PM] CHAT: 1k bm ea d token
+[14/07/2019, 07:34: PM] CHAT: is what u just did
+[14/07/2019, 07:35: PM] CHAT: what do u dont understand?
+[14/07/2019, 07:35: PM] CHAT: noooooo
+[14/07/2019, 07:35: PM] CHAT: it was an example
+[14/07/2019, 07:35: PM] CHAT: look
+[14/07/2019, 07:35: PM] CHAT: i was selling 6k d tokens
+[14/07/2019, 07:35: PM] CHAT: imagine i want to have 1k each
+[14/07/2019, 07:35: PM] CHAT: so 1k bm for 1 d token
+[14/07/2019, 07:36: PM] CHAT: so thats 6m for 6k d tokens
+[14/07/2019, 07:36: PM] CHAT: if u do the math
+[14/07/2019, 07:36: PM] CHAT: yh
+[14/07/2019, 07:36: PM] CHAT: 6k in total
+[14/07/2019, 07:36: PM] CHAT: but u buy em in 1
+[14/07/2019, 07:36: PM] CHAT: :p
+[14/07/2019, 07:36: PM] CHAT: btw
+[14/07/2019, 07:36: PM] CHAT: why is fezo in this project?
+[14/07/2019, 07:37: PM] CHAT: hmm kk
+[14/07/2019, 07:37: PM] CHAT: yh cool
+[14/07/2019, 07:37: PM] CHAT: dont like to have alot of ppl working on our codes
+[14/07/2019, 07:38: PM] CHAT: true
+[14/07/2019, 07:38: PM] CHAT: you guys can get owner
+[14/07/2019, 07:38: PM] CHAT: i get developer title?
+[14/07/2019, 07:38: PM] CHAT: yh rather have that
+[14/07/2019, 07:38: PM] CHAT: oh yh
+[14/07/2019, 07:38: PM] CHAT: dont hire staff 
+[14/07/2019, 07:38: PM] CHAT: wait till we get some players
+[14/07/2019, 07:39: PM] CHAT: and look for a good admin
+[14/07/2019, 07:39: PM] CHAT: not some1 thats childish
+[14/07/2019, 07:39: PM] CHAT: and gives out free shit
+[14/07/2019, 07:39: PM] CHAT: u know
+[14/07/2019, 07:39: PM] CHAT: we want this to work
+[14/07/2019, 07:39: PM] CHAT: kk cool
+[14/07/2019, 07:39: PM] CHAT: but wait
+[14/07/2019, 07:39: PM] CHAT: should admins be able to spawn?
+[14/07/2019, 07:39: PM] CHAT: kk
+[14/07/2019, 07:40: PM] CHAT: get the regular ones
+[14/07/2019, 07:40: PM] CHAT: they cool
+[14/07/2019, 07:40: PM] CHAT: yh
+[14/07/2019, 07:40: PM] CHAT: thats better
+[14/07/2019, 07:40: PM] CHAT: im getting the background done by my designer
+[14/07/2019, 07:40: PM] CHAT: should be done soon
+[14/07/2019, 07:41: PM] CHAT: so dw bout that
+[14/07/2019, 07:41: PM] CHAT: no
+[14/07/2019, 07:41: PM] CHAT: yh
+[14/07/2019, 07:41: PM] CHAT: good friend of me
+[14/07/2019, 07:42: PM] CHAT: ill ask
+[14/07/2019, 07:42: PM] CHAT: aslong players dont have it or admins or mods
+[14/07/2019, 07:42: PM] CHAT: its okay
+[14/07/2019, 07:42: PM] CHAT: but only u 
+[14/07/2019, 07:42: PM] CHAT: kk?
+[14/07/2019, 07:42: PM] CHAT: kk
+[14/07/2019, 07:43: PM] CHAT: oh ye 1 thing
+[14/07/2019, 07:43: PM] CHAT: later 
+[14/07/2019, 07:43: PM] CHAT: probs
+[14/07/2019, 07:43: PM] CHAT: im going on vacation tuesday
+[14/07/2019, 07:43: PM] CHAT: so i wont be able to code for  a week...
+[14/07/2019, 07:43: PM] CHAT: well its not hard coding rn
+[14/07/2019, 07:43: PM] CHAT: now its like fixing the npcs
+[14/07/2019, 07:43: PM] CHAT: just get npc's in place
+[14/07/2019, 07:44: PM] CHAT: fix crowns
+[14/07/2019, 07:44: PM] CHAT: ill get the background
+[14/07/2019, 07:44: PM] CHAT: today or tommorow
+[14/07/2019, 07:44: PM] CHAT: and then its most likely done
+[14/07/2019, 07:44: PM] CHAT: players can play while we code u know
+[14/07/2019, 07:45: PM] CHAT: ill be reach able on discord 24/7 when im on vacation
+[14/07/2019, 07:46: PM] CHAT: if u need help or something

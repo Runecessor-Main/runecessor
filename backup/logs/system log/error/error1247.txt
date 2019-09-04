@@ -1,0 +1,45 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Aug 21, 2019 9:38:06 AM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\.server\data\repositories\
+File Name: shop-data
+Extension: .json
+--------------------------------------------------------
+Aug 21, 2019 9:38:10 AM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\.server\data\repositories\
+File Name: merchandise-data
+Extension: .json
+--------------------------------------------------------
+Aug 21, 2019 9:38:10 AM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\.server\data\repositories\
+File Name: item-definitions
+Extension: .json
+--------------------------------------------------------
+java.lang.NullPointerException: Missing Definition For: 22115
+	at org.menaphos.model.entity.impl.item.ItemDefinitionFactory.getDefinition(ItemDefinitionFactory.java:20)
+	at org.menaphos.model.world.content.shop.model.merchandise.Merchandise.<init>(Merchandise.java:47)
+	at org.menaphos.model.world.content.shop.Shop.value(Shop.java:48)
+	at game.player.Player.appraise(Player.java:112)
+	at game.content.shop.ShopAssistant.checkShopPrice(ShopAssistant.java:406)
+	at game.content.packet.RemoveItemPacket.processPacket(RemoveItemPacket.java:113)
+	at network.packet.PacketHandler.processPacket(PacketHandler.java:373)
+	at game.player.Player.processQueuedPackets(Player.java:6696)
+	at game.player.PlayerHandler.packetProcessing(PlayerHandler.java:187)
+	at core.Server$1.lambda$execute$1(Server.java:368)
+	at com.google.common.collect.ImmutableList.forEach(ImmutableList.java:407)
+	at core.Server$1.execute(Server.java:368)
+	at core.maintick.Task.tick(Task.java:111)
+	at core.maintick.TaskScheduler.run(TaskScheduler.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

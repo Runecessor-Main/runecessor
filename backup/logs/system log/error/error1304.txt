@@ -1,0 +1,13 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Exception in thread "main" java.lang.RuntimeException: Unable to parse custom npc component: [component=@game.npc.CustomNpcComponent(identities=[@game.type.GameTypeIdentity(type=OSRS, identity=[2713])]), npc=class game.content.phantasye.gambling.DiceNPCBase]
+	at game.npc.CustomNpcMap.load(CustomNpcMap.java:97)
+	at core.Server.lambda$loadSystems$1(Server.java:545)
+	at core.benchmark.GameBenchmark.execute(GameBenchmark.java:69)
+	at core.Server.loadSystems(Server.java:546)
+	at core.Server.main(Server.java:214)
+Caused by: java.lang.NoSuchMethodException: game.content.phantasye.gambling.DiceNPCBase.<init>(int, int)
+	at java.lang.Class.getConstructor0(Class.java:3082)
+	at java.lang.Class.getConstructor(Class.java:1825)
+	at game.npc.CustomNpcMap.load(CustomNpcMap.java:77)
+	... 4 more

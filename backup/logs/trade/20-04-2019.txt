@@ -1,0 +1,76 @@
+19/04/2019, 11:54: PM PICKUP: [Kosta] picked up an item that belongs to [Marky] 38k
+19/04/2019, 11:54: PM PICKUP: [Kosta] picked up an item that belongs to [Marky] 38k
+19/04/2019, 11:57: PM PICKUP: [Fezo] picked up in combat 11 secs ago that belongs to [Inject] 11.2m
+19/04/2019, 11:58: PM PICKUP: [Inject] picked up an item that belongs to [Fezo] 11.2m
+20/04/2019, 12:14: AM TRADE:  [Marky] trading with [Zin], 0 and 753k 
+20/04/2019, 01:02: AM TRADE:  [Inject] trading with [Majuri], 6.1m and 10.8m 
+20/04/2019, 01:33: AM TRADE:  [Kosta] trading with [Majuri], 1.8m and 0 
+20/04/2019, 07:08: AM TRADE:  [Roxas] trading with [Queen], 100m and 67.5m 
+20/04/2019, 07:15: AM PICKUP: [Matt] picked up an item that belongs to [Queen] 96k
+20/04/2019, 07:15: AM PICKUP: [Matt] picked up an item that belongs to [Queen] 90k
+20/04/2019, 07:42: AM PICKUP: [Roxas] picked up an item that belongs to [Queen] 750k
+20/04/2019, 07:42: AM PICKUP: [Roxas] picked up an item that belongs to [Queen] 78k
+20/04/2019, 07:43: AM PICKUP: [Roxas] picked up an item that belongs to [Queen] 37k
+20/04/2019, 07:46: AM TRADE:  [S1ck] trading with [Matt], 532k and 0 
+20/04/2019, 08:05: AM TRADE:  [Staxxie] trading with [Miss B], 30m and 19.1m 
+20/04/2019, 09:04: AM PICKUP: [Staxxie] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+20/04/2019, 09:18: AM TRADE:  [Queen] trading with [Happy Shibe], 1.1m and 5k 
+20/04/2019, 10:05: AM TRADE:  [Miss B] trading with [Staxxie], 225k and 4m 
+20/04/2019, 10:40: AM TRADE:  [Marky] trading with [Staxxie], 31.2m and 84.7m 
+20/04/2019, 11:09: AM TRADE:  [Happy Shibe] trading with [Resourceful], 60.2m and 0 
+20/04/2019, 11:09: AM TRADE:  [Resourceful] trading with [Happy Shibe], 192k and 0 
+20/04/2019, 11:19: AM TRADE:  [Happy Shibe] trading with [Resourceful], 0 and 53.3m 
+20/04/2019, 11:47: AM TRADE:  [Resourceful] trading with [Happy Shibe], 7.4m and 0 
+20/04/2019, 12:19: PM PICKUP: [Matt] picked up in combat 13 secs ago that belongs to [Sketchy] 32k
+20/04/2019, 12:22: PM TRADE:  [Maladose] trading with [Marky], 85m and 67.5m 
+20/04/2019, 12:34: PM TRADE:  [Kiing] trading with [Kosta], 3m and 0 
+20/04/2019, 12:43: PM TRADE:  [Matt] trading with [Maladose], 0 and 3.7m 
+20/04/2019, 01:04: PM PICKUP: [Eguie] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+20/04/2019, 01:05: PM TRADE:  [Kosta] trading with [Miss B], 0 and 73k 
+20/04/2019, 01:10: PM TRADE:  [Will Goffry] trading with [Maladose], 16k and 0 
+20/04/2019, 01:32: PM PICKUP: [Maladose] picked up in combat 13 secs ago that belongs to [Will Goffry] 412k
+20/04/2019, 01:32: PM PICKUP: [Maladose] picked up in combat 20 secs ago that belongs to [Will Goffry] 1.5m
+20/04/2019, 01:32: PM PICKUP: [Maladose] picked up in combat 20 secs ago that belongs to [Will Goffry] 937k
+20/04/2019, 01:32: PM PICKUP: [Maladose] picked up in combat 23 secs ago that belongs to [Will Goffry] 225k
+20/04/2019, 01:32: PM PICKUP: [Maladose] picked up in combat 25 secs ago that belongs to [Will Goffry] 110k
+20/04/2019, 01:53: PM TRADE:  [Leap] trading with [Staxxie], 14.9m and 0 
+20/04/2019, 02:14: PM TRADE:  [Staxxie] trading with [Miss B], 20m and 1.8m 
+20/04/2019, 02:27: PM TRADE:  [Eguie] trading with [Froot Loops], 20.2m and 0 
+20/04/2019, 02:28: PM TRADE:  [Eguie] trading with [Froot Loops], 0 and 297k 
+20/04/2019, 02:35: PM TRADE:  [Eguie] trading with [Stoeptegel], 118k and 0 
+20/04/2019, 02:39: PM TRADE:  [Stoeptegel] trading with [Froot Loops], 0 and 35.6m 
+20/04/2019, 02:41: PM TRADE:  [Stoeptegel] trading with [Eguie], 2.2m and 0 
+20/04/2019, 02:44: PM TRADE:  [Staxxie] trading with [Eguie], 6m and 2.7m 
+20/04/2019, 02:48: PM TRADE:  [Stoeptegel] trading with [Eguie], 3.2m and 0 
+20/04/2019, 02:49: PM TRADE:  [Eguie] trading with [Staxxie], 2.1m and 21.7m 
+20/04/2019, 02:51: PM TRADE:  [Eguie] trading with [Staxxie], 13.4m and 5m 
+20/04/2019, 02:51: PM TRADE:  [Eguie] trading with [Staxxie], 1.5m and 10m 
+20/04/2019, 02:53: PM TRADE:  [Maladose] trading with [Eguie], 0 and 805k 
+20/04/2019, 02:54: PM TRADE:  [Eguie] trading with [Stoeptegel], 54.1m and 0 
+20/04/2019, 03:07: PM TRADE:  [Resourceful] trading with [Happy Shibe], 11.9m and 0 
+20/04/2019, 03:09: PM TRADE:  [Staxxie] trading with [Leap], 2.2m and 0 
+20/04/2019, 03:11: PM TRADE:  [Kosta] trading with [Maladose], 11k and 0 
+20/04/2019, 03:41: PM TRADE:  [Marky] trading with [Staxxie], 573k and 1.4m 
+20/04/2019, 03:42: PM TRADE:  [Staxxie] trading with [Marky], 18.7m and 85m 
+20/04/2019, 03:57: PM TRADE:  [Marky] trading with [Maladose], 18.7m and 95m 
+20/04/2019, 03:58: PM TRADE:  [Stoeptegel] trading with [Eguie], 26.8m and 0 
+20/04/2019, 04:03: PM TRADE:  [Miss B] trading with [Eguie], 0 and 25m 
+20/04/2019, 04:08: PM TRADE:  [Marky] trading with [Miss B], 0 and 25m 
+20/04/2019, 04:37: PM TRADE:  [Maladose] trading with [Marky], 67.7m and 3k 
+20/04/2019, 04:50: PM TRADE:  [Staxxie] trading with [Marky], 52.5m and 85m 
+20/04/2019, 05:07: PM TRADE:  [Leap] trading with [Staxxie], 11.4m and 0 
+20/04/2019, 05:25: PM TRADE:  [Staxxie] trading with [You], 0 and 428k 
+20/04/2019, 05:43: PM TRADE:  [You] trading with [Zin], 562.5m and 0 
+20/04/2019, 07:17: PM TRADE:  [Miss B] trading with [Majuri], 566m and 471k 
+20/04/2019, 07:38: PM PICKUP: [Staxxie] picked up an item that belongs to [You] 750k
+20/04/2019, 07:58: PM TRADE:  [Majuri] trading with [Miss B], 3.5m and 0 
+20/04/2019, 08:01: PM TRADE:  [Majuri] trading with [Miss B], 0 and 3.5m 
+20/04/2019, 08:04: PM PICKUP: [Staxxie] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+20/04/2019, 08:13: PM TRADE:  [Majuri] trading with [Miss B], 566m and 471k 
+20/04/2019, 08:47: PM PICKUP: [Leap] picked up an item that belongs to [You] 556k
+20/04/2019, 08:47: PM PICKUP: [Leap] picked up an item that belongs to [You] 229k
+20/04/2019, 08:54: PM TRADE:  [Staxxie] trading with [Zin], 290m and 0 
+20/04/2019, 08:56: PM TRADE:  [Zin] trading with [Marky], 290m and 0 
+20/04/2019, 08:57: PM TRADE:  [Marky] trading with [Staxxie], 40m and 0 
+20/04/2019, 09:07: PM TRADE:  [Marky] trading with [Staxxie], 12m and 65m 
+20/04/2019, 09:18: PM TRADE:  [Marky] trading with [Roxas], 40m and 10m 

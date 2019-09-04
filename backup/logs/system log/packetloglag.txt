@@ -1,0 +1,44 @@
+26/06/2019, 04:56: PM, Michael, Command took 64 ms
+26/06/2019, 04:57: PM, Michael, ClickNpcAttack took 127 ms
+26/06/2019, 04:58: PM, Michael, Command took 67 ms
+26/06/2019, 05:40: PM, Michael, DropItem took 84 ms
+26/06/2019, 05:41: PM, Michael, Command took 69 ms
+26/06/2019, 05:50: PM, Michael, ClickingButton took 187 ms
+26/06/2019, 06:37: PM, Michael, Bank10 took 78 ms
+26/06/2019, 07:16: PM, Michael, ClickObjectFirst took 58 ms
+03/07/2019, 09:26: PM, Michael, Chat took 57 ms
+03/07/2019, 09:32: PM, Michael, RemoveItem took 56 ms
+06/07/2019, 08:45: PM, Michael, Chat took 62 ms
+06/07/2019, 10:55: PM, Michael, WalkingTileClick took 200 ms
+06/07/2019, 10:55: PM, loops1: 0, , loops2: 0, , loops3: 0, , loops4: 0, , loops5: 0, , loops6: 0, destX: 0, destY: 0
+13/07/2019, 12:27: AM, Shooma, ClickingButton took 53 ms
+13/07/2019, 12:43: AM, Shooma, Command took 149 ms
+13/07/2019, 12:44: AM, Shooma, Command took 61 ms
+13/07/2019, 12:46: AM, Shooma, Command took 1267 ms
+14/07/2019, 04:34: PM, Shooma, ClickingButton took 55 ms
+14/07/2019, 06:52: PM, Shooma, Command took 787 ms
+23/07/2019, 01:34: AM, Michael, ClickingButton took 72 ms
+05/08/2019, 12:34: AM, Og Goku, ClickingButton took 70 ms
+05/08/2019, 12:36: AM, Og Goku, ItemOnItem took 64 ms
+05/08/2019, 12:37: AM, Og Goku, ClickingButton took 97 ms
+05/08/2019, 03:10: AM, Michael, Command took 104 ms
+08/08/2019, 01:38: AM, Shrub, ClickingButton took 531 ms
+08/08/2019, 01:54: AM, Shrub, Dialogue took 359 ms
+08/08/2019, 02:18: AM, Same Old, ClickingButton took 62 ms
+08/08/2019, 02:31: AM, Shrub, ClickNpcAttack took 110 ms
+08/08/2019, 02:31: AM, Same Old, ClickItem took 319 ms
+08/08/2019, 05:17: AM, Shrub, ClickingButton took 70 ms
+08/08/2019, 05:17: AM, Shrub, ChangeRegion1 took 190 ms
+09/08/2019, 03:40: AM, Dark Shadow, WearItem took 63 ms
+10/08/2019, 03:56: AM, Michael, ClickingButton took 78 ms
+11/08/2019, 05:45: AM, Mikehunt, ClickNpcFirst took 94 ms
+14/08/2019, 05:51: AM, Dougbolden, ClickingButton took 63 ms
+14/08/2019, 05:53: AM, Crystall777, BankAll took 110 ms
+17/08/2019, 04:28: AM, Ez, ItemOnItem took 339 ms
+17/08/2019, 04:41: AM, Ez, ClickNpcAttack took 53 ms
+17/08/2019, 04:42: AM, S T O R Y, ChangeRegion1 took 1094 ms
+17/08/2019, 04:55: AM, Ez, DropItem took 109 ms
+20/08/2019, 06:51: PM, Alk, ClickItem took 109 ms
+20/08/2019, 06:51: PM, Alk, ClickingButton took 219 ms
+20/08/2019, 06:52: PM, Seventeen, ClickingButton took 109 ms
+20/08/2019, 06:52: PM, Officialmm, ClanChat took 78 ms

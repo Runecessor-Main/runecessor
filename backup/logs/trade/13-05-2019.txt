@@ -1,0 +1,8 @@
+13/05/2019, 06:54: AM TRADE:  [Andy] trading with [Inject], 0 and 3m 
+13/05/2019, 06:58: AM TRADE:  [Andy] trading with [Inject], 48m and 41.2m 
+13/05/2019, 07:02: AM TRADE:  [Andy] trading with [Inject], 41.2m and 48m 
+13/05/2019, 07:06: AM TRADE:  [Andy] trading with [Inject], 3m and 0 
+13/05/2019, 07:36: AM TRADE:  [Inject] trading with [Andy], 0 and 750k 
+13/05/2019, 07:37: AM TRADE:  [Inject] trading with [Andy], 750k and 0 
+13/05/2019, 07:38: AM TRADE:  [Andy] trading with [Inject], 750k and 0 
+13/05/2019, 09:04: AM PICKUP: [Andy] picked up an item that belongs to [OTHER: Blood key spawn] 45m

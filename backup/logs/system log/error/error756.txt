@@ -1,0 +1,45 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+java.lang.NoClassDefFoundError: game/player/LogOutUpdate
+	at game.player.PlayerHandler.playerGameTick(PlayerHandler.java:328)
+	at core.Server$1.lambda$1(Server.java:366)
+	at com.google.common.collect.ImmutableList.forEach(ImmutableList.java:407)
+	at core.Server$1.execute(Server.java:366)
+	at core.maintick.Task.tick(Task.java:111)
+	at core.maintick.TaskScheduler.run(TaskScheduler.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: game.player.LogOutUpdate
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 13 more
+Feb 05, 2019 5:16:52 PM core.maintick.TaskScheduler run
+SEVERE: Exception during task execution.
+java.lang.NoClassDefFoundError: game/player/LogOutUpdate
+	at game.player.PlayerHandler.playerGameTick(PlayerHandler.java:328)
+	at core.Server$1.lambda$1(Server.java:366)
+	at com.google.common.collect.ImmutableList.forEach(ImmutableList.java:407)
+	at core.Server$1.execute(Server.java:366)
+	at core.maintick.Task.tick(Task.java:111)
+	at core.maintick.TaskScheduler.run(TaskScheduler.java:101)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: game.player.LogOutUpdate
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 13 more
+

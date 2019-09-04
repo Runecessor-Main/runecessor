@@ -1,0 +1,467 @@
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 13, uid: 1068057930582695936, at: -1, -1, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: oldgameframe
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 10, uid: 8667359312615796736, at: -1, -1, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: filteroff
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 10, uid: 1365138437003057152, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: musicauto
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 13, uid: 6888045129348378624, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: musicloopoff
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 643552728425469952, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 931337494004657152, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 3901236274942671872, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 191469414834955264, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 6989535905292411904, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:20: PM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 2077302239259320320, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:20: PM: Has logged off.
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 13, uid: 5213646804575233024, at: -1, -1, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: oldgameframe
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 10, uid: 7593195775982290944, at: -1, -1, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: filteroff
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 10, uid: 554085933793860608, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: musicauto
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 13, uid: 7035395775578258432, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: musicloopoff
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 4815670575685289984, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 5613932329030264832, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 7474524243663618048, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 2178060973325972480, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2254722023738336256, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 5648164765643669504, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7381930515978408960, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 3325314739978970112, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2342942274783996928, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 2819154785873780736, at: 3213, 3425, 0, wealth: 0
+Bossman at 14/07/2019, 07:31: PM: buttonId: 9158
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 1339550757189058560, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 7665014838471116800, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 4209899833855031296, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Command, Packet type: 103. Packet size: 16, uid: 3763838187842748416, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8302849145555940352, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ChangeAppearance, Packet type: 101. Packet size: 13, uid: 4666451227199843328, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 31254735982731264, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: buttonId: 14067
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 5051245861960084480, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 142973977691028480, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 1865305044878691328, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2583879375785936896, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 976533791439603712, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 1838758048339807232, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: buttonId: 89205
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8703668410977082368, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 4187384665115987968, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: buttonId: 89209
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2916982206720648192, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 6130266937851890688, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: buttonId: 89213
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7601151305386191872, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 1417784304114613248, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:31: PM: buttonId: 89209
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 7930961695571859456, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:31: PM: Sending Silent packet, Packet type: 77. Packet size: 12, uid: 3837084197525721088, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:32: PM: Sending Silent packet, Packet type: 77. Packet size: 12, uid: 969806496722078720, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:32: PM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2790264420743424000, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Bossman at 14/07/2019, 07:32: PM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 6202738897692707840, at: 3080, 3504, 0, wealth: 2
+Bossman at 14/07/2019, 07:32: PM: Has logged off.
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 13, uid: 661418041631303680, at: -1, -1, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: oldgameframe
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 10, uid: 5470345309100695552, at: -1, -1, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: filteroff
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 10, uid: 5114779654288502784, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: musicauto
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 13, uid: 3989488110180922368, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: musicloopoff
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 1134056607159497728, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 2168334176232303616, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 8000834855609484288, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 1150776020553444352, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 7277937619733403648, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 5517151958106559488, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 3608518035084965888, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 6173515698591965184, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 3463962629484386304, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 7244711768882042880, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2672166514456030208, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 4803405906633578496, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8938188419621921792, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 2364336814598332416, at: 3213, 3425, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: buttonId: 9157
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 5555476201357139968, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 954746401039081472, at: 3096, 3510, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 2319921734657025024, at: 3096, 3510, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 4297621769284879360, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 3646317902755745792, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 3. Packet size: 1, uid: 4712928917394756608, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 4024343862767035392, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 3880570782178310144, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 199018733905946624, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 1601129414717914112, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 5758303367572395008, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 2238793730020581376, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 6718040200094254080, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 77. Packet size: 12, uid: 5967582457578770432, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 5314139542048754688, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 3888334379027158016, at: 3096, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 5092369962474019840, at: 3083, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Silent packet, Packet type: 86. Packet size: 4, uid: 977952006218498048, at: 3083, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7277769783284489216, at: 3083, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 7665481058598439936, at: 3083, 3510, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 5126593174049894400, at: 3094, 3495, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 5797975190792858624, at: 3094, 3495, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2332023320959792128, at: 3094, 3495, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 3179776109120550912, at: 3094, 3495, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 8440992008253644800, at: 3419, 3572, 2, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 849243263815667712, at: 3419, 3572, 2, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 9130280892790825984, at: 3419, 3572, 2, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8310587681617858560, at: 3419, 3572, 2, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 2161762109393506304, at: 3419, 3572, 2, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 8285787802080507904, at: 2978, 3735, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 8050449733913005056, at: 2978, 3735, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 34346412767036416, at: 2978, 3735, 0, wealth: 0
+Ironman at 20/07/2019, 07:13: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7478212673851483136, at: 2978, 3735, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:13: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 4946290306527151104, at: 2978, 3735, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 4268261065282685952, at: 2857, 3336, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 1909103058852580352, at: 2857, 3336, 0, wealth: 0
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 1102444015086850048, at: 2857, 3336, 0, wealth: 0
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6645339364825799680, at: 2857, 3336, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2028403428955935744, at: 2857, 3336, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 3705901443864509440, at: 2857, 3336, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 2056215179935067136, at: 3080, 3504, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Silent packet, Packet type: 77. Packet size: 12, uid: 1800403474528489472, at: 3080, 3504, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 485348298447201280, at: 3080, 3504, 0, wealth: 0
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 6206231651256638464, at: 3080, 3504, 0, wealth: 0
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 4343430511125130240, at: 3080, 3504, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 4855963705156920320, at: 3080, 3504, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 4217121955246064640, at: 3080, 3504, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 5670724410979695616, at: 3080, 3504, 0, wealth: 0
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 5944720420726264832, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6294438018771875840, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 270230079715272704, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 1041781770010781696, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2824419297559664640, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 3239965279211691008, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8629576602087975936, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 302266343854042112, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 89205
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 3184004573393780736, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 4404580636287796224, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 89209
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 1171161769648355328, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 248304070334732288, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 89213
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 4078887171188469760, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 4575190860345326592, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 89201
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2265548271933691904, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 7680176337080535040, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 89205
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2054417349097592832, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 9222864322889368576, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 1989260366737399808, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 4089239247044231168, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 919432537167965184, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 3145
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 34310983711205376, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 7532252579890076672, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 78238
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2739558757227878400, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 95158929607590912, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 78249
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingOther, Packet type: 130. Packet size: 0, uid: 3519302635190862848, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8629488437820680192, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending WalkingTileClick, Packet type: 164. Packet size: 7, uid: 3551975854753174528, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2976419801374771200, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending WalkingMinimapClick, Packet type: 248. Packet size: 29, uid: 5661630810507117568, at: 3080, 3504, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: Walk to: 3091, 3495
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6498602480870095872, at: 3090, 3496, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6049701380757694464, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Silent packet, Packet type: 77. Packet size: 12, uid: 5045492394372387840, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 256183773340697600, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 6402049452734312448, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 9154
+Ironman at 20/07/2019, 07:14: AM: Has logged off.
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 13, uid: 9180246255086646272, at: -1, -1, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: oldgameframe
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 10, uid: 8393662884592578560, at: -1, -1, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: filteroff
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 10, uid: 8437225061315202048, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: musicauto
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 13, uid: 3917666851258185728, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: musicloopoff
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 5652824262924491776, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 2752291542963862528, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 2075930976005423104, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 8324276491983655936, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 1207780437867297792, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7602841312691430400, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2569364557623524352, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6573113063603955712, at: 3091, 3495, 0, wealth: 2
+-------------------------------------------------------------
+Ironman at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 7073787453269262336, at: 3091, 3495, 0, wealth: 2
+Ironman at 20/07/2019, 07:14: AM: buttonId: 9154
+Ironman at 20/07/2019, 07:14: AM: Has logged off.
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 13, uid: 3058385558729543680, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: oldgameframe
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 10, uid: 8849590144888974336, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: filteroff
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 10, uid: 332741419916681216, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: musicauto
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 13, uid: 3915524017969524736, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: musicloopoff
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 5236532560313083904, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 2719154858112123904, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 371819769434184704, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 6532196480195416064, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2831078648577659904, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 2615417106508412928, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7550604719300322304, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Dialogue, Packet type: 40. Packet size: 2, uid: 2640336342345326592, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8494383139549910016, at: 3213, 3425, 0, wealth: 0
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 3970719617986869248, at: 3213, 3425, 0, wealth: 0
+Ironman1 at 20/07/2019, 07:14: AM: buttonId: 9158
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ChangeRegion1, Packet type: 121. Packet size: 0, uid: 6816093446474468352, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 1956319952731468800, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending Command, Packet type: 103. Packet size: 16, uid: 2710399401246414848, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:14: AM: playerCommand: nomusicselected
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8249834614326102016, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ChangeAppearance, Packet type: 101. Packet size: 13, uid: 2954097518573844480, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 8338228521433668608, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:14: AM: buttonId: 14067
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 8076297612286024704, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:14: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 5163981919207202816, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 7297637785738344448, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 3560864650668649472, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6878937642747447296, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 1363627178808603648, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:15: AM: buttonId: 89205
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 6452784595490026496, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 6628650620656529408, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:15: AM: buttonId: 89209
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2577454541663194112, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingButton, Packet type: 185. Packet size: 2, uid: 6142031815623590912, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:15: AM: buttonId: 89213
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 2209203165849917440, at: 3080, 3504, 0, wealth: 2
+-------------------------------------------------------------
+Ironman1 at 20/07/2019, 07:15: AM: Sending ClickingInGame, Packet type: 241. Packet size: 4, uid: 1167379022205432832, at: 3080, 3504, 0, wealth: 2
+Ironman1 at 20/07/2019, 07:15: AM: Has logged off.

@@ -1,0 +1,25 @@
+16/04/2019, 10:13: AM TRADE:  [Maxer] trading with [Happy Shibe], 36.7m and 0 
+16/04/2019, 11:46: AM TRADE:  [Maxer] trading with [Happy Shibe], 1.1m and 0 
+16/04/2019, 12:11: PM TRADE:  [Bob] trading with [Essex], 275k (50 tokens) and 0 
+16/04/2019, 01:04: PM PICKUP: [Maladose] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+16/04/2019, 02:32: PM TRADE:  [Will Goffry] trading with [Maladose], 0 and 105k 
+16/04/2019, 02:33: PM TRADE:  [Will Goffry] trading with [Maladose], 0 and 880k 
+16/04/2019, 02:41: PM TRADE:  [Maladose] trading with [Will Goffry], 4.3m and 0 
+16/04/2019, 02:55: PM TRADE:  [Will Goffry] trading with [Maladose], 1.8m and 0 
+16/04/2019, 04:57: PM TRADE:  [Maladose] trading with [Roxas], 12m and 0 
+16/04/2019, 04:59: PM TRADE:  [Roxas] trading with [Maladose], 0 and 3.7m 
+16/04/2019, 05:02: PM TRADE:  [Maladose] trading with [Bob], 5k and 9m 
+16/04/2019, 05:05: PM TRADE:  [Maladose] trading with [Eguie], 5m and 0 
+16/04/2019, 05:36: PM TRADE:  [Eguie] trading with [Maladose], 5m and 2k 
+16/04/2019, 05:57: PM TRADE:  [Roxas] trading with [Miss B], 62k and 3.7m 
+16/04/2019, 06:21: PM TRADE:  [Maladose] trading with [Queen], 70m and 11.2m 
+16/04/2019, 06:23: PM TRADE:  [Maladose] trading with [Andreas], 5m and 4.5m 
+16/04/2019, 06:25: PM TRADE:  [Queen] trading with [Andreas], 11.2m and 72.7m 
+16/04/2019, 07:35: PM TRADE:  [Maladose] trading with [Froot Loops], 600k and 0 
+16/04/2019, 08:03: PM PICKUP: [Froot Loops] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+16/04/2019, 08:27: PM TRADE:  [Froot Loops] trading with [Eguie], 34k and 0 
+16/04/2019, 09:09: PM TRADE:  [Froot Loops] trading with [Eguie], 2.8m and 0 
+16/04/2019, 09:15: PM TRADE:  [The] trading with [Majuri], 0 and 15m 
+16/04/2019, 10:03: PM PICKUP: [Froot Loops] picked up an item that belongs to [OTHER: Blood key spawn] 45m
+16/04/2019, 10:25: PM TRADE:  [Essex] trading with [Majuri], 3.7m and 3.7m 
+16/04/2019, 11:24: PM TRADE:  [Eguie] trading with [The], 118k and 0 

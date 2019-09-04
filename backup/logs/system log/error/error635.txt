@@ -1,0 +1,22 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Exception in thread "Timer-3" java.lang.NullPointerException
+	at java.util.Objects.requireNonNull(Unknown Source)
+	at java.util.Arrays$ArrayList.<init>(Unknown Source)
+	at java.util.Arrays.asList(Unknown Source)
+	at utility.FileUtility.getFilesList(FileUtility.java:79)
+	at utility.OsBotCommunication.readAndDeleteAFileFromDirectory(OsBotCommunication.java:69)
+	at utility.OsBotCommunication$1.run(OsBotCommunication.java:56)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.mina.transport.socket.nio.SocketAcceptor.registerNew(SocketAcceptor.java:363)
+	at org.apache.mina.transport.socket.nio.SocketAcceptor.access$800(SocketAcceptor.java:55)
+	at org.apache.mina.transport.socket.nio.SocketAcceptor$Worker.run(SocketAcceptor.java:222)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Unknown Source)
