@@ -11,11 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
@@ -26,6 +22,7 @@ import core.ServerConstants;
 import core.benchmark.GameBenchmark;
 import game.NamedPosition;
 import game.content.phantasye.minigame.pirate.PirateCannon;
+import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.npc.NpcWalkToEvent;
 import game.position.Position;
 import game.position.PositionUtils;
@@ -173,23 +170,17 @@ public class AdministratorCommand {
             return true;
         }
         if (command.equals("tt")) {
-//			player.createShoppingSession(ShopFactory.getShop(1));
-//			PirateCannon cannon = new PirateCannon(player);
-//			Server.objectManager.addObject(cannon);
-//
-//			cannon.face = Face.SOUTHWEST.ordinal();
+            player.setPirateMinigameSession(new PirateMinigame(player));
             Location playerLocation = new Location(player.getX(), player.getHeight(),
                     player.getY());
-            Location cannonLocation = new Location(player.getX() + 2, player.getHeight(),
-                    player.getY());
-
+            final Location location = PirateCannon.spawnForTarget(player);
             PirateCannon cannon = new PirateCannon(
-                    cannonLocation,
-                    0,
+                    location,
+                    location.directionFrom(playerLocation),
                     player);
-            Server.objectManager.addObject(cannon);
-            System.out.println(cannon.face);
-//            cannon.fire();
+
+            cannon.fire();
+
         }
         if (command.equals("doubleitems")) {
             int loops = 100_000;

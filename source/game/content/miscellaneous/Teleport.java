@@ -492,6 +492,7 @@ public class Teleport {
 	private static boolean canTeleport(Player player, String teleportType, int x, int y, int height) {
 		if(player.getHeight() == 8 && Combat.wasUnderAttackByAnotherPlayer(player,7000)) {
 			player.playerAssistant.sendMessage("You can not until after 7 seconds out of combat.");
+			return false;
 		}
 		if (player.isJailed()) {
 			player.playerAssistant.sendMessage("You can't teleport out of jail.");

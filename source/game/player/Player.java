@@ -25,6 +25,7 @@ import game.content.minigame.Minigame;
 import game.content.miscellaneous.*;
 import game.content.packet.PickUpItemPacket;
 import game.content.phantasye.PlayerDetails;
+import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.content.prayer.Prayer;
 import game.content.prayer.PrayerManager;
 import game.content.prayer.book.regular.QuickPrayers;
@@ -124,6 +125,21 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         this.attackTime = value;
     }
 
+
+    private PirateMinigame pirateMinigameSession;
+
+    public PirateMinigame getPirateMinigameSession() {
+        return pirateMinigameSession;
+    }
+
+    public void setPirateMinigameSession(PirateMinigame session) {
+        this.pirateMinigameSession = session;
+    }
+
+    public void resetPirateMinigameSession() {
+        this.setPirateMinigameSession(null);
+        this.setPirateMinigameSession(new PirateMinigame(this));
+    }
 
     private ShoppingSession shoppingSession;
     private final ActionInvoker actionInvoker = new ActionInvoker();

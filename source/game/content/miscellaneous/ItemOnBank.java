@@ -1,6 +1,7 @@
 package game.content.miscellaneous;
 
 import core.GameType;
+import game.item.Item;
 import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.object.clip.ObjectDefinitionServer;
@@ -43,20 +44,36 @@ public class ItemOnBank {
 
 				// Platinum tokens
 				if (itemId == 13204 && GameType.isOsrsEco()) {
+					final int tokenPrice = ItemDefinition.getDefinitions()[13204].price;
 					int amount = ItemAssistant.getItemAmount(player, itemId);
 					int gp = 995;
-					if (amount < 2147483) {
+					final int gpOnHand = ItemAssistant.getItemAmount(player,995);
+					final int tokensOnHand = amount;
+					final int tokenValue = tokensOnHand * tokenPrice;
+					final int gpTotal = gpOnHand + tokenValue;
+					if(gpTotal < Integer.MAX_VALUE && gpTotal > 0) {
 						if (ItemAssistant.hasItemAmountInInventory(player, itemId, amount)) {
 							ItemAssistant.deleteItemFromInventory(player, itemId, amount);
 							ItemAssistant.addItem(player, gp, amount * 1000000);
 							player.getDH().sendItemChat("",
-							                            "You exchange @blu@" + Misc.formatRunescapeStyle(amount) + "@bla@ Platinum tokens for @blu@" + Misc.formatRunescapeStyle(
-									                            amount * 1000000) + "@bla@ Coins.", gp + 9, 200, 35, 0);
+									"You exchange @blu@" + Misc.formatRunescapeStyle(amount) + "@bla@ Platinum tokens for @blu@" + Misc.formatRunescapeStyle(
+											amount * tokenPrice) + "@bla@ Coins.", gp + 9, 200, 35, 0);
 						}
-
 					} else {
-						player.getDH().sendStatement("You must have less than " + Misc.formatNumber(2147483) + " tokens to do this!");
+						player.getDH().sendStatement("You can not carry this much gold.");
 					}
+//					if (amount < 2147483) {
+//						if (ItemAssistant.hasItemAmountInInventory(player, itemId, amount)) {
+//							ItemAssistant.deleteItemFromInventory(player, itemId, amount);
+//							ItemAssistant.addItem(player, gp, amount * 1000000);
+//							player.getDH().sendItemChat("",
+//							                            "You exchange @blu@" + Misc.formatRunescapeStyle(amount) + "@bla@ Platinum tokens for @blu@" + Misc.formatRunescapeStyle(
+//									                            amount * 1000000) + "@bla@ Coins.", gp + 9, 200, 35, 0);
+//						}
+//
+//					} else {
+//						player.getDH().sendStatement("You must have less than " + Misc.formatNumber(2147483) + " tokens to do this!");
+//					}
 					return true;
 				}
 

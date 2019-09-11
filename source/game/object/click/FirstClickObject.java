@@ -5,6 +5,8 @@ import core.Plugin;
 import core.Server;
 import core.ServerConfiguration;
 import core.ServerConstants;
+import game.content.phantasye.minigame.pirate.PirateCannon;
+import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.position.Position;
 import game.content.bank.Bank;
 import game.content.consumable.Potions;
@@ -76,7 +78,10 @@ import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import game.player.movement.Movement;
 import network.packet.PacketHandler;
+import org.menaphos.model.world.location.Location;
 import utility.Misc;
+
+import java.util.Optional;
 
 public class FirstClickObject {
 
@@ -148,8 +153,21 @@ public class FirstClickObject {
 		if (!GameType.isOsrs()) {
 			return;
 		}
-		switch (objectId) {
 
+		if(player.getPirateMinigameSession() != null && player.getPirateMinigameSession().processClick(objectId,objectX,objectY)) {
+			return;
+		}
+
+		switch (objectId) {
+			case PirateMinigame.GANGPLANK:
+				player.resetPirateMinigameSession();
+				player.getPirateMinigameSession().boardBoat();
+				break;
+			case 11212:
+				player.getPA().movePlayer(3684 ,2953, 0);
+				player.receiveMessage("You disembark the boat...");
+				player.setPirateMinigameSession(null);
+				break;
 		case 2640:
 		case 409:
 		case 10638:
