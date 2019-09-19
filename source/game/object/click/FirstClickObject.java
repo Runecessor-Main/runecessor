@@ -42,6 +42,7 @@ import game.content.quicksetup.QuickSetUp;
 import game.content.skilling.Farming;
 import game.content.skilling.Mining;
 import game.content.skilling.Runecrafting;
+import game.content.skilling.WellofGoodwill;
 import game.content.skilling.Woodcutting;
 import game.content.skilling.agility.AgilityAssistant;
 import game.content.skilling.agility.AgilityShortcuts;
@@ -54,6 +55,7 @@ import game.content.skilling.hunter.trap.HunterTrap;
 import game.content.skilling.smithing.Smithing;
 import game.content.skilling.thieving.Stalls;
 import game.content.staff.StaffActivity;
+import game.content.starter.GameMode;
 import game.content.worldevent.Tournament;
 import game.entity.Entity;
 import game.entity.MovementState;
@@ -153,11 +155,9 @@ public class FirstClickObject {
 		if (!GameType.isOsrs()) {
 			return;
 		}
-
 		if(player.getPirateMinigameSession() != null && player.getPirateMinigameSession().processClick(objectId,objectX,objectY)) {
 			return;
 		}
-
 		switch (objectId) {
 			case PirateMinigame.GANGPLANK:
 				player.resetPirateMinigameSession();
@@ -168,8 +168,10 @@ public class FirstClickObject {
 				player.receiveMessage("You disembark the boat...");
 				player.setPirateMinigameSession(null);
 				break;
+		
 		case 2640:
 		case 409:
+		case 20377:
 		case 10638:
 		case 14860:
 		case 30253:
@@ -184,6 +186,8 @@ public class FirstClickObject {
 				}
 			}
 			break;
+			//Objects to open link
+
 		case 31674:
 			DonatorContent.leaveDonatorDungeon(player);
 			break;
@@ -353,7 +357,9 @@ public class FirstClickObject {
 				minigame.addPlayer(player, MinigameAreaKey.FIGHT_PIT_LOBBY);
 			}
 			return;
-
+		case 30251:
+			player.sendMessage("Testing");
+			break;
 		case 11845:
 			if (GameType.isOsrsPvp() && !ServerConfiguration.DEBUG_MODE) {
 				return;
@@ -558,6 +564,9 @@ public class FirstClickObject {
 		case 18990:// Exit 1 from Lava maze dungeon
 			ObjectEvent.climbUpLadder(player, 3069, 3857, 0);
 			break;
+		case 26492:// game updates list
+			player.getPA().openWebsite("runecessor.com/forum/index.php?/forum/61-updates/", false);
+			break;
 		case 4879:
 			ObjectEvent.climbDownLadder(player, 2767, 9190, 0);
 			Plugin.execute("start_mm_dialogue", player);
@@ -578,7 +587,15 @@ public class FirstClickObject {
 			player.startAnimation(832);
 			player.getDH().sendItemChat("", "You take some molten glass.", 1775, 200, 14, 0);
 			break;
-
+		case 15506:
+			if (ItemAssistant.getFreeInventorySlots(player) == 0) {
+				player.getDH().sendStatement("You need at least 1 free inventory space to do this.");
+				return;
+			}
+			ItemAssistant.addItem(player, 1947, ItemAssistant.getFreeInventorySlots(player));
+			player.startAnimation(832);
+			player.getDH().sendItemChat("", "You take some molten glass.", 1947, 200, 14, 0);
+			break;
 		case 15275:
 			if (ItemAssistant.getFreeInventorySlots(player) == 0) {
 				player.getDH().sendStatement("You need at least 1 free inventory space to do this.");
@@ -869,6 +886,7 @@ public class FirstClickObject {
 		// Ladder climb up.
 		case 11794:
 		case 11801:
+		case 20353:
 		case 16683:
 		case 12964:
 		case 11:
@@ -895,7 +913,6 @@ public class FirstClickObject {
 		case 26797:
 			player.getPA().openWebsite("www.Runecessor.com", false);
 			break;
-			
 		// Deposit box.
 		case 26254:
 		case 6948:
