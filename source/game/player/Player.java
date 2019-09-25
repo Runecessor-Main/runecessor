@@ -25,6 +25,8 @@ import game.content.minigame.Minigame;
 import game.content.miscellaneous.*;
 import game.content.packet.PickUpItemPacket;
 import game.content.phantasye.PlayerDetails;
+import game.content.phantasye.event.WildernessChestController;
+import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.content.prayer.Prayer;
 import game.content.prayer.PrayerManager;
@@ -101,6 +103,16 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private long attackTime;
     private long bankDelay;
 
+    private BossInstance activeBossInstance;
+
+    public BossInstance getActiveBossInstance() {
+        return activeBossInstance;
+    }
+
+    public void setActiveBossInstance(BossInstance activeBossInstance) {
+        this.activeBossInstance = activeBossInstance;
+    }
+
     public long getPotDelay() {
         return potDelay;
     }
@@ -157,18 +169,29 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     private boolean hasKeyForLootableObject(LootableObject lootableObject) {
-        return ItemAssistant.hasItemAmountInInventory(this, lootableObject.getKeyId(), lootableObject.getKeyQty());
+        if (lootableObject.getKeyId() != -1)
+            return ItemAssistant.hasItemAmountInInventory(this, lootableObject.getKeyId(), lootableObject.getKeyQty());
+        return true;
     }
 
     private void openLootableObject(LootableObject lootableObject) {
         if (this.hasKeyForLootableObject(lootableObject)) {
-            Loot loot = lootableObject.open();
+            switch (lootableObject.getId()) {
+                case 11341:
+                    WildernessChestController.getInstance().openChest(this);
+                    break;
+                default:
+                    Loot loot = lootableObject.open();
+                    this.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount());
+                    this.getPA().sendMessage(lootableObject.getOpenMessage() + " and receive x" + loot.getItem().getAmount() + " " + ItemAssistant.getItemName(loot.getItem().getId()));
+                    break;
+            }
+
             this.consumeKeyForLootableObject(lootableObject);
             this.startAnimation(lootableObject.getAnimationId());
-            ItemAssistant.addItem(this,loot.getItem().getId(), loot.getItem().getAmount());
-            this.getPA().sendMessage(lootableObject.getOpenMessage() + " and receive x" + loot.getItem().getAmount() + " " + ItemAssistant.getItemName(loot.getItem().getId()));
-        } else if (lootableObject.getAttemptMessage() == null) {
-            this.getPA().sendMessage("You need " + lootableObject.getKeyQty() + "x " + ItemAssistant.getItemName(lootableObject.getKeyId()) + " to open this.");
+
+        } else if (lootableObject.getAttemptMessage().isEmpty()) {
+            this.getPA().sendMessage("You need " + ServerConstants.RED_COL + lootableObject.getKeyQty() + "x " + ItemAssistant.getItemName(lootableObject.getKeyId()) + "</col> to open this.");
         } else {
             this.getPA().sendMessage(lootableObject.getAttemptMessage());
         }
@@ -177,9 +200,9 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private void openLootableItem(LootableItem lootableItem) {
         Loot loot = lootableItem.open();
         String name = ItemAssistant.getItemName(loot.getItem().getId());
-        ItemAssistant.addItem(this,loot.getItem().getId(), loot.getItem().getAmount());
+        ItemAssistant.addItem(this, loot.getItem().getId(), loot.getItem().getAmount());
         this.getPA().sendMessage("You receive x" + loot.getItem().getAmount() + " " + name);
-        ItemAssistant.deleteItemFromInventory(this,lootableItem.getId(), 1);
+        ItemAssistant.deleteItemFromInventory(this, lootableItem.getId(), 1);
     }
 
     public void loot(LootableContainer lootable) {
@@ -254,12 +277,6 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     @Override
-    public <T extends CharacterDetails> Optional<T> getDetails() {
-        PlayerDetails details = new PlayerDetails(null);
-        return Optional.empty();
-    }
-
-    @Override
     public int getId() {
         return playerId;
     }
@@ -286,6 +303,16 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     @Override
     public void receiveMessage(String s) {
         this.getPA().sendMessage(s);
+    }
+
+    @Override
+    public boolean hasItem(int i, int i1) {
+        return false;
+    }
+
+    @Override
+    public void performAnimation(int i) {
+
     }
 
     @Override

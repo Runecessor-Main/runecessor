@@ -5,8 +5,10 @@ import core.Plugin;
 import core.Server;
 import core.ServerConfiguration;
 import core.ServerConstants;
+import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateCannon;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
+import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.position.Position;
 import game.content.bank.Bank;
 import game.content.consumable.Potions;
@@ -98,6 +100,10 @@ public class FirstClickObject {
 				return;
 			}
 		}
+
+		if(objectId == 13633) {
+			BossInstanceController.getInstance().startInstance(player);
+		}
 		
 		// player.getPA().sendMessage(""+objectX+ " "+objectY );
 		if (WildernessObjects.doWildernessObject(player, objectId)) {
@@ -157,7 +163,10 @@ public class FirstClickObject {
 		if(player.getPirateMinigameSession() != null && player.getPirateMinigameSession().processClick(objectId,objectX,objectY)) {
 			return;
 		}
-
+		if(LootFactory.getLootableObject(objectId) != null) {
+			player.loot(LootFactory.getLootableObject(objectId));
+			return;
+		}
 		switch (objectId) {
 			case PirateMinigame.GANGPLANK:
 				player.resetPirateMinigameSession();
