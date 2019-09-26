@@ -119,7 +119,7 @@ public final class WildernessChestController {
         spawnQueue.addAll(Arrays.asList(Spawn.values()));
     }
 
-    private void spawnChest() {
+    public void spawnChest() {
         if (!spawnQueue.isEmpty()) {
             final Spawn spawn = spawnQueue.poll();
             final Region region = new Region(

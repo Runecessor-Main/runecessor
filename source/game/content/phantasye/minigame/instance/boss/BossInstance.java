@@ -6,6 +6,8 @@ import game.content.phantasye.RegionUtils;
 import game.content.phantasye.minigame.instance.Instancable;
 import game.content.phantasye.minigame.instance.InstanceFactory;
 import game.content.phantasye.minigame.instance.InstanceKey;
+import game.item.GameItem;
+import game.item.ItemAssistant;
 import game.npc.Npc;
 import game.npc.NpcHandler;
 import game.player.Player;
@@ -14,6 +16,8 @@ import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.model.world.location.region.Region;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -26,22 +30,37 @@ public class BossInstance implements Instancable {
     private final InstanceKey key;
     private final Timer eventTimer;
     private final Region instanceRegion;
+    private final List<GameItem> itemsOnEntry;
 
     public BossInstance(Npc boss, Player player) {
         this.boss = boss;
+        this.itemsOnEntry = new ArrayList<>();
         this.instanceOwner = player;
         this.key = InstanceFactory.getKeyForInstance(this);
         this.eventTimer = new Timer();
         this.instanceRegion = new Region(
-                new Location(2580,key.getInstance(),3150),
-                new Location(2607,key.getInstance(),3172)
+                new Location(2580, key.getInstance(), 3150),
+                new Location(2607, key.getInstance(), 3172)
 
         );
+    }
+
+    private void saveItems() {
+        for (int i = 0; i < instanceOwner.playerItems.length; i++) {
+            if (instanceOwner.playerItems[i] > 0)
+                itemsOnEntry.add(new GameItem(instanceOwner.playerItems[i] - 1, instanceOwner.playerItemsN[i]));
+        }
+
+        for (int i = 0; i < instanceOwner.playerEquipment.length; i++) {
+            if (instanceOwner.playerEquipment[i] > 0)
+                itemsOnEntry.add(new GameItem(instanceOwner.playerEquipment[i], instanceOwner.playerEquipmentN[i]));
+        }
     }
 
     public void create(Region region) {
         instanceOwner.receiveMessage(ServerConstants.RED_COL + "Boss will spawn in 5 seconds...");
         instanceOwner.setActiveBossInstance(this);
+        this.saveItems();
         final Location location = RegionUtils.getLocationInRegion(region);
         eventTimer.schedule(new TimerTask() {
             @Override
@@ -53,7 +72,7 @@ public class BossInstance implements Instancable {
                         location.getZCoordinate(),
                         key.getInstance(),
                         false,
-                        true);
+                        false);
 
                 startSession();
                 process();
@@ -69,11 +88,11 @@ public class BossInstance implements Instancable {
             public void run() {
                 currentMinute.increment();
                 instanceOwner.receiveMessage(ServerConstants.RED_COL + "Instance will close in " + (SESSION_DURATION - currentMinute.value()) + " Minutes.");
-                if(currentMinute.value() == SESSION_DURATION) {
+                if (currentMinute.value() == SESSION_DURATION) {
                     this.cancel();
                 }
             }
-        },60000,60000);
+        }, 60000, 60000);
     }
 
     public void startSession() {
@@ -92,16 +111,32 @@ public class BossInstance implements Instancable {
         eventTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                if(!instanceRegion.contains(new Location(instanceOwner.getX(),instanceOwner.getHeight(),instanceOwner.getY()))) {
+                if (!instanceRegion.contains(new Location(instanceOwner.getX(), instanceOwner.getHeight(), instanceOwner.getY()))) {
                     this.cancel();
                 }
             }
+
             @Override
             public boolean cancel() {
                 closeInstance();
                 return true;
             }
-        },600,600);
+        }, 600, 600);
+    }
+
+    private void refundItemsAndClose() {
+        final Timer respawnTimer = new Timer();
+        respawnTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                ItemAssistant.deleteAllItems(instanceOwner);
+                itemsOnEntry.forEach(gameItem -> ItemAssistant.addItemToInventoryOrDrop(instanceOwner, gameItem.getId(), gameItem.getAmount()));
+                closeInstance();
+                respawnTimer.cancel();
+            }
+        },5000);
+
+
     }
 
     public void closeInstance() {

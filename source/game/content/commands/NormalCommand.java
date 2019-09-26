@@ -78,6 +78,7 @@ import network.sql.SQLConstants;
 import network.sql.SQLNetwork;
 import network.sql.query.impl.DoubleParameter;
 import network.sql.query.impl.StringParameter;
+import org.menaphos.model.world.content.shop.factory.ShopFactory;
 import utility.AESencrp;
 import utility.EmailSystem;
 import utility.FileUtility;
@@ -101,7 +102,7 @@ public class NormalCommand {
 	public static boolean normalCommands(Player player, String playerCommand) {
 		Misc.print("Name: " + player.getPlayerName() + " used command : " + playerCommand);
 		if (playerCommand.equals("test1")) {
-			test1(player, playerCommand);
+			player.createShoppingSession(ShopFactory.getShop(1));
 			return true;
 		} else if(playerCommand.equals("dmm")) {
 			if (Teleport.spellTeleport(player, 3094, 3496, 8, false)) {

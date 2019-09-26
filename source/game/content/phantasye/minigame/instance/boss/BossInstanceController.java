@@ -2,6 +2,7 @@ package game.content.phantasye.minigame.instance.boss;
 
 import game.content.dialogue.DialogueChain;
 import game.content.miscellaneous.Teleport;
+import game.item.ItemAssistant;
 import game.npc.NpcHandler;
 import game.player.Player;
 import org.menaphos.model.world.location.Location;
@@ -29,6 +30,7 @@ public final class BossInstanceController {
     }
 
     public void startInstance(Player player) {
+        ItemAssistant.addItemToInventoryOrDrop(player,BOSS_TICKET,50); //TODO DELETE BEFORE RELEASE
         this.sendDialog(player);
     }
 

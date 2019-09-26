@@ -21,6 +21,7 @@ import core.ServerConfiguration;
 import core.ServerConstants;
 import core.benchmark.GameBenchmark;
 import game.NamedPosition;
+import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateCannon;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
@@ -181,9 +182,9 @@ public class AdministratorCommand {
 //                    player);
 //
 //            cannon.fire();
-
-            BossInstanceController.getInstance().startInstance(player);
-            player.receiveMessage("TEST");
+            WildernessChestController.getInstance().spawnChest();
+//            player.createShoppingSession(ShopFactory.getShop(1));
+//            BossInstanceController.getInstance().startInstance(player);
 
         }
         if (command.equals("doubleitems")) {
