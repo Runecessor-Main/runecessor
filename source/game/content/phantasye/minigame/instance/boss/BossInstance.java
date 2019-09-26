@@ -114,6 +114,9 @@ public class BossInstance implements Instancable {
                 if (!instanceRegion.contains(new Location(instanceOwner.getX(), instanceOwner.getHeight(), instanceOwner.getY()))) {
                     this.cancel();
                 }
+                if(instanceOwner.dead) {
+                    instanceOwner.receiveMessage(ServerConstants.RED_COL + "Your Items have been dropped at ::home. ");
+                }
             }
 
             @Override
