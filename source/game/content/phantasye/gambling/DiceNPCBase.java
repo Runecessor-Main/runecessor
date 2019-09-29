@@ -4,6 +4,7 @@ import core.GameType;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
 import game.item.GameItem;
+import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.npc.CustomNpcComponent;
 import game.npc.Npc;
@@ -14,7 +15,9 @@ import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.entity.impl.item.container.ItemContainer;
 import org.menaphos.entity.impl.item.container.impl.DefaultItemContainerImpl;
+
 import org.menaphos.entity.impl.item.container.impl.MerchandiseItemContainerImpl;
+
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.location.Location;
@@ -26,6 +29,9 @@ import java.util.*;
 @CustomNpcComponent(identities = @GameTypeIdentity(type = GameType.OSRS, identity = 2713))
 public class DiceNPCBase extends Npc implements NonPlayableCharacter {
 
+    private static final int COINS = 995;
+    private static final int TOKENS = 13204;
+
     private static DiceNPCBase instance = null;
 
     private final AdjustableNumber<Integer> coins;
@@ -34,14 +40,18 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     private final List<GameItem> playersWager;
     private final ItemContainer inventory;
 
+    private CoinPayoutDispenseChain payoutDispenseChain;
+
     private Timer wageTimer;
 
     private DiceNPCBase(int id, int type) {
         super(-1, type);
         this.actionInvoker = new ActionInvoker();
-        this.coins = new AdjustableInteger(500000000);
+        this.coins = new AdjustableInteger(0);
         this.playersWager = new ArrayList<>();
         this.inventory = new MerchandiseItemContainerImpl(50);
+        this.inventory = new DefaultItemContainerImpl(50);
+        this.addItemToInventory(995, 500000000);
     }
 
     public static DiceNPCBase getInstance(int index) {
@@ -122,8 +132,8 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         int roll = Misc.random(1, 100);
         int maxValue = roll - 55;
         int finalRoll = roll;
-        if(maxValue > 0) {
-            finalRoll -= Misc.random(1,20);
+        if (maxValue > 0) {
+            finalRoll -= Misc.random(1, 20);
         }
         final int modifiedRoll = finalRoll;
         this.performAnimation(11000);
@@ -134,6 +144,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     private void announceFinalRoll(int finalRoll) {
         if (finalRoll > 55) {
             NpcHandler.getNpcByNpcId(getId()).forceChat("It's a " + finalRoll + "! We have a winner!");
+            this.payoutDispenseChain = new CoinPayoutDispenseChain(player);
             payout();
         } else {
             NpcHandler.getNpcByNpcId(getId()).forceChat("It's a " + finalRoll + "! Better luck next time!");
@@ -142,23 +153,33 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     }
 
     private void collect() {
-        playersWager.forEach(item -> this.addItemToInventory(item.getId(), item.getAmount()));
         this.reset();
     }
 
     private void payout() {
-        playersWager.stream().filter(item->item.getId() != 995).forEach(item -> player.addItemToInventory(item.getId(), item.getAmount()));
-        final int winnings = playersWager.stream().mapToInt(item->ItemDefinition.getDefinitions()[item.getId()].price * item.getAmount()).sum();
-
-        if (this.convertWinningsToTokens(winnings) > 0) {
-            player.addItemToInventory(13204, this.convertWinningsToTokens(winnings * 2));
-            this.removeItemFromInventory(995, winnings);
-        } else {
-            player.addItemToInventory(995, winnings);
-            this.removeItemFromInventory(995, winnings);
-        }
+        playersWager.forEach(item->payPlayer(item.getId(),item.getAmount()));
         this.reset();
     }
+
+    private void payPlayer(int id, int amount) {
+        final int payout = amount * 2;
+        if(!removeItemFromInventory(id,payout)) {
+             removeItemFromInventory(COINS,ItemDefinition.getDefinitions()[id].price * amount);
+        }
+        if (ItemAssistant.getItemAmount(player, id) + payout < Integer.MAX_VALUE && id != COINS) {
+            player.addItemToInventory(id, payout);
+        } else if(id == COINS){
+            payoutDispenseChain.payout(payout);
+        } else {
+            payoutDispenseChain.payout((ItemDefinition.getDefinitions()[id].price * amount) * 2) ;
+        }
+    }
+
+    private void clean() {
+        inventory.contents().clear();
+        this.addItemToInventory(COINS, 500000000);
+    }
+
 
     private void sendPlayEarlyDialog() {
         player.setDialogueChain(new DialogueChain().npc(
@@ -212,7 +233,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
                 if (!ItemDefinition.getDefinitions()[itemId].untradeableOsrsEco) {
                     if (this.convertToCoins(itemId, amount) && player.removeItemFromInventory(itemId, amount)) {
                         this.playersWager.add(new GameItem(itemId, amount));
-                        return true;
+                        return this.addItemToInventory(itemId, amount);
                     }
                 } else {
                     this.sendMessage("I can not accept untradable items.");
@@ -228,31 +249,30 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
 
     private boolean convertToCoins(int itemId, int amount) {
         final int value = ItemDefinition.getDefinitions()[itemId].price * amount;
-            if (value <= this.getMaxBid()) {
-                return true;
-            } else {
-                this.sendMessage("I can't accept an offer that high! My current max trade is: " + this.formatValue(this.getMaxBid()) + " GP.");
-            }
+        if (value <= this.getMaxBid()) {
+            return true;
+        } else {
+            this.sendMessage("I can't accept an offer that high! My current max trade is: " + this.formatValue(this.getMaxBid()) + " GP.");
+        }
         return false;
     }
 
-    public int getCurrentWager() {
+    private int getCurrentWager() {
         if (!playersWager.isEmpty())
             return playersWager.stream().mapToInt(item -> ItemDefinition.getDefinitions()[item.getId()].price * item.getAmount()).sum();
         return 0;
     }
 
-    public String formatValue(int value) {
+    private String formatValue(long value) {
         return NumberFormat.getInstance().format(value) + " GP";
     }
 
     public int getMaxBid() {
         return coins.value();
-    }
+    private long getMaxBid() {
+        return Arrays.stream(inventory.getReadOnlyContents()).filter(itemSlot -> itemSlot.getId() != -1).mapToInt(item -> ItemDefinition.getDefinitions()[item.getId()].price * item.count()).sum();
 
-//    public int getMaxTrade() {
-//        return Integer.MAX_VALUE - coins.value();
-//    }
+    }
 
     @Override
     public int getId() {
@@ -261,18 +281,13 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
 
     @Override
     public boolean addItemToInventory(int id, int amt) {
-            final int value = ItemDefinition.getDefinitions()[id].price * amt;
-            coins.add(value);
-            return true;
+        return inventory.add(id, amt);
     }
 
     @Override
     public boolean removeItemFromInventory(int id, int amt) {
-        if(coins.value() > amt) {
-            coins.subtract(amt);
-            return true;
-        }
-        return false;
+        System.out.println("REMOVING ID: " + id + " AMOUNT: " + amt);
+        return inventory.remove(id, amt);
     }
 
     @Override

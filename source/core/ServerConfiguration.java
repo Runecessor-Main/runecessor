@@ -34,7 +34,7 @@ public class ServerConfiguration {
 	/**
 	 * Port used.
 	 */
-	public static int PORT = 43594;
+	public static int PORT = 5555;
 
 	/**
 	 * True, to send a packet to the client informing it to force update items every game tick.

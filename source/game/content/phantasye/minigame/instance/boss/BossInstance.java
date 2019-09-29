@@ -150,9 +150,9 @@ public class BossInstance implements Instancable {
     }
 
     public void removePlayerFromInstance() {
-        Teleport.spellTeleport(instanceOwner, 3089, 3490, 0, true);
-        instanceOwner.setX(3089);
-        instanceOwner.setY(3490);
+        Teleport.spellTeleport(instanceOwner, 3087, 3493, 0, true);
+        instanceOwner.setX(3087);
+        instanceOwner.setY(3493);
         instanceOwner.setHeight(0);
         this.closeInstance();
     }

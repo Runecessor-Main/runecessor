@@ -19917,3 +19917,37 @@
 [21/08/2019, 03:28: PM] Name: Phantasye used command : item 1
 [21/08/2019, 03:33: PM] [Main loop took: 3 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
 [21/08/2019, 03:33: PM] Uptime: 1 hour.
+[25/09/2019, 02:34: PM] Server starting up...
+[25/09/2019, 02:34: PM] [WARNING]: Gambling npc missing.
+[25/09/2019, 02:34: PM] 
+[25/09/2019, 02:34: PM] Server finished loading: 6.3 seconds.
+[25/09/2019, 02:34: PM] Client version: 0
+[25/09/2019, 02:34: PM] Port: 43594
+[25/09/2019, 02:34: PM] Mode: Economy
+[25/09/2019, 02:34: PM] Running as live mode
+[25/09/2019, 02:34: PM] Logged in: Sketchy
+[25/09/2019, 02:34: PM] Logged in: Miamii
+[25/09/2019, 02:34: PM] Logged in: Nope not
+[25/09/2019, 02:34: PM] Logged in: Rahm65
+[25/09/2019, 02:34: PM] Logged in: Omfg Xbow
+[25/09/2019, 02:34: PM] Logged in: Im Farmer
+[25/09/2019, 02:34: PM] Logged in: G 0 L D Dick
+[25/09/2019, 02:34: PM] Logged in: Tubek
+[25/09/2019, 02:34: PM] Logged in: Th E Roy Alz
+[25/09/2019, 02:34: PM] Logged in: Remy E
+[25/09/2019, 02:34: PM] Logged in: Phantasye
+[25/09/2019, 02:54: PM] Uptime: 20 minutes.
+[25/09/2019, 02:54: PM] Server content save took: 885 ms
+[25/09/2019, 03:04: PM] [Main loop took: 3 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[25/09/2019, 03:14: PM] Uptime: 40 minutes.
+[25/09/2019, 03:14: PM] Server content save took: 296 ms
+[25/09/2019, 03:34: PM] [Main loop took: 3 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[25/09/2019, 03:34: PM] Uptime: 1 hour.
+[25/09/2019, 03:34: PM] Server content save took: 255 ms
+[25/09/2019, 03:54: PM] Uptime: 1 hour.
+[25/09/2019, 03:54: PM] Server content save took: 231 ms
+[25/09/2019, 04:04: PM] [Main loop took: 3 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[25/09/2019, 04:14: PM] Uptime: 1 hour.
+[25/09/2019, 04:14: PM] Server content save took: 150 ms
+[25/09/2019, 04:34: PM] [Main loop took: 3 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[25/09/2019, 04:34: PM] Uptime: 2 hours.
