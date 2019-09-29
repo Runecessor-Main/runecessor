@@ -922,6 +922,12 @@ Shop currency: 20527
 21314 400 // Rainbow scarf
 22114 500 // Mythical cape
 
+Shop name: Scalper Shop
+Shop id: 101
+Shop currency: 995
+1464 15000 // Boss Tickets
+
+
 Shop name: Hats & robe sets shop
 Shop id: 41
 Shop currency: 995

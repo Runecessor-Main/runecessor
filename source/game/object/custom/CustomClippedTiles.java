@@ -137,7 +137,8 @@ public class CustomClippedTiles {
 		Region.addObjectActionTile(23709, 3090, 3512, 0, 1, 1);
 	//	Region.addObjectActionTile(23709, 3091, 3493, 0, 1, 1);
 		Region.addObjectActionTile(14903, 3195, 3438, 0, 1, 1); // Chest
-
+		//boss instance portal
+		Region.addObjectActionTile(13633, 3090, 3489, 0, 2, 2);
 		// Deposit vault at Dice zone
 		Region.addObjectActionTile(29111, 1692, 4257, 0, 2, 2);
 

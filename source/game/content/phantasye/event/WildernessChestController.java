@@ -149,6 +149,7 @@ public final class WildernessChestController {
         sb.setLength(0);
 
         sb.append("Contents:");
+
         lootList.stream().forEach(loot ->
                 sb.append(" ")
                 .append("x")

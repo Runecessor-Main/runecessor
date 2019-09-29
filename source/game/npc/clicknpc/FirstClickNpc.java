@@ -771,6 +771,9 @@ public class FirstClickNpc {
 				}
 				player.getShops().openShop(39);
 				break;
+			case 3463:
+				player.getShops().openShop(101);
+				break;
 			case 1504:
 				if (GameMode.getGameModeContains(player, "IRON MAN")) {
 					player.getDH().sendStatement("Your bloodline is forbidden from this shop. Talk to adam");
