@@ -21,6 +21,8 @@ import core.ServerConfiguration;
 import core.ServerConstants;
 import core.benchmark.GameBenchmark;
 import game.NamedPosition;
+import game.content.phantasye.event.WildernessChestController;
+import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateCannon;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.npc.NpcWalkToEvent;
@@ -170,16 +172,19 @@ public class AdministratorCommand {
             return true;
         }
         if (command.equals("tt")) {
-            player.setPirateMinigameSession(new PirateMinigame(player));
-            Location playerLocation = new Location(player.getX(), player.getHeight(),
-                    player.getY());
-            final Location location = PirateCannon.spawnForTarget(player);
-            PirateCannon cannon = new PirateCannon(
-                    location,
-                    location.directionFrom(playerLocation),
-                    player);
-
-            cannon.fire();
+//            player.setPirateMinigameSession(new PirateMinigame(player));
+//            Location playerLocation = new Location(player.getX(), player.getHeight(),
+//                    player.getY());
+//            final Location location = PirateCannon.spawnForTarget(player);
+//            PirateCannon cannon = new PirateCannon(
+//                    location,
+//                    location.directionFrom(playerLocation),
+//                    player);
+//
+//            cannon.fire();
+            WildernessChestController.getInstance().spawnChest();
+//            player.createShoppingSession(ShopFactory.getShop(1));
+//            BossInstanceController.getInstance().startInstance(player);
 
         }
         if (command.equals("doubleitems")) {

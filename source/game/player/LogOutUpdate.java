@@ -15,6 +15,7 @@ import game.content.minigame.TargetSystem;
 import game.content.minigame.zombie.Zombie;
 import game.content.miscellaneous.PlayerGameTime;
 import game.content.packet.PrivateMessagingPacket;
+import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.starter.GameMode;
 import game.content.worldevent.Tournament;
 import game.npc.NpcAggression;
@@ -173,6 +174,8 @@ public class LogOutUpdate {
 		if (player == null) {
 			return;
 		}
+		if(player.getActiveBossInstance() != null)
+			player.getActiveBossInstance().removePlayerFromInstance();
 		PlayerSave.saveGame(player);
 		if (!player.bot && player.session != null) {
 			HostList.getHostList().remove(player.session);

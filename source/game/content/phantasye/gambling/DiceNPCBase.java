@@ -12,6 +12,9 @@ import game.player.Player;
 import game.type.GameTypeIdentity;
 import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
+import org.menaphos.entity.impl.item.container.ItemContainer;
+import org.menaphos.entity.impl.item.container.impl.DefaultItemContainerImpl;
+import org.menaphos.entity.impl.item.container.impl.MerchandiseItemContainerImpl;
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.location.Location;
@@ -29,7 +32,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     private final ActionInvoker actionInvoker;
     private Player player;
     private final List<GameItem> playersWager;
-//    private final AdjustableNumber<Integer> coinsWager;
+    private final ItemContainer inventory;
 
     private Timer wageTimer;
 
@@ -38,6 +41,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         this.actionInvoker = new ActionInvoker();
         this.coins = new AdjustableInteger(500000000);
         this.playersWager = new ArrayList<>();
+        this.inventory = new MerchandiseItemContainerImpl(50);
     }
 
     public static DiceNPCBase getInstance(int index) {
@@ -79,8 +83,10 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
 
     private void reset() {
         playersWager.clear();
+        wageTimer.cancel();
         this.setWageTimer(null);
         this.setPlayer(null);
+
     }
 
     private void sendPlayDialog(Player player) {
@@ -119,16 +125,10 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         if(maxValue > 0) {
             finalRoll -= Misc.random(1,20);
         }
-        NpcHandler.getNpcByNpcId(this.getId()).requestAnimation(11000);
+        final int modifiedRoll = finalRoll;
+        this.performAnimation(11000);
         NpcHandler.getNpcByNpcId(this.getId()).gfx0(2000);
-        final Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-
-            }
-        }, 1000);
-        announceFinalRoll(finalRoll);
+        announceFinalRoll(modifiedRoll);
     }
 
     private void announceFinalRoll(int finalRoll) {
@@ -247,7 +247,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     }
 
     public int getMaxBid() {
-        return coins.value() * 2;
+        return coins.value();
     }
 
 //    public int getMaxTrade() {
@@ -288,6 +288,16 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     @Override
     public void receiveMessage(String s) {
 
+    }
+
+    @Override
+    public boolean hasItem(int i, int i1) {
+        return false;
+    }
+
+    @Override
+    public void performAnimation(int i) {
+        NpcHandler.getNpcByNpcId(this.getId()).requestAnimation(i);
     }
 
     @Override

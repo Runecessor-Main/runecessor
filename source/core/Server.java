@@ -41,6 +41,7 @@ import game.content.miscellaneous.Web;
 import game.content.miscellaneous.WelcomeMessage;
 import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
+import game.content.phantasye.event.WildernessChestController;
 import game.content.quest.Quest;
 import game.content.quest.tab.InformationTab;
 import game.content.shop.ShopHandler;
@@ -118,6 +119,7 @@ import network.sql.create.SQLTableCreationHandler;
 import org.apache.mina.common.IoAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
+import org.menaphos.commands.CommandDispatcher;
 import tools.discord.api.DiscordBot;
 import utility.CharacterBackup;
 import utility.ChargebackPlayerAutoJail;
@@ -214,7 +216,8 @@ public class Server {
 		Server.loadSystems();
 		initiateConnections();
 		gameTick();
-
+		CommandDispatcher.init();
+		WildernessChestController.getInstance().initialize();
 		long timeTaken = (System.currentTimeMillis() - start);
 		if (timeTaken > 4000) {
 			Misc.print(speedDebug);

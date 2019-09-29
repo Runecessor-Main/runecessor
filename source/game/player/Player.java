@@ -25,6 +25,8 @@ import game.content.minigame.Minigame;
 import game.content.miscellaneous.*;
 import game.content.packet.PickUpItemPacket;
 import game.content.phantasye.PlayerDetails;
+import game.content.phantasye.event.WildernessChestController;
+import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.content.prayer.Prayer;
 import game.content.prayer.PrayerManager;
@@ -47,10 +49,7 @@ import game.entity.attributes.AttributeKey;
 import game.entity.attributes.PermanentAttributeKey;
 import game.entity.attributes.PermanentAttributeKeyComponent;
 import game.entity.combat_strategy.EntityCombatStrategy;
-import game.item.GameItem;
-import game.item.Item;
-import game.item.ItemAssistant;
-import game.item.ItemDefinition;
+import game.item.*;
 import game.menaphos.looting.model.loot.Loot;
 import game.menaphos.looting.model.loot.LootableContainer;
 import game.menaphos.looting.model.loot.LootableItem;
@@ -72,6 +71,7 @@ import game.player.pet.PlayerPetState;
 import game.player.sets.XPBoostingItems;
 import game.position.Position;
 import game.shop.Shop;
+import javafx.animation.Animation;
 import network.packet.Packet;
 import network.packet.PacketHandler;
 import network.packet.StaticPacketBuilder;
@@ -81,6 +81,7 @@ import org.menaphos.action.ActionInvoker;
 import org.menaphos.action.impl.item.container.impl.RemoveItemFromInventoryAction;
 import org.menaphos.entity.impl.impl.Customer;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
+import org.menaphos.model.entity.impl.character.CharacterDetails;
 import org.menaphos.model.finance.transaction.currency.Currency;
 import org.menaphos.model.finance.transaction.currency.CurrencyRequest;
 import org.menaphos.model.world.content.shop.model.PurchaseRequest;
@@ -101,6 +102,16 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     private long attackTime;
     private long bankDelay;
+
+    private BossInstance activeBossInstance;
+
+    public BossInstance getActiveBossInstance() {
+        return activeBossInstance;
+    }
+
+    public void setActiveBossInstance(BossInstance activeBossInstance) {
+        this.activeBossInstance = activeBossInstance;
+    }
 
     public long getPotDelay() {
         return potDelay;
@@ -142,7 +153,6 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         this.setPirateMinigameSession(new PirateMinigame(this));
     }
 
-
     private ShoppingSession shoppingSession;
     private final ActionInvoker actionInvoker = new ActionInvoker();
 
@@ -159,29 +169,40 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     private boolean hasKeyForLootableObject(LootableObject lootableObject) {
-        return ItemAssistant.hasItemAmountInInventory(this, lootableObject.getKeyId(), lootableObject.getKeyQty());
+        if (lootableObject.getKeyId() != -1)
+            return ItemAssistant.hasItemAmountInInventory(this, lootableObject.getKeyId(), lootableObject.getKeyQty());
+        return true;
     }
 
     private void openLootableObject(LootableObject lootableObject) {
         if (this.hasKeyForLootableObject(lootableObject)) {
-            Loot loot = lootableObject.open();
+            switch (lootableObject.getId()) {
+                case 11341:
+                    WildernessChestController.getInstance().openChest(this);
+                    break;
+                default:
+                    Loot loot = lootableObject.open();
+                    this.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount());
+                    this.getPA().sendMessage(lootableObject.getOpenMessage() + " and receive x" + loot.getItem().getAmount() + " " + ItemAssistant.getItemName(loot.getItem().getId()));
+                    break;
+            }
+
             this.consumeKeyForLootableObject(lootableObject);
             this.startAnimation(lootableObject.getAnimationId());
-            this.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount());
-            this.receiveMessage(lootableObject.getOpenMessage() + " and receive x" + loot.getItem().getAmount() + " " + ItemAssistant.getItemName(loot.getItem().getId()));
-        } else if (lootableObject.getAttemptMessage() == null) {
-            this.receiveMessage("You need " + lootableObject.getKeyQty() + "x " + ItemAssistant.getItemName(lootableObject.getKeyId()) + " to open this.");
+
+        } else if (lootableObject.getAttemptMessage().isEmpty()) {
+            this.getPA().sendMessage("You need " + ServerConstants.RED_COL + lootableObject.getKeyQty() + "x " + ItemAssistant.getItemName(lootableObject.getKeyId()) + "</col> to open this.");
         } else {
-            this.receiveMessage(lootableObject.getAttemptMessage());
+            this.getPA().sendMessage(lootableObject.getAttemptMessage());
         }
     }
 
     private void openLootableItem(LootableItem lootableItem) {
         Loot loot = lootableItem.open();
         String name = ItemAssistant.getItemName(loot.getItem().getId());
-        this.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount());
-        this.receiveMessage("You receive x" + loot.getItem().getAmount() + " " + name);
-        this.removeItemFromInventory(lootableItem.getId(), 1);
+        ItemAssistant.addItem(this, loot.getItem().getId(), loot.getItem().getAmount());
+        this.getPA().sendMessage("You receive x" + loot.getItem().getAmount() + " " + name);
+        ItemAssistant.deleteItemFromInventory(this, lootableItem.getId(), 1);
     }
 
     public void loot(LootableContainer lootable) {
@@ -242,7 +263,7 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         if (!ItemDefinition.getDefinitions()[itemId].note && !ItemDefinition.getDefinitions()[itemId].stackable) {
             if (ItemDefinition.isNoteableItem(itemId)) {
                 if (ItemAssistant.hasItemInInventory(this, 419)) {
-                    final int note = itemId +=1;
+                    final int note = itemId += 1;
                     return this.addItemToInventory(note, amount) && this.removeItemFromInventory(419, 1);
                 }
             }
@@ -282,6 +303,16 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     @Override
     public void receiveMessage(String s) {
         this.getPA().sendMessage(s);
+    }
+
+    @Override
+    public boolean hasItem(int i, int i1) {
+        return false;
+    }
+
+    @Override
+    public void performAnimation(int i) {
+
     }
 
     @Override
@@ -1025,13 +1056,11 @@ public class Player extends Entity implements PlayableCharacter, Customer {
      * The item id of the Mystery box used.
      */
     public int mysteryBoxItemIdUsed;
-    public int spinTicketItemIdUsed;
 
     /**
      * True to announce the item won from the Mystery box.
      */
     public boolean announceMysteryBoxWinningItem;
-    public boolean announceSpinTicketWinningItem;
 
     /**
      * The last npc the player interacted with, this is never reset.
@@ -7691,7 +7720,6 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     public boolean bot;
-	public boolean spinTicketEventForDc;
 
     public Player(IoSession ioSession, int playerId, boolean isBot, EntityType type) {
         super(type);
@@ -7757,8 +7785,8 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         playerEquipment[ServerConstants.ARROW_SLOT] = -1;
         playerEquipment[ServerConstants.WEAPON_SLOT] = -1;
         setHeight(0);
-        teleportToX = GameType.isOsrsEco() ? 3300 : 3300; // Starter co-ord for new players
-        teleportToY = GameType.isOsrsEco() ? 2796 : 2796;
+        teleportToX = GameType.isOsrsEco() ? 3095 : 3095; // Starter co-ord for new players
+        teleportToY = GameType.isOsrsEco() ? 3503 : 3503;
         setX(setY(-1));
         mapRegionX = mapRegionY = -1;
         currentX = currentY = 0;
@@ -8591,14 +8619,6 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     public void setDwarfMultiCannon(DwarfMultiCannon dwarfMultiCannon) {
         this.dwarfMultiCannon = dwarfMultiCannon;
-    }
-private boolean usedSpinTicket;
-public int spinTicketWinningItemId;
-	public boolean isUsedSpinTicket() {
-		return usedSpinTicket;
-	}
-	public void setUsedSpinTicket(boolean usedSpinTicket) {
-        this.usedSpinTicket = usedSpinTicket;
     }
 
 }

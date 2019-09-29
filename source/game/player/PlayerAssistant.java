@@ -1,12 +1,9 @@
 package game.player;
 
-import com.mysql.cj.api.io.PacketSender;
 import core.GameType;
 import core.Server;
 import core.ServerConfiguration;
 import core.ServerConstants;
-
-import game.position.Position;
 import game.container.ItemContainer;
 import game.content.bank.Bank;
 import game.content.combat.Combat;
@@ -38,22 +35,17 @@ import game.player.movement.Follow;
 import game.player.movement.Movement;
 import game.player.punishment.Mute;
 import game.player.punishment.RagBan;
-
-import java.nio.ByteOrder;
-import java.util.HashMap;
-import java.util.Map;
-
-import game.position.PositionUtils;
-import game.position.distance.DistanceAlgorithms;
+import game.position.Position;
 import network.connection.DonationManager;
 import network.connection.VoteManager;
 import network.packet.PacketHandler;
-import network.packet.PacketType;
 import network.packet.Stream;
-import org.menaphos.model.entity.impl.item.container.ItemSlot;
+import org.menaphos.entity.impl.item.container.ItemSlot;
 import utility.LoadTextWidth;
 import utility.Misc;
-import utility.WebsiteLogInDetails;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class PlayerAssistant {
 	private Player player;
@@ -1695,7 +1687,7 @@ public class PlayerAssistant {
 		}, delay);
 	}
 
-	public void sendItemContainer(org.menaphos.model.entity.impl.item.container.ItemContainer container, int interfaceId) {
+	public void sendItemContainer(org.menaphos.entity.impl.item.container.ItemContainer container, int interfaceId) {
 		player.getOutStream().createFrameVarSizeWord(53);
 		player.getOutStream().writeWord(interfaceId);
 		player.getOutStream().writeWord(container.capacity());

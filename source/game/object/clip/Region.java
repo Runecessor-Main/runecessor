@@ -201,6 +201,10 @@ public class Region {
 			return true;
 		}
 
+		if(objectId == 13633 && x == 3090 && y == 3489 && height == 0) {
+			return true;
+		}
+
 		if (GameType.isOsrs()) {
 			// Ice chunk (vorkath object)
 			if (objectId == 31990 && x == 2272 && y == 4053) {

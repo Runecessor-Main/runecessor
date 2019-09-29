@@ -1,32 +1,54 @@
 package game.content.phantasye.minigame.pirate;
 
+import core.ServerConstants;
 import game.content.phantasye.RegionUtils;
 import game.content.phantasye.minigame.instance.Instancable;
 import game.content.phantasye.minigame.instance.InstanceFactory;
 import game.content.phantasye.minigame.instance.InstanceKey;
+import game.item.ItemAssistant;
+import game.menaphos.looting.model.loot.Loot;
+import game.menaphos.looting.model.loot.LootableContainer;
+import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.player.Player;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.model.world.location.region.Region;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class PirateMinigame implements Instancable {
 
     public static final int GANGPLANK = 11211;
+    public static final int REWARD_CHEST = 11341;
+    public static final int CAPTAIN = 5426;
+    public static final int THROW = 806; //anim
+    public static final int ATTACK = 4177; //anim
+    public static final int DRINK = 1327; //anim
+
 
     private static final int CANNONS = 3;
+
 
     private final Map<Location, PirateCannon> cannonMap;
     private final Player player;
     private final Region topDeck;
     private final InstanceKey instanceKey = InstanceFactory.getKeyForInstance(this);
+    private final List<Integer> pirateList;
 
     public PirateMinigame(Player player) {
         this.cannonMap = new HashMap<>();
+        this.pirateList = new ArrayList<>();
         this.player = player;
         this.topDeck = new Region(new Location(3676, instanceKey.getInstance(), 2946), new Location(3685, instanceKey.getInstance(), 2950));
+    }
+
+    private void loadPirateList() {
+        pirateList.add(1447);
+        for (int i = 2879; i < 2883; i++) {
+            pirateList.add(i);
+        }
+        for (int i = 4023; i < 4053; i++) {
+            pirateList.add(i);
+        }
     }
 
     public boolean processClick(int objectId, int objectX, int objectY) {
@@ -44,7 +66,7 @@ public class PirateMinigame implements Instancable {
     }
 
     public void disembark() {
-        player.getPA().movePlayer(3684 ,2953, 0);
+        player.getPA().movePlayer(3684, 2953, 0);
         player.receiveMessage("You disembark the boat...");
         InstanceFactory.reclaimKey(instanceKey);
         player.setPirateMinigameSession(null);
@@ -69,6 +91,20 @@ public class PirateMinigame implements Instancable {
         cannonMap.remove(cannon.getLocation());
     }
 
+    public static List<Loot> openRewardChest(Player player) {
+        final List<Loot> rewards = new ArrayList<>();
+        final LootableContainer chest = LootFactory.getLootableObject(REWARD_CHEST);
+        for (int i = 0; i < 4; i++) {
+            Loot loot = chest.open();
+            rewards.add(loot);
+            player.receiveMessage("You open the chest and receive " + ServerConstants.BLUE_COL + "x"
+                    + loot.getItem().getAmount()
+                    + " "
+                    + ItemAssistant.getItemName(loot.getItem().getId()));
+        }
+        return rewards;
+    }
+
     private void reset() {
         cannonMap.clear();
     }
@@ -78,7 +114,7 @@ public class PirateMinigame implements Instancable {
                 player.getY());
         for (int i = 0; i < CANNONS; i++) {
             final Location location = RegionUtils.getLocationInRegion(topDeck);
-            this.addCannon(new PirateCannon(location,location.directionFrom(playerLocation),player));
+            this.addCannon(new PirateCannon(location, location.directionFrom(playerLocation), player));
         }
     }
 
