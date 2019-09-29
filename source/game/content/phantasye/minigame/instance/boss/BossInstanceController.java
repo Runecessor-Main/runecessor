@@ -151,7 +151,7 @@ public final class BossInstanceController {
         TEKTON(20, 5090),
         LIZARD_SHAMAN(5, 6766),
         DERANGED_ARCHAEOLOGIST(5, 7806),
-        KALPHITE_QUEEN(1, 964),
+        KALPHITE_QUEEN(1, 963),
         CORPOREAL_BEAST(8, 319),
         KRIL_TSUTsAROTH(8, 3129),
         GENERAL_GRAARDOR(8, 2215),

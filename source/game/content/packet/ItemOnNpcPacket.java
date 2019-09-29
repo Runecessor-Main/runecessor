@@ -57,7 +57,9 @@ public class ItemOnNpcPacket implements PacketType {
 		}
 
 		if(npcType == 2713) {
-			DiceNPCBase.getInstance(NpcHandler.getNpcByNpcId(npcType).npcIndex).acceptTrade(itemId,ItemAssistant.getItemAmount(player,itemId,itemSlot),player);
+			if(!DiceNPCBase.getInstance(NpcHandler.getNpcByNpcId(npcType).npcIndex).acceptTrade(itemId,ItemAssistant.getItemAmount(player,itemId,itemSlot),player)) {
+				player.receiveMessage("This bid is too high.");
+			}
 			return;
 		}
 
