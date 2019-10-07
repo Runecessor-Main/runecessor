@@ -14,6 +14,8 @@ import game.content.minigame.lottery.Lottery;
 import game.content.miscellaneous.PvpTask;
 import game.content.miscellaneous.Teleport;
 import game.content.packet.preeoc.ClickNpcPreEoc;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.slayer.master.impl.*;
 import game.content.skilling.Skilling;
 import game.content.skilling.Slayer;
 import game.content.skilling.fishing.FishingOld;
@@ -53,7 +55,7 @@ public class SecondClickNpc {
 		Npc npc = NpcHandler.npcs[player.getNpcClickIndex()];
 		NpcHandler.facePlayer(player, npc);
 		player.turnPlayerTo(NpcHandler.npcs[player.getNpcClickIndex()].getX(), NpcHandler.npcs[player.getNpcClickIndex()].getY());
-
+		System.out.println("SECOND CLICK");
 		// Has to be on a delayed tick or else it will so awkward rotations when talking to an npc when running to it.
 		CycleEventHandler.getSingleton().addEvent(player, new CycleEvent() {
 			@Override
@@ -96,6 +98,19 @@ public class SecondClickNpc {
 			return true;
 		}
 		switch (npcType) {
+			case SlayerMasterNieve
+					.ID:
+			case SlayerMasterTurael
+					.ID:
+			case SlayerMasterMazchna
+					.ID:
+			case SlayerMasterChaeldar
+					.ID:
+			case SlayerMasterVannaka
+					.ID:
+			case SlayerMasterDuradel.ID:
+				SlayerMasterFactory.getSlayerMaster(npc.npcType).ifPresent(slayerMaster -> slayerMaster.assignTaskTo(player));
+				break;
 			case 5832:
 				NpcDefinition farmer = NpcDefinition.DEFINITIONS[5832];
 				player.setDialogueChainAndStart(new DialogueChain().npc(farmer, FacialAnimation.CALM_1, "Use a farming item on me and I'll happily note it."));
@@ -136,9 +151,9 @@ public class SecondClickNpc {
 			case 3343:
 				player.getShops().openShop(60);
 				break;
-			case 6797:
-				player.getShops().openShop(46);
-				break;
+//			case 6797:
+//				player.getShops().openShop(46);
+//				break;
 			// Bob
 			case 505:
 				BarrowsRepair.repair(player);
@@ -167,12 +182,6 @@ public class SecondClickNpc {
 			// Horvik, melee.
 			case 535:
 				player.getShops().openShop(3);
-				break;
-			// Vannaka, normal-task.
-			// Nieve.
-			//case 6797:
-			case 403:
-				Slayer.giveTask(player, false);
 				break;
 			// Shopkeeper at Edgeville, Cape shop.
 			case 512:

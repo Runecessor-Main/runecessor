@@ -1,7 +1,6 @@
 package core;
 
 import com.google.common.collect.ImmutableList;
-import com.zaxxer.hikari.HikariConfig;
 import core.benchmark.GameBenchmark;
 import core.maintick.Task;
 import core.maintick.TaskScheduler;
@@ -37,11 +36,17 @@ import game.content.miscellaneous.ServerShutDownUpdate;
 import game.content.miscellaneous.SnowPile;
 import game.content.miscellaneous.Teleport;
 import game.content.miscellaneous.TeleportInterface;
-import game.content.miscellaneous.Web;
 import game.content.miscellaneous.WelcomeMessage;
 import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
 import game.content.phantasye.event.WildernessChestController;
+import game.content.phantasye.skill.slayer.master.SlayerMaster;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.slayer.master.SlayerMasterRepository;
+import game.content.phantasye.skill.slayer.master.SlayerMasterRepositoryManager;
+import game.content.phantasye.skill.slayer.master.impl.*;
+import game.content.phantasye.skill.slayer.task.BossTask;
+import game.content.phantasye.skill.slayer.task.SlayerTask;
 import game.content.quest.Quest;
 import game.content.quest.tab.InformationTab;
 import game.content.shop.ShopHandler;
@@ -76,7 +81,6 @@ import game.object.clip.Region;
 import game.object.custom.Door;
 import game.object.custom.ObjectManagerServer;
 import game.object.lever.Lever;
-import game.player.Player;
 import game.player.PlayerHandler;
 import game.player.event.CycleEventHandler;
 import game.player.event.impl.IdentifierSetAnalysisEvent;
@@ -101,9 +105,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import network.connection.ConnectionHandler;
 import network.connection.ConnectionThrottleFilter;
@@ -111,15 +112,14 @@ import network.connection.DonationManager;
 import network.connection.InvalidAttempt.AutoBlacklisted;
 import network.connection.VoteManager;
 import network.packet.PacketHandler;
-import network.sql.MockSQLNetwork;
 import network.sql.SQLNetwork;
 import network.sql.batch.impl.LongStringBatchUpdateEvent;
 import network.sql.batch.impl.OutputBatchUpdateEvent;
-import network.sql.create.SQLTableCreationHandler;
 import org.apache.mina.common.IoAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
 import org.menaphos.commands.CommandDispatcher;
+import org.phantasye.RepositoryManager;
 import tools.discord.api.DiscordBot;
 import utility.CharacterBackup;
 import utility.ChargebackPlayerAutoJail;
@@ -131,10 +131,8 @@ import utility.ErrorManager;
 import utility.FileUtility;
 import utility.HackLogHistory;
 import utility.HighestPlayerCount;
-import utility.LeakedSourceApi;
 import utility.LoadTextWidth;
 import utility.Misc;
-import utility.OsBotCommunication;
 import utility.SimpleTimer;
 import utility.WebsiteLogInDetails;
 import utility.WebsiteRead;
@@ -216,6 +214,27 @@ public class Server {
 		Server.loadSystems();
 		initiateConnections();
 		gameTick();
+
+
+
+//		RepositoryManager<SlayerMaster, SlayerMasterRepository> repositoryManager = new SlayerMasterRepositoryManager();
+//
+//		SlayerMaster turael = new SlayerMasterTurael();
+//        SlayerMaster mazchna = new SlayerMasterMazchna();
+//        SlayerMaster vannaka = new SlayerMasterVannaka();
+//        SlayerMaster chaeldar = new SlayerMasterChaeldar();
+//        SlayerMaster nieve = new SlayerMasterNieve();
+//        SlayerMaster duradel = new SlayerMasterDuradel();
+//
+//		repositoryManager.getRepository().create(turael);
+//        repositoryManager.getRepository().create(mazchna);
+//        repositoryManager.getRepository().create(vannaka);
+//        repositoryManager.getRepository().create(chaeldar);
+//        repositoryManager.getRepository().create(nieve);
+//        repositoryManager.getRepository().create(duradel);
+//
+//		repositoryManager.updateRepository();
+
 		CommandDispatcher.init();
 		WildernessChestController.getInstance().initialize();
 		long timeTaken = (System.currentTimeMillis() - start);

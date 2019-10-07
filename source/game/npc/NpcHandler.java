@@ -25,6 +25,7 @@ import game.content.miscellaneous.GodWarsDungeonInterface;
 import game.content.miscellaneous.OverlayTimer;
 import game.content.miscellaneous.SpecialAttackTracker;
 import game.content.music.SoundSystem;
+import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.profile.NpcKillTracker;
 import game.content.quest.tab.InformationTab;
 import game.content.skilling.Skilling;
@@ -1771,8 +1772,9 @@ public class NpcHandler {
 					}
 					startAnimation(npc, deathAnimation);// arlo
 					InformationTab.updateQuestTab(player);
-					Slayer.slayerTaskNPCKilled(player, npcs[i],
-							NpcDefinition.getDefinitions()[npcs[i].npcType].hitPoints);
+					SlayerSkill.slayerKill(player,npcs[i],NpcDefinition.getDefinitions()[npcs[i].npcType].hitPoints);
+//					Slayer.slayerTaskNPCKilled(player, npcs[i],
+//							NpcDefinition.getDefinitions()[npcs[i].npcType].hitPoints);
 					FightCaves.fightCavesReward(player, npc.npcType);
 					Barrows.killedBarrows(player, npc);
 					npc.setFrozenLength(0);

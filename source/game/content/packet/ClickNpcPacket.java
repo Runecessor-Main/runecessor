@@ -6,6 +6,8 @@ import game.content.combat.CombatConstants;
 import game.content.combat.vsnpc.CombatNpc;
 import game.content.combat.vsnpc.MagicOnNpcPacket;
 import game.content.combat.vsplayer.range.RangedData;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.slayer.master.impl.SlayerMasterNieve;
 import game.npc.Npc;
 import game.npc.NpcEvent;
 import game.npc.NpcHandler;
@@ -51,6 +53,7 @@ public class ClickNpcPacket implements PacketType {
 			 **/
 			case ATTACK_NPC:
 				int npcId = player.getInStream().readUnsignedWordA();
+
 				if (trackPlayer) {
 					PacketHandler.saveData(player.getPlayerName(), "npcId: " + npcId);
 				}
@@ -63,6 +66,9 @@ public class ClickNpcPacket implements PacketType {
 				}
 				if (!player.playerAssistant.withinDistance(npc)) {
 					break;
+				}
+				if(npc.npcType == SlayerMasterNieve.ID) {
+					handleClickNpc(player, 2,npcId, trackPlayer, "Second");
 				}
 				player.setNpcIdentityAttacking(npcId);
 				if (ServerConfiguration.DEBUG_MODE) {
@@ -183,6 +189,7 @@ public class ClickNpcPacket implements PacketType {
 		if (npc == null) {
 			return;
 		}
+
 		if (ServerConfiguration.DEBUG_MODE) {
 			Misc.print("[" + clickTypeString + " click npc: " + npc.npcType + "]");
 		}

@@ -16,6 +16,8 @@ import game.content.minigame.zombie.Zombie;
 import game.content.miscellaneous.PlayerGameTime;
 import game.content.packet.PrivateMessagingPacket;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
+import game.content.phantasye.skill.slayer.master.SlayerMaster;
+import game.content.skilling.Slayer;
 import game.content.starter.GameMode;
 import game.content.worldevent.Tournament;
 import game.npc.NpcAggression;
@@ -89,6 +91,9 @@ public class LogOutUpdate {
 		 * (GameMode.getGameMode(player, "HARDCORE IRON MAN")) { new Thread(new
 		 * NewHard(player)).start(); } new Thread(new NewHighScore(player)).start();
 		 */
+		if(player.getSlayerPartner() != null) {
+			SlayerMaster.leaveGroup(player);
+		}
 		player.manualLogOut = true;
 		Misc.print("Logged Out: "+player.getPlayerName());
 
@@ -159,6 +164,9 @@ public class LogOutUpdate {
 					player.rwtChat.clear();
 				}
 			}).start();
+		}
+		if(player.getSlayerPartner() != null) {
+			SlayerMaster.leaveGroup(player);
 		}
 		player.onRemove();
 		CycleEventHandler.getSingleton().stopEvents(player);

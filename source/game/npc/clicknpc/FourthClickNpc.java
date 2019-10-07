@@ -5,6 +5,8 @@ import core.Plugin;
 import game.content.miscellaneous.EdgePvp;
 import game.content.miscellaneous.PvpTask;
 import game.content.packet.preeoc.ClickNpcPreEoc;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.slayer.master.impl.*;
 import game.content.skilling.Slayer;
 import game.content.starter.GameMode;
 import game.item.PotionCombining;
@@ -66,7 +68,19 @@ public class FourthClickNpc {
 		}
 
 		switch (npcType) {
-
+			case SlayerMasterNieve
+					.ID:
+			case SlayerMasterTurael
+					.ID:
+			case SlayerMasterMazchna
+					.ID:
+			case SlayerMasterChaeldar
+					.ID:
+			case SlayerMasterVannaka
+					.ID:
+			case SlayerMasterDuradel.ID:
+				player.getShops().openShop(46);
+				break;
 			// Nurse Tafani
 			case 3343:
 				if (!Area.inEdgevilleBankPvpInstance(player.getX(), player.getY(), player.getHeight())) {
@@ -94,12 +108,6 @@ public class FourthClickNpc {
 			// Horvik, magic.
 			case 535:
 				player.getShops().openShop(19);
-				return true;
-
-			// Vannaka, reset-task.
-			case 6797:
-			case 403:
-				Slayer.resetTask(player);
 				return true;
 
 			// Shop keeper at Edgeville.

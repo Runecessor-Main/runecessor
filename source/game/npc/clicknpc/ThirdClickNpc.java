@@ -5,6 +5,8 @@ import core.Plugin;
 import game.content.minigame.lottery.Lottery;
 import game.content.miscellaneous.PvpTask;
 import game.content.packet.preeoc.ClickNpcPreEoc;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.slayer.master.impl.*;
 import game.content.skilling.Slayer;
 import game.content.starter.GameMode;
 import game.npc.Npc;
@@ -69,7 +71,19 @@ public class ThirdClickNpc {
 			return true;
 		}
 		switch (npcType) {
-
+			case SlayerMasterNieve
+					.ID:
+			case SlayerMasterTurael
+					.ID:
+			case SlayerMasterMazchna
+					.ID:
+			case SlayerMasterChaeldar
+					.ID:
+			case SlayerMasterVannaka
+					.ID:
+			case SlayerMasterDuradel.ID:
+				SlayerMasterFactory.getSlayerMaster(npc.npcType).ifPresent(slayerMaster -> slayerMaster.cancelTaskFor(player));
+				break;
 		// Lottery/Durial321
 		case 11057:
 			if (GameMode.getGameModeContains(player, "IRON MAN")) {
@@ -113,12 +127,6 @@ public class ThirdClickNpc {
 			player.getShops().openShop(20);
 			return true;
 
-		// Vannaka, boss-task.
-		case 6797:
-
-		case 403:
-			Slayer.resetTask(player);
-			return true;
 		// Shop keeper at Edgeville.
 		case 512:
 			player.getShops().openShop(7);

@@ -25,6 +25,8 @@ import game.content.minigame.Minigame;
 import game.content.miscellaneous.*;
 import game.content.packet.PickUpItemPacket;
 import game.content.phantasye.PlayerDetails;
+import game.content.phantasye.PlayerDetailsRepository;
+import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
@@ -88,6 +90,7 @@ import org.menaphos.model.world.content.shop.model.PurchaseRequest;
 import org.menaphos.model.world.content.shop.model.shopper.session.ShoppingSession;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.util.StringUtils;
+import org.phantasye.RepositoryManager;
 import utility.FileUtility;
 import utility.ISAACRandomGen;
 import utility.Misc;
@@ -102,6 +105,31 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     private long attackTime;
     private long bankDelay;
+    private PlayerDetails playerDetails;
+    private Player slayerPartner;
+
+    public Player getSlayerPartner() {
+        return slayerPartner;
+    }
+
+    public void setSlayerPartner(Player slayerPartner) {
+        this.slayerPartner = slayerPartner;
+    }
+
+    public void saveDetails() {
+        final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager =
+                new PlayerDetailsRepositoryManager();
+        repositoryManager.getRepository().create(playerDetails);
+        repositoryManager.updateRepository();
+    }
+
+    public PlayerDetails getPlayerDetails() {
+        return playerDetails;
+    }
+
+    public void setPlayerDetails(PlayerDetails playerDetails) {
+        this.playerDetails = playerDetails;
+    }
 
     private BossInstance activeBossInstance;
 
@@ -7723,7 +7751,6 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     public Player(IoSession ioSession, int playerId, boolean isBot, EntityType type) {
         super(type);
-
         this.bot = isBot;
 
         setPlayerId(playerId);

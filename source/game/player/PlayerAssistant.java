@@ -255,15 +255,10 @@ public class PlayerAssistant {
 
 				VoteManager.voteAlert(player);
 
-				// Do not save account if in tournament.
-				if (player.getHeight() != 20) {
-					PlayerSave.saveGame(player);
-				}
 			}
 
 			@Override
 			public void stop() {
-
 			}
 		}, 100 * Server.saveTimer); // 20 minutes..
 

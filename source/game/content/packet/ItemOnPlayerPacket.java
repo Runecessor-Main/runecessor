@@ -2,6 +2,8 @@ package game.content.packet;
 
 import game.content.combat.Combat;
 import game.content.dialogue.DialogueChain;
+import game.content.phantasye.skill.slayer.master.SlayerMaster;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
 import game.entity.EntityType;
 import game.item.ItemAssistant;
 import game.item.ItemDefinition;
@@ -81,6 +83,9 @@ public class ItemOnPlayerPacket implements PacketType {
 				otherPlayerPet.equip(itemId, 1, slotId);
 			}
 			return;
+		}
+		if(itemId == 4155) {
+			SlayerMaster.sendSocialSlayer(c,other);
 		}
 	}
 }

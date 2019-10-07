@@ -9,7 +9,7 @@ public class ServerConfiguration {
 	/**
 	 * True, when developing.
 	 */
-	public static boolean DEBUG_MODE = false;
+	public static boolean DEBUG_MODE = true;
 
 	/**
 	 * Determines whether or not basic information should be benchmarked or not.
@@ -44,7 +44,7 @@ public class ServerConfiguration {
 	/**
 	 * True to enable bots.
 	 */
-	public static boolean ENABLE_BOTS = true;
+	public static boolean ENABLE_BOTS = false;
 
 	/**
 	 * True to enable discord integration.

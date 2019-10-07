@@ -6,6 +6,7 @@ import core.ServerConstants;
 import game.bot.BotManager;
 import game.content.combat.Combat;
 import game.content.commands.AdministratorCommand;
+import game.content.phantasye.PlayerDetailsFactory;
 import game.entity.EntityType;
 import game.player.Player;
 import game.player.PlayerHandler;
@@ -272,6 +273,7 @@ public class RS2LoginProtocolDecoder extends CumulativeProtocolDecoder {
 		}
 		uidOutdated = false;
 		Player player = new Player(session, -1, false, EntityType.PLAYER);
+		player.setPlayerDetails(PlayerDetailsFactory.getDetailsFor(name));
 		player.setPlayerName(name);
 		player.playerPass = pass;
 		player.clientVersion = clientVersion;
