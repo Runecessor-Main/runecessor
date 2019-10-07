@@ -628,7 +628,6 @@ public class FirstClickNpc {
 					Achievements.checkCompletionSingle(player, 1014);
 				}
 				break;*/
-
             case 1645:
             case 1646:
             case 1647:
@@ -892,6 +891,4 @@ public class FirstClickNpc {
         }
         return false;
     }
-
-
 }

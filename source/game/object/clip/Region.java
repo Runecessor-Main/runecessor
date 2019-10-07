@@ -201,7 +201,7 @@ public class Region {
 			return true;
 		}
 
-		if(objectId == 13633) {
+		if(objectId == 13633 && x == 3090 && y == 3489 && height == 0) {
 			return true;
 		}
 

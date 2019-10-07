@@ -30,7 +30,7 @@ public final class BossInstanceController {
     }
 
     public void startInstance(Player player) {
-        ItemAssistant.addItemToInventoryOrDrop(player,BOSS_TICKET,50); //TODO DELETE BEFORE RELEASE
+        //.addItemToInventoryOrDrop(player,BOSS_TICKET,50); //TODO DELETE BEFORE RELEASE
         this.sendDialog(player);
     }
 

@@ -5,13 +5,13 @@
 		"roam_distance": 10
 	},
 	{
-		"npc_name": "Dice Man",
-		"npc_type": 2713,
+		"npc_name": "Gambler",
+		"npc_type": 5417,
 		"roam_distance": 0
 	},
 	{
-		"npc_name": "Gambler",
-		"npc_type": 5417,
+		"npc_name": "Scalper",
+		"npc_type": 3463,
 		"roam_distance": 0
 	},
 	{

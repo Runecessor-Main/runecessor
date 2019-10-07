@@ -15,6 +15,9 @@ import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.entity.impl.item.container.ItemContainer;
 import org.menaphos.entity.impl.item.container.impl.DefaultItemContainerImpl;
+
+import org.menaphos.entity.impl.item.container.impl.MerchandiseItemContainerImpl;
+
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.location.Location;
@@ -36,6 +39,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     private Player player;
     private final List<GameItem> playersWager;
     private final ItemContainer inventory;
+
     private CoinPayoutDispenseChain payoutDispenseChain;
 
     private Timer wageTimer;
@@ -45,6 +49,7 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         this.actionInvoker = new ActionInvoker();
         this.coins = new AdjustableInteger(0);
         this.playersWager = new ArrayList<>();
+        this.inventory = new MerchandiseItemContainerImpl(50);
         this.inventory = new DefaultItemContainerImpl(50);
         this.addItemToInventory(995, 500000000);
     }
@@ -262,8 +267,11 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         return NumberFormat.getInstance().format(value) + " GP";
     }
 
+    public int getMaxBid() {
+        return coins.value();
     private long getMaxBid() {
         return Arrays.stream(inventory.getReadOnlyContents()).filter(itemSlot -> itemSlot.getId() != -1).mapToInt(item -> ItemDefinition.getDefinitions()[item.getId()].price * item.count()).sum();
+
     }
 
     @Override

@@ -25,6 +25,14 @@
    },
    {
       "npc_name": "Morgan",
+      "npc_type": 3463,
+      "x": 3090,
+      "y": 3488,
+      "height": 0,
+      "face_action": "WEST"
+   },
+   {
+      "npc_name": "Morgan",
       "npc_type": 3479,
       "x": 3098,
       "y": 3268,
