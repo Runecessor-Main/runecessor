@@ -3,6 +3,7 @@ package game.content.phantasye.skill.slayer;
 import core.ServerConstants;
 import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
 import game.content.phantasye.skill.slayer.task.BossTask;
+import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
 import game.content.skilling.Skilling;
 import game.content.skilling.Slayer;
 import game.npc.Npc;
@@ -22,6 +23,23 @@ public class SlayerSkill {
 
     public static boolean unlock(Player player,SlayerUnlocks unloackable) {
         return !player.getPlayerDetails().getUnlocksList().contains(unloackable.ordinal());
+    }
+
+    public static Player getWeakestMemberFromDuo(Player player) {
+        if(player.baseSkillLevel[18] < player.getSlayerPartner().baseSkillLevel[18]) {
+            return player;
+        }
+        return  player.getSlayerPartner();
+    }
+
+    public static String getAssignmentName(PlayerSlayerTask task) {
+        if(task != null)
+            return SlayerAssignment.values()[task.getAssignment()].toString();
+        return "None";
+    }
+
+    public static boolean isDoingDuoSlayer(Player player) {
+        return player.getSlayerPartner() != null;
     }
 
     public static void slayerKill(Player player, Npc npc, int hp) {

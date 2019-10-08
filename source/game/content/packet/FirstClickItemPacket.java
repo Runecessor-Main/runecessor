@@ -625,10 +625,14 @@ public class FirstClickItemPacket implements PacketType {
 
             // Enchanted gem.
             case 4155:
-                player.receiveMessage("You must slayer "
-                        + player.getPlayerDetails().getSlayerTask().getAmount().value()
-                        + " more "
-                        + SlayerAssignment.values()[player.getPlayerDetails().getSlayerTask().getAssignment()].toString());
+                if(player.getPlayerDetails().getSlayerTask() != null) {
+                    player.receiveMessage("You must slay "
+                            + player.getPlayerDetails().getSlayerTask().getAmount().value()
+                            + " more "
+                            + SlayerAssignment.values()[player.getPlayerDetails().getSlayerTask().getAssignment()].toString());
+                } else {
+                    player.receiveMessage("You currently have no Slayer Task.");
+                }
                 break;
 
             // Clue scroll.

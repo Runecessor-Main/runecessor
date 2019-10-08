@@ -2,6 +2,8 @@ package game.content.quest.tab;
 
 import core.GameType;
 import game.content.donator.DonatorTokenUse;
+import game.content.phantasye.skill.slayer.SlayerAssignment;
+import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.skilling.SkillingStatistics;
 import game.content.skilling.Slayer;
 import game.player.Player;
@@ -117,7 +119,9 @@ public class InformationTab {
 							"Current Rank: " + player.highestDonatorRank(),
 							"Voting Points: @gr3@" + player.votingPoints,
 							"Token used: @gr3@" + player.donatorTokensRankUsed,
-							"Slayer Points: @gr3@" + player.getSlayerPoints(),
+							"Slayer Points: @gr3@" + player.getPlayerDetails().getSlayerPoints().value(),
+							"Task Streak: @gr3@" + player.getPlayerDetails().getTaskStreak().value(),
+							"Current Task: @gr3@" + SlayerSkill.getAssignmentName(player.getPlayerDetails().getSlayerTask()),
 							"Agility Points: @gr3@" + player.agilityPoints,
 							"Boss score: @gr3@" + player.bossScoreUnCapped,
 							"Barrows runs: @gr3@" + player.getBarrowsRunCompleted(),

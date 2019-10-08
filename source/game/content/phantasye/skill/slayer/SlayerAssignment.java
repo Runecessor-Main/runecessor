@@ -1,5 +1,7 @@
 package game.content.phantasye.skill.slayer;
 
+import utility.Misc;
+
 public enum SlayerAssignment {
 
     ABERRANT_SPECTRES(60,new Locations[] {Locations.SLAYER_TOWER},69,420),
@@ -103,6 +105,6 @@ public enum SlayerAssignment {
 
     @Override
     public String toString() {
-        return name().replaceAll("_"," ");
+        return Misc.capitalize(name().replaceAll("_"," ").toLowerCase());
     }
 }

@@ -5,9 +5,14 @@ import game.content.dialogueold.DialogueHandler;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
 import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.phantasye.skill.slayer.SlayerUnlocks;
+import game.content.phantasye.skill.slayer.master.assignment.AssignmentChain;
+import game.content.phantasye.skill.slayer.master.assignment.DuoPlayerAssignmentChain;
+import game.content.phantasye.skill.slayer.master.assignment.SoloSlayerAssignmentChain;
+import game.content.phantasye.skill.slayer.master.assignment.impl.*;
 import game.content.phantasye.skill.slayer.task.BossTask;
 import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
 import game.content.phantasye.skill.slayer.task.SlayerTask;
+import game.content.phantasye.skill.slayer.task.TaskGenerator;
 import game.content.skilling.Skilling;
 import game.menaphos.looting.model.Range;
 import game.npc.data.NpcDefinition;
@@ -123,44 +128,10 @@ public class SlayerMaster implements NonPlayableCharacter {
     }
 
     public void assignTaskTo(Player player) {
-        if (player.getPlayerDetails().getSlayerTask() == null) {
-            final PlayerSlayerTask task = getTaskFor(player);
-            if (task != null) {
-                if (!player.getPlayerDetails().getBlockedTasks().contains(task.getAssignment())) {
-                    if (player.getSlayerPartner() == null) {
-                        player.getPlayerDetails().setSlayerTask(task);
-                        player.receiveMessage("You've been assigned to slay "
-                                + task.getAmount().value()
-                                + " "
-                                + SlayerAssignment.values()[task.getAssignment()].name()
-                                + ".");
-                        player.saveDetails();
-                    } else if(player.getSlayerPartner().getPlayerDetails().getSlayerTask() == null) {
-                        final Player other = player.getSlayerPartner();
-                        player.getPlayerDetails().setSlayerTask(task);
-                        player.receiveMessage("You've been assigned to slay "
-                                + task.getAmount().value()
-                                + " "
-                                + SlayerAssignment.values()[task.getAssignment()].name()
-                                + ".");
-                        player.saveDetails();
-                        other.getPlayerDetails().setSlayerTask(task);
-                        other.receiveMessage("You've been assigned to slay "
-                                + task.getAmount().value()
-                                + " "
-                                + SlayerAssignment.values()[task.getAssignment()].name()
-                                + ".");
-                        other.saveDetails();
-                    } else {
-                        leaveGroup(player);
-                        assignTaskTo(player);
-                    }
-                } else {
-                    assignTaskTo(player);
-                }
-            }
+        if(SlayerSkill.isDoingDuoSlayer(player)) {
+            new DuoPlayerAssignmentChain(player,this).execute();
         } else {
-            player.receiveMessage("Please complete, or cancel your current Slayer task.");
+            new SoloSlayerAssignmentChain(player,this).execute();
         }
     }
 
@@ -189,7 +160,7 @@ public class SlayerMaster implements NonPlayableCharacter {
                             break;
                     }
                 }, "How Can I Help?",
-                "Prefer Task (" + PREFER_COST + " Points)", "Block Task (" + BLOCK_COST + " Points)", "Social Slayer","Unlockables", "Nevermind"))
+                "Prefer Task (" + PREFER_COST + " Points)", "Block Task (" + BLOCK_COST + " Points)", "Social Slayer", "Unlockables", "Nevermind"))
                 .start(player);
     }
 
@@ -198,8 +169,8 @@ public class SlayerMaster implements NonPlayableCharacter {
         player.setDialogueChain(new DialogueChain().option((p, option) -> {
                     switch (option) {
                         case 1:
-                            if(SlayerSkill.unlock(player,SlayerUnlocks.BOSS_SLAYER)) {
-                                if(player.getPlayerDetails().getSlayerPoints().value() >= BOSS_SLAYER) {
+                            if (SlayerSkill.unlock(player, SlayerUnlocks.BOSS_SLAYER)) {
+                                if (player.getPlayerDetails().getSlayerPoints().value() >= BOSS_SLAYER) {
                                     player.getPA().closeInterfaces(true);
                                     player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.BOSS_SLAYER.ordinal());
                                     player.setDialogueChain(new DialogueChain().statement("You've unlocked Boss Slayer")).start(player);
@@ -475,58 +446,58 @@ public class SlayerMaster implements NonPlayableCharacter {
         }
     }
 
-    private PlayerSlayerTask getTaskFor(Player player) {
-        if (player.baseSkillLevel[18] >= levelRequirement) {
-            if (player.getSlayerPartner() != null && player.getSlayerPartner().baseSkillLevel[18] >= levelRequirement) {
-                final List<SlayerTask> playerTaskList = new ArrayList<>();
-                taskList.stream()
-                        .filter(task -> task.getAssignment().getLevel() <= player.baseSkillLevel[18])
-                        .filter(task -> !player.getPlayerDetails().getBlockedTasks().contains(task.getAssignment().ordinal()))
-                        .forEach(playerTaskList::add);
-                if (player.getPlayerDetails().getUnlocksList().contains(SlayerUnlocks.BOSS_SLAYER.ordinal())) {
-                    Arrays.stream(BossTask.values())
-                            .filter(bossTask -> bossTask.getCombatLevel() <= player.getCombatLevel())
-                            .forEach(bossTask -> playerTaskList.add(new SlayerTask(
-                                    SlayerAssignment.valueOf(bossTask.name()),
-                                    new Range(3, 35),
-                                    new Range(0, 0),
-                                    4
-                            )));
-                }
-                return roll(playerTaskList, player.getPlayerDetails().getPreferredTasks());
-            } else {
-                player.receiveMessage("Both members need " + levelRequirement + " Slayer to get a task.");
-            }
-        } else {
-            player.receiveMessage("You need " + levelRequirement + " Slayer to get a task.");
-        }
-        return null;
-    }
-
-    private PlayerSlayerTask roll(List<SlayerTask> playerTaskList, List<Integer> preferredList) {
-        final Random r = new Random();
-        final int sum = playerTaskList.stream()
-                .filter(task -> !SlayerSkill.isBossTask(task.getAssignment().ordinal()))
-                .mapToInt(SlayerTask::getWeight).sum();
-        float chance = r.nextFloat();
-        final int index = r.nextInt(playerTaskList.size());
-        float taskRoll;
-        if (index >= taskList.size()) {
-            taskRoll = (((float) playerTaskList.get(index).getWeight() / (sum + 4)));
-        } else if (!preferredList.contains(taskList.get(index).getAssignment().ordinal())) {
-            taskRoll = (((float) playerTaskList.get(index).getWeight() / sum));
-        } else {
-            taskRoll = (((float) (playerTaskList.get(index).getWeight() * 2) / sum));
-        }
-        if (chance <= (taskRoll)) {
-            return new PlayerSlayerTask(playerTaskList.get(index), this.getId());
-        }
-        return roll(playerTaskList, preferredList);
-    }
+//    private PlayerSlayerTask getTaskFor(Player player) {
+//        if (player.baseSkillLevel[18] >= levelRequirement) {
+//            if (player.getSlayerPartner() != null && player.getSlayerPartner().baseSkillLevel[18] >= levelRequirement) {
+//                final List<SlayerTask> playerTaskList = new ArrayList<>();
+//                taskList.stream()
+//                        .filter(task -> task.getAssignment().getLevel() <= player.baseSkillLevel[18])
+//                        .filter(task -> !player.getPlayerDetails().getBlockedTasks().contains(task.getAssignment().ordinal()))
+//                        .forEach(playerTaskList::add);
+//                if (player.getPlayerDetails().getUnlocksList().contains(SlayerUnlocks.BOSS_SLAYER.ordinal())) {
+//                    Arrays.stream(BossTask.values())
+//                            .filter(bossTask -> bossTask.getCombatLevel() <= player.getCombatLevel())
+//                            .forEach(bossTask -> playerTaskList.add(new SlayerTask(
+//                                    SlayerAssignment.valueOf(bossTask.name()),
+//                                    new Range(3, 35),
+//                                    new Range(0, 0),
+//                                    4
+//                            )));
+//                }
+//                return roll(playerTaskList, player.getPlayerDetails().getPreferredTasks());
+//            } else {
+//                player.receiveMessage("Both members need " + levelRequirement + " Slayer to get a task.");
+//            }
+//        } else {
+//            player.receiveMessage("You need " + levelRequirement + " Slayer to get a task.");
+//        }
+//        return null;
+//    }
+//
+//    private PlayerSlayerTask roll(List<SlayerTask> playerTaskList, List<Integer> preferredList) {
+//        final Random r = new Random();
+//        final int sum = playerTaskList.stream()
+//                .filter(task -> !SlayerSkill.isBossTask(task.getAssignment().ordinal()))
+//                .mapToInt(SlayerTask::getWeight).sum();
+//        float chance = r.nextFloat();
+//        final int index = r.nextInt(playerTaskList.size());
+//        float taskRoll;
+//        if (index >= taskList.size()) {
+//            taskRoll = (((float) playerTaskList.get(index).getWeight() / (sum + 4)));
+//        } else if (!preferredList.contains(taskList.get(index).getAssignment().ordinal())) {
+//            taskRoll = (((float) playerTaskList.get(index).getWeight() / sum));
+//        } else {
+//            taskRoll = (((float) (playerTaskList.get(index).getWeight() * 2) / sum));
+//        }
+//        if (chance <= (taskRoll)) {
+//            return new PlayerSlayerTask(playerTaskList.get(index), this.getId());
+//        }
+//        return roll(playerTaskList, preferredList);
+//    }
 
     public static void sendSocialSlayer(Player player, Player target) {
         if ((player.getPlayerDetails().getSlayerTask() == null && target.getPlayerDetails().getSlayerTask() == null)
-                ||(player.getPlayerDetails().getSlayerTask() != null
+                || (player.getPlayerDetails().getSlayerTask() != null
                 && target.getPlayerDetails().getSlayerTask() != null)
                 && player.getPlayerDetails().getSlayerTask().getAssignment()
                 == target.getPlayerDetails().getSlayerTask().getAssignment()) {
