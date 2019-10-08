@@ -182,11 +182,43 @@ public class SlayerMaster implements NonPlayableCharacter {
                             sendSocialSlayerInfoDialog(player);
                             break;
                         case 4:
+                            sendUnlockDialog(player);
+                            break;
+                        case 5:
                             player.getPA().closeInterfaces(true);
                             break;
                     }
                 }, "How Can I Help?",
-                "Prefer Task (" + PREFER_COST + " Points)", "Block Task (" + BLOCK_COST + " Points)", "Social Slayer", "Nevermind"))
+                "Prefer Task (" + PREFER_COST + " Points)", "Block Task (" + BLOCK_COST + " Points)", "Social Slayer","Unlockables", "Nevermind"))
+                .start(player);
+    }
+
+    private void sendUnlockDialog(Player player) {
+        player.getPA().closeInterfaces(true);
+        player.setDialogueChain(new DialogueChain().option((p, option) -> {
+                    switch (option) {
+                        case 1:
+                            if(SlayerSkill.unlock(player,SlayerUnlocks.BOSS_SLAYER)) {
+                                if(player.getPlayerDetails().getSlayerPoints().value() >= BOSS_SLAYER) {
+                                    player.getPA().closeInterfaces(true);
+                                    player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.BOSS_SLAYER.ordinal());
+                                    player.setDialogueChain(new DialogueChain().statement("You've unlocked Boss Slayer")).start(player);
+                                    player.saveDetails();
+                                } else {
+                                    player.getPA().closeInterfaces(true);
+                                    player.receiveMessage("You need at least  " + BOSS_SLAYER + " Slayer Points to unlock this.");
+                                }
+                            } else {
+                                player.getPA().closeInterfaces(true);
+                                player.setDialogueChain(new DialogueChain().statement("You already unlocked this.")).start(player);
+                            }
+                            break;
+                        case 2:
+                            player.getPA().closeInterfaces(true);
+                            break;
+                    }
+                }, "What would you like to Unlock?",
+                "Boss Slayer (" + BOSS_SLAYER + " Points)", "Nevermind"))
                 .start(player);
     }
 

@@ -18,6 +18,12 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class SlayerSkill {
 
+    public static final int LIKE_BOSS_SCROLL = 12049;
+
+    public static boolean unlock(Player player,SlayerUnlocks unloackable) {
+        return !player.getPlayerDetails().getUnlocksList().contains(unloackable.ordinal());
+    }
+
     public static void slayerKill(Player player, Npc npc, int hp) {
         if (npc != null) {
             if (player.getPlayerDetails().getSlayerTask() != null) {
