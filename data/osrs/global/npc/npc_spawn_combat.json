@@ -9046,5 +9046,424 @@
 		"y": 3581,
 		"height": 0,
 		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3162,
+		"y": 9574,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3164,
+		"y": 9556,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3161,
+		"y": 9547,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3198,
+		"y": 9554,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3198,
+		"y": 9572,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3216,
+		"y": 9588,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Wall Beast",
+		"npc_type": 7823,
+		"x": 3215,
+		"y": 9560,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Giant Frog",
+		"npc_type": 1828,
+		"x": 3248,
+		"y": 9562,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Giant Frog",
+		"npc_type": 1828,
+		"x": 3242,
+		"y": 9567,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Giant Frog",
+		"npc_type": 1828,
+		"x": 3245,
+		"y": 9579,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3252,
+		"y": 9580,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3254,
+		"y": 9576,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3253,
+		"y": 9581,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3252,
+		"y": 9580,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3254,
+		"y": 9571,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3222,
+		"y": 9559,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3181,
+		"y": 9545,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3155,
+		"y": 9548,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Big Frog",
+		"npc_type": 1829,
+		"x": 3151,
+		"y": 9552,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Rock Slug",
+		"npc_type": 1632,
+		"x": 3223,
+		"y": 9588,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Rock Slug",
+		"npc_type": 1632,
+		"x": 3226,
+		"y": 9585,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Rock Slug",
+		"npc_type": 1632,
+		"x": 3222,
+		"y": 9580,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Rock Slug",
+		"npc_type": 1632,
+		"x": 3257,
+		"y": 9577,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3223,
+		"y": 9569,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3225,
+		"y": 9575,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3218,
+		"y": 9571,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3208,
+		"y": 9589,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3210,
+		"y": 9586,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3186,
+		"y": 9581,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3191,
+		"y": 9578,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3184,
+		"y": 9556,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3189,
+		"y": 9552,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3177,
+		"y": 9558,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3185,
+		"y": 9583,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3167,
+		"y": 9547,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3152,
+		"y": 9557,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3160,
+		"y": 9555,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3154,
+		"y": 9574,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3148,
+		"y": 9573,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Bug",
+		"npc_type": 1832,
+		"x": 3151,
+		"y": 9578,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3211,
+		"y": 9570,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3210,
+		"y": 9557,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3207,
+		"y": 9554,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3183,
+		"y": 9548,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3178,
+		"y": 9547,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3178,
+		"y": 9547,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3165,
+		"y": 9542,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3156,
+		"y": 9559,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3151,
+		"y": 9562,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3159,
+		"y": 9592,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3165,
+		"y": 9587,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+		"npc_name": "Cave Slime",
+		"npc_type": 1831,
+		"x": 3168,
+		"y": 9591,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
+
 	}
 ]
