@@ -17,7 +17,7 @@ public enum SlayerAssignment {
     BRONZE_DRAGONS(1,new Locations[]{Locations.BRIMHAVEN_DUNGEON},270),
     CYCLOPES(1,new Locations[]{Locations.WARRIORS_GUILD},2463),
     DAGANNOTH(1,new Locations[]{Locations.DAGANNOTH_KINGS},3185),
-    DUST_DEVILS(65,new Locations[]{Locations.SLAYER_TOWER},0),
+    DUST_DEVILS(65,new Locations[]{Locations.SLAYER_TOWER},423),
     CRAWLING_HANDS(5,new Locations[]{Locations.SLAYER_TOWER},448),
     COWS(1,new Locations[]{Locations.LUMBRIDGE},2805),
     COCKATRICES(25,new Locations[]{Locations.FREMENNIK_DUNGEON},419),
