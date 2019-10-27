@@ -5,6 +5,7 @@ import core.Plugin;
 import core.Server;
 import core.ServerConfiguration;
 import core.ServerConstants;
+import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateCannon;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
@@ -168,6 +169,16 @@ public class FirstClickObject {
 			return;
 		}
 		switch (objectId) {
+			case 10049:
+			case 9366:
+			case 9364:
+			case 9367:
+			case 9365:
+				GraveDigger.getInstance().lootGrave(player);
+				break;
+			case 26204:
+				GraveDigger.getInstance().openGift(player);
+				break;
 			case PirateMinigame.GANGPLANK:
 				player.resetPirateMinigameSession();
 				player.getPirateMinigameSession().boardBoat();

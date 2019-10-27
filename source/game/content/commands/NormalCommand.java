@@ -203,7 +203,7 @@ public class NormalCommand {
 				player.getPA().sendMessage("::enterfanatic for <img=5><col=3eda63>Extreme Donator+</col>!");
 				player.getPA().sendMessage("::enterrevs for <img=6><col=ecd900>Legendary rank  Donator+</col>!");
 				player.getPA().sendMessage("::enterlava for <img=6><col=ecd900>Legendary Donator+</col>!");
-				player.getPA().sendMessage("::entertekton for <img=22><col=c511ff> 	Ultimate Donator+</col>!");
+//				player.getPA().sendMessage("::entertekton for <img=22><col=c511ff> 	Ultimate Donator+</col>!");
 
 				// player.getPA().sendMessage("<img=3><col=c511ff>commands list !");
 				// player.getPA().sendMessage("<img=3><col=c511ff>commands list !");

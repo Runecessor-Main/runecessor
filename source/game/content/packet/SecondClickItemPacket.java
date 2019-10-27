@@ -12,6 +12,7 @@ import game.content.miscellaneous.LootingBag;
 import game.content.miscellaneous.MagicCapeSpellbookSwap;
 import game.content.miscellaneous.PlayerMiscContent;
 import game.content.miscellaneous.RunecrafterHat;
+import game.content.phantasye.skill.slayer.item.SlayerGem;
 import game.content.skilling.Slayer;
 import game.item.ItemAssistant;
 import game.player.Player;
@@ -82,6 +83,9 @@ public class SecondClickItemPacket implements PacketType {
 			return;
 		}
 		switch (itemId) {
+			case SlayerGem.ID:
+				new SlayerGem(player).checkTask();
+				break;
 			case 7509:
 				PlayerMiscContent.rockCake(player);
 				break;

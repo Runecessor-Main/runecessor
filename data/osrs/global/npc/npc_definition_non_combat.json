@@ -10,6 +10,11 @@
 		"roam_distance": 0
 	},
 	{
+		"npc_name": "Dice Man",
+		"npc_type": 2713,
+		"roam_distance": 0
+	},
+	{
 		"npc_name": "Scalper",
 		"npc_type": 3463,
 		"roam_distance": 0

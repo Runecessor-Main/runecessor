@@ -479,24 +479,24 @@ public class Movement {
 			}
 		}
 
-		if (player.getHeight() == 20) {
-			if (Misc.distanceToPoint(player.getX() + Misc.directionDeltaX[dir], player.getY() + Misc.directionDeltaY[dir], Tournament.TOURNAMENT_ARENA_X,
-			                         Tournament.TOURNAMENT_ARENA_Y) > Tournament.MAXIMUM_ROAM_DISTANCE) {
-				player.getPA().sendMessage("You cannot walk too far.");
-				resetWalkingQueue(player);
-				return -1;
-			}
-			if (player.getY() >= 4760 && player.getY() + Misc.directionDeltaY[dir] < 4760) {
-				player.getPA().sendMessage("You cannot walk to the safe zone.");
-				resetWalkingQueue(player);
-				return -1;
-			}
-			if (player.getY() < 4760 && player.getY() + Misc.directionDeltaY[dir] >= 4760) {
-				player.getPA().sendMessage("You cannot walk to the arena.");
-				resetWalkingQueue(player);
-				return -1;
-			}
-		}
+//		if (player.getHeight() == 20) {
+//			if (Misc.distanceToPoint(player.getX() + Misc.directionDeltaX[dir], player.getY() + Misc.directionDeltaY[dir], Tournament.TOURNAMENT_ARENA_X,
+//			                         Tournament.TOURNAMENT_ARENA_Y) > Tournament.MAXIMUM_ROAM_DISTANCE) {
+//				player.getPA().sendMessage("You cannot walk too far.");
+//				resetWalkingQueue(player);
+//				return -1;
+//			}
+//			if (player.getY() >= 4760 && player.getY() + Misc.directionDeltaY[dir] < 4760) {
+//				player.getPA().sendMessage("You cannot walk to the safe zone.");
+//				resetWalkingQueue(player);
+//				return -1;
+//			}
+//			if (player.getY() < 4760 && player.getY() + Misc.directionDeltaY[dir] >= 4760) {
+//				player.getPA().sendMessage("You cannot walk to the arena.");
+//				resetWalkingQueue(player);
+//				return -1;
+//			}
+//		}
 
 		if (player.dead) {
 			return -1;

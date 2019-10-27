@@ -40,6 +40,7 @@ import game.content.miscellaneous.WelcomeMessage;
 import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
 import game.content.phantasye.event.WildernessChestController;
+import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.skill.slayer.master.SlayerMaster;
 import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
 import game.content.phantasye.skill.slayer.master.SlayerMasterRepository;
@@ -211,6 +212,9 @@ public class Server {
 		//loadSqlNetwork();
 		//sqlNetwork.start();
 	//	sqlNetwork.blockingTest();
+
+		GraveDigger.getInstance().initialize();
+
 		Server.loadSystems();
 		initiateConnections();
 		gameTick();

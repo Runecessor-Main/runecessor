@@ -7,6 +7,7 @@ import game.content.combat.Combat;
 import game.content.combat.CombatConstants;
 import game.content.combat.CombatInterface;
 import game.content.combat.Venom;
+import game.content.combat.effect.TwistedBow;
 import game.content.combat.special.SpecialAttackBase;
 import game.content.combat.vsplayer.AttackPlayer;
 import game.content.combat.vsplayer.magic.AutoCast;
@@ -427,8 +428,12 @@ public class CombatNpc {
 			maximum *= 2.3;
 		}
 		if (attacker.getWieldedWeapon() == 20997) {
-			rangedAttack *= 2.5;
-			maximum *= 2.5;
+//			System.out.println("MAX: " + maximum);
+//			System.out.println("DAMAGE: " + (TwistedBow.getDamageOnNpc(npc)));
+			rangedAttack += TwistedBow.getAccuracyOnNpc(npc);
+			maximum += TwistedBow.getDamageOnNpc(npc);
+//			System.out.println("CURRENT RANGE: " + rangedAttack);
+//			System.out.println("CURRENT MAX: " + maximum);
 		}
 		if (attacker.getWieldedWeapon() == 16052) {
 			rangedAttack *= 2.2;

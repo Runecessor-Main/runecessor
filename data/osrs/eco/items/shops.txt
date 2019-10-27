@@ -1136,12 +1136,25 @@ Shop name: Slayer points shop
 Shop id: 46
 Shop currency: Points
 4155 0 // gem
-10551 200 // Fighter torso.
-10548 75 // Fighter hat.
-10547 65 // Healer hat.
-10549 65 // Runner hat.
-10550 65 // Ranger hat.
+21257 100 // slayer scroll
+7788 50 // slayer tome (10k)
+7789 100 // slayer tome(50k)
+7790 150 // slayer tome (100k)
+22315 5000 //infernal stone
+1763 25 // Red Dye
+1771 25 // Green Dye
+16067 25 // purple dye
+419 5 //magic note papaer
 11864 300 // Slayer helmet.
+4170 75 // slayer staff
+12791 100 // Rune pouch
+16110 10000 // pet
+6605 2000 //chaotic rapier
+6607 2000 //chaotic longsword
+6609 2000 //chaotic maul
+9084 2000 //chaotic staff
+11165 2000 //chaotic crossbow
+
 11665 100 // Void melee helm.
 11664 100 // Void ranger helm.
 11663 100 // Void mage helm.
@@ -1150,23 +1163,7 @@ Shop currency: Points
 8842 115 // Void knight gloves.
 13072 225 // Elite void top
 13073 225 // Elite void bottom
-12610 35 // Book of law
-12612 45 // Book of darkness
-12791 100 // Rune pouch
-13124 40 // Ardougne cloak 4
-12783 260 // Ring of wealth scroll
-12786 70 // Magic shortbow scroll
-12804 120 // Saradomin's tear
-11941 150 // Looting bag
-12849 50 // Granite clamp
-12855 60 // Hunter's honour
-12856 60 // Rogue's revenge
-16136 2500 // Whip
-16110 10000 // pet
-6 100 // 
-8 100 //
-10 100 //
-12 100 //
+
 
 Shop name: Runecrafting shop
 Shop id: 47

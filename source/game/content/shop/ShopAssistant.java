@@ -52,7 +52,7 @@ public class ShopAssistant {
 				return true;
 			case 46:
 				if (GameType.isOsrsEco()) {
-					player.setSlayerPoints(
+					player.getPlayerDetails().getSlayerPoints().setValue(
 							buyItemAction(player, itemId, amount, itemSlot, currentAmount, 0, ShopAssistant.shopCurrencyName(player), getItemShopPrice(player, itemId)));
 					return true;
 				}
@@ -77,7 +77,7 @@ public class ShopAssistant {
 				return player.getMeritPoints();
 			case 46:
 				if (GameType.isOsrsEco()) {
-					return player.getSlayerPoints();
+					return player.getPlayerDetails().getSlayerPoints().value();
 				}
 				break;
 			case 16:

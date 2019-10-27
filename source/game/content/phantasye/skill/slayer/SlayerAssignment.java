@@ -26,7 +26,7 @@ public enum SlayerAssignment {
     FIRE_GIANTS(1,new Locations[]{Locations.BRIMHAVEN_DUNGEON},7251),
     GARGOYLES(75,new Locations[]{Locations.SLAYER_TOWER},412,7407),
     GHOSTS(1,new Locations[]{Locations.SLAYER_TOWER},6815),
-    GOBLINS(1,new Locations[]{Locations.LUMBRIDGE,Locations.GENERAL_GRAARDOR,Locations.TAVERLY_DUNGEON,Locations.REVENANT_CAVES},3049,6605,3029,2216,2218,2217),
+    GOBLINS(1,new Locations[]{Locations.LUMBRIDGE,Locations.GENERAL_GRAARDOR,Locations.TAVERLY_DUNGEON,Locations.REVENANT_CAVES},3049,6605,3029,2216,2218,2217,3031,3032,3033,3034,3035),
     GREATER_DEMONS(1,new Locations[]{Locations.BRIMHAVEN_DUNGEON},2026),
     GREEN_DRAGONS(1,new Locations[]{Locations.EAST_DRAGONS},260),
     HELL_HOUNDS(1,new Locations[]{Locations.TAVERLY_DUNGEON,Locations.CERBERUS},104,15256),

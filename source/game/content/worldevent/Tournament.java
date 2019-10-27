@@ -436,51 +436,51 @@ public class Tournament {
 	 * @param player
 	 */
 	public static void logOutUpdate(Player player, boolean logIn) {
-		if (logIn) {
-			switch (getTournamentStatus()) {
-				case "TOURNAMENT ANNOUNCED":
-					player.getPA().sendMessage(ServerConstants.BLUE_COL + "The " + eventType + " tournament has been announced.");
-					break;
-				case "TOURNAMENT LOBBY WAIT":
-					player.getPA().sendMessage(ServerConstants.BLUE_COL + "The " + eventType + " tournament will start soon, talk to Cow31337Killer.");
-					break;
-
-				case "TOURNAMENT NEXT ROUND":
-					player.getPA().sendMessage(ServerConstants.BLUE_COL + "The " + eventType + " tournament is active!");
-					break;
-			}
-		}
-		if (player.getHeight() != 20) {
-			return;
-		}
-
-		// Log in and remove player must be kept incase the server disconnected during tournament, so they are not left lingering around at height 20.
-		if (logIn && player.getHeight() == 20) {
-			player.getPA().movePlayer(player.getX(), player.getY(), 0);
-		}
-
-		ItemAssistant.deleteAllItems(player);
-		Combat.updatePlayerStance(player);
-		Skull.clearSkull(player);
-		if (GameType.isOsrsEco()) {
-			for (int index = 0; index < player.baseSkillLevelStoredBeforeTournament.length; index++) {
-				player.baseSkillLevel[index] = player.baseSkillLevelStoredBeforeTournament[index];
-				player.skillExperience[index] = player.skillExperienceStoredBeforeTournament[index];
-			}
-			QuickSetUp.heal(player, false, true);
-		}
-
-		if (!logIn) {
-			player.getPA().createPlayerHints(10, -1);
-			if (player.tournamentTarget >= 0) {
-				Player other = PlayerHandler.players[player.tournamentTarget];
-				if (other != null) {
-					playerDied(other, player);
-				}
-			}
-		}
-		player.tournamentTarget = -1;
-		removeFromTournamentLobby(player.getPlayerId());
+//		if (logIn) {
+//			switch (getTournamentStatus()) {
+//				case "TOURNAMENT ANNOUNCED":
+//					player.getPA().sendMessage(ServerConstants.BLUE_COL + "The " + eventType + " tournament has been announced.");
+//					break;
+//				case "TOURNAMENT LOBBY WAIT":
+//					player.getPA().sendMessage(ServerConstants.BLUE_COL + "The " + eventType + " tournament will start soon, talk to Cow31337Killer.");
+//					break;
+//
+//				case "TOURNAMENT NEXT ROUND":
+//					player.getPA().sendMessage(ServerConstants.BLUE_COL + "The " + eventType + " tournament is active!");
+//					break;
+//			}
+//		}
+//		if (player.getHeight() != 20 && player.getX() != TOURNAMENT_ARENA_X && player.getY() != TOURNAMENT_ARENA_Y) {
+//			return;
+//		}
+//
+//		// Log in and remove player must be kept incase the server disconnected during tournament, so they are not left lingering around at height 20.
+//		if (logIn && player.getHeight() == 20) {
+//			player.getPA().movePlayer(player.getX(), player.getY(), 0);
+//		}
+//
+//		ItemAssistant.deleteAllItems(player);
+//		Combat.updatePlayerStance(player);
+//		Skull.clearSkull(player);
+//		if (GameType.isOsrsEco()) {
+//			for (int index = 0; index < player.baseSkillLevelStoredBeforeTournament.length; index++) {
+//				player.baseSkillLevel[index] = player.baseSkillLevelStoredBeforeTournament[index];
+//				player.skillExperience[index] = player.skillExperienceStoredBeforeTournament[index];
+//			}
+//			QuickSetUp.heal(player, false, true);
+//		}
+//
+//		if (!logIn) {
+//			player.getPA().createPlayerHints(10, -1);
+//			if (player.tournamentTarget >= 0) {
+//				Player other = PlayerHandler.players[player.tournamentTarget];
+//				if (other != null) {
+//					playerDied(other, player);
+//				}
+//			}
+//		}
+//		player.tournamentTarget = -1;
+//		removeFromTournamentLobby(player.getPlayerId());
 	}
 
 	/**
@@ -880,22 +880,22 @@ public class Tournament {
 	}
 
 	public static void updateText(Player player) {
-		if (player != null) {
-			player.getPA().sendFrame126("Lobby: " + Tournament.playerListLobby.size(), 25982);
-			player.getPA().sendFrame126("Tournament: " + Tournament.playerListTournament.size(), 25983);
-		}
-		for (int index = 0; index < ServerConstants.MAXIMUM_PLAYERS; index++) {
-			Player loop = PlayerHandler.players[index];
-			if (loop == null) {
-				continue;
-			}
-			if (loop.getHeight() != 20) {
-				continue;
-			}
-
-			loop.getPA().sendFrame126("Lobby: " + Tournament.playerListLobby.size(), 25982);
-			loop.getPA().sendFrame126("Tournament: " + Tournament.playerListTournament.size(), 25983);
-		}
+//		if (player != null) {
+//			player.getPA().sendFrame126("Lobby: " + Tournament.playerListLobby.size(), 25982);
+//			player.getPA().sendFrame126("Tournament: " + Tournament.playerListTournament.size(), 25983);
+//		}
+//		for (int index = 0; index < ServerConstants.MAXIMUM_PLAYERS; index++) {
+//			Player loop = PlayerHandler.players[index];
+//			if (loop == null) {
+//				continue;
+//			}
+//			if (loop.getHeight() != 20) {
+//				continue;
+//			}
+//
+//			loop.getPA().sendFrame126("Lobby: " + Tournament.playerListLobby.size(), 25982);
+//			loop.getPA().sendFrame126("Tournament: " + Tournament.playerListTournament.size(), 25983);
+//		}
 
 	}
 

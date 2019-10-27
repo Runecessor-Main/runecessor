@@ -12,6 +12,7 @@ import game.content.miscellaneous.ItemCombining;
 import game.content.miscellaneous.RunePouch;
 import game.content.miscellaneous.Teleport;
 import game.content.miscellaneous.Wolpertinger;
+import game.content.phantasye.skill.slayer.item.SlayerGem;
 import game.content.skilling.Slayer;
 import game.content.skilling.summoning.Summoning;
 import game.item.ItemAssistant;
@@ -42,7 +43,7 @@ public class ThirdClickItemPacket implements PacketType {
 		// 0 to 27.
 		int itemId = player.getInStream().readSignedWordA();
 		itemSlot = (itemSlot - 128) / 256;
-
+		System.out.println("3rd");
 		if (trackPlayer) {
 			PacketHandler.saveData(player.getPlayerName(), "itemId11: " + itemId11);
 			PacketHandler.saveData(player.getPlayerName(), "itemSlot: " + itemSlot);
@@ -100,6 +101,9 @@ public class ThirdClickItemPacket implements PacketType {
 			return;
 		}
 		switch (itemId) {
+			case SlayerGem.ID:
+				new SlayerGem(player).social();
+				break;
 			case 13221:
 				if (ItemAssistant.hasItemInInventory(player, 13221)) {
 					ItemAssistant.deleteItemFromInventory(player, 13221, 1);

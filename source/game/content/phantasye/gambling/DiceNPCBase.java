@@ -50,7 +50,6 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         this.coins = new AdjustableInteger(0);
         this.playersWager = new ArrayList<>();
         this.inventory = new MerchandiseItemContainerImpl(50);
-        this.inventory = new DefaultItemContainerImpl(50);
         this.addItemToInventory(995, 500000000);
     }
 
@@ -267,8 +266,6 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         return NumberFormat.getInstance().format(value) + " GP";
     }
 
-    public int getMaxBid() {
-        return coins.value();
     private long getMaxBid() {
         return Arrays.stream(inventory.getReadOnlyContents()).filter(itemSlot -> itemSlot.getId() != -1).mapToInt(item -> ItemDefinition.getDefinitions()[item.getId()].price * item.count()).sum();
 

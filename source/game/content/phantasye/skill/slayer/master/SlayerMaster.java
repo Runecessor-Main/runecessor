@@ -1,5 +1,6 @@
 package game.content.phantasye.skill.slayer.master;
 
+import core.ServerConstants;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
@@ -25,12 +26,13 @@ import java.util.*;
 
 public class SlayerMaster implements NonPlayableCharacter {
 
-    private static final int RESET_COST = 50;
+    private static final int RESET_COST = 30;
     private static final int BLOCK_COST = 100;
     private static final int PREFER_COST = 150;
     private static final int EXTEND_COST = 30;
     private static final int BOSS_SLAYER = 200;
-
+    private static final int SAFE_BOSSES = 500;
+    private static final int REMOTE_SLAYER = 100;
     private final List<SlayerTask> taskList;
     private final int levelRequirement;
     private final int id;
@@ -88,7 +90,8 @@ public class SlayerMaster implements NonPlayableCharacter {
         player.receiveMessage("You've completed " + player.getPlayerDetails().getTaskStreak().value()
                 + " Tasks in a row and received "
                 + points
-                + " Slayer Points!");
+                + " Slayer Points! You now have " + player.getPlayerDetails().getSlayerPoints().value()
+                + " Slayer Points.");
 
         if (SlayerSkill.isBossTask(player.getPlayerDetails().getSlayerTask().getAssignment())) {
             Skilling.addSkillExperience(player, 5000, 18, false);
@@ -128,15 +131,17 @@ public class SlayerMaster implements NonPlayableCharacter {
     }
 
     public void assignTaskTo(Player player) {
-        if(SlayerSkill.isDoingDuoSlayer(player)) {
-            new DuoPlayerAssignmentChain(player,this).execute();
+        player.getPlayerDetails().setSlayerMaster(this.id);
+        if (SlayerSkill.isDoingDuoSlayer(player)) {
+            new DuoPlayerAssignmentChain(player, this).execute();
         } else {
-            new SoloSlayerAssignmentChain(player,this).execute();
+            new SoloSlayerAssignmentChain(player, this).execute();
         }
     }
 
     public void openShopFor(Player player) {
         player.getShops().openShop(46);
+        player.receiveMessage("You have " + ServerConstants.RED_COL + player.getPlayerDetails().getSlayerPoints().value() + "</col> Slayer Points.");
     }
 
     private void sendDialogContinued(Player player) {
@@ -185,11 +190,46 @@ public class SlayerMaster implements NonPlayableCharacter {
                             }
                             break;
                         case 2:
+                            if (SlayerSkill.unlock(player, SlayerUnlocks.SAFE_BOSS_INSTANCES)) {
+                                if (player.getPlayerDetails().getSlayerPoints().value() >= SAFE_BOSSES) {
+                                    player.getPA().closeInterfaces(true);
+                                    player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.SAFE_BOSS_INSTANCES.ordinal());
+                                    player.setDialogueChain(new DialogueChain().statement("You've unlocked Safe Boss Instances")).start(player);
+                                    player.saveDetails();
+                                } else {
+                                    player.getPA().closeInterfaces(true);
+                                    player.receiveMessage("You need at least  " + SAFE_BOSSES + " Slayer Points to unlock this.");
+                                }
+                            } else {
+                                player.getPA().closeInterfaces(true);
+                                player.setDialogueChain(new DialogueChain().statement("You already unlocked this.")).start(player);
+                            }
+                            break;
+                        case 3:
+                            if (SlayerSkill.unlock(player, SlayerUnlocks.REMOTE_TASKS)) {
+                                if (player.getPlayerDetails().getSlayerPoints().value() >= REMOTE_SLAYER) {
+                                    player.getPA().closeInterfaces(true);
+                                    player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.REMOTE_TASKS.ordinal());
+                                    player.setDialogueChain(new DialogueChain().statement("You've unlocked Remote Tasks!")).start(player);
+                                    player.saveDetails();
+                                } else {
+                                    player.getPA().closeInterfaces(true);
+                                    player.receiveMessage("You need at least  " + REMOTE_SLAYER + " Slayer Points to unlock this.");
+                                }
+                            } else {
+                                player.getPA().closeInterfaces(true);
+                                player.setDialogueChain(new DialogueChain().statement("You already unlocked this.")).start(player);
+                            }
+                            break;
+                        case 4:
                             player.getPA().closeInterfaces(true);
                             break;
                     }
                 }, "What would you like to Unlock?",
-                "Boss Slayer (" + BOSS_SLAYER + " Points)", "Nevermind"))
+                "Boss Slayer (" + BOSS_SLAYER + " Points)",
+                "Safe Boss Instances (" + SAFE_BOSSES + " Points)",
+                "Remote Tasks (" + REMOTE_SLAYER + " Points)",
+                "Nevermind"))
                 .start(player);
     }
 
@@ -528,7 +568,7 @@ public class SlayerMaster implements NonPlayableCharacter {
         }
     }
 
-    public void leaveGroupDialog(Player player) {
+    public static void leaveGroupDialog(Player player) {
         player.getPA().closeInterfaces(true);
         player.setDialogueChain(new DialogueChain().option((p, option) -> {
                     switch (option) {

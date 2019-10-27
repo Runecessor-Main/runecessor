@@ -35,6 +35,7 @@ import game.content.packet.preeoc.ClickItemPreEoc;
 import game.content.phantasye.skill.Trap;
 import game.content.phantasye.skill.TrapController;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
+import game.content.phantasye.skill.slayer.item.SlayerGem;
 import game.content.skilling.BirdNests;
 import game.content.skilling.Runecrafting;
 import game.content.skilling.Skilling;
@@ -624,15 +625,8 @@ public class FirstClickItemPacket implements PacketType {
                 break;
 
             // Enchanted gem.
-            case 4155:
-                if(player.getPlayerDetails().getSlayerTask() != null) {
-                    player.receiveMessage("You must slay "
-                            + player.getPlayerDetails().getSlayerTask().getAmount().value()
-                            + " more "
-                            + SlayerAssignment.values()[player.getPlayerDetails().getSlayerTask().getAssignment()].toString());
-                } else {
-                    player.receiveMessage("You currently have no Slayer Task.");
-                }
+            case SlayerGem.ID:
+                new SlayerGem(player).activate();
                 break;
 
             // Clue scroll.

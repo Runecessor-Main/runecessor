@@ -1,5 +1,6 @@
 package game.content.phantasye;
 
+import game.content.phantasye.event.hween.GraveDiggerProperties;
 import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
 import org.menaphos.model.math.impl.AdjustableInteger;
 
@@ -19,6 +20,10 @@ public class PlayerDetails {
     private final List<Integer> blockedTasks;
     private List<Integer> unlocksList;
     private PlayerSlayerTask slayerTask;
+    private int slayerMaster;
+
+    private GraveDiggerProperties graveDiggerProperties;
+    private boolean openedGift;
 
     public PlayerDetails(String id) {
         this.id = id;
@@ -30,6 +35,7 @@ public class PlayerDetails {
         this.taskStreak = new AdjustableInteger(0);
         this.preferredTasks = new ArrayList<>();
         this.blockedTasks = new ArrayList<>();
+        this.graveDiggerProperties = new GraveDiggerProperties();
     }
 
     public void initialize() {
@@ -44,6 +50,30 @@ public class PlayerDetails {
                 e.printStackTrace();
             }
         });
+    }
+
+    public boolean hasOpenedGift() {
+        return openedGift;
+    }
+
+    public void setOpenedGift(boolean openedGift) {
+        this.openedGift = openedGift;
+    }
+
+    public GraveDiggerProperties getGraveDiggerProperties() {
+        return graveDiggerProperties;
+    }
+
+    public void setGraveDiggerProperties(GraveDiggerProperties graveDiggerProperties) {
+        this.graveDiggerProperties = graveDiggerProperties;
+    }
+
+    public int getSlayerMaster() {
+        return slayerMaster;
+    }
+
+    public void setSlayerMaster(int slayerMaster) {
+        this.slayerMaster = slayerMaster;
     }
 
     public List<Integer> getUnlocksList() {
