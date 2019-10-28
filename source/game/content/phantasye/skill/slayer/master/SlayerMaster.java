@@ -3,17 +3,14 @@ package game.content.phantasye.skill.slayer.master;
 import core.ServerConstants;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
+import game.content.phantasye.dialogue.DialogueOptionPaginator;
+import game.content.phantasye.dialogue.impl.SlayerMasterTalkToListener;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
 import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.phantasye.skill.slayer.SlayerUnlocks;
-import game.content.phantasye.skill.slayer.master.assignment.AssignmentChain;
 import game.content.phantasye.skill.slayer.master.assignment.DuoPlayerAssignmentChain;
 import game.content.phantasye.skill.slayer.master.assignment.SoloSlayerAssignmentChain;
-import game.content.phantasye.skill.slayer.master.assignment.impl.*;
-import game.content.phantasye.skill.slayer.task.BossTask;
-import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
 import game.content.phantasye.skill.slayer.task.SlayerTask;
-import game.content.phantasye.skill.slayer.task.TaskGenerator;
 import game.content.skilling.Skilling;
 import game.menaphos.looting.model.Range;
 import game.npc.data.NpcDefinition;
@@ -22,7 +19,8 @@ import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.model.world.location.Location;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SlayerMaster implements NonPlayableCharacter {
 
@@ -104,29 +102,19 @@ public class SlayerMaster implements NonPlayableCharacter {
 
     public void talkTo(Player player) {
         player.getPA().closeInterfaces(true);
-        player.setDialogueChain(new DialogueChain().option((p, option) -> {
-                    switch (option) {
-                        case 1:
-                            assignTaskTo(player);
-                            player.getPA().closeInterfaces(true);
-                            break;
-                        case 2:
-                            openShopFor(player);
-                            break;
-                        case 3:
-                            cancelTaskFor(player);
-                            player.getPA().closeInterfaces(true);
-                            break;
-                        case 4:
-                            extendTaskFor(player);
-                            player.getPA().closeInterfaces(true);
-                            break;
-                        case 5:
-                            sendDialogContinued(player);
-                            break;
-                    }
-                }, "How Can I Help?",
-                "Assign Task", "Open Shop", "Cancel Task (" + RESET_COST + " Points)", "Extend Task (" + EXTEND_COST + " Points)", "More Options"))
+        DialogueOptionPaginator paginator =
+                new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player)
+                        .withTitle("How Can I Help?")
+                        .addOption("Assign Task")
+                        .addOption("Open Shop")
+                        .addOption("Cancel Task (" + RESET_COST + " Points)")
+                        .addOption("Extend Task (" + EXTEND_COST + " Points)")
+                        .addOption("Prefer Task (" + PREFER_COST + " Points)")
+                        .addOption("Block Task (" + BLOCK_COST + " Points)")
+                        .addOption("Social Slayer")
+                        .addOption("Unlockables")
+                        .build();
+        player.setDialogueChain(paginator.getPageAsDialogOptions(0, new SlayerMasterTalkToListener(paginator, this)))
                 .start(player);
     }
 
@@ -144,32 +132,7 @@ public class SlayerMaster implements NonPlayableCharacter {
         player.receiveMessage("You have " + ServerConstants.RED_COL + player.getPlayerDetails().getSlayerPoints().value() + "</col> Slayer Points.");
     }
 
-    private void sendDialogContinued(Player player) {
-        player.getPA().closeInterfaces(true);
-        player.setDialogueChain(new DialogueChain().option((p, option) -> {
-                    switch (option) {
-                        case 1:
-                            sendPreferDialog(player);
-                            break;
-                        case 2:
-                            sendBlockDialog(player);
-                            break;
-                        case 3:
-                            sendSocialSlayerInfoDialog(player);
-                            break;
-                        case 4:
-                            sendUnlockDialog(player);
-                            break;
-                        case 5:
-                            player.getPA().closeInterfaces(true);
-                            break;
-                    }
-                }, "How Can I Help?",
-                "Prefer Task (" + PREFER_COST + " Points)", "Block Task (" + BLOCK_COST + " Points)", "Social Slayer", "Unlockables", "Nevermind"))
-                .start(player);
-    }
-
-    private void sendUnlockDialog(Player player) {
+    public void sendUnlockDialog(Player player) {
         player.getPA().closeInterfaces(true);
         player.setDialogueChain(new DialogueChain().option((p, option) -> {
                     switch (option) {
@@ -233,14 +196,14 @@ public class SlayerMaster implements NonPlayableCharacter {
                 .start(player);
     }
 
-    private void sendSocialSlayerInfoDialog(Player player) {
+    public void sendSocialSlayerInfoDialog(Player player) {
         player.setDialogueChain(new DialogueChain().npc(NpcDefinition.getDefinitions()[id], DialogueHandler.FacialAnimation.DEFAULT,
                 "Simply use your Slayer Gem on another player to invite them",
                 "both players must have the same task or no task and to work.",
                 "Both players will get kill credit if they're within 30 tiles of eachother.")).start(player);
     }
 
-    private void sendBlockDialog(Player player) {
+    public void sendBlockDialog(Player player) {
         player.getPA().closeInterfaces(true);
         player.setDialogueChain(new DialogueChain().option((p, option) -> {
                     switch (option) {
@@ -310,7 +273,7 @@ public class SlayerMaster implements NonPlayableCharacter {
         player.saveDetails();
     }
 
-    private void sendPreferDialog(Player player) {
+    public void sendPreferDialog(Player player) {
         player.getPA().closeInterfaces(true);
         player.setDialogueChain(new DialogueChain().option((p, option) -> {
                     switch (option) {
@@ -434,7 +397,7 @@ public class SlayerMaster implements NonPlayableCharacter {
         }
     }
 
-    private void extendTaskFor(Player player) {
+    public void extendTaskFor(Player player) {
         if (player.getPlayerDetails().getSlayerTask() != null) {
             if (!SlayerSkill.isBossTask(player.getPlayerDetails().getSlayerTask().getAssignment())) {
                 if (player.getPlayerDetails().getSlayerPoints().value() >= EXTEND_COST) {

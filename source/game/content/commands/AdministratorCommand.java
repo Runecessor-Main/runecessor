@@ -21,6 +21,10 @@ import core.ServerConfiguration;
 import core.ServerConstants;
 import core.benchmark.GameBenchmark;
 import game.NamedPosition;
+import game.content.dialogue.Dialogue;
+import game.content.dialogue.listener.impl.CloseDialogueListener;
+import game.content.phantasye.dialogue.DialogueOptionPaginator;
+import game.content.phantasye.dialogue.impl.TestPaginatorClickListener;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateCannon;
@@ -158,6 +162,7 @@ public class AdministratorCommand {
     /**
      * Commands eligible for Administrators only.
      */
+
     public static boolean administratorCommands(Player player, String command) {
         if (YoutubePaid.givePaidYoutubeCommand(player, command)) {
             return true;
@@ -172,20 +177,22 @@ public class AdministratorCommand {
             return true;
         }
         if (command.equals("tt")) {
-//            player.setPirateMinigameSession(new PirateMinigame(player));
-//            Location playerLocation = new Location(player.getX(), player.getHeight(),
-//                    player.getY());
-//            final Location location = PirateCannon.spawnForTarget(player);
-//            PirateCannon cannon = new PirateCannon(
-//                    location,
-//                    location.directionFrom(playerLocation),
-//                    player);
-//
-//            cannon.fire();
-            WildernessChestController.getInstance().spawnChest();
-//            player.createShoppingSession(ShopFactory.getShop(1));
-//            BossInstanceController.getInstance().startInstance(player);
+            DialogueOptionPaginator paginator =
+                    new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player)
+                            .addOption("one")
+                            .addOption("two")
+                            .addOption("three")
+                            .addOption("four")
+                            .addOption("five")
+                            .addOption("six")
+                            .addOption("seven")
+                            .addOption("eight")
+                            .addOption("nine")
+                            .addOption("ten")
+                            .withTitle("test")
+                            .build();
 
+            player.setDialogueChain(paginator.getPageAsDialogOptions(0,new TestPaginatorClickListener(paginator))).start(player);
         }
         if (command.equals("doubleitems")) {
             int loops = 100_000;

@@ -85,6 +85,7 @@ public class SecondClickItemPacket implements PacketType {
 		switch (itemId) {
 			case SlayerGem.ID:
 				new SlayerGem(player).checkTask();
+				System.out.println("wtf");
 				break;
 			case 7509:
 				PlayerMiscContent.rockCake(player);

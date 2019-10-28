@@ -19,6 +19,7 @@ import game.content.minigame.single_minigame.zulrah.ZulrahSinglePlayerMinigame;
 import game.content.minigame.single_minigame.zulrah.ZulrahSinglePlayerMinigameFactory;
 import game.content.miscellaneous.TeleportInterface;
 import game.content.packet.preeoc.ClickNpcPreEoc;
+import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.gambling.DiceNPCBase;
 import game.content.phantasye.skill.slayer.master.SlayerMaster;
 import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
@@ -134,6 +135,9 @@ public class FirstClickNpc {
         }
 
         switch (npc.npcType) {
+            case 5567:
+                GraveDigger.getInstance().talkToDeath(player);
+                break;
             case SlayerMasterNieve
                     .ID:
             case SlayerMasterTurael

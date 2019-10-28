@@ -8,6 +8,14 @@
 		"face_action": "ROAM"
 	},
 	{
+		"npc_description": "Death",
+		"npc_type": 5567,
+		"x": 3087,
+		"y": 3498,
+		"height": 0,
+		"face_action": "WEST"
+	},
+	{
 		"npc_name":"Dice Man",
 		"npc_type": 2713,
 		"x":3087,

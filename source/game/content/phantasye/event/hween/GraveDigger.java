@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import game.content.phantasye.PlayerDetails;
 import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
+import game.content.phantasye.dialogue.DialogueOptionPaginator;
+import game.content.phantasye.dialogue.impl.HalloweenPaginatorListener;
 import game.menaphos.looting.model.item.Item;
 import game.menaphos.looting.model.loot.Loot;
 import game.menaphos.looting.model.loot.LootableContainer;
@@ -50,6 +52,17 @@ public class GraveDigger {
 
         timer.scheduleAtFixedRate(new DailyReset(), today.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS));
 
+    }
+
+    public void talkToDeath(Player player) {
+        DialogueOptionPaginator paginator =
+                new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player)
+                        .withTitle("Happy halloween!")
+                        .addOption("Talk to")
+                        .addOption("Open Shop")
+                        .addOption("Get another attempt")
+                        .build();
+        player.setDialogueChain(paginator.getPageAsDialogOptions(0,new HalloweenPaginatorListener(paginator))).start(player);
     }
 
     private boolean consumeAttempt(Player player) {
