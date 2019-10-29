@@ -204,7 +204,9 @@ public class Region {
 		if(objectId == 13633 && x == 3090 && y == 3489 && height == 0) {
 			return true;
 		}
-
+		if (objectId == 12260 && x == 3087 && y == 3494 && height == 0) {
+				return true;
+			}
 		if (GameType.isOsrs()) {
 			// Ice chunk (vorkath object)
 			if (objectId == 31990 && x == 2272 && y == 4053) {
@@ -213,6 +215,7 @@ public class Region {
 			if (objectId == 4875 && x == 3191 && y == 3433 && height == 0) {
 				return true;
 			}
+			
 			if (objectId == 4876 && x == 3191 && y == 3434 && height == 0) {
 				return true;
 			}

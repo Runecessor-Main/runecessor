@@ -109,9 +109,7 @@ public class CustomClippedTiles {
 		//Varrock Home
 		Region.addObjectActionTile(23709, 3212, 3429, 0, 2, 2);
 		Region.addObjectActionTile(30251, 3238, 3435, 0, 2, 2);
-		
-		
-		
+
 		// Max dummy @ donator zone
 		//Region.addObjectActionTile(18242, 2192, 3250, 0, 1, 1);
 
@@ -139,6 +137,7 @@ public class CustomClippedTiles {
 		Region.addObjectActionTile(14903, 3195, 3438, 0, 1, 1); // Chest
 		//boss instance portal
 		Region.addObjectActionTile(13633, 3090, 3489, 0, 2, 2);
+		Region.addObjectActionTile(12260, 3087, 3494, 0, 2, 2);
 		// Deposit vault at Dice zone
 		Region.addObjectActionTile(29111, 1692, 4257, 0, 2, 2);
 
@@ -355,6 +354,7 @@ public class CustomClippedTiles {
 		Region.addObject(30251, 3238, 3435, 0, 0, 3, true);
 		Region.addObject(29170, 3204, 3417, 0, 0, 3, true);
 		
+	
 		// Gates in the wilderness and double doors.
 		Region.addObject(1728, 3008, 3849, 0, 0, 3, true);
 		Region.addObject(1727, 3008, 3850, 0, 0, 1, true);

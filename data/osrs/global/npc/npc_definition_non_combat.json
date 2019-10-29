@@ -10,13 +10,13 @@
 		"roam_distance": 0
 	},
 	{
-		"npc_name": "Dice Man",
-		"npc_type": 2713,
+		"npc_name": "Scalper",
+		"npc_type": 3463,
 		"roam_distance": 0
 	},
 	{
-		"npc_name": "Scalper",
-		"npc_type": 3463,
+		"npc_name": "Doc Holiday",
+		"npc_type": 2713,
 		"roam_distance": 0
 	},
 	{
@@ -580,6 +580,11 @@
 		"roam_distance": 0
 	},
 	{
+		"npc_name": "Ajax",
+		"npc_type": 114,
+		"roam_distance": 0
+	},
+	{
 		"npc_name": "wiz",
 		"npc_type": 1559,
 		"roam_distance": 0
@@ -632,26 +637,6 @@
 	{
 		"npc_name": "Nieve",
 		"npc_type": 6797,
-		"roam_distance": 0
-	},
-	{
-		"npc_name": "Turael",
-		"npc_type": 401,
-		"roam_distance": 0
-	},
-	{
-		"npc_name": "Mazchna",
-		"npc_type": 402,
-		"roam_distance": 0
-	},
-	{
-		"npc_name": "Chaeldar",
-		"npc_type": 404,
-		"roam_distance": 0
-	},
-	{
-		"npc_name": "Duradel",
-		"npc_type": 405,
 		"roam_distance": 0
 	},
 	{
