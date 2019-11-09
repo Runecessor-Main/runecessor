@@ -91,6 +91,7 @@ public class ItemSlot {
 			case 6396: // Menaphite robe.
 			case 6404: // Menaphite robe.
 			case 6752: // Black desert robe.
+			case 5563:
 				return ServerConstants.LEG_SLOT;
 
 			case 11019: // Chicken feet.

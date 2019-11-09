@@ -2,11 +2,10 @@ package game.content.phantasye;
 
 import game.content.phantasye.event.hween.GraveDiggerProperties;
 import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
+import game.menaphos.looting.model.item.Item;
 import org.menaphos.model.math.impl.AdjustableInteger;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class PlayerDetails {
 
@@ -21,9 +20,11 @@ public class PlayerDetails {
     private List<Integer> unlocksList;
     private PlayerSlayerTask slayerTask;
     private int slayerMaster;
+    private Map<Integer,AdjustableInteger> herbSack;
 
     private GraveDiggerProperties graveDiggerProperties;
     private boolean openedGift;
+    private List<Item> unlcaimedPrizes;
 
     public PlayerDetails(String id) {
         this.id = id;
@@ -36,6 +37,8 @@ public class PlayerDetails {
         this.preferredTasks = new ArrayList<>();
         this.blockedTasks = new ArrayList<>();
         this.graveDiggerProperties = new GraveDiggerProperties();
+        this.unlcaimedPrizes = new ArrayList<>();
+        this.herbSack = new HashMap<>();
     }
 
     public void initialize() {
@@ -50,6 +53,14 @@ public class PlayerDetails {
                 e.printStackTrace();
             }
         });
+    }
+
+    public Map<Integer, AdjustableInteger> getHerbSack() {
+        return herbSack;
+    }
+
+    public List<Item> getUnlcaimedPrizes() {
+        return unlcaimedPrizes;
     }
 
     public boolean hasOpenedGift() {

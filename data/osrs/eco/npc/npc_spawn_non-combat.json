@@ -16,6 +16,46 @@
 		"face_action": "WEST"
 	},
 	{
+		"npc_name":"Turael",
+		"npc_type":401,
+		"x":3110,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Mazchna",
+		"npc_type":402,
+		"x":3111,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Vannaka",
+		"npc_type":403,
+		"x":3112,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Chaeldar",
+		"npc_type":404,
+		"x":3113,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Duradel",
+		"npc_type":405,
+		"x":3114,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
 		"npc_name":"Dice Man",
 		"npc_type": 2713,
 		"x":3087,
@@ -1451,14 +1491,6 @@
       "y":3227,
       "height":0,
       "face_action":"EAST"
-   },
-   {
-      "npc_name":"Nieve",
-      "npc_type":6797,
-      "x":3109,
-      "y":3514,
-      "height":0,
-      "face_action":"NORTH"
    },
 	{
 		"npc_name":"Turael",

@@ -12,6 +12,8 @@ import game.content.miscellaneous.LootingBag;
 import game.content.miscellaneous.MagicCapeSpellbookSwap;
 import game.content.miscellaneous.PlayerMiscContent;
 import game.content.miscellaneous.RunecrafterHat;
+import game.content.phantasye.item.HerbSack;
+import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.phantasye.skill.slayer.item.SlayerGem;
 import game.content.skilling.Slayer;
 import game.item.ItemAssistant;
@@ -69,7 +71,7 @@ public class SecondClickItemPacket implements PacketType {
 		}
 
 		if (Misc.arrayHasNumber(ServerConstants.getSlayerHelms(), itemId)) {
-			Slayer.checkSlayerHelmOption(player);
+			new SlayerGem(player).checkTask();
 			return;
 		}
 		if (ItemCombining.isDismantlable(player, itemId, ItemAssistant.getItemSlot(player, itemId),
@@ -83,9 +85,22 @@ public class SecondClickItemPacket implements PacketType {
 			return;
 		}
 		switch (itemId) {
+			case 11866:
+			case 11867:
+			case 11868:
+			case 11869:
+			case 11870:
+			case 11871:
+			case 11872:
+			case 11873:
+			case 7121:
+				SlayerSkill.useSlayerRing(player,itemId);
+				break;
+			case 13226:
+				HerbSack.getInstanceForPlayer(player).empty();
+				break;
 			case SlayerGem.ID:
 				new SlayerGem(player).checkTask();
-				System.out.println("wtf");
 				break;
 			case 7509:
 				PlayerMiscContent.rockCake(player);

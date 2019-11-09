@@ -6,13 +6,15 @@ import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.impl.HalloweenPaginatorListener;
+import game.item.ItemAssistant;
 import game.menaphos.looting.model.item.Item;
 import game.menaphos.looting.model.loot.Loot;
 import game.menaphos.looting.model.loot.LootableContainer;
-import game.menaphos.looting.model.loot.LootableObject;
+import game.menaphos.looting.model.loot.LootableItem;
 import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.player.Player;
 import game.player.PlayerHandler;
+import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.phantasye.RepositoryManager;
 
@@ -22,8 +24,8 @@ import java.util.concurrent.TimeUnit;
 
 public class GraveDigger {
 
-    private static final int ATTEMPT_COST_GP = 50000000;
-    private static final int ATTEMPT_COST_DT = 30;
+    public static final int ATTEMPT_COST_GP = 20000000;
+    public static final int ATTEMPT_COST_DT = 30;
     private static final int RESET_AMOUNT_BASE = 3;
 
     private CommunityGift activeGift;
@@ -61,8 +63,10 @@ public class GraveDigger {
                         .addOption("Talk to")
                         .addOption("Open Shop")
                         .addOption("Get another attempt")
+                        .addOption("Teleport me to the Event")
+                        .addOption("Spawn Community Gift")
                         .build();
-        player.setDialogueChain(paginator.getPageAsDialogOptions(0,new HalloweenPaginatorListener(paginator))).start(player);
+        player.setDialogueChain(paginator.getPageAsDialogOptions(0, new HalloweenPaginatorListener(paginator))).start(player);
     }
 
     private boolean consumeAttempt(Player player) {
@@ -79,7 +83,7 @@ public class GraveDigger {
         return true;
     }
 
-    private void saveProperties(Player player) {
+    public void saveProperties(Player player) {
         player.saveDetails();
     }
 
@@ -89,6 +93,15 @@ public class GraveDigger {
             gson.toJson(this, writer);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public boolean dyeItem(PlayableCharacter player, int id) {
+        switch (id) {
+            case 20784:
+                return player.removeItemFromInventory(16903, 1) && player.removeItemFromInventory(id, 1) && player.addItemToInventory(16340, 1);
+            default:
+                return false;
         }
     }
 
@@ -121,13 +134,31 @@ public class GraveDigger {
     }
 
     private void spawnCommunityGift(int tier) {
-        PlayerHandler.getPlayers().forEach(player -> {
-            player.getPlayerDetails().setOpenedGift(false);
-            player.receiveMessage("The Community has gathered " + communityPoints.value() + " points and a new gift has spawned!");
-            saveProperties(player);
-        });
         this.setActiveGift(new CommunityGift(tier));
         this.saveEvent();
+
+        PlayerHandler.getPlayers().forEach(player -> {
+            if (player.getPlayerDetails() != null) {
+                activeGift.getLootList().forEach(loot -> giveReward(player,loot.getItem()));
+                player.getPlayerDetails().setOpenedGift(false);
+                player.receiveMessage("The Community has gathered " + communityPoints.value() + " points and a new gift has spawned!");
+            } else {
+                player.setPlayerDetails(new PlayerDetails(player.getPlayerName()));
+                saveProperties(player);
+            }
+        });
+
+    }
+
+    private void giveReward(Player player,Item item) {
+        player.getPlayerDetails().getUnlcaimedPrizes().add(item);
+        player.saveDetails();
+//        final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager =
+//                new PlayerDetailsRepositoryManager();
+//        repositoryManager.getRepository().readAll().stream()
+//                .filter(player -> player.getUnlcaimedPrizes() != null)
+//                .forEach(player -> player.getUnlcaimedPrizes().add(item));
+//        repositoryManager.updateRepository();
     }
 
     private void generateCommunityRewards() {
@@ -147,22 +178,44 @@ public class GraveDigger {
     private int getNextTier() {
         if (communityPoints.lessThan(5))
             return 5;
-        else if (communityPoints.greaterThan(5) && communityPoints.lessThan(50))
+        else if (communityPoints.value() >= 5 && communityPoints.lessThan(50))
             return 50;
-        else if (communityPoints.greaterThan(50) && communityPoints.lessThan(100))
+        else if (communityPoints.value() >= 50 && communityPoints.lessThan(100))
             return 100;
-        else if (communityPoints.greaterThan(100) && communityPoints.lessThan(500))
+        else if (communityPoints.value() >= 100 && communityPoints.lessThan(500))
             return 500;
-        else if (communityPoints.greaterThan(500) && communityPoints.lessThan(1000))
+        else if (communityPoints.value() >= 500 && communityPoints.lessThan(1000))
             return 1000;
+        else if (communityPoints.value() >= 1000 && communityPoints.lessThan(1500))
+            return 1500;
         return 0;
     }
 
     public void openGift(Player player) {
-        if (!player.getPlayerDetails().hasOpenedGift() && activeGift != null) {
-            activeGift.getLootList().forEach(loot -> player.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount()));
+        if (!player.getPlayerDetails().hasOpenedGift()
+                && player.getPlayerDetails().getUnlcaimedPrizes() != null) {
+            player.getPlayerDetails().getUnlcaimedPrizes().forEach(item -> ItemAssistant.addItemToInventoryOrDrop(player,item.getId(),item.getAmount()));
             player.receiveMessage("You open the Community Gift and receive an assortment of prizes!");
+            player.getPlayerDetails().getGraveDiggerProperties().getPoints().add(10 * activeGift.getTierMultiplier());
+            player.receiveMessage("You earned " + (10 * activeGift.getTierMultiplier()) + " points!");
+            final List<Loot> lootList = new ArrayList<>();
+
+            lootList.add(new Loot(new Item(16903,1),0.05f));
+            lootList.add(new Loot(new Item(16898,1),0.05f));
+            lootList.add(new Loot(new Item(16891,1),0.09f));
+            lootList.add(new Loot(new Item(16904,1),0.09f));
+            lootList.add(new Loot(new Item(21794,1),0.09f));
+            switch (activeGift.getTier()) {
+                case 4:
+                case 5:
+                case 6:
+                    LootableContainer lootableContainer = new LootableItem(-1,"dummy_item",lootList);
+                    player.loot(lootableContainer);
+                    break;
+            }
+
             player.getPlayerDetails().setOpenedGift(true);
+            player.getPlayerDetails().getUnlcaimedPrizes().clear();
             saveProperties(player);
         } else {
             player.receiveMessage("There is currently no gift available. Community Points: "

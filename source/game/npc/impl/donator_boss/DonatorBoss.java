@@ -9,7 +9,7 @@ import game.type.GameTypeIdentity;
 /**
  * Created by Owain, 05/07/18
  */
-
+//7286 skot
 @CustomNpcComponent(identities = @GameTypeIdentity(type = GameType.OSRS, identity = 7884))
 public class DonatorBoss extends Npc {
 

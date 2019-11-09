@@ -12,8 +12,7 @@ public class SlayerMasterNieve extends SlayerMaster {
 
     public SlayerMasterNieve() {
         super(ID, 75,12);
-        this.getOptions().add("Boss Task");
-        this.getOptions().add("Social Slayer");
+        this.getOptions().add("Create Zamorakian Hasta");
         Arrays.stream(Nieve.values()).forEach(task -> this.getTaskList().add(
                 new SlayerTask(task.getAssignment(), task.getCount(), task.getExtended(), task.getWeight())
         ));

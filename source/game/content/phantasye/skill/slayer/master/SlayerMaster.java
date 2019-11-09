@@ -5,6 +5,7 @@ import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.impl.SlayerMasterTalkToListener;
+import game.content.phantasye.dialogue.impl.SlayerMasterUnlockListener;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
 import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.phantasye.skill.slayer.SlayerUnlocks;
@@ -20,6 +21,8 @@ import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.model.world.location.Location;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SlayerMaster implements NonPlayableCharacter {
@@ -28,9 +31,6 @@ public class SlayerMaster implements NonPlayableCharacter {
     private static final int BLOCK_COST = 100;
     private static final int PREFER_COST = 150;
     private static final int EXTEND_COST = 30;
-    private static final int BOSS_SLAYER = 200;
-    private static final int SAFE_BOSSES = 500;
-    private static final int REMOTE_SLAYER = 100;
     private final List<SlayerTask> taskList;
     private final int levelRequirement;
     private final int id;
@@ -41,13 +41,16 @@ public class SlayerMaster implements NonPlayableCharacter {
         this.taskList = new ArrayList<>();
         this.id = id;
         this.basePointValue = basePointValue;
-        this.options = new ArrayList<>();
+        this.options = new LinkedList<>();
         this.levelRequirement = levelRequirement;
-        this.options.add("Assign Task");
-        this.options.add("Cancel Task");
-        this.options.add("Open Shop");
-        this.options.add("Block Task");
-        this.options.add("Prefer Task");
+        options.add("Assign Task");
+        options.add("Open Shop");
+        options.add("Cancel Task (" + RESET_COST + " Points)");
+        options.add("Extend Task (" + EXTEND_COST + " Points)");
+        options.add("Prefer Task (" + PREFER_COST + " Points)");
+        options.add("Block Task (" + BLOCK_COST + " Points)");
+        options.add("Social Slayer");
+        options.add("Unlockables");
     }
 
     private List<String[]> createOptionChain(List<String> options) {
@@ -102,18 +105,10 @@ public class SlayerMaster implements NonPlayableCharacter {
 
     public void talkTo(Player player) {
         player.getPA().closeInterfaces(true);
-        DialogueOptionPaginator paginator =
-                new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player)
-                        .withTitle("How Can I Help?")
-                        .addOption("Assign Task")
-                        .addOption("Open Shop")
-                        .addOption("Cancel Task (" + RESET_COST + " Points)")
-                        .addOption("Extend Task (" + EXTEND_COST + " Points)")
-                        .addOption("Prefer Task (" + PREFER_COST + " Points)")
-                        .addOption("Block Task (" + BLOCK_COST + " Points)")
-                        .addOption("Social Slayer")
-                        .addOption("Unlockables")
-                        .build();
+        DialogueOptionPaginator.DialogueOptionPaginatorBuilder builder = new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player);
+        options.forEach(option -> builder.addOption(option));
+        builder.withTitle("How Can I Help?");
+        DialogueOptionPaginator paginator = builder.build();
         player.setDialogueChain(paginator.getPageAsDialogOptions(0, new SlayerMasterTalkToListener(paginator, this)))
                 .start(player);
     }
@@ -134,65 +129,11 @@ public class SlayerMaster implements NonPlayableCharacter {
 
     public void sendUnlockDialog(Player player) {
         player.getPA().closeInterfaces(true);
-        player.setDialogueChain(new DialogueChain().option((p, option) -> {
-                    switch (option) {
-                        case 1:
-                            if (SlayerSkill.unlock(player, SlayerUnlocks.BOSS_SLAYER)) {
-                                if (player.getPlayerDetails().getSlayerPoints().value() >= BOSS_SLAYER) {
-                                    player.getPA().closeInterfaces(true);
-                                    player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.BOSS_SLAYER.ordinal());
-                                    player.setDialogueChain(new DialogueChain().statement("You've unlocked Boss Slayer")).start(player);
-                                    player.saveDetails();
-                                } else {
-                                    player.getPA().closeInterfaces(true);
-                                    player.receiveMessage("You need at least  " + BOSS_SLAYER + " Slayer Points to unlock this.");
-                                }
-                            } else {
-                                player.getPA().closeInterfaces(true);
-                                player.setDialogueChain(new DialogueChain().statement("You already unlocked this.")).start(player);
-                            }
-                            break;
-                        case 2:
-                            if (SlayerSkill.unlock(player, SlayerUnlocks.SAFE_BOSS_INSTANCES)) {
-                                if (player.getPlayerDetails().getSlayerPoints().value() >= SAFE_BOSSES) {
-                                    player.getPA().closeInterfaces(true);
-                                    player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.SAFE_BOSS_INSTANCES.ordinal());
-                                    player.setDialogueChain(new DialogueChain().statement("You've unlocked Safe Boss Instances")).start(player);
-                                    player.saveDetails();
-                                } else {
-                                    player.getPA().closeInterfaces(true);
-                                    player.receiveMessage("You need at least  " + SAFE_BOSSES + " Slayer Points to unlock this.");
-                                }
-                            } else {
-                                player.getPA().closeInterfaces(true);
-                                player.setDialogueChain(new DialogueChain().statement("You already unlocked this.")).start(player);
-                            }
-                            break;
-                        case 3:
-                            if (SlayerSkill.unlock(player, SlayerUnlocks.REMOTE_TASKS)) {
-                                if (player.getPlayerDetails().getSlayerPoints().value() >= REMOTE_SLAYER) {
-                                    player.getPA().closeInterfaces(true);
-                                    player.getPlayerDetails().getUnlocksList().add(SlayerUnlocks.REMOTE_TASKS.ordinal());
-                                    player.setDialogueChain(new DialogueChain().statement("You've unlocked Remote Tasks!")).start(player);
-                                    player.saveDetails();
-                                } else {
-                                    player.getPA().closeInterfaces(true);
-                                    player.receiveMessage("You need at least  " + REMOTE_SLAYER + " Slayer Points to unlock this.");
-                                }
-                            } else {
-                                player.getPA().closeInterfaces(true);
-                                player.setDialogueChain(new DialogueChain().statement("You already unlocked this.")).start(player);
-                            }
-                            break;
-                        case 4:
-                            player.getPA().closeInterfaces(true);
-                            break;
-                    }
-                }, "What would you like to Unlock?",
-                "Boss Slayer (" + BOSS_SLAYER + " Points)",
-                "Safe Boss Instances (" + SAFE_BOSSES + " Points)",
-                "Remote Tasks (" + REMOTE_SLAYER + " Points)",
-                "Nevermind"))
+        final DialogueOptionPaginator.DialogueOptionPaginatorBuilder builder = new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player);
+        builder.withTitle("What would you like to Unlock?");
+        Arrays.stream(SlayerUnlocks.values()).forEach(unlock -> builder.addOption(unlock.toString()));
+        DialogueOptionPaginator paginator = builder.build();
+        player.setDialogueChain(paginator.getPageAsDialogOptions(0, new SlayerMasterUnlockListener(paginator)))
                 .start(player);
     }
 

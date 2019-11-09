@@ -1,5 +1,6 @@
 package game.content.phantasye.event.hween;
 
+import game.menaphos.looting.model.item.Item;
 import org.menaphos.model.math.impl.AdjustableInteger;
 
 public final class GraveDiggerProperties {
@@ -7,7 +8,6 @@ public final class GraveDiggerProperties {
     private final AdjustableInteger points;
     private final AdjustableInteger attempts;
     private final AdjustableInteger paidAttempts;
-
 
     public GraveDiggerProperties() {
         this.points = new AdjustableInteger(0);

@@ -32,9 +32,11 @@ import game.content.miscellaneous.XpBonus;
 import game.content.miscellaneous.XpLamp;
 import game.content.music.SoundSystem;
 import game.content.packet.preeoc.ClickItemPreEoc;
+import game.content.phantasye.item.HerbSack;
 import game.content.phantasye.skill.Trap;
 import game.content.phantasye.skill.TrapController;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
+import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.phantasye.skill.slayer.item.SlayerGem;
 import game.content.skilling.BirdNests;
 import game.content.skilling.Runecrafting;
@@ -115,6 +117,9 @@ public class FirstClickItemPacket implements PacketType {
         if (CoinCasket.isCoinCasketItemId(player, itemId, itemSlot)) {
             return;
         }
+        if(SlayerSkill.consumeXpTome(player,itemId)) {
+            return;
+        }
         if (Food.isFood(itemId)) {
             Food.eat(player, itemId, itemSlot);
             return;
@@ -158,6 +163,9 @@ public class FirstClickItemPacket implements PacketType {
         }
 
         switch (itemId) {
+            case 13226:
+                HerbSack.getInstanceForPlayer(player).fill();
+                break;
             case 6: //cannon base
                 DwarfMultiCannon cannon = new DwarfMultiCannon(player, player.getPlayerName(), player.getPosition(), 7);
                 cannon.setup();

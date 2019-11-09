@@ -29,6 +29,8 @@ import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
+import game.content.phantasye.skill.slayer.SlayerUnlocks;
+import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
 import game.content.prayer.Prayer;
 import game.content.prayer.PrayerManager;
 import game.content.prayer.book.regular.QuickPrayers;
@@ -107,6 +109,12 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private long bankDelay;
     private PlayerDetails playerDetails;
     private Player slayerPartner;
+
+    public PlayerSlayerTask getSlayerTask() {
+        if(playerDetails != null && playerDetails.getSlayerTask() != null)
+            return playerDetails.getSlayerTask();
+        return null;
+    }
 
     public Player getSlayerPartner() {
         return slayerPartner;
@@ -3546,7 +3554,7 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     public boolean[] combatSkillsAnnounced = new boolean[7];
 
-    public boolean smashVials;
+    public boolean smashVials = playerDetails != null && playerDetails.getUnlocksList().contains(SlayerUnlocks.AUTO_SMASH_VIALS.ordinal());
 
     public boolean toggleSeedPod;
 

@@ -57,6 +57,13 @@ public class ShopAssistant {
 					return true;
 				}
 				break;
+			case 44:
+				if (GameType.isOsrsEco()) {
+					player.getPlayerDetails().getGraveDiggerProperties().getPoints().setValue(
+							buyItemAction(player, itemId, amount, itemSlot, currentAmount, 0, ShopAssistant.shopCurrencyName(player), getItemShopPrice(player, itemId)));
+					return true;
+				}
+				break;
 			case 16:
 				player.setCustomPetPoints(
 						buyItemAction(player, itemId, amount, itemSlot, currentAmount, 0, ShopAssistant.shopCurrencyName(player), getItemShopPrice(player, itemId)));
@@ -78,6 +85,11 @@ public class ShopAssistant {
 			case 46:
 				if (GameType.isOsrsEco()) {
 					return player.getPlayerDetails().getSlayerPoints().value();
+				}
+				break;
+			case 44:
+				if (GameType.isOsrsEco()) {
+					return player.getPlayerDetails().getGraveDiggerProperties().getPoints().value();
 				}
 				break;
 			case 16:

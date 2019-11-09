@@ -12,6 +12,7 @@ import game.content.miscellaneous.ItemCombining;
 import game.content.miscellaneous.RunePouch;
 import game.content.miscellaneous.Teleport;
 import game.content.miscellaneous.Wolpertinger;
+import game.content.phantasye.item.HerbSack;
 import game.content.phantasye.skill.slayer.item.SlayerGem;
 import game.content.skilling.Slayer;
 import game.content.skilling.summoning.Summoning;
@@ -101,6 +102,9 @@ public class ThirdClickItemPacket implements PacketType {
 			return;
 		}
 		switch (itemId) {
+			case 13226:
+				HerbSack.getInstanceForPlayer(player).check();
+				break;
 			case SlayerGem.ID:
 				new SlayerGem(player).social();
 				break;

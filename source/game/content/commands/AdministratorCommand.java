@@ -29,6 +29,7 @@ import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateCannon;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
+import game.content.phantasye.skill.slayer.SlayerAssignment;
 import game.npc.NpcWalkToEvent;
 import game.position.Position;
 import game.position.PositionUtils;
@@ -177,22 +178,10 @@ public class AdministratorCommand {
             return true;
         }
         if (command.equals("tt")) {
-            DialogueOptionPaginator paginator =
-                    new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player)
-                            .addOption("one")
-                            .addOption("two")
-                            .addOption("three")
-                            .addOption("four")
-                            .addOption("five")
-                            .addOption("six")
-                            .addOption("seven")
-                            .addOption("eight")
-                            .addOption("nine")
-                            .addOption("ten")
-                            .withTitle("test")
-                            .build();
-
-            player.setDialogueChain(paginator.getPageAsDialogOptions(0,new TestPaginatorClickListener(paginator))).start(player);
+            for (int i = 0; i < 100; i++) {
+                if (SuperiorNpc.meetsRequirement(SlayerAssignment.values()[player.getSlayerTask().getAssignment()].getLevel()))
+                    System.out.println("WINNER");
+            }
         }
         if (command.equals("doubleitems")) {
             int loops = 100_000;
@@ -543,11 +532,11 @@ public class AdministratorCommand {
             Stream.of(position, local, localToAbsolute, regionPosition).forEach(System.out::println);
             return true;
         }
-        if (command.startsWith("superior")) {
-            int id = Integer.parseInt(command.split(" ")[1]);
+        if (command.startsWith("sup")) {
+            int id = 1;
 
             Slayer.Task task = Stream.of(Slayer.Task.values()).filter(t -> t.getSuperiorNpc() == id).findAny()
-                    .orElse(null);
+                    .orElse(Slayer.Task.INFERNAL_MAGE);
 
             player.slayerTaskNpcType = task.getNpcId()[0];
 

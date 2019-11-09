@@ -12,8 +12,6 @@ public class SlayerMasterDuradel extends SlayerMaster {
 
     public SlayerMasterDuradel() {
         super(ID, 99,15);
-        this.getOptions().add("Boss Task");
-        this.getOptions().add("Social Slayer");
         Arrays.stream(Duradel.values()).forEach(task -> this.getTaskList().add(
                 new SlayerTask(task.getAssignment(), task.getCount(), task.getExtended(), task.getWeight())
         ));

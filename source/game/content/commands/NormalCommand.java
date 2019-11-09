@@ -555,11 +555,11 @@ public class NormalCommand {
 		case "magebank":
 			Teleport.spellTeleport(player, 2537, 4714, 0, false);
 			return true;
-		case "tourny":
-		case "tournament":
-		case "tourn":
-			Teleport.spellTeleport(player, 3106, 3498, 0, false);
-			return true;
+//		case "tourny":
+//		case "tournament":
+//		case "tourn":
+//			Teleport.spellTeleport(player, 3106, 3498, 0, false);
+//			return true;
 
 		case "shop":
 		case "shops":
@@ -830,12 +830,6 @@ public class NormalCommand {
 		case "kdrreset":
 		case "kdr reset":
 			player.getDH().sendDialogues(490);
-			return true;
-
-		case "vials":
-		case "smashvials":
-		case "smashvial":
-			player.getDH().sendDialogues(635);
 			return true;
 
 		case "old":

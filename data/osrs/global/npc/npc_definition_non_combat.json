@@ -20,6 +20,26 @@
 		"roam_distance": 0
 	},
 	{
+		"npc_name": "Turael",
+		"npc_type": 401,
+		"roam_distance": 0
+	},
+	{
+		"npc_name": "Mazchna",
+		"npc_type": 402,
+		"roam_distance": 0
+	},
+	{
+		"npc_name": "Chaeldar",
+		"npc_type": 404,
+		"roam_distance": 0
+	},
+	{
+		"npc_name": "Duradel",
+		"npc_type": 405,
+		"roam_distance": 0
+	},
+	{
 		"npc_name": "Fiona",
 		"npc_type": 8193,
 		"roam_distance": 3

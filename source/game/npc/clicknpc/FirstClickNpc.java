@@ -19,7 +19,10 @@ import game.content.minigame.single_minigame.zulrah.ZulrahSinglePlayerMinigame;
 import game.content.minigame.single_minigame.zulrah.ZulrahSinglePlayerMinigameFactory;
 import game.content.miscellaneous.TeleportInterface;
 import game.content.packet.preeoc.ClickNpcPreEoc;
+import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.gambling.DiceNPCBase;
+import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.slayer.master.impl.*;
 import game.content.quicksetup.QuickSetUp;
 import game.content.skilling.EntChopping;
 import game.content.skilling.Skilling;
@@ -131,6 +134,22 @@ public class FirstClickNpc {
 		}
 
 		switch (npc.npcType) {
+			case SlayerMasterNieve
+					.ID:
+			case SlayerMasterTurael
+					.ID:
+			case SlayerMasterMazchna
+					.ID:
+			case SlayerMasterChaeldar
+					.ID:
+			case SlayerMasterVannaka
+					.ID:
+			case SlayerMasterDuradel.ID:
+				SlayerMasterFactory.getSlayerMaster(npc.npcType).ifPresent(slayerMaster -> slayerMaster.talkTo(player));
+				break;
+			case 5567:
+				GraveDigger.getInstance().talkToDeath(player);
+				break;
 			case 2713:
 				DiceNPCBase.getInstance(NpcHandler.getNpcByNpcId(2713).npcIndex).talkTo(player);
 				break;
@@ -618,10 +637,10 @@ public class FirstClickNpc {
 				break;*/
 
 			// Vannaka.
-			case 6797:
-			case 403:
-				player.getDH().sendDialogues(10);
-				break;
+//			case 6797:
+//			case 403:
+//				player.getDH().sendDialogues(10);
+//				break;
 
 			case 1645:
 			case 1646:

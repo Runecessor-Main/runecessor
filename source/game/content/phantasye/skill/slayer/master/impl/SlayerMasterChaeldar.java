@@ -12,8 +12,6 @@ public class SlayerMasterChaeldar extends SlayerMaster {
 
     public SlayerMasterChaeldar() {
         super(ID, 70,10);
-        this.getOptions().add("Boss Task");
-        this.getOptions().add("Social Slayer");
         Arrays.stream(Chaeldar.values()).forEach(task -> this.getTaskList().add(
                 new SlayerTask(task.getAssignment(), task.getCount(), task.getExtended(), task.getWeight())
         ));

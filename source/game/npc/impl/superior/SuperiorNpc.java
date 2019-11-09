@@ -1,5 +1,6 @@
 package game.npc.impl.superior;
 
+import game.content.phantasye.skill.slayer.SlayerAssignment;
 import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.Slayer;
@@ -78,29 +79,32 @@ public abstract class SuperiorNpc extends Npc {
             }
         }
 
-        if (meetsRequirement(task.getLevelReq())) {
-            List<GameItem> drop = new ArrayList<>();
+        if (player.getSlayerTask() != null) {
+            if (meetsRequirement(SlayerAssignment.values()[player.getSlayerTask().getAssignment()].getLevel())) {
+                List<GameItem> drop = new ArrayList<>();
 
-            if (ThreadLocalRandom.current().nextInt(0, 8) == 0) {
-                drop.add(new GameItem(ThreadLocalRandom.current().nextBoolean() ? 21270 : 20724));
+                if (ThreadLocalRandom.current().nextInt(0, 8) == 0) {
+                    drop.add(new GameItem(ThreadLocalRandom.current().nextBoolean() ? 21270 : 20724));
+                }
+
+                if (ThreadLocalRandom.current().nextInt(0, 8) <= 2) {
+                    drop.add(new GameItem(ThreadLocalRandom.current().nextBoolean() ? 20730 : 20736));
+                }
+
+                drop.forEach(item -> {
+                    ItemAssistant.addItemToInventoryOrDrop(player, item.getId(), item.getAmount());
+                    player.getPA().sendMessageF("The superior monster dropped a %s.", item.getDefinition() == null ? "unarmed" : item.getDefinition().name);
+                });
             }
-
-            if (ThreadLocalRandom.current().nextInt(0, 8) <= 2) {
-                drop.add(new GameItem(ThreadLocalRandom.current().nextBoolean() ? 20730 : 20736));
-            }
-
-            drop.forEach(item -> {
-                ItemAssistant.addItemToInventoryOrDrop(player, item.getId(), item.getAmount());
-                player.getPA().sendMessageF("The superior monster dropped a %s.", item.getDefinition() == null ? "unarmed" :  item.getDefinition().name);
-            });
         }
     }
 
-    private boolean meetsRequirement(double slayerRequirement) {
-        return ThreadLocalRandom.current().nextInt(0, (int) chance(slayerRequirement)) == 0;
+    public static boolean meetsRequirement(double slayerRequirement) {
+        final int roll = ThreadLocalRandom.current().nextInt(0, (int) chance(slayerRequirement));
+        return roll == 0;
     }
 
-    private double chance(double slayerRequirement) {
+    private static double chance(double slayerRequirement) {
         return Math.floor(200 - Math.pow(slayerRequirement + 55, 2) / 125D);
     }
 

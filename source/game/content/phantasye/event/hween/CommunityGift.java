@@ -27,7 +27,7 @@ public class CommunityGift extends Object {
     }
 
 
-    private int getTierMultiplier() {
+    public int getTierMultiplier() {
         switch (tier) {
             case 1:
                 return 1;
@@ -39,6 +39,8 @@ public class CommunityGift extends Object {
                 return 20;
             case 5:
                 return 50;
+            case 6:
+                return 100;
             default:
                 return 1;
         }

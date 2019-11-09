@@ -3,10 +3,15 @@ package game.content.phantasye.dialogue.impl;
 import core.ServerConstants;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
+import game.content.miscellaneous.Teleport;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
+import game.content.phantasye.event.hween.CommunityGift;
+import game.content.phantasye.event.hween.GraveDigger;
 import game.npc.data.NpcDefinition;
 import game.player.Player;
+
+import java.text.NumberFormat;
 
 public class HalloweenPaginatorListener extends DialoguePaginatorClickListener {
     public HalloweenPaginatorListener(DialogueOptionPaginator paginator) {
@@ -17,7 +22,7 @@ public class HalloweenPaginatorListener extends DialoguePaginatorClickListener {
     public void onOption(Player player, int option) {
         final int actualOption = option + (this.getPaginator().getIndex() * 3);
         if (!this.pageAction(player, option)) {
-            switch (option) {
+            switch (actualOption) {
                 case 1:
                     player.getPA().closeInterfaces(true);
                     DialogueOptionPaginator paginator =
@@ -41,14 +46,14 @@ public class HalloweenPaginatorListener extends DialoguePaginatorClickListener {
                             .start(player);
                     break;
                 case 2:
-                    player.getShops().openShop(46);
+                    player.getShops().openShop(44);
                     player.receiveMessage("You have " + ServerConstants.RED_COL + player.getPlayerDetails().getGraveDiggerProperties().getPoints().value() + "</col> Slayer Points.");
                     break;
                 case 3:
                     DialogueOptionPaginator paginator3 =
                             new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player)
                                     .withTitle("Purchase Attempts")
-                                    .addOption("Pay With Coins (50,000,000GP)")
+                                    .addOption("Pay With Coins (" + NumberFormat.getInstance().format(GraveDigger.ATTEMPT_COST_GP) + ")")
                                     .addOption("Pay with Donator Tokens (30)")
                                     .build();
                     player.setDialogueChain(paginator3.getPageAsDialogOptions(0, new DialoguePaginatorClickListener(paginator3) {
@@ -56,24 +61,42 @@ public class HalloweenPaginatorListener extends DialoguePaginatorClickListener {
                         public void onOption(Player player, int option) {
                             switch (option) {
                                 case 1:
-                                    if (player.removeItemFromInventory(995, 50000000)) {
+                                    if (player.removeItemFromInventory(995, GraveDigger.ATTEMPT_COST_GP)) {
                                         player.receiveMessage("You've purchased an attempt. You now have "
-                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().value()
+                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment()
                                                 + player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value())
                                                 + " attempts.");
+                                        GraveDigger.getInstance().saveProperties(player);
+                                        player.getPA().closeInterfaces(true);
+                                    } else {
+                                        player.getPA().closeInterfaces(true);
+                                        player.receiveMessage("You do not have enough coins.");
                                     }
                                     break;
                                 case 2:
-                                    if (player.removeItemFromInventory(7478, 30)) {
+                                    if (player.removeItemFromInventory(7478, GraveDigger.ATTEMPT_COST_DT)) {
                                         player.receiveMessage("You've purchased an attempt. You now have "
-                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().value()
+                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment()
                                                 + player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value())
                                                 + " attempts.");
+                                        GraveDigger.getInstance().saveProperties(player);
+                                        player.getPA().closeInterfaces(true);
+                                    } else {
+                                        player.getPA().closeInterfaces(true);
+                                        player.receiveMessage("You do not have enough tokens.");
                                     }
                                     break;
                             }
                         }
-                    }));
+                    })).start(player);
+                    break;
+                case 4:
+                    Teleport.spellTeleport(player,1930,4996,0,true);
+                    player.getPA().closeInterfaces(true);
+                    break;
+                case 5:
+                    new CommunityGift(1);
+                    player.getPA().closeInterfaces(true);
                     break;
             }
         }

@@ -2,6 +2,7 @@ package game.npc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import core.GameType;
 import core.Server;
@@ -473,6 +474,10 @@ public class NpcDrops {
 			amount = 1;
 			Player secondHighest = PlayerHandler.players[Server.npcHandler.getSecondHighestDamageDealer(npc)];
 			if (secondHighest != null) {
+				if(new Random().nextInt(1000) == 1) {
+					Server.itemHandler.createGroundItem(secondHighest, 21275, npc.getVisualX(), npc.getVisualY(),
+							npc.getHeight(), 1, false, 0, true, "", "", "", "", "otherDrops Skotizo, " + npc.name);
+				}
 				Server.itemHandler.createGroundItem(secondHighest, 13302, npc.getVisualX(), npc.getVisualY(),
 						npc.getHeight(), 1, false, 0, true, "", "", "", "", "otherDrops Skotizo, " + npc.name);
 			}
