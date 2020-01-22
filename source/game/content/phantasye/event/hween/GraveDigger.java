@@ -7,14 +7,14 @@ import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.impl.HalloweenPaginatorListener;
 import game.item.ItemAssistant;
-import game.menaphos.looting.model.item.Item;
-import game.menaphos.looting.model.loot.Loot;
-import game.menaphos.looting.model.loot.LootableContainer;
-import game.menaphos.looting.model.loot.LootableItem;
-import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.player.Player;
 import game.player.PlayerHandler;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
+import org.menaphos.entity.impl.item.Item;
+import org.menaphos.model.loot.Loot;
+import org.menaphos.model.loot.LootableContainer;
+import org.menaphos.model.loot.LootableItem;
+import org.menaphos.model.loot.factory.LootFactory;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.phantasye.RepositoryManager;
 
@@ -150,7 +150,7 @@ public class GraveDigger {
 
     }
 
-    private void giveReward(Player player,Item item) {
+    private void giveReward(Player player, Item item) {
         player.getPlayerDetails().getUnlcaimedPrizes().add(item);
         player.saveDetails();
 //        final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager =
@@ -194,7 +194,7 @@ public class GraveDigger {
     public void openGift(Player player) {
         if (!player.getPlayerDetails().hasOpenedGift()
                 && player.getPlayerDetails().getUnlcaimedPrizes() != null) {
-            player.getPlayerDetails().getUnlcaimedPrizes().forEach(item -> ItemAssistant.addItemToInventoryOrDrop(player,item.getId(),item.getAmount()));
+            player.getPlayerDetails().getUnlcaimedPrizes().forEach(item -> ItemAssistant.addItemToInventoryOrDrop(player,item.getId(),item.getAmount().value()));
             player.receiveMessage("You open the Community Gift and receive an assortment of prizes!");
             player.getPlayerDetails().getGraveDiggerProperties().getPoints().add(10 * activeGift.getTierMultiplier());
             player.receiveMessage("You earned " + (10 * activeGift.getTierMultiplier()) + " points!");

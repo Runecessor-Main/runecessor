@@ -1,7 +1,7 @@
 package game.content.phantasye.skill.slayer.master.data;
 
 import game.content.phantasye.skill.slayer.SlayerAssignment;
-import game.menaphos.looting.model.Range;
+import org.menaphos.model.math.Range;
 
 public enum Mazchna {
 

@@ -1,6 +1,7 @@
 package game.content.phantasye.minigame.instance.boss;
 
 import core.ServerConstants;
+import game.content.minigame.single_minigame.zulrah.ZulrahSinglePlayerMinigameFactory;
 import game.content.miscellaneous.Teleport;
 import game.content.phantasye.RegionUtils;
 import game.content.phantasye.minigame.instance.Instancable;
@@ -10,6 +11,7 @@ import game.item.GameItem;
 import game.item.ItemAssistant;
 import game.npc.Npc;
 import game.npc.NpcHandler;
+import game.player.Boundary;
 import game.player.Player;
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
@@ -38,11 +40,19 @@ public class BossInstance implements Instancable {
         this.instanceOwner = player;
         this.key = InstanceFactory.getKeyForInstance(this);
         this.eventTimer = new Timer();
-        this.instanceRegion = new Region(
-                new Location(2580, key.getInstance(), 3150),
-                new Location(2607, key.getInstance(), 3172)
+        this.instanceRegion = createInstanceRegion();
+    }
 
-        );
+    private Region createInstanceRegion() {
+        switch (boss.npcType) {
+            case 2042:
+                return new Region(new Location(2250, key.getInstance(), 3060), new Location(2290, key.getInstance(), 3090));
+            default:
+                return new Region(
+                        new Location(2580, key.getInstance(), 3150),
+                        new Location(2607, key.getInstance(), 3172));
+
+        }
     }
 
     private void saveItems() {
@@ -62,22 +72,37 @@ public class BossInstance implements Instancable {
         instanceOwner.setActiveBossInstance(this);
         this.saveItems();
         final Location location = RegionUtils.getLocationInRegion(region);
-        eventTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                NpcHandler.spawnNpc(
-                        instanceOwner,
-                        boss.npcType,
-                        location.getXCoordinate(),
-                        location.getZCoordinate(),
-                        key.getInstance(),
-                        false,
-                        false);
+        switch (boss.npcType) {
+            case 2042:
+                eventTimer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        ZulrahSinglePlayerMinigameFactory.create(instanceOwner, key.getInstance()).start();
+                        startSession();
+                        process();
+                    }
+                },5000);
 
-                startSession();
-                process();
-            }
-        }, 5000);
+                break;
+            default:
+                eventTimer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        NpcHandler.spawnNpc(
+                                instanceOwner,
+                                boss.npcType,
+                                location.getXCoordinate(),
+                                location.getZCoordinate(),
+                                key.getInstance(),
+                                false,
+                                false);
+                        startSession();
+                        process();
+                    }
+                }, 5000);
+                break;
+        }
+
     }
 
     private void startTimer() {
@@ -114,7 +139,7 @@ public class BossInstance implements Instancable {
                 if (!instanceRegion.contains(new Location(instanceOwner.getX(), instanceOwner.getHeight(), instanceOwner.getY()))) {
                     this.cancel();
                 }
-                if(instanceOwner.dead) {
+                if (instanceOwner.dead) {
                     instanceOwner.receiveMessage(ServerConstants.RED_COL + "Your Items have been dropped at ::home. ");
                 }
             }
@@ -137,7 +162,7 @@ public class BossInstance implements Instancable {
                 closeInstance();
                 respawnTimer.cancel();
             }
-        },5000);
+        }, 5000);
 
 
     }
@@ -164,7 +189,7 @@ public class BossInstance implements Instancable {
 
     @Override
     public int startingInstance() {
-        return 0;
+        return 4;
     }
 
     public Player getInstanceOwner() {

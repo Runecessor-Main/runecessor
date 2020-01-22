@@ -1,6 +1,6 @@
 package game.content.phantasye.skill.slayer.task;
 
-import game.menaphos.looting.model.Range;
+import org.menaphos.model.math.Range;
 import org.menaphos.model.math.impl.AdjustableInteger;
 
 public class PlayerSlayerTask {

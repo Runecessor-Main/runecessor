@@ -1,9 +1,9 @@
 package game.content.phantasye.event.hween;
 
-import game.menaphos.looting.model.loot.Loot;
-import game.menaphos.looting.model.loot.LootableContainer;
-import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.object.custom.Object;
+import org.menaphos.model.loot.Loot;
+import org.menaphos.model.loot.LootableContainer;
+import org.menaphos.model.loot.factory.LootFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class CommunityGift extends Object {
 
     private void fillChest() {
         final LootableContainer lootableContainer = LootFactory.getLootableObject(3);
-        lootableContainer.getLoot().forEach(loot -> loot.getItem().setAmount(loot.getItem().getAmount() * this.getTierMultiplier()));
+        lootableContainer.getLoot().forEach(loot -> loot.getItem().getAmount().setValue(loot.getItem().getAmount().value() * this.getTierMultiplier()));
         lootList.addAll(lootableContainer.getLoot());
     }
 

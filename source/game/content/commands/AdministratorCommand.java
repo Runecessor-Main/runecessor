@@ -178,10 +178,7 @@ public class AdministratorCommand {
             return true;
         }
         if (command.equals("tt")) {
-            for (int i = 0; i < 100; i++) {
-                if (SuperiorNpc.meetsRequirement(SlayerAssignment.values()[player.getSlayerTask().getAssignment()].getLevel()))
-                    System.out.println("WINNER");
-            }
+            TradingPost.displayTradingPost(player);
         }
         if (command.equals("doubleitems")) {
             int loops = 100_000;

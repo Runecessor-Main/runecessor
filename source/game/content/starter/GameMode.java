@@ -48,7 +48,7 @@ public class GameMode {
 			modifier -= 0.7;
 		} else if (GameMode.getDifficulty(player, "GLADIATOR")){
 			modifier -= 0.5;
-		
+
 		} else if (player.isSuperDonator()) {
 			modifier -= 0.05;
 		} else if (player.isDonator()) {
@@ -86,7 +86,7 @@ public class GameMode {
 	 * 0.9;// Added by Michael + 9% droprate } else if
 	 * (player.playerEquipment[ServerConstants.AMULET_SLOT] == 589) { modifier -=
 	 * 0.20;// Added by Michael + 50% Droprate }
-	 * 
+	 *
 	 * chanceNew *= modifier; return chanceNew; }
 	 */
 

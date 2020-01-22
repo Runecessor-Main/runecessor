@@ -4,8 +4,8 @@ import game.content.phantasye.skill.slayer.SlayerAssignment;
 import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.phantasye.skill.slayer.SlayerUnlocks;
 import game.content.phantasye.skill.slayer.master.SlayerMaster;
-import game.menaphos.looting.model.Range;
 import game.player.Player;
+import org.menaphos.model.math.Range;
 
 import java.util.ArrayList;
 import java.util.Arrays;

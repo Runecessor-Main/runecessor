@@ -5,10 +5,10 @@ import core.ServerConstants;
 import game.content.miscellaneous.Announcement;
 import game.content.phantasye.RegionUtils;
 import game.item.ItemAssistant;
-import game.menaphos.looting.model.loot.Loot;
-import game.menaphos.looting.model.loot.LootableContainer;
-import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.player.Player;
+import org.menaphos.model.loot.Loot;
+import org.menaphos.model.loot.LootableContainer;
+import org.menaphos.model.loot.factory.LootFactory;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.model.world.location.region.Region;
 import utility.Misc;
@@ -111,7 +111,7 @@ public final class WildernessChestController {
                         + loot.getItem().getAmount()
                         + " "
                         + ItemAssistant.getItemName(loot.getItem().getId())));
-        lootList.stream().forEach(loot -> ItemAssistant.addItem(player,loot.getItem().getId(),loot.getItem().getAmount()));
+        lootList.stream().forEach(loot -> ItemAssistant.addItem(player,loot.getItem().getId(),loot.getItem().getAmount().value()));
         this.resetChest();
     }
 
@@ -171,7 +171,7 @@ public final class WildernessChestController {
         final LootableContainer lootableContainer = LootFactory.getLootableObject(11341);
 
         for (int i = 0; i < Misc.random(1, 5); i++) {
-            lootList.add(lootableContainer.open());
+            lootList.add(lootableContainer.open(0.0d));
         }
     }
 

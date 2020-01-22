@@ -54,6 +54,8 @@ import game.player.movement.Follow;
 import game.player.movement.Movement;
 import utility.Misc;
 
+import java.time.LocalTime;
+
 /**
  * Player vs Npc combat.
  *
@@ -1547,11 +1549,15 @@ public class CombatNpc {
                 attacker.setOldNpcIndex(npc.npcIndex);
                 attacker.setOldSpellId(attacker.getSpellId());
                 attacker.setSpellId(-1);
+
                 if (!attacker.getAutoCasting()) {
                     attacker.resetNpcIdentityAttacking();
                     attacker.resetNpcIdToFollow();
                 }
             }
+        }
+        if(!Combat.wasAttackedByNpc(attacker)) {
+            attacker.getStopWatch().start();
         }
     }
 

@@ -358,7 +358,7 @@ public class NpcDrops {
 			int itemAmount = Misc.random(minimumAmount, maximumAmount);
 
 			if (!dropSimulator) {
-				chance = GameMode.getDropRate(player, chance);
+				chance = 0;
 				if (WorldEvent.getCurrentEvent().contains(NpcDefinition.getDefinitions()[npcToKill].name)) {
 					chance /= 3.0;
 					if (chance <= 1) {

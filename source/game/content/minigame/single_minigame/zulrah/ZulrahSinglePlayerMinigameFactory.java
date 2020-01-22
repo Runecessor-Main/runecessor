@@ -24,4 +24,10 @@ public final class ZulrahSinglePlayerMinigameFactory {
 		return new ZulrahSinglePlayerMinigame(MinigameKey.ZULRAH, player,
 		                                      heightManager.consume(MinigameKey.ZULRAH));
 	}
+
+	public static ZulrahSinglePlayerMinigame create(Player player, int height) throws NoAvailableHeightException {
+
+		return new ZulrahSinglePlayerMinigame(MinigameKey.ZULRAH, player,
+				height);
+	}
 }

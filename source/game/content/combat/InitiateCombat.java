@@ -7,6 +7,8 @@ import game.npc.NpcHandler;
 import game.player.Player;
 import game.player.PlayerHandler;
 
+import java.time.LocalTime;
+
 /**
  * Methods related to initiating combat.
  *
@@ -26,6 +28,7 @@ public class InitiateCombat {
 		if (player.getNpcIdAttacking() > 0 && player.getAttackTimer() == 0) {
 			Npc NPC = NpcHandler.npcs[player.getNpcIdAttacking()];
 			CombatNpc.attackNpc(player, NPC);
+
 		}
 		if (player.getPlayerIdAttacking() > 0) {
 			Player victim = PlayerHandler.players[player.getPlayerIdAttacking()];

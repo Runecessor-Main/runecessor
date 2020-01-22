@@ -8,12 +8,20 @@
 		"face_action": "ROAM"
 	},
 	{
-		"npc_description": "Death",
-		"npc_type": 5567,
-		"x": 3087,
-		"y": 3498,
+		"npc_description": "Mage of Zamorak",
+		"npc_type": 2580,
+		"x": 3108,
+		"y": 3559,
 		"height": 0,
-		"face_action": "WEST"
+		"face_action": "ROAM"
+	},
+	{
+		"npc_description": "William",
+		"npc_type": 2195,
+		"x": 3018,
+		"y": 5625,
+		"height": 0,
+		"face_action": "ROAM"
 	},
 	{
 		"npc_name":"Turael",

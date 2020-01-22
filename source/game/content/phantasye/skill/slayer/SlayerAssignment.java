@@ -4,7 +4,7 @@ import utility.Misc;
 
 public enum SlayerAssignment {
 
-    ABERRANT_SPECTRES(60,new Locations[] {Locations.SHADOW_CAVE},69,420),
+    ABERRANT_SPECTRES(60,new Locations[] {Locations.SHADOW_CAVE},2),
     ABYSSAL_DEMONS(85,new Locations[]{Locations.SLAYER_TOWER},415,7410,5886),
     BANSHEE(15,new Locations[]{Locations.SLAYER_TOWER},414,7390),
     BASILISKS(40,new Locations[]{Locations.FREMENNIK_DUNGEON},417,7395),
@@ -44,7 +44,7 @@ public enum SlayerAssignment {
     SCORPIONS(1,new Locations[]{Locations.SCORPIA},3024),
     WYVERNS(72,new Locations[]{Locations.WYVERN_CAVE},465),
     SKELETONS(1,new Locations[]{Locations.EDGEVILLE_DUNGEON},70),
-    SPIDERS(1,new Locations[]{Locations.LUMBRIDGE,Locations.TAVERLY_DUNGEON,Locations.SHADOW_CAVE},3017,3021),
+    SPIDERS(1,new Locations[]{Locations.LUMBRIDGE,Locations.TAVERLY_DUNGEON,Locations.SHADOW_CAVE},3018,3017,3021,6504,5373),
     STEEL_DRAGONS(1,new Locations[]{Locations.EDGEVILLE_DUNGEON},274),
     TUROTHS(55,new Locations[]{Locations.FREMENNIK_DUNGEON},428),
     TZHARR(1,new Locations[]{Locations.TZHAAR},2167),

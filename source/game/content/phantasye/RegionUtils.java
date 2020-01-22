@@ -1,6 +1,6 @@
 package game.content.phantasye;
 
-import game.menaphos.looting.model.Range;
+import org.menaphos.model.math.Range;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.model.world.location.region.Region;
 

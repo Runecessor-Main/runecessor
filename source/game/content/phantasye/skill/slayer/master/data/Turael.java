@@ -1,7 +1,7 @@
 package game.content.phantasye.skill.slayer.master.data;
 
 import game.content.phantasye.skill.slayer.SlayerAssignment;
-import game.menaphos.looting.model.Range;
+import org.menaphos.model.math.Range;
 
 public enum Turael {
 
@@ -22,7 +22,7 @@ public enum Turael {
     private final Range extended;
     private final int weight;
 
-    private Turael(SlayerAssignment assignment,Range count, Range extended, int weight) {
+    private Turael(SlayerAssignment assignment, Range count, Range extended, int weight) {
         this.assignment = assignment;
         this.count = count;
         this.extended = extended;

@@ -20,3 +20,31 @@ Kree'arra: Armadyl chainskirt
 Kree'arra: Armadyl helmet
 Tormented demon: Dragon claws
 K'ril Tsutsaroth: Zamorak hilt
+Tekton: Tekton
+Tekton: Tekton pet
+Tekton: Mystery box
+Tekton: Pet Mystery box
+Tekton: Mega Mystery box
+Tekton: Legendary Mystery box
+Tekton: Twisted bow
+Tekton: Elder maul
+Tekton: Scythe of vitur
+Tekton: Justiciar legguards
+Tekton: Justiciar chestguard
+Tekton: Justiciar faceguard
+Tekton: Ancestral hat
+Tekton: Ancestral robe bottom
+Tekton: Ancestral robe top
+Tekton: Mystery box
+Tekton: Pet Mystery box
+Tekton: Mega Mystery box
+Tekton: Legendary Mystery box
+Tekton: Twisted bow
+Tekton: Elder maul
+Tekton: Scythe of vitur
+Tekton: Justiciar legguards
+Tekton: Justiciar chestguard
+Tekton: Justiciar faceguard
+Tekton: Ancestral hat
+Tekton: Ancestral robe bottom
+Tekton: Ancestral robe top

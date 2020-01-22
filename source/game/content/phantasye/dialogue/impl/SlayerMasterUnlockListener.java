@@ -26,6 +26,7 @@ public class SlayerMasterUnlockListener extends DialoguePaginatorClickListener {
                         if (SlayerSkill.unlock(player, unlock)) {
                             if (player.getPlayerDetails().getSlayerPoints().value() >= unlock.getCost()) {
                                 player.getPA().closeInterfaces(true);
+                                player.getPlayerDetails().getSlayerPoints().subtract(unlock.getCost());
                                 player.getPlayerDetails().getUnlocksList().add(unlock.ordinal());
                                 player.setDialogueChain(new DialogueChain().statement("You've unlocked: " + unlock.getDescription())).start(player);
                                 player.saveDetails();

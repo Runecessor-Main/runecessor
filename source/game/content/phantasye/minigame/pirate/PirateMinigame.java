@@ -6,10 +6,10 @@ import game.content.phantasye.minigame.instance.Instancable;
 import game.content.phantasye.minigame.instance.InstanceFactory;
 import game.content.phantasye.minigame.instance.InstanceKey;
 import game.item.ItemAssistant;
-import game.menaphos.looting.model.loot.Loot;
-import game.menaphos.looting.model.loot.LootableContainer;
-import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.player.Player;
+import org.menaphos.model.loot.Loot;
+import org.menaphos.model.loot.LootableContainer;
+import org.menaphos.model.loot.factory.LootFactory;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.model.world.location.region.Region;
 
@@ -95,7 +95,7 @@ public class PirateMinigame implements Instancable {
         final List<Loot> rewards = new ArrayList<>();
         final LootableContainer chest = LootFactory.getLootableObject(REWARD_CHEST);
         for (int i = 0; i < 4; i++) {
-            Loot loot = chest.open();
+            Loot loot = chest.open(player.getMagicFind());
             rewards.add(loot);
             player.receiveMessage("You open the chest and receive " + ServerConstants.BLUE_COL + "x"
                     + loot.getItem().getAmount()

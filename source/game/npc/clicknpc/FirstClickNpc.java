@@ -21,6 +21,8 @@ import game.content.miscellaneous.TeleportInterface;
 import game.content.packet.preeoc.ClickNpcPreEoc;
 import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.gambling.DiceNPCBase;
+import game.content.phantasye.skill.runecrafting.ZMIAltarBankNpc;
+import game.content.phantasye.skill.runecrafting.impl.AbyssRunecrafting;
 import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
 import game.content.phantasye.skill.slayer.master.impl.*;
 import game.content.quicksetup.QuickSetUp;
@@ -598,7 +600,11 @@ public class FirstClickNpc {
 
 			// Mage of Zamorak.
 			case 2580:
-				player.getShops().openShop(47);
+				AbyssRunecrafting.teleportToAbyss(player);
+				break;
+			case ZMIAltarBankNpc
+						.NPC_ID:
+				ZMIAltarBankNpc.talkToPlayer(player);
 				break;
 
 			// Jatix.

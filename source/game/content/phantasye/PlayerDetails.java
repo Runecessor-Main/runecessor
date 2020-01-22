@@ -2,7 +2,7 @@ package game.content.phantasye;
 
 import game.content.phantasye.event.hween.GraveDiggerProperties;
 import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
-import game.menaphos.looting.model.item.Item;
+import org.menaphos.entity.impl.item.Item;
 import org.menaphos.model.math.impl.AdjustableInteger;
 
 import java.util.*;
@@ -21,6 +21,7 @@ public class PlayerDetails {
     private PlayerSlayerTask slayerTask;
     private int slayerMaster;
     private Map<Integer,AdjustableInteger> herbSack;
+    private List<Integer> paymentRunes;
 
     private GraveDiggerProperties graveDiggerProperties;
     private boolean openedGift;
@@ -39,6 +40,7 @@ public class PlayerDetails {
         this.graveDiggerProperties = new GraveDiggerProperties();
         this.unlcaimedPrizes = new ArrayList<>();
         this.herbSack = new HashMap<>();
+        this.paymentRunes = new ArrayList<>();
     }
 
     public void initialize() {
@@ -53,6 +55,10 @@ public class PlayerDetails {
                 e.printStackTrace();
             }
         });
+    }
+
+    public List<Integer> getPaymentRunes() {
+        return paymentRunes;
     }
 
     public Map<Integer, AdjustableInteger> getHerbSack() {

@@ -4,6 +4,7 @@ import core.ServerConstants;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
+import game.content.phantasye.dialogue.impl.ResetTaskPaginatorListener;
 import game.content.phantasye.dialogue.impl.SlayerMasterTalkToListener;
 import game.content.phantasye.dialogue.impl.SlayerMasterUnlockListener;
 import game.content.phantasye.skill.slayer.SlayerAssignment;
@@ -13,13 +14,16 @@ import game.content.phantasye.skill.slayer.master.assignment.DuoPlayerAssignment
 import game.content.phantasye.skill.slayer.master.assignment.SoloSlayerAssignmentChain;
 import game.content.phantasye.skill.slayer.task.SlayerTask;
 import game.content.skilling.Skilling;
-import game.menaphos.looting.model.Range;
 import game.npc.data.NpcDefinition;
 import game.player.Player;
 import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
+import org.menaphos.entity.impl.impl.PlayableCharacter;
+import org.menaphos.model.math.Range;
 import org.menaphos.model.world.location.Location;
+import org.menaphos.util.StopWatch;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -31,6 +35,7 @@ public class SlayerMaster implements NonPlayableCharacter {
     private static final int BLOCK_COST = 100;
     private static final int PREFER_COST = 150;
     private static final int EXTEND_COST = 30;
+    private final int GP_COST = 500000;
     private final List<SlayerTask> taskList;
     private final int levelRequirement;
     private final int id;
@@ -106,7 +111,7 @@ public class SlayerMaster implements NonPlayableCharacter {
     public void talkTo(Player player) {
         player.getPA().closeInterfaces(true);
         DialogueOptionPaginator.DialogueOptionPaginatorBuilder builder = new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player);
-        options.forEach(option -> builder.addOption(option));
+        options.forEach(builder::addOption);
         builder.withTitle("How Can I Help?");
         DialogueOptionPaginator paginator = builder.build();
         player.setDialogueChain(paginator.getPageAsDialogOptions(0, new SlayerMasterTalkToListener(paginator, this)))
@@ -374,7 +379,34 @@ public class SlayerMaster implements NonPlayableCharacter {
         }
     }
 
+    public void cancelTaskForCoins(Player player) {
+        if (player.getPlayerDetails().getSlayerTask() != null) {
+            if (player.hasItem(995,GP_COST)) {
+                player.removeItemFromInventory(995,GP_COST);
+                player.getPlayerDetails().setSlayerTask(null);
+                player.getPlayerDetails().getTaskStreak().setValue(0);
+                player.saveDetails();
+                player.receiveMessage("You've cancelled your current task for " + NumberFormat.getInstance().format(GP_COST) + " Coins.");
+            } else {
+                player.receiveMessage("You need at least " + NumberFormat.getInstance().format(GP_COST) + " Coins to cancel a task.");
+            }
+        } else {
+            player.receiveMessage("You do not have a Slayer Task to cancel.");
+        }
+    }
+
     public void cancelTaskFor(Player player) {
+        player.getPA().closeInterfaces(true);
+        DialogueOptionPaginator.DialogueOptionPaginatorBuilder builder = new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player);
+        builder.withTitle("Reset your Task?")
+                .addOption("Reset with Coins " + "( " + NumberFormat.getInstance().format(GP_COST) + " Coins )" )
+                .addOption("Reset with Points " + "( " + RESET_COST + " Points )");
+        DialogueOptionPaginator resetPaginator = builder.build();
+        player.setDialogueChain(resetPaginator.getPageAsDialogOptions(0, new ResetTaskPaginatorListener(resetPaginator, this)))
+                .start(player);
+    }
+
+    public void cancelTaskForPoints(Player player) {
         if (player.getPlayerDetails().getSlayerTask() != null) {
             if (player.getPlayerDetails().getSlayerPoints().value() >= RESET_COST) {
                 player.getPlayerDetails().getSlayerPoints().subtract(RESET_COST);
@@ -538,6 +570,11 @@ public class SlayerMaster implements NonPlayableCharacter {
     }
 
     @Override
+    public StopWatch getStopWatch() {
+        return null;
+    }
+
+    @Override
     public ActionInvoker getActionInvoker() {
         return null;
     }
@@ -561,5 +598,10 @@ public class SlayerMaster implements NonPlayableCharacter {
 
     public int getBasePointValue() {
         return basePointValue;
+    }
+
+    @Override
+    public void dropLootFor(PlayableCharacter playableCharacter) {
+
     }
 }

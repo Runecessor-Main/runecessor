@@ -213,7 +213,7 @@ public class Server {
 		//sqlNetwork.start();
 	//	sqlNetwork.blockingTest();
 
-		GraveDigger.getInstance().initialize();
+//		GraveDigger.getInstance().initialize();
 
 		Server.loadSystems();
 		initiateConnections();

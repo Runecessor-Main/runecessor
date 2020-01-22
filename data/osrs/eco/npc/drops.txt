@@ -3423,7 +3423,7 @@ Npc: 412
 8 554 75 // Fire rune
 8 1073 1 // Adamant platelegs
 
-// Aberrant spectre
+//Aberrant spectre
 Npc: 2
 375000 1249 1 // Dragon spear
 512 4109 1 // Mystic hat (light)

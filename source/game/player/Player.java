@@ -1,6 +1,7 @@
 package game.player;
 
 import core.GameType;
+import core.Server;
 import core.ServerConfiguration;
 import core.ServerConstants;
 import game.bot.BotContent;
@@ -26,9 +27,9 @@ import game.content.miscellaneous.*;
 import game.content.phantasye.PlayerDetails;
 import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
-import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
+import game.content.phantasye.skill.runecrafting.Runecrafting;
 import game.content.phantasye.skill.slayer.SlayerUnlocks;
 import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
 import game.content.prayer.Prayer;
@@ -56,10 +57,6 @@ import game.item.GameItem;
 import game.item.Item;
 import game.item.ItemAssistant;
 import game.item.ItemDefinition;
-import game.menaphos.looting.model.loot.Loot;
-import game.menaphos.looting.model.loot.LootableContainer;
-import game.menaphos.looting.model.loot.LootableItem;
-import game.menaphos.looting.model.loot.LootableObject;
 import game.npc.Npc;
 import game.npc.NpcHandler;
 import game.object.clip.ObjectDefinitionServer;
@@ -85,12 +82,14 @@ import org.apache.mina.common.IoSession;
 import org.menaphos.action.ActionInvoker;
 import org.menaphos.action.impl.item.container.impl.RemoveItemFromInventoryAction;
 import org.menaphos.entity.impl.impl.Customer;
+import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.model.finance.transaction.currency.Currency;
 import org.menaphos.model.finance.transaction.currency.CurrencyRequest;
 import org.menaphos.model.world.content.shop.model.PurchaseRequest;
 import org.menaphos.model.world.content.shop.model.shopper.session.ShoppingSession;
 import org.menaphos.model.world.location.Location;
+import org.menaphos.util.StopWatch;
 import org.menaphos.util.StringUtils;
 import org.phantasye.RepositoryManager;
 import utility.FileUtility;
@@ -109,9 +108,15 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private long bankDelay;
     private PlayerDetails playerDetails;
     private Player slayerPartner;
+    private final StopWatch stopWatch = new StopWatch();
+    private final Runecrafting runecrafting = new Runecrafting(this);
+
+    public Runecrafting getRunecrafting() {
+        return runecrafting;
+    }
 
     public PlayerSlayerTask getSlayerTask() {
-        if(playerDetails != null && playerDetails.getSlayerTask() != null)
+        if (playerDetails != null && playerDetails.getSlayerTask() != null)
             return playerDetails.getSlayerTask();
         return null;
     }
@@ -129,6 +134,23 @@ public class Player extends Entity implements PlayableCharacter, Customer {
                 new PlayerDetailsRepositoryManager();
         repositoryManager.getRepository().create(playerDetails);
         repositoryManager.updateRepository();
+    }
+
+    @Override
+    public void receiveDropFrom(NonPlayableCharacter npc, org.menaphos.model.loot.Loot loot, Location location) {
+        Server.itemHandler.createGroundItem(this, loot.getItem().getId(), location.getXCoordinate(),
+                location.getYCoordinate(), location.getZCoordinate(), loot.getItem().getAmount().value(), false, 0, true, "", "", "",
+                "", "giveDropTableDrop " + npc.getId());
+    }
+
+    @Override
+    public void register() {
+
+    }
+
+    @Override
+    public void deregister() {
+        saveDetails();
     }
 
     public PlayerDetails getPlayerDetails() {
@@ -200,54 +222,54 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         this.shoppingSession = shoppingSession;
     }
 
-    private void consumeKeyForLootableObject(LootableObject lootableObject) {
-        this.removeItemFromInventory(lootableObject.getKeyId(), lootableObject.getKeyQty());
-    }
-
-    private boolean hasKeyForLootableObject(LootableObject lootableObject) {
-        if (lootableObject.getKeyId() != -1)
-            return ItemAssistant.hasItemAmountInInventory(this, lootableObject.getKeyId(), lootableObject.getKeyQty());
-        return true;
-    }
-
-    private void openLootableObject(LootableObject lootableObject) {
-        if (this.hasKeyForLootableObject(lootableObject)) {
-            switch (lootableObject.getId()) {
-                case 11341:
-                    WildernessChestController.getInstance().openChest(this);
-                    break;
-                default:
-                    Loot loot = lootableObject.open();
-                    this.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount());
-                    this.getPA().sendMessage(lootableObject.getOpenMessage() + " and receive x" + loot.getItem().getAmount() + " " + ItemAssistant.getItemName(loot.getItem().getId()));
-                    break;
-            }
-
-            this.consumeKeyForLootableObject(lootableObject);
-            this.startAnimation(lootableObject.getAnimationId());
-
-        } else if (lootableObject.getAttemptMessage().isEmpty()) {
-            this.getPA().sendMessage("You need " + ServerConstants.RED_COL + lootableObject.getKeyQty() + "x " + ItemAssistant.getItemName(lootableObject.getKeyId()) + "</col> to open this.");
-        } else {
-            this.getPA().sendMessage(lootableObject.getAttemptMessage());
-        }
-    }
-
-    private void openLootableItem(LootableItem lootableItem) {
-        Loot loot = lootableItem.open();
-        String name = ItemAssistant.getItemName(loot.getItem().getId());
-        ItemAssistant.addItem(this, loot.getItem().getId(), loot.getItem().getAmount());
-        this.getPA().sendMessage("You receive x" + loot.getItem().getAmount() + " " + name);
-        ItemAssistant.deleteItemFromInventory(this, lootableItem.getId(), 1);
-    }
-
-    public void loot(LootableContainer lootable) {
-        if (lootable instanceof LootableObject) {
-            this.openLootableObject((LootableObject) lootable);
-        } else {
-            this.openLootableItem((LootableItem) lootable);
-        }
-    }
+//    private void consumeKeyForLootableObject(LootableObject lootableObject) {
+//        this.removeItemFromInventory(lootableObject.getKeyId(), lootableObject.getKeyQty());
+//    }
+//
+//    private boolean hasKeyForLootableObject(LootableObject lootableObject) {
+//        if (lootableObject.getKeyId() != -1)
+//            return ItemAssistant.hasItemAmountInInventory(this, lootableObject.getKeyId(), lootableObject.getKeyQty());
+//        return true;
+//    }
+//
+//    private void openLootableObject(LootableObject lootableObject) {
+//        if (this.hasKeyForLootableObject(lootableObject)) {
+//            switch (lootableObject.getId()) {
+//                case 11341:
+//                    WildernessChestController.getInstance().openChest(this);
+//                    break;
+//                default:
+//                    Loot loot = lootableObject.open();
+//                    this.addItemToInventory(loot.getItem().getId(), loot.getItem().getAmount());
+//                    this.getPA().sendMessage(lootableObject.getOpenMessage() + " and receive x" + loot.getItem().getAmount() + " " + ItemAssistant.getItemName(loot.getItem().getId()));
+//                    break;
+//            }
+//
+//            this.consumeKeyForLootableObject(lootableObject);
+//            this.startAnimation(lootableObject.getAnimationId());
+//
+//        } else if (lootableObject.getAttemptMessage().isEmpty()) {
+//            this.getPA().sendMessage("You need " + ServerConstants.RED_COL + lootableObject.getKeyQty() + "x " + ItemAssistant.getItemName(lootableObject.getKeyId()) + "</col> to open this.");
+//        } else {
+//            this.getPA().sendMessage(lootableObject.getAttemptMessage());
+//        }
+//    }
+//
+//    private void openLootableItem(LootableItem lootableItem) {
+//        Loot loot = lootableItem.open();
+//        String name = ItemAssistant.getItemName(loot.getItem().getId());
+//        ItemAssistant.addItem(this, loot.getItem().getId(), loot.getItem().getAmount());
+//        this.getPA().sendMessage("You receive x" + loot.getItem().getAmount() + " " + name);
+//        ItemAssistant.deleteItemFromInventory(this, lootableItem.getId(), 1);
+//    }
+//
+//    public void loot(LootableContainer lootable) {
+//        if (lootable instanceof LootableObject) {
+//            this.openLootableObject((LootableObject) lootable);
+//        } else {
+//            this.openLootableItem((LootableItem) lootable);
+//        }
+//    }
 
     @Override
     public Optional<Integer> inquire(int slot) {
@@ -313,6 +335,48 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     @Override
+    public double getMagicFind() {
+        double modifier = 0d;
+        if (this.isSupremeDonator()) {
+            modifier = 0.30;
+        } else if (this.isImmortalDonator()) {
+            modifier = 0.25;
+        } else if (this.isUberDonator()) {
+            modifier = 0.20;
+        } else if (this.isUltimateDonator()) {
+            modifier = 0.15;
+        } else if (this.isLegendaryDonator()) {
+            modifier = 0.12;
+        } else if (this.isExtremeDonator()) {
+            modifier = 0.07;
+        } else if (this.isSuperDonator()) {
+            modifier = 0.05;
+        } else if (this.isDonator()) {
+            modifier = 0.03;
+        }
+        if (GameMode.getDifficulty(this, "GLADIATOR")) {
+            modifier += 0.5;
+
+        } else if (this.getPetId() == 11108) {//
+            modifier += 0.15;
+        } else if (this.getPetId() == 11042) {//
+            modifier += 0.25;
+        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 20786) {
+            modifier += 0.12;
+        } else if (this.playerEquipment[ServerConstants.AMULET_SLOT] == 589) {
+            modifier += 0.12;
+        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 2572) {
+            modifier += 0.01;
+        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 12785) {
+            modifier += 0.03;
+        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 16505) {
+            modifier += 0.07;
+
+        }
+        return modifier * 100;
+    }
+
+    @Override
     public int getId() {
         return playerId;
     }
@@ -342,13 +406,21 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     @Override
-    public boolean hasItem(int i, int i1) {
-        return false;
+    public boolean hasItem(int item, int amount) {
+        if (!ItemAssistant.hasItemInInventory(this, item) || (ItemAssistant.getItemAmount(this, item) < amount)) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public void performAnimation(int i) {
+        this.startAnimation(i);
+    }
 
+    @Override
+    public StopWatch getStopWatch() {
+        return stopWatch;
     }
 
     @Override
@@ -358,7 +430,8 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     @Override
     public boolean moveTo(Location location) {
-        return false;
+        this.move(new Position(location.getXCoordinate(), location.getZCoordinate(), location.getYCoordinate()));
+        return true;
     }
 
     public boolean hasOverloadBoost;

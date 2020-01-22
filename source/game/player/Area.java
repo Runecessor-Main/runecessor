@@ -346,9 +346,6 @@ public class Area {
 	}
 
 	public static boolean inWilderness(int x, int y, int height) {
-		if(height == 8) {
-			return true;
-		}
 		if (isWithInArea(x, y, 2825, 2942, 10052, 10234)) // Rev caves
 		{
 			return true;

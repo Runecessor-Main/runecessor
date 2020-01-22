@@ -493,6 +493,8 @@ public class Combat {
 	public static boolean wasAttackedByNpc(Player player) {
 		if (System.currentTimeMillis() - player.timeNpcAttackedPlayer < 4000) {
 			return true;
+		} else if(player.getStopWatch().getElapsedMS() > 0) {
+			player.getStopWatch().reset();
 		}
 		return false;
 	}

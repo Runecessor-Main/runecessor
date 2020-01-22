@@ -31,7 +31,6 @@ public class SlayerMasterTalkToListener extends DialoguePaginatorClickListener {
                     break;
                 case 3:
                     master.cancelTaskFor(player);
-                    player.getPA().closeInterfaces(true);
                     break;
                 case 4:
                     master.extendTaskFor(player);

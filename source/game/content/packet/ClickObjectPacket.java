@@ -2,7 +2,6 @@ package game.content.packet;
 
 import core.ServerConfiguration;
 import game.content.skilling.Farming;
-import game.menaphos.looting.model.loot.factory.LootFactory;
 import game.object.ObjectEvent;
 import game.object.ObjectRePathing;
 import game.object.click.FirstClickObject;

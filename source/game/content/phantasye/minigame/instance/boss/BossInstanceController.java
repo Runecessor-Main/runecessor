@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 public final class BossInstanceController {
 
     public static final int BOSS_TICKET = 1464;
+    public static final Location DEFAULT_LOCATION = new Location(2606, 3153);
 
     private static BossInstanceController instance = null;
 
@@ -128,8 +129,7 @@ public final class BossInstanceController {
     private void createInstance(BossInstance instance, Player player, Boss boss) {
         if (this.consumeTicket(player, boss)) {
             this.getBossInstanceList().add(instance);
-            final Location location = new Location(2606, instance.getKey().getInstance(), 3153);
-            Teleport.startTeleport(player, location.getXCoordinate(), location.getZCoordinate(), location.getYCoordinate(), "MODERN");
+            Teleport.startTeleport(player, boss.getLocation().getXCoordinate(), boss.getLocation().getZCoordinate(),instance.getKey().getInstance(), "MODERN");
             instance.create(new Region(
                     new Location(2596, 0, 3157),
                     new Location(2604, 0, 3166)
@@ -148,28 +148,31 @@ public final class BossInstanceController {
     }
 
     private enum Boss {
-        TEKTON(20, 5090),
-        LIZARD_SHAMAN(5, 6766),
-        DERANGED_ARCHAEOLOGIST(5, 7806),
-        KALPHITE_QUEEN(1, 963),
-        CORPOREAL_BEAST(8, 319),
-        KRIL_TSUTsAROTH(8, 3129),
-        GENERAL_GRAARDOR(8, 2215),
-        COMMANDER_ZILYANA(8, 2205),
-        KREEARRA(8, 3162),
-        KING_BLACK_DRAGON(3, 239),
-        YVELTAL_DRAGON(10, 11215),
-        CRAZY_ARCHAEOLOGIST(10, 6618),
-        CALLISTO(10, 6503),
-        VETION(10, 6611),
-        CHAOS_ELEMENTAL(10, 2054);
+        TEKTON(20, 5090,DEFAULT_LOCATION),
+        LIZARD_SHAMAN(5, 6766,DEFAULT_LOCATION),
+        DERANGED_ARCHAEOLOGIST(5, 7806,DEFAULT_LOCATION),
+        KALPHITE_QUEEN(1, 963,DEFAULT_LOCATION),
+        CORPOREAL_BEAST(8, 319,DEFAULT_LOCATION),
+        KRIL_TSUTsAROTH(8, 3129,DEFAULT_LOCATION),
+        GENERAL_GRAARDOR(8, 2215,DEFAULT_LOCATION),
+        COMMANDER_ZILYANA(8, 2205,DEFAULT_LOCATION),
+        KREEARRA(8, 3162,DEFAULT_LOCATION),
+        KING_BLACK_DRAGON(3, 239,DEFAULT_LOCATION),
+        YVELTAL_DRAGON(10, 11215,DEFAULT_LOCATION),
+        CRAZY_ARCHAEOLOGIST(10, 6618,DEFAULT_LOCATION),
+        CALLISTO(10, 6503,DEFAULT_LOCATION),
+        VETION(10, 6611,DEFAULT_LOCATION),
+        CHAOS_ELEMENTAL(10, 2054,DEFAULT_LOCATION),
+        ZULRAH(15,2042,new Location(2268,3069));
 
         private final int price;
         private final int id;
+        private final Location location;
 
-        private Boss(int price, int id) {
+        private Boss(int price, int id, Location location) {
             this.price = price;
             this.id = id;
+            this.location = location;
         }
 
         public int getId() {
@@ -178,6 +181,10 @@ public final class BossInstanceController {
 
         public int getPrice() {
             return price;
+        }
+
+        public Location getLocation() {
+            return location;
         }
 
         @Override

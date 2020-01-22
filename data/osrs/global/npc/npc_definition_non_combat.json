@@ -10,6 +10,11 @@
 		"roam_distance": 0
 	},
 	{
+		"npc_name": "William",
+		"npc_type": 2195,
+		"roam_distance": 5
+	},
+	{
 		"npc_name": "Scalper",
 		"npc_type": 3463,
 		"roam_distance": 0

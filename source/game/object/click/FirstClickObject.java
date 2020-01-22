@@ -1,16 +1,6 @@
 package game.object.click;
 
-import core.GameType;
-import core.Plugin;
-import core.Server;
-import core.ServerConfiguration;
-import core.ServerConstants;
-import game.content.phantasye.event.hween.GraveDigger;
-import game.content.phantasye.minigame.instance.boss.BossInstanceController;
-import game.content.phantasye.minigame.pirate.PirateCannon;
-import game.content.phantasye.minigame.pirate.PirateMinigame;
-import game.menaphos.looting.model.loot.factory.LootFactory;
-import game.position.Position;
+import core.*;
 import game.content.bank.Bank;
 import game.content.consumable.Potions;
 import game.content.dialogue.DialogueChain;
@@ -20,38 +10,24 @@ import game.content.donator.DonatorTokenUse;
 import game.content.donator.DonatorTokenUse.DonatorRankSpentData;
 import game.content.highscores.HighscoresInterface;
 import game.content.interfaces.InterfaceAssistant;
-import game.content.minigame.Minigame;
-import game.content.minigame.MinigameArea;
-import game.content.minigame.MinigameAreaKey;
-import game.content.minigame.MinigameKey;
-import game.content.minigame.WarriorsGuild;
+import game.content.minigame.*;
 import game.content.minigame.barrows.Barrows;
 import game.content.minigame.height_manager.NoAvailableHeightException;
 import game.content.minigame.impl.fight_pits.FightPitsMinigame;
 import game.content.minigame.single_minigame.vorkath.VorkathSinglePlayerMinigame;
 import game.content.minigame.single_minigame.vorkath.VorkathSinglePlayerMinigameFactory;
 import game.content.minigame.zombie.Zombie;
-import game.content.miscellaneous.CrystalChest;
-import game.content.miscellaneous.DiceSystem;
-import game.content.miscellaneous.Ectofuntus;
-import game.content.miscellaneous.FightCaves;
-import game.content.miscellaneous.PlayerMiscContent;
-import game.content.miscellaneous.Skull;
-import game.content.miscellaneous.SnowPile;
-import game.content.miscellaneous.Teleport;
-import game.content.miscellaneous.Web;
+import game.content.miscellaneous.*;
 import game.content.packet.preeoc.ClickObjectPreEoc;
+import game.content.phantasye.event.hween.GraveDigger;
+import game.content.phantasye.minigame.instance.boss.BossInstanceController;
+import game.content.phantasye.minigame.pirate.PirateMinigame;
+import game.content.phantasye.skill.runecrafting.impl.AbyssRunecrafting;
 import game.content.quicksetup.QuickSetUp;
 import game.content.skilling.Farming;
 import game.content.skilling.Mining;
-import game.content.skilling.Runecrafting;
 import game.content.skilling.Woodcutting;
-import game.content.skilling.agility.AgilityAssistant;
-import game.content.skilling.agility.AgilityShortcuts;
-import game.content.skilling.agility.BarbarianCourse;
-import game.content.skilling.agility.DonatorCourse;
-import game.content.skilling.agility.GnomeCourse;
-import game.content.skilling.agility.WildernessCourse;
+import game.content.skilling.agility.*;
 import game.content.skilling.hunter.HunterTrapObjectManager;
 import game.content.skilling.hunter.trap.HunterTrap;
 import game.content.skilling.smithing.Smithing;
@@ -62,12 +38,7 @@ import game.entity.Entity;
 import game.entity.MovementState;
 import game.item.ItemAssistant;
 import game.object.ObjectEvent;
-import game.object.areas.BrimhavenDungeon;
-import game.object.areas.Karamja;
-import game.object.areas.MageBank;
-import game.object.areas.SlayerTower;
-import game.object.areas.TaverlyDungeon;
-import game.object.areas.WildernessObjects;
+import game.object.areas.*;
 import game.object.clip.Region;
 import game.object.custom.Door;
 import game.object.custom.DoorEvent;
@@ -80,11 +51,10 @@ import game.player.event.CycleEventAdapter;
 import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import game.player.movement.Movement;
+import game.position.Position;
 import network.packet.PacketHandler;
-import org.menaphos.model.world.location.Location;
+import org.menaphos.model.loot.factory.LootFactory;
 import utility.Misc;
-
-import java.util.Optional;
 
 public class FirstClickObject {
 
@@ -125,7 +95,7 @@ public class FirstClickObject {
 			return;
 		} else if (Farming.isFarmingObject(player, objectId)) {
 			return;
-		} else if (Runecrafting.runecraftAltar(player, objectId)) {
+		} else if (player.getRunecrafting().clickedAltar(objectId)) {
 			return;
 		} else if (Mining.isMiningObject(objectId)) {
 			Mining.doMiningObject(player, objectId);
@@ -166,6 +136,9 @@ public class FirstClickObject {
 		}
 		if(LootFactory.getLootableObject(objectId) != null) {
 			player.loot(LootFactory.getLootableObject(objectId));
+			return;
+		}
+		if(new AbyssRunecrafting(player).clickedObject(objectId)) {
 			return;
 		}
 		switch (objectId) {
