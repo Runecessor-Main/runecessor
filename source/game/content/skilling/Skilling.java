@@ -198,10 +198,10 @@ public class Skilling {
         player.resourcesHarvested = finalIncomeList;
     }
 
-    public static void addTokens(Player player, int amount, int skill) {
+   /* public static void addTokens(Player player, int amount, int skill) {
         ItemAssistant.addItemToInventoryOrDrop(player, 20527, amount);//TODO - ADD PRE_EOC SKILLING TOKENS
         player.getPA().sendMessage("<col=890caf>You receive " + amount + " skilling tokens for your efforts while training " + ServerConstants.SKILL_NAME[skill] + ".");
-    }
+    } */
 
     /**
      * True if the player has the given itemId worn in the cape slot or has Max cape worn.
@@ -685,18 +685,18 @@ public class Skilling {
         int basepoints = 1;
         int xpmod = originalExperience / 20;
         int totalmod = (int) (player.skillExperience[skill] * 0.00000015);
-        int points = basepoints + xpmod + totalmod;
-        if (skill != 0 && skill != 1 && skill != 2 && skill != 3 && skill != 4 && skill != 5 && skill != 6)
-            addSkillingTokens(player, points);
+        //int points = basepoints + xpmod + totalmod;
+       // if (skill != 0 && skill != 1 && skill != 2 && skill != 3 && skill != 4 && skill != 5 && skill != 6)
+       //     addSkillingTokens(player, points);
         player.getPA().setSkillLevel(skill, player.baseSkillLevel[skill], player.skillExperience[skill]);
         updateSkillTabFrontTextMain(player, skill);
         announceMaxExperienceInASkill(player, skill);
     }
 
-    private static void addSkillingTokens(Player player, int amt) {
+   /* private static void addSkillingTokens(Player player, int amt) {
         final int TOKEN = 20527; //TODO REPLACE WITH TOKEN ID
         ItemAssistant.addItem(player, TOKEN, amt);
-    }
+    }*/
 
     public static int getTotalLevel(Player player, boolean excludeCombat) {
         int total = 0;
@@ -734,7 +734,7 @@ public class Skilling {
 
     public static void levelUpMessage(Player player, int skill, int first, int second, int third) {
         player.getPA().sendFrame126(Skilling.getDarkBlue() + "Congratulations, you just advanced " + Misc.getAorAn(ServerConstants.SKILL_NAME[skill]) + " level!", first);
-        ItemAssistant.addItemToInventoryOrDrop(player, 20527, 1);//TODO - leveling up
+        //ItemAssistant.addItemToInventoryOrDrop(player, 20527, 1);//TODO - leveling up
         player.getPA().sendFrame126("Your " + ServerConstants.SKILL_NAME[skill] + " level is now " + player.baseSkillLevel[skill] + ".", second);
         player.getPA().sendFrame164(third);
     }
@@ -757,24 +757,24 @@ public class Skilling {
                     "Your " + ServerConstants.SKILL_NAME[skill] + " level is now " + player.baseSkillLevel[skill] + ".", "", 9951, 200, -15, -17);
         } else {
             levelUpMessage(player, skill, levelUpIds2007[skill][0], levelUpIds2007[skill][1], levelUpIds2007[skill][2]);
-            addSkillingTokens(player, player.baseSkillLevel[skill]);
+           // addSkillingTokens(player, player.baseSkillLevel[skill]);
         }
         player.playerAssistant.sendFilterableMessage("Congratulations! Your " + ServerConstants.SKILL_NAME[skill] + " level is now " + player.baseSkillLevel[skill] + ".");
         player.setDialogueAction(0);
         player.nextDialogue = 0;
         player.playerAssistant.calculateCombatLevel();
         InterfaceAssistant.updateCombatLevel(player);
-        ItemAssistant.addItemToInventoryOrDrop(player, 20527, 1);//TODO - leveling up
+        //ItemAssistant.addItemToInventoryOrDrop(player, 20527, 1);//TODO - leveling up
         GameMode.announceMaxedCombatOrMaxedTotal(player);
         announce99Achieved(player, skill);
         ProfileRank.rankPopUp(player, "ADVENTURER");
-        if (ServerConfiguration.DEBUG_MODE) {
+        /*if (ServerConfiguration.DEBUG_MODE) {
             for (tokenData data : tokenData.values()) {
                 if (player.baseSkillLevel[skill] == data.getLevel() && Skilling.isSkillingSkill(skill) && !player.announceMaxLevel) {
                     Skilling.addTokens(player, data.getAmount(), skill);
                 }
             }
-        }
+        }*/
         if (player.baseSkillLevel[skill] < 99) {
             player.gfx100(199); //levels 1-98
         } else {
