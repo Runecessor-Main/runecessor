@@ -1780,7 +1780,6 @@ public class NpcHandler {
                     if (player.getStopWatch().getElapsedMS() > 0) {
                         final NpcMetric metric = NpcMetricFactory.getMetricForNpc(npc.npcType);
                         final double killtime = Math.abs(player.getStopWatch().getElapsedMS() / 1000.0);
-                        System.out.println("Kill Time: " + killtime);
                         metric.getKills().increment();
                         metric.getKillTimeList().add(killtime);
                         player.getStopWatch().reset();
@@ -1950,7 +1949,6 @@ public class NpcHandler {
             return;
         }
         try {
-            System.out.println("DROP ID: " + npc.getId());
             npc.dropLootFor(player);
         } catch (NullPointerException e) {
             player.receiveMessage("This NPC is missing it's drops. Please contact an administrator. [ID:" + npc.getId() + "]");

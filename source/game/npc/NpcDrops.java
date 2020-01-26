@@ -421,7 +421,6 @@ public class NpcDrops {
 							player.getPA().sendMessage("Item Name: <col=0099ff>" + ItemAssistant.getItemName(itemId));
 
 							Bank.addItemToBank(player, itemId, itemAmount, false);
-
 						}
 						if (itemId == 13307) {
 							player.getPA().sendFilterableMessage(

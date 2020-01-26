@@ -270,45 +270,46 @@ public class NormalCommand {
 			}
 			return false;
 		case "droprate":
-			if (player.getPetId() == 11042) {
-				player.getPA().sendMessage("Your Donator Pet increase your drop rate by <col=db1c1c>50%.");
-			}
-			if (player.getPetId() == 11108) {
-				player.getPA().sendMessage("Your Fairy Pet increase your drop rate by <col=db1c1c>15%.");
-			}
-			if (player.isSupremeDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>30%.");
-			} else if (player.isImmortalDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>25%.");
-			} else if (player.isUberDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>20%.");
-			} else if (player.isUltimateDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>15%.");
-			} else if (player.isLegendaryDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>12%.");
-			} else if (player.isExtremeDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>7%.");
-			} else if (player.isSuperDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>5%.");
-			} else if (player.isDonator()) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>3%.");
-			}
-
-			if (player.playerEquipment[ServerConstants.RING_SLOT] == 20786) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>30%.");
-			}
-			if (player.playerEquipment[ServerConstants.AMULET_SLOT] == 589) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>30%.");
-
-			}
-			if (player.playerEquipment[ServerConstants.RING_SLOT] == 2572) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>1%.");
-
-			}
-			if (player.playerEquipment[ServerConstants.RING_SLOT] == 12785) {
-				player.getPA().sendMessage("Your drop rate: <col=db1c1c>3%.");
-
-			}
+			player.receiveMessage("Your magic find is: <col=db1c1c>3" + player.getMagicFind() + "%");
+//			if (player.getPetId() == 11042) {
+//				player.getPA().sendMessage("Your Donator Pet increase your drop rate by <col=db1c1c>50%.");
+//			}
+//			if (player.getPetId() == 11108) {
+//				player.getPA().sendMessage("Your Fairy Pet increase your drop rate by <col=db1c1c>15%.");
+//			}
+//			if (player.isSupremeDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>30%.");
+//			} else if (player.isImmortalDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>25%.");
+//			} else if (player.isUberDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>20%.");
+//			} else if (player.isUltimateDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>15%.");
+//			} else if (player.isLegendaryDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>12%.");
+//			} else if (player.isExtremeDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>7%.");
+//			} else if (player.isSuperDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>5%.");
+//			} else if (player.isDonator()) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>3%.");
+//			}
+//
+//			if (player.playerEquipment[ServerConstants.RING_SLOT] == 20786) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>30%.");
+//			}
+//			if (player.playerEquipment[ServerConstants.AMULET_SLOT] == 589) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>30%.");
+//
+//			}
+//			if (player.playerEquipment[ServerConstants.RING_SLOT] == 2572) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>1%.");
+//
+//			}
+//			if (player.playerEquipment[ServerConstants.RING_SLOT] == 12785) {
+//				player.getPA().sendMessage("Your drop rate: <col=db1c1c>3%.");
+//
+//			}
 
 			return true;
 		case "multibug":

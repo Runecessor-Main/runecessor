@@ -9,6 +9,7 @@ import game.container.ItemContainer;
 import game.container.ItemContainerNotePolicy;
 import game.container.ItemContainerStackPolicy;
 import game.container.impl.MoneyPouch;
+import game.content.bank.Bank;
 import game.content.cannon.DwarfMultiCannon;
 import game.content.combat.Combat;
 import game.content.combat.Death;
@@ -138,9 +139,16 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     @Override
     public void receiveDropFrom(NonPlayableCharacter npc, org.menaphos.model.loot.Loot loot, Location location) {
-        Server.itemHandler.createGroundItem(this, loot.getItem().getId(), location.getXCoordinate(),
-                location.getYCoordinate(), location.getZCoordinate(), loot.getItem().getAmount().value(), false, 0, true, "", "", "",
-                "", "giveDropTableDrop " + npc.getId());
+        if (this.getPetId() == 11024 && !(loot.getItem().getId() == 13307)) {
+            this.receiveMessage("<col=0099ff>Yoshi Pet Collected item to your bank.");
+            this.receiveMessage("Item Name: <col=0099ff>" + ItemAssistant.getItemName(loot.getItem().getId()));
+
+            Bank.addItemToBank(this, loot.getItem().getId(), loot.getItem().getAmount().value(), false);
+        } else {
+            Server.itemHandler.createGroundItem(this, loot.getItem().getId(), location.getXCoordinate(),
+                    location.getYCoordinate(), location.getZCoordinate(), loot.getItem().getAmount().value(), false, 0, true, "", "", "",
+                    "", "giveDropTableDrop " + npc.getId());
+        }
     }
 
     @Override
@@ -338,40 +346,20 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     public double getMagicFind() {
         double modifier = 0d;
         if (this.isSupremeDonator()) {
-            modifier = 0.30;
-        } else if (this.isImmortalDonator()) {
             modifier = 0.25;
-        } else if (this.isUberDonator()) {
+        } else if (this.isImmortalDonator()) {
             modifier = 0.20;
-        } else if (this.isUltimateDonator()) {
+        } else if (this.isUberDonator()) {
             modifier = 0.15;
-        } else if (this.isLegendaryDonator()) {
+        } else if (this.isUltimateDonator()) {
             modifier = 0.12;
+        } else if (this.isLegendaryDonator()) {
+            modifier = 0.10;
         } else if (this.isExtremeDonator()) {
-            modifier = 0.07;
-        } else if (this.isSuperDonator()) {
             modifier = 0.05;
-        } else if (this.isDonator()) {
-            modifier = 0.03;
         }
         if (GameMode.getDifficulty(this, "GLADIATOR")) {
-            modifier += 0.5;
-
-        } else if (this.getPetId() == 11108) {//
-            modifier += 0.15;
-        } else if (this.getPetId() == 11042) {//
-            modifier += 0.25;
-        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 20786) {
-            modifier += 0.12;
-        } else if (this.playerEquipment[ServerConstants.AMULET_SLOT] == 589) {
-            modifier += 0.12;
-        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 2572) {
-            modifier += 0.01;
-        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 12785) {
-            modifier += 0.03;
-        } else if (this.playerEquipment[ServerConstants.RING_SLOT] == 16505) {
-            modifier += 0.07;
-
+            modifier += 0.2;
         }
         return modifier * 100;
     }
