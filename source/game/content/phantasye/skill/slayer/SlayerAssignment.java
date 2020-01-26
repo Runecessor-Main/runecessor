@@ -28,7 +28,7 @@ public enum SlayerAssignment {
     GHOSTS(1,new Locations[]{Locations.SLAYER_TOWER},6815),
     GOBLINS(1,new Locations[]{Locations.LUMBRIDGE,Locations.GENERAL_GRAARDOR,Locations.TAVERLY_DUNGEON,Locations.REVENANT_CAVES},3049,6605,3029,2216,2218,2217,3031,3032,3033,3034,3035),
     GREATER_DEMONS(1,new Locations[]{Locations.SHADOW_CAVE},2026,3129,3130),
-    GREEN_DRAGONS(1,new Locations[]{Locations.EAST_DRAGONS},260),
+    GREEN_DRAGONS(1,new Locations[]{Locations.EAST_DRAGONS},260,261,264),
     HELL_HOUNDS(1,new Locations[]{Locations.TAVERLY_DUNGEON,Locations.CERBERUS},104,15256,5862),
     HILL_GIANTS(1,new Locations[]{Locations.EDGEVILLE_DUNGEON},7261),
     ICE_GIANTS(1,new Locations[]{Locations.ICE_STRYKEWYRMS},2085),

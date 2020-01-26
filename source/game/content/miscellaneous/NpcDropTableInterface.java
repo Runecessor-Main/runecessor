@@ -8,6 +8,7 @@ import game.npc.NpcDrops.NpcIdList;
 import game.npc.data.NpcDefinition;
 import game.player.Player;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import org.menaphos.model.loot.LootableContainer;
@@ -150,13 +151,19 @@ public class NpcDropTableInterface {
                 String maximumPrice = "";
                 if (index < dropsLength) {
                     if (npc != null) {
-                        chance = npc.getLoot().get(index).getPercentDrop() * 100 + "%";
+                        DecimalFormat df = new DecimalFormat("###.##");
+                        chance = df.format(npc.getLoot().get(index).getPercentDrop() * 100) + "%";
                         if(npc.getLoot().get(index).getPercentDrop() == 1.0) {
                             chance = "always";
                         }
                         itemId = npc.getLoot().get(index).getItem().getId();
-                        minimumAmount = npc.getLoot().get(index).getRange().getMin();
-                        maximumAmount = npc.getLoot().get(index).getRange().getMax();
+                        if(npc.getLoot().get(index).getRange() != null) {
+                            minimumAmount = npc.getLoot().get(index).getRange().getMin();
+                            maximumAmount = npc.getLoot().get(index).getRange().getMax();
+                        } else {
+                            minimumAmount = npc.getLoot().get(index).getItem().getAmount().value();
+                            maximumAmount = minimumAmount;
+                        }
                         if(minimumAmount == 0) {
                             minimumAmount = 1;
                         }

@@ -600,7 +600,7 @@ public class FirstClickNpc {
 
 			// Mage of Zamorak.
 			case 2580:
-				AbyssRunecrafting.teleportToAbyss(player);
+//				AbyssRunecrafting.teleportToAbyss(player);
 				break;
 			case ZMIAltarBankNpc
 						.NPC_ID:

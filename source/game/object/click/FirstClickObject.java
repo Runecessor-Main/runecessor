@@ -20,6 +20,7 @@ import game.content.minigame.zombie.Zombie;
 import game.content.miscellaneous.*;
 import game.content.packet.preeoc.ClickObjectPreEoc;
 import game.content.phantasye.event.hween.GraveDigger;
+import game.content.phantasye.minigame.instance.boss.BossInstanceChest;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.content.phantasye.skill.runecrafting.impl.AbyssRunecrafting;
@@ -142,6 +143,9 @@ public class FirstClickObject {
 			return;
 		}
 		switch (objectId) {
+			case 26273:
+				BossInstanceChest.getInstance().openFor(player);
+				break;
 			case 10049:
 			case 9366:
 			case 9364:

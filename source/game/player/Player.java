@@ -308,12 +308,12 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     @Override
     public void createShoppingSession(org.menaphos.model.world.content.shop.Shop shop) {
         this.setShoppingSession(new ShoppingSession(this, shop));
-        ItemAssistant.resetItems(this, 3823);
         this.getPA().sendFrame248(3824, 3822);
         this.getOutStream().endFrameVarSizeWord();
         this.flushOutStream();
         this.setInterfaceIdOpened(3900);
         this.getPA().sendItemContainer(shop, 3900);
+        ItemAssistant.resetItems(this, 3823);
     }
 
     @Override

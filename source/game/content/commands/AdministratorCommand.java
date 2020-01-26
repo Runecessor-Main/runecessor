@@ -1907,6 +1907,8 @@ public class AdministratorCommand {
             player.getPA().sendMessage("Bots npc combat: " + totalMoving);
             return true;
         } else if (command.equals("pos") || command.equals("mypos")) {
+            System.out.println(player.getPlayerId());
+            System.out.println(player.getId());
             player.getPA().sendMessage(
                     String.format("position {x=%s, y=%s, z=%s}", player.getX(), player.getY(), player.getHeight()));
             return true;

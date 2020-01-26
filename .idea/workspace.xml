@@ -2,94 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backup/characters/phantasye.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/metric/NpcMetric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/metric/NpcMetricFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/metric/NpcMetricRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/metric/NpcMetricRepositoryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Rune.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/impl/AbyssRunecrafting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceChest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/donations/bmt_payments_today.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/bmt_payments_today.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/donations/daily_custom_payments_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/daily_custom_payments_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/donations/daily_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/daily_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/donations/daily_osrs_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/daily_osrs_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/given_items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/given_items.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/rare drop log/Phantasye.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/rare drop log/Phantasye.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$Action1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$Action2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$Action3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$GameTickTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$GameTickTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$TextInputField.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$TextInputField.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/InitiateCombat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/InitiateCombat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$14.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$15.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$16.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$17.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1A.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1A.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1PlayerTableEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1PlayerTableEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/miscellaneous/NpcDropTableInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/miscellaneous/NpcDropTableInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ClickObjectPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ClickObjectPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/RegionUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/RegionUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/event/WildernessChestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/event/WildernessChestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/RemoveItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/RemoveItemPacket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$Boss.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$BossDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$BossDialogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/pirate/PirateMinigame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/pirate/PirateMinigame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/content/quest/tab/InformationTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/quest/tab/InformationTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/Range.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/item/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/item/ItemDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/loot/Loot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/loot/LootableContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/loot/LootableItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/loot/LootableObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/loot/RangeLoot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/model/loot/factory/LootFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/repo/LootableItemRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/menaphos/looting/repo/LootableObjectRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/Npc$NextWalkingDirecitonTileSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/Npc$NextWalkingDirecitonTileSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/Npc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/NpcDrops.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/NpcDrops.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/NpcHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/NpcHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$3.class" afterDir="false" />
@@ -98,73 +33,17 @@
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/player/Area.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Area.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/halloween.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/halloween.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/osrs/eco/npc/drops.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/eco/npc/drops.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/osrs/global/items/item definition.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/global/items/item definition.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/osrs/global/npc/npc_definition_non_combat.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/global/npc/npc_definition_non_combat.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/osrs/global/world osrs/object/removed_objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/global/world osrs/object/removed_objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/player-details-repository.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/player-details-repository.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraries/Menaphos Server API.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/Menaphos Server API.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/core/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/Combat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/combat/InitiateCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/InitiateCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/content/miscellaneous/NpcDropTableInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/miscellaneous/NpcDropTableInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/packet/ClickObjectPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/ClickObjectPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/RegionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/RegionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterUnlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterUnlockListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/event/hween/CommunityGift.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/event/hween/CommunityGift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/event/hween/GraveDigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/event/hween/GraveDigger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/RemoveItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/RemoveItemPacket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateMinigame.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateMinigame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Chaeldar.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Chaeldar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Duradel.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Duradel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Mazchna.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Mazchna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Nieve.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Nieve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Turael.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Turael.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Vannaka.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Vannaka.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/starter/GameMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/starter/GameMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/Range.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/item/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/item/ItemDefinition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/loot/Loot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/loot/LootableContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/loot/LootableItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/loot/LootableObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/loot/RangeLoot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/loot/factory/LootFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/model/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/repo/LootableItemRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/repo/LootableObjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/looting/repo/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/menaphos/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/Npc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/npc/NpcDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/NpcDrops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/npc/NpcHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/NpcHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/player/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/Area.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/Player.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -176,23 +55,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4533">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="145">
+              <caret line="270" column="54" lean-forward="true" selection-start-line="270" selection-start-column="54" selection-end-line="270" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3279">
-              <caret line="113" column="42" lean-forward="true" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+            <state relative-caret-position="248">
+              <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceChest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1949#1950#0" expanded="true" />
+                <element signature="e#2016#2017#0" expanded="true" />
+                <element signature="e#3362#3363#0" expanded="true" />
+                <element signature="e#3421#3422#0" expanded="true" />
+                <element signature="e#3473#3474#0" expanded="true" />
+                <element signature="e#3504#3505#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/core/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="218" column="29" lean-forward="true" selection-start-line="218" selection-start-column="29" selection-end-line="218" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="606" column="22" lean-forward="true" selection-start-line="606" selection-start-column="22" selection-end-line="606" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="43" selection-start-column="43" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/player/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2397">
+              <caret line="274" column="29" selection-start-line="274" selection-start-column="29" selection-end-line="274" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -210,13 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>64</find>
-      <find>nothi</find>
-      <find>runecra</find>
-      <find>run o</find>
-      <find>petc</find>
-      <find>anim</find>
-      <find>pet</find>
       <find>2580</find>
       <find>runec</find>
       <find>&quot;bank&quot;</find>
@@ -240,6 +184,13 @@
       <find>weari</find>
       <find>soun</find>
       <find>equip</find>
+      <find>pass</find>
+      <find>pos</find>
+      <find>shop</find>
+      <find>creates</find>
+      <find>you ca</find>
+      <find>assi</find>
+      <find>zamo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,34 +199,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/NpcMetricRepositoryManager.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/NpcMetricFactory.java" />
-        <option value="$PROJECT_DIR$/source/game/content/combat/InitiateCombat.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/NpcMetric.java" />
-        <option value="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterUnlockListener.java" />
         <option value="$PROJECT_DIR$/data/osrs/global/world osrs/object/removed_objects.txt" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/impl/AbyssRunecrafting.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBank.java" />
-        <option value="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" />
         <option value="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" />
         <option value="$PROJECT_DIR$/data/osrs/global/npc/npc_definition_non_combat.json" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Rune.java" />
         <option value="$PROJECT_DIR$/data/player-details-repository.json" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java" />
         <option value="$PROJECT_DIR$/source/game/npc/NpcDrops.java" />
-        <option value="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" />
         <option value="$PROJECT_DIR$/source/game/content/starter/GameMode.java" />
         <option value="$PROJECT_DIR$/source/game/content/combat/Combat.java" />
         <option value="$PROJECT_DIR$/source/game/player/Area.java" />
-        <option value="$PROJECT_DIR$/source/game/player/Player.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateMinigame.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/event/hween/GraveDigger.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/event/hween/CommunityGift.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Duradel.java" />
@@ -288,17 +226,30 @@
         <option value="$PROJECT_DIR$/source/game/content/phantasye/RegionUtils.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java" />
         <option value="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" />
-        <option value="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" />
-        <option value="$PROJECT_DIR$/source/core/Server.java" />
         <option value="$PROJECT_DIR$/source/game/npc/Npc.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" />
         <option value="$PROJECT_DIR$/source/game/npc/NpcHandler.java" />
         <option value="$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java" />
         <option value="$PROJECT_DIR$/source/game/content/music/SoundSystem.java" />
+        <option value="$PROJECT_DIR$/source/game/content/miscellaneous/NpcDropTableInterface.java" />
+        <option value="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" />
+        <option value="$PROJECT_DIR$/source/game/content/shop/ShopAssistant.java" />
+        <option value="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceChest.java" />
+        <option value="$PROJECT_DIR$/source/game/player/Player.java" />
+        <option value="$PROJECT_DIR$/source/game/content/packet/RemoveItemPacket.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/SoloSlayerAssignmentChain.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java" />
+        <option value="$PROJECT_DIR$/source/core/Server.java" />
+        <option value="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java" />
       </list>
     </option>
   </component>
@@ -321,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,7 +282,18 @@
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
@@ -346,6 +307,14 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="miscellaneous" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
@@ -363,6 +332,27 @@
               <item name="content" type="462c0819:PsiDirectoryNode" />
               <item name="phantasye" type="462c0819:PsiDirectoryNode" />
               <item name="skill" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="phantasye" type="462c0819:PsiDirectoryNode" />
+              <item name="skill" type="462c0819:PsiDirectoryNode" />
+              <item name="runecrafting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="phantasye" type="462c0819:PsiDirectoryNode" />
+              <item name="skill" type="462c0819:PsiDirectoryNode" />
+              <item name="runecrafting" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
@@ -385,15 +375,65 @@
               <item name="slayer" type="462c0819:PsiDirectoryNode" />
               <item name="master" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="phantasye" type="462c0819:PsiDirectoryNode" />
+              <item name="skill" type="462c0819:PsiDirectoryNode" />
+              <item name="slayer" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="npc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="npc" type="462c0819:PsiDirectoryNode" />
+              <item name="clicknpc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="object" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="object" type="462c0819:PsiDirectoryNode" />
+              <item name="click" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1578613349313" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579998455008" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Client (1)/Client" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -455,9 +495,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2785235" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20402685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,7 +507,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.31586403" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.31586403" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -495,247 +536,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateMinigame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="27" column="33" lean-forward="true" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/hween/CommunityGift.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="122" selection-start-line="24" selection-start-column="122" selection-end-line="24" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/hween/GraveDigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Duradel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Mazchna.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Turael.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Vannaka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/RegionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/packet/ClickObjectPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="173" column="52" selection-start-line="173" selection-start-column="52" selection-end-line="173" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5552#5553#0" expanded="true" />
-            <element signature="e#5583#5584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/object/click/FirstClickObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="136" column="15" lean-forward="true" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/core/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/NpcDrops.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="386" column="31" lean-forward="true" selection-start-line="386" selection-start-column="31" selection-end-line="386" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/player/Area.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="347" column="66" selection-start-line="347" selection-start-column="66" selection-end-line="347" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/player/PlayerAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="1201" column="25" selection-start-line="1201" selection-start-column="25" selection-end-line="1201" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/InstanceKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/InstanceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/impl/zulrah/Zulrah.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1401">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/impl/zulrah/ZulrahLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="189" column="32" selection-start-line="189" selection-start-column="32" selection-end-line="217" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahMinigameArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1929">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
-          <folding>
-            <element signature="e#2934#3174#0" expanded="true" />
-            <element signature="e#3173#3174#0" expanded="true" />
-            <element signature="e#4682#5270#0" expanded="true" />
-            <element signature="e#5269#5270#0" expanded="true" />
-            <element signature="e#5597#6011#0" expanded="true" />
-            <element signature="e#6010#6011#0" expanded="true" />
-            <element signature="e#6123#6264#0" expanded="true" />
-            <element signature="e#6263#6264#0" expanded="true" />
-            <element signature="e#7105#7478#0" expanded="true" />
-            <element signature="e#7477#7478#0" expanded="true" />
-            <element signature="e#6711#6712#0" expanded="true" />
-            <element signature="e#6786#6787#0" expanded="true" />
-            <element signature="e#6862#6863#0" expanded="true" />
-            <element signature="e#6923#6924#0" expanded="true" />
-            <element signature="e#6978#6979#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-678">
-          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-          <folding>
-            <element signature="e#6485#6486#0" expanded="true" />
-            <element signature="e#6524#6525#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -788,24 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="41" column="5" selection-start-line="7" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/impl/AbyssRunecrafting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/item/ItemAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -820,37 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="413" column="24" lean-forward="true" selection-start-line="413" selection-start-column="24" selection-end-line="413" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="5533" column="31" selection-start-line="5533" selection-start-column="26" selection-end-line="5533" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -889,20 +644,276 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java">
+    <entry file="file://$PROJECT_DIR$/backup/characters/players/dirty dan.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/miscellaneous/NpcDropTableInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4533">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="217">
+          <caret line="154" column="91" selection-start-line="154" selection-start-column="91" selection-end-line="154" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/AssignTaskAssignmentChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/commands/ServerSsCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/item/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1109">
+          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libraries/Menaphos Server API.jar!/org/menaphos/model/world/content/shop/Shop.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-779">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateCannon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="656" column="27" lean-forward="true" selection-start-line="656" selection-start-column="27" selection-end-line="656" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/item/ItemAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="557" column="23" selection-start-line="557" selection-start-column="23" selection-end-line="557" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/shop/Shop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2397">
+          <caret line="274" column="29" selection-start-line="274" selection-start-column="29" selection-end-line="274" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/shop/ShopAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6239">
+          <caret line="395" column="21" selection-start-line="395" selection-start-column="21" selection-end-line="395" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/packet/RemoveItemPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/miscellaneous/ClueScroll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="422" column="27" selection-start-line="422" selection-start-column="27" selection-end-line="422" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/osrs/eco/items/shops.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/object/click/FirstClickObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="157" column="22" lean-forward="true" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="552" selection-start-line="552" selection-end-line="552" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/player/PlayerAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="1711" column="23" selection-start-line="1711" selection-start-column="23" selection-end-line="1711" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="41" column="5" selection-start-line="7" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="106" column="35" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/SoloSlayerAssignmentChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/BossTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3279">
-          <caret line="113" column="42" lean-forward="true" selection-start-line="113" selection-start-column="42" selection-end-line="113" selection-end-column="42" />
+        <state relative-caret-position="17">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1949#1950#0" expanded="true" />
+            <element signature="e#2016#2017#0" expanded="true" />
+            <element signature="e#3362#3363#0" expanded="true" />
+            <element signature="e#3421#3422#0" expanded="true" />
+            <element signature="e#3473#3474#0" expanded="true" />
+            <element signature="e#3504#3505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/core/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="218" column="29" lean-forward="true" selection-start-line="218" selection-start-column="29" selection-end-line="218" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="606" column="22" lean-forward="true" selection-start-line="606" selection-start-column="22" selection-end-line="606" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="270" column="54" lean-forward="true" selection-start-line="270" selection-start-column="54" selection-end-line="270" selection-end-column="54" />
         </state>
       </provider>
     </entry>

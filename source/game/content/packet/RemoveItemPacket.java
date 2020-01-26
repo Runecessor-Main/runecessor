@@ -16,6 +16,8 @@ import game.shop.Shop;
 import network.packet.PacketHandler;
 import network.packet.PacketType;
 
+import java.text.NumberFormat;
+
 
 /**
  * Remove Item
@@ -102,15 +104,22 @@ public class RemoveItemPacket implements PacketType {
 
 			case 3900:
 				if (Shop.ENABLED) {
-					Shop shop = player.getShop();
+					System.out.println(player.getShoppingSession());
+					if (player.getShoppingSession() != null) {
+						player.receiveMessage("You can buy this for: " + NumberFormat.getInstance().format(player.inquire(removeSlot)));
+					} else {
+						Shop shop = player.getShop();
 
-					if (shop == null) {
+						if (shop == null) {
+							return;
+						}
+
+
+						shop.buy(player, removeId, 1, removeSlot);
 						return;
 					}
-					shop.buy(player, removeId, 1, removeSlot);
-					return;
+					player.getShops().checkShopPrice(removeId, removeSlot);
 				}
-				player.getShops().checkShopPrice(removeId, removeSlot);
 				break;
 
 			case 3823:

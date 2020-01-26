@@ -13,6 +13,7 @@ import game.npc.Npc;
 import game.npc.NpcHandler;
 import game.player.Boundary;
 import game.player.Player;
+import org.menaphos.entity.impl.item.Item;
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.location.Location;
@@ -141,6 +142,8 @@ public class BossInstance implements Instancable {
                 }
                 if (instanceOwner.dead) {
                     instanceOwner.receiveMessage(ServerConstants.RED_COL + "Your Items have been dropped at ::home. ");
+//                    itemsOnEntry.forEach(item->BossInstanceChest.getInstance().addItem(instanceOwner,new Item(item.getId(),item.getAmount())));
+                    this.cancel();
                 }
             }
 
