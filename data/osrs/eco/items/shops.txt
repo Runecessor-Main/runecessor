@@ -884,46 +884,6 @@ Shop currency: 4067
 22114 500 // Mythical cape
 16073 800 // give x2 on exp
 
-Shop name: Skilling tokens shop
-Shop id: 40
-Shop currency: 20527
-10933 250 // Lumberjack boots
-10939 250 // Lumberjack top
-10940 250 // Lumberjack legs
-10941 250 // Lumberjack hat
-12013 250 // Prospector helmet
-12014 250 // Prospector jacket
-12015 250 // Prospector legs
-12016 250 // Prospector boots
-13258 250 // Angler hat
-13259 250 // Angler top
-13260 250 // Angler waders
-13261 250 // Angler boots
-20704 250 // Pyromancer garb
-20706 250 // Pyromancer robe
-20708 250 // Pyromancer hood
-20710 250 // Pyromancer boots
-13646 250 //
-13642 250 //
-13640 250 //
-13644 250 //
-10394 75 // Flared trousers
-6666 120 // Flippers.
-7671 120 // Boxing gloves.
-7673 120 // Boxing gloves.
-9005 420 // Fancy boots.
-9006 420 // Fighting boots.
-1052 70 // Cape of legends.
-12393 330 // Royal shirt.
-12395 330 // Royal leggings.
-12439 320 // Royal sceptre.
-12397 325 // Royal crown.
-12432 400 // Top hat.
-21314 400 // Rainbow scarf
-22114 500 // Mythical cape
-7409 1500 // Magic secateurs
-
-
 
 Shop name: Scalper Shop
 Shop id: 101
