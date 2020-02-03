@@ -921,6 +921,7 @@ public class ItemAssistant {
 
 	private static final String[] TWO_HANDED_WEAPONS = {"hand cannon", "heavy casket",
 			"clueless scroll", "large spade", "dinh's bulwark", "3rd age bow", "toxic blowpipe",
+			"magma blowpipe",
 			"twisted bow", "ballista", "halberd", "karil", "verac", "guthan", "dharok", "torag",
 			"longbow", "shortbow", "dark bow", "godsword", "saradomin sword", "blessed sword", "2h",
 			"spear", "maul", "tzhaar-ket-om", "dragon claws", "barrelchest anchor", "boxing gloves",
@@ -1025,7 +1026,6 @@ public class ItemAssistant {
 		String itemName = getItemName(itemId).toLowerCase();
 		ItemRequirement.setItemRequirements(player, itemName, itemId);
 		itemEquipmentSlot = ItemSlot.getItemEquipmentSlot(itemName, itemId);
-
 		if (!ItemInteractionManager.handleEquipItem(player, itemId, slot)) {
 			player.sendDebugMessage("This item does not support item interactions!");
 			return false;
@@ -1622,6 +1622,9 @@ public class ItemAssistant {
 	public static String getItemName(int itemId) {
 		if (itemId <= 0) {
 			return "Unarmed";
+		}
+		if(itemId == 6075) {
+			return "Magma Blowpipe";
 		}
 		if (ItemDefinition.getDefinitions()[itemId] != null) {
 			return ItemDefinition.getDefinitions()[itemId].name;

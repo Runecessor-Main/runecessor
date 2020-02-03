@@ -2,6 +2,9 @@ package game.content.phantasye.minigame.instance.boss;
 
 import game.content.dialogue.DialogueChain;
 import game.content.miscellaneous.Teleport;
+import game.content.phantasye.dialogue.DialogueOptionPaginator;
+import game.content.phantasye.dialogue.impl.SlayerMasterUnlockListener;
+import game.content.phantasye.skill.slayer.SlayerUnlocks;
 import game.item.ItemAssistant;
 import game.npc.NpcHandler;
 import game.player.Player;
@@ -89,29 +92,35 @@ public final class BossInstanceController {
 
     private void sendDialog(Player player) {
         player.getPA().closeInterfaces(true);
-        int optionIndex = dialogController.getIndex() * 4;
-        player.setDialogueChain(new DialogueChain().option((p, option) -> {
-                    if (option != dialogController.getIndexMap().get(dialogController.getIndex()).size()) {
-                        final Boss boss = Boss.forOption(option + optionIndex);
-                        if (boss != null) {
-                            player.getPA().closeInterfaces(true);
-                            selectBoss(Objects.requireNonNull(boss), player);
-                        }
-                    } else {
-                        if (dialogController.getIndex() + 1 < dialogController.getIndexMap().size()) {
-                            dialogController.setIndex(dialogController.getIndex() + 1);
-                        } else {
-                            dialogController.setIndex(0);
-                        }
-                        this.sendDialog(player);
-                    }
-                }, "Select a Boss",
-                dialogController.getBossNames()))
+        final DialogueOptionPaginator.DialogueOptionPaginatorBuilder builder = new DialogueOptionPaginator.DialogueOptionPaginatorBuilder(player);
+        builder.withTitle("Select a Boss");
+        Arrays.stream(Boss.values()).forEach(boss -> builder.addOption(boss.toString()));
+        DialogueOptionPaginator paginator = builder.build();
+        player.setDialogueChain(paginator.getPageAsDialogOptions(0, new BossInstancePaginatorListener(paginator)))
                 .start(player);
+//        int optionIndex = dialogController.getIndex() * 4;
+//        player.setDialogueChain(new DialogueChain().option((p, option) -> {
+//                    if (option != dialogController.getIndexMap().get(dialogController.getIndex()).size()) {
+//                        final Boss boss = Boss.forOption(option + optionIndex);
+//                        if (boss != null) {
+//                            player.getPA().closeInterfaces(true);
+//                            selectBoss(Objects.requireNonNull(boss), player);
+//                        }
+//                    } else {
+//                        if (dialogController.getIndex() + 1 < dialogController.getIndexMap().size()) {
+//                            dialogController.setIndex(dialogController.getIndex() + 1);
+//                        } else {
+//                            dialogController.setIndex(0);
+//                        }
+//                        this.sendDialog(player);
+//                    }
+//                }, "Select a Boss",
+//                dialogController.getBossNames()))
+//                .start(player);
 
     }
 
-    private void selectBoss(Boss boss, Player player) {
+    public void selectBoss(Boss boss, Player player) {
         this.createInstance(new BossInstance(NpcHandler.createCustomOrDefault(this.getAvailableNpcSlot(), boss.getId()), player), player, boss);
     }
 
@@ -147,7 +156,7 @@ public final class BossInstanceController {
         return bossInstanceList;
     }
 
-    private enum Boss {
+    public enum Boss {
         TEKTON(20, 5090,DEFAULT_LOCATION),
         LIZARD_SHAMAN(5, 6766,DEFAULT_LOCATION),
         DERANGED_ARCHAEOLOGIST(5, 7806,DEFAULT_LOCATION),

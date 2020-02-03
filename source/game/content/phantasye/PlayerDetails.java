@@ -23,6 +23,9 @@ public class PlayerDetails {
     private Map<Integer,AdjustableInteger> herbSack;
     private List<Integer> paymentRunes;
 
+    private AdjustableInteger mythicalCapeCharges;
+    private AdjustableInteger mythicalCapeTier;
+
     private GraveDiggerProperties graveDiggerProperties;
     private boolean openedGift;
     private List<Item> unlcaimedPrizes;
@@ -55,6 +58,14 @@ public class PlayerDetails {
                 e.printStackTrace();
             }
         });
+    }
+
+    public AdjustableInteger getMythicalCapeCharges() {
+        return mythicalCapeCharges;
+    }
+
+    public AdjustableInteger getMythicalCapeTier() {
+        return mythicalCapeTier;
     }
 
     public List<Integer> getPaymentRunes() {

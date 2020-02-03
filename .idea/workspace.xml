@@ -2,11 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/GeneralUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/item/MythicalCape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstancePaginatorListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/commands/NormalCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/commands/NormalCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/npc/NpcDrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/NpcDrops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/system log/save log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/save log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/WeaponSpeed.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/WeaponSpeed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedAmmoUsed.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedAmmoUsed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedAttack.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedAttack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData$SpecialRangedWeapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData$SpecialRangedWeapon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedFormula.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedFormula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/highscores/HighscoresDaily.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/highscores/HighscoresDaily.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/miscellaneous/Announcement$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/miscellaneous/Announcement$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/miscellaneous/Announcement$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/miscellaneous/Announcement$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ClickingButtonPacket$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ClickingButtonPacket$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ClickingButtonPacket$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ClickingButtonPacket$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ClickingButtonPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ClickingButtonPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$Boss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$BossDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$BossDialogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/quest/tab/InformationTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/quest/tab/InformationTab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/Skilling$SkillCapeMasterData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/Skilling$SkillCapeMasterData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/Skilling$SkillCapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/Skilling$SkillCapes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/Skilling$tokenData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/Skilling$tokenData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/Skilling.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/Skilling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/item/ItemAssistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/item/ItemAssistant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/item/ItemSlot.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/item/ItemSlot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/NpcDrops.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/NpcDrops.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/NpcHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/NpcHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/pet/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/pet/Pet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/LogInUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/LogInUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/Player$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/sets/XPBoostingItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/sets/XPBoostingItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/npc-metrics.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/npc-metrics.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/osrs/eco/items/item definition.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/eco/items/item definition.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/osrs/global/items/item definition.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/osrs/global/items/item definition.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/Combat.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/Combat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/WeaponSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/WeaponSpeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAmmoUsed.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAmmoUsed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedFormula.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedFormula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/highscores/HighscoresDaily.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/highscores/HighscoresDaily.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/miscellaneous/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/miscellaneous/Announcement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/ClickingButtonPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/ClickingButtonPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/ItemOnItemActionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/ItemOnItemActionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/skilling/Skilling.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/skilling/Skilling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/item/ItemAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/item/ItemAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/item/ItemSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/item/ItemSlot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/npc/NpcHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/NpcHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/pet/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/pet/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/player/LogInUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/LogInUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/player/sets/XPBoostingItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/sets/XPBoostingItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/network/login/RS2LoginProtocolDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/network/login/RS2LoginProtocolDecoder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,19 +89,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/game/content/commands/NormalCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="299" column="13" lean-forward="true" selection-start-line="299" selection-start-column="13" selection-end-line="299" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/game/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+            <state relative-caret-position="77401">
+              <caret line="4771" column="23" selection-start-line="4771" selection-start-column="23" selection-end-line="4771" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,28 +101,82 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/game/npc/NpcDrops.java">
+        <entry file="file://$PROJECT_DIR$/data/osrs/global/items/item definition.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="418" column="24" selection-start-line="418" selection-start-column="24" selection-end-line="423" selection-end-column="25" />
+            <state relative-caret-position="366">
+              <caret line="127928" selection-start-line="127928" selection-end-line="127928" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/game/npc/NpcHandler.java">
+        <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="1951" column="24" selection-start-line="1951" selection-start-column="24" selection-end-line="1951" selection-end-column="24" />
+            <state relative-caret-position="27047">
+              <caret line="1651" column="58" selection-start-line="1651" selection-start-column="58" selection-end-line="1651" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/game/npc/Npc.java">
+        <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedFormula.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="892" column="28" lean-forward="true" selection-start-line="892" selection-start-column="28" selection-end-line="892" selection-end-column="28" />
+            <state relative-caret-position="5661">
+              <caret line="344" column="22" selection-start-line="344" selection-start-column="17" selection-end-line="344" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2278">
+              <caret line="142" column="18" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAttack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/game/content/combat/Combat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="2431" column="61" selection-start-line="2431" selection-start-column="61" selection-end-line="2431" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/content/combat/WeaponSpeed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/item/ItemSlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4760">
+              <caret line="281" column="21" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/game/item/ItemAssistant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="1626" column="36" selection-start-line="1626" selection-start-column="36" selection-end-line="1626" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -78,37 +194,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bank</find>
-      <find>xp</find>
-      <find>dropr</find>
-      <find>magicf</find>
-      <find>@O</find>
-      <find>player(</find>
-      <find>attackpl</find>
-      <find>attackn</find>
-      <find>timer</find>
-      <find>attacknp</find>
-      <find>attackp</find>
-      <find>stopwat</find>
-      <find>inwi</find>
-      <find>GP_C</find>
-      <find>wear</find>
-      <find>weari</find>
-      <find>soun</find>
-      <find>equip</find>
-      <find>pass</find>
-      <find>pos</find>
-      <find>shop</find>
-      <find>creates</find>
-      <find>you ca</find>
-      <find>assi</find>
-      <find>zamo</find>
-      <find>getm</find>
-      <find>give</find>
+      <find>rubb</find>
       <find>drop</find>
-      <find>rece</find>
-      <find>receiv</find>
+      <find>vann</find>
+      <find>tura</find>
+      <find>10209</find>
+      <find>mythical</find>
+      <find>token</find>
+      <find>20527</find>
+      <find>cape i</find>
+      <find>toxic</find>
+      <find>pipe</find>
+      <find>equi</find>
+      <find>bp</find>
+      <find>toxic b</find>
+      <find>toxi</find>
+      <find>6076</find>
+      <find>craw'</find>
+      <find>22547</find>
+      <find>225</find>
+      <find>max =</find>
+      <find>22550</find>
+      <find>blowp</find>
+      <find>spee</find>
+      <find>speed</find>
+      <find>12926</find>
+      <find>6075</find>
+      <find>blow</find>
+      <find>skill</find>
+      <find>one:</find>
+      <find>speed:</find>
     </findStrings>
+    <replaceStrings>
+      <replace>6075</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,40 +235,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/impl/AbyssRunecrafting.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBank.java" />
-        <option value="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" />
-        <option value="$PROJECT_DIR$/data/osrs/global/npc/npc_definition_non_combat.json" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Rune.java" />
-        <option value="$PROJECT_DIR$/data/player-details-repository.json" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java" />
-        <option value="$PROJECT_DIR$/source/game/content/starter/GameMode.java" />
-        <option value="$PROJECT_DIR$/source/game/content/combat/Combat.java" />
-        <option value="$PROJECT_DIR$/source/game/player/Area.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateMinigame.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/event/hween/GraveDigger.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/event/hween/CommunityGift.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Duradel.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Chaeldar.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Nieve.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Vannaka.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Turael.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Mazchna.java" />
-        <option value="$PROJECT_DIR$/source/game/content/packet/ClickObjectPacket.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/RegionUtils.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java" />
-        <option value="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" />
-        <option value="$PROJECT_DIR$/source/game/npc/Npc.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" />
-        <option value="$PROJECT_DIR$/source/game/content/minigame/single_minigame/zulrah/ZulrahSinglePlayerMinigameFactory.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java" />
         <option value="$PROJECT_DIR$/source/game/content/music/SoundSystem.java" />
         <option value="$PROJECT_DIR$/source/game/content/miscellaneous/NpcDropTableInterface.java" />
         <option value="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" />
-        <option value="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" />
         <option value="$PROJECT_DIR$/source/game/content/shop/ShopAssistant.java" />
         <option value="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceChest.java" />
@@ -164,9 +254,38 @@
         <option value="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" />
         <option value="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java" />
         <option value="$PROJECT_DIR$/source/game/content/commands/NormalCommand.java" />
-        <option value="$PROJECT_DIR$/source/game/npc/NpcHandler.java" />
         <option value="$PROJECT_DIR$/source/game/npc/NpcDrops.java" />
         <option value="$PROJECT_DIR$/source/game/player/Player.java" />
+        <option value="$PROJECT_DIR$/source/network/login/RS2LoginProtocolDecoder.java" />
+        <option value="$PROJECT_DIR$/source/game/npc/NpcHandler.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstancePaginatorListener.java" />
+        <option value="$PROJECT_DIR$/source/game/content/miscellaneous/Announcement.java" />
+        <option value="$PROJECT_DIR$/source/game/content/highscores/HighscoresDaily.java" />
+        <option value="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" />
+        <option value="$PROJECT_DIR$/source/game/npc/pet/Pet.java" />
+        <option value="$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json" />
+        <option value="$PROJECT_DIR$/source/game/content/packet/ClickingButtonPacket.java" />
+        <option value="$PROJECT_DIR$/source/game/npc/Npc.java" />
+        <option value="$PROJECT_DIR$/source/game/player/LogInUpdate.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/GeneralUtils.java" />
+        <option value="$PROJECT_DIR$/source/game/content/skilling/Skill.java" />
+        <option value="$PROJECT_DIR$/source/game/player/sets/XPBoostingItems.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/item/MythicalCape.java" />
+        <option value="$PROJECT_DIR$/source/game/content/phantasye/ItemOnItemActionManager.java" />
+        <option value="$PROJECT_DIR$/source/game/content/skilling/Skilling.java" />
+        <option value="$PROJECT_DIR$/source/core/ServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedFormula.java" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAttack.java" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAmmoUsed.java" />
+        <option value="$PROJECT_DIR$/source/game/item/ItemSlot.java" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedData.java" />
+        <option value="$PROJECT_DIR$/data/osrs/global/items/item definition.txt" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/WeaponSpeed.java" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" />
+        <option value="$PROJECT_DIR$/source/game/item/ItemAssistant.java" />
+        <option value="$PROJECT_DIR$/source/game/content/combat/Combat.java" />
       </list>
     </option>
   </component>
@@ -189,6 +308,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,18 +320,33 @@
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="osrs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="osrs" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="osrs" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
+              <item name="items" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
@@ -231,7 +367,7 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="combat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
@@ -239,40 +375,43 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="combat" type="462c0819:PsiDirectoryNode" />
+              <item name="vsnpc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="object" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="combat" type="462c0819:PsiDirectoryNode" />
+              <item name="vsplayer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="object" type="462c0819:PsiDirectoryNode" />
-              <item name="click" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="combat" type="462c0819:PsiDirectoryNode" />
+              <item name="vsplayer" type="462c0819:PsiDirectoryNode" />
+              <item name="range" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Runecessor_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Runecessor" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580044338554" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580767837507" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Client (1)/Client" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -284,11 +423,11 @@
       <recent name="game.content.phantasye.minigame.pirate" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\data\osrs\eco\npc" />
+      <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\data\osrs\eco\items" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\libraries" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\backup\characters\players" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\backup\characters" />
-      <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\data\osrs\eco\items" />
-      <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\source\game\object\clip" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -337,7 +476,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20402685" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -346,7 +485,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.31586403" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.31586403" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,343 +514,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterNieve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Nieve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/impl/AbyssRunecrafting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/music/SoundSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/skilling/Runecrafting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="413" column="24" lean-forward="true" selection-start-line="413" selection-start-column="24" selection-end-line="413" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/Locations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Chaeldar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerUnlocks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/characters/players/dirty dan.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/miscellaneous/NpcDropTableInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="154" column="91" selection-start-line="154" selection-start-column="91" selection-end-line="154" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/AssignTaskAssignmentChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/commands/ServerSsCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/item/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1109">
-          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libraries/Menaphos Server API.jar!/org/menaphos/model/world/content/shop/Shop.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/pirate/PirateCannon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/event/WildernessChest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="656" column="27" lean-forward="true" selection-start-line="656" selection-start-column="27" selection-end-line="656" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/item/ItemAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="557" column="23" selection-start-line="557" selection-start-column="23" selection-end-line="557" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/shop/Shop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/shop/ShopAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6239">
-          <caret line="395" column="21" selection-start-line="395" selection-start-column="21" selection-end-line="395" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/packet/RemoveItemPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/miscellaneous/ClueScroll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="422" column="27" selection-start-line="422" selection-start-column="27" selection-end-line="422" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/osrs/eco/items/shops.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/object/click/FirstClickObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="157" column="22" lean-forward="true" selection-start-line="157" selection-start-column="22" selection-end-line="157" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="552" selection-start-line="552" selection-end-line="552" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/player/PlayerAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="1711" column="23" selection-start-line="1711" selection-start-column="23" selection-end-line="1711" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="41" column="5" selection-start-line="7" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="106" column="35" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/SoloSlayerAssignmentChain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/BossTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceChest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1949#1950#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#3362#3363#0" expanded="true" />
-            <element signature="e#3421#3422#0" expanded="true" />
-            <element signature="e#3473#3474#0" expanded="true" />
-            <element signature="e#3504#3505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/core/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="218" column="29" selection-start-line="218" selection-start-column="29" selection-end-line="218" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="606" column="22" selection-start-line="606" selection-start-column="22" selection-end-line="606" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="270" column="54" selection-start-line="270" selection-start-column="54" selection-end-line="270" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/content/donator/DonatorTokenUse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/game/content/commands/NormalCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="299" column="13" lean-forward="true" selection-start-line="299" selection-start-column="13" selection-end-line="299" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/NpcHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="1951" column="24" selection-start-line="1951" selection-start-column="24" selection-end-line="1951" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -722,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/game/npc/NpcDrops.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="418" column="24" selection-start-line="418" selection-start-column="24" selection-end-line="423" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libraries/Menaphos Server API.jar!/org/menaphos/entity/impl/CharacterEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -736,20 +535,485 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/npc/NpcDrops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="417" column="24" lean-forward="true" selection-start-line="417" selection-start-column="24" selection-end-line="417" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/network/login/RS2LoginProtocolDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="275" column="85" selection-start-line="275" selection-start-column="85" selection-end-line="275" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libraries/Menaphos Server API.jar!/org/phantasye/RepositoryManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-849">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/PlayerDetailsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/player-details-repository.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="377" lean-forward="true" selection-start-column="377" selection-end-column="377" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/HalloweenPaginatorListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="106" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstancePaginatorListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/npc/NpcHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="1963" column="13" lean-forward="true" selection-start-line="1963" selection-start-column="13" selection-end-line="1963" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/miscellaneous/Announcement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="247" lean-forward="true" selection-start-line="247" selection-end-line="247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/highscores/HighscoresDaily.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="253" column="14" selection-start-line="253" selection-start-column="14" selection-end-line="253" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="244" column="84" selection-start-line="244" selection-start-column="84" selection-end-line="244" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/npc/pet/Pet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6358">
+          <caret line="386" selection-start-line="386" selection-end-line="386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/osrs/eco/items/item definition.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/osrs/eco/npc/npc_spawn_non-combat.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1502" column="4" selection-start-line="1502" selection-start-column="4" selection-end-line="1502" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/packet/ClickingButtonPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="431" column="19" lean-forward="true" selection-start-line="431" selection-start-column="19" selection-end-line="431" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterUnlockListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="410" column="39" selection-start-line="410" selection-start-column="39" selection-end-line="410" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/game/npc/Npc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="892" column="28" lean-forward="true" selection-start-line="892" selection-start-column="28" selection-end-line="892" selection-end-column="28" />
+        <state relative-caret-position="408">
+          <caret line="904" column="13" selection-start-line="904" selection-start-column="13" selection-end-line="904" selection-end-column="13" />
+          <folding>
+            <element signature="e#24235#24236#0" expanded="true" />
+            <element signature="e#24265#24266#0" expanded="true" />
+            <element signature="e#24335#24336#0" expanded="true" />
+            <element signature="e#24363#24364#0" expanded="true" />
+            <element signature="e#24438#24439#0" expanded="true" />
+            <element signature="e#24466#24467#0" expanded="true" />
+            <element signature="e#24528#24529#0" expanded="true" />
+            <element signature="e#24556#24557#0" expanded="true" />
+            <element signature="e#24611#24612#0" expanded="true" />
+            <element signature="e#24639#24640#0" expanded="true" />
+            <element signature="e#24763#24764#0" expanded="true" />
+            <element signature="e#24791#24792#0" expanded="true" />
+            <element signature="e#24848#24849#0" expanded="true" />
+            <element signature="e#24883#24884#0" expanded="true" />
+            <element signature="e#24936#24937#0" expanded="true" />
+            <element signature="e#24963#24964#0" expanded="true" />
+            <element signature="e#25024#25025#0" expanded="true" />
+            <element signature="e#25051#25052#0" expanded="true" />
+            <element signature="e#31120#31121#0" expanded="true" />
+            <element signature="e#31144#31145#0" expanded="true" />
+            <element signature="e#31169#31170#0" expanded="true" />
+            <element signature="e#31193#31194#0" expanded="true" />
+            <element signature="e#31230#31231#0" expanded="true" />
+            <element signature="e#31294#31295#0" expanded="true" />
+            <element signature="e#31544#31545#0" expanded="true" />
+            <element signature="e#31610#31611#0" expanded="true" />
+            <element signature="e#31860#31861#0" expanded="true" />
+            <element signature="e#31926#31927#0" expanded="true" />
+            <element signature="e#31960#31961#0" expanded="true" />
+            <element signature="e#32020#32021#0" expanded="true" />
+            <element signature="e#32450#32451#0" expanded="true" />
+            <element signature="e#32487#32488#0" expanded="true" />
+            <element signature="e#32535#32536#0" expanded="true" />
+            <element signature="e#32578#32579#0" expanded="true" />
+            <element signature="e#32610#32611#0" expanded="true" />
+            <element signature="e#32641#32642#0" expanded="true" />
+            <element signature="e#33309#33310#0" expanded="true" />
+            <element signature="e#33346#33347#0" expanded="true" />
+            <element signature="e#33403#33404#0" expanded="true" />
+            <element signature="e#33455#33456#0" expanded="true" />
+            <element signature="e#33486#33487#0" expanded="true" />
+            <element signature="e#33512#33513#0" expanded="true" />
+            <element signature="e#33543#33544#0" expanded="true" />
+            <element signature="e#33569#33570#0" expanded="true" />
+            <element signature="e#33698#33699#0" expanded="true" />
+            <element signature="e#33732#33733#0" expanded="true" />
+            <element signature="e#33787#33788#0" expanded="true" />
+            <element signature="e#33833#33834#0" expanded="true" />
+            <element signature="e#33862#33863#0" expanded="true" />
+            <element signature="e#33890#33891#0" expanded="true" />
+            <element signature="e#33929#33930#0" expanded="true" />
+            <element signature="e#33963#33964#0" expanded="true" />
+            <element signature="e#33992#33993#0" expanded="true" />
+            <element signature="e#34020#34021#0" expanded="true" />
+            <element signature="e#34059#34060#0" expanded="true" />
+            <element signature="e#34093#34094#0" expanded="true" />
+            <element signature="e#34125#34126#0" expanded="true" />
+            <element signature="e#34153#34154#0" expanded="true" />
+            <element signature="e#34196#34197#0" expanded="true" />
+            <element signature="e#34230#34231#0" expanded="true" />
+            <element signature="e#34263#34264#0" expanded="true" />
+            <element signature="e#34295#34296#0" expanded="true" />
+            <element signature="e#34342#34343#0" expanded="true" />
+            <element signature="e#34384#34385#0" expanded="true" />
+            <element signature="e#34414#34415#0" expanded="true" />
+            <element signature="e#34443#34444#0" expanded="true" />
+            <element signature="e#34489#34490#0" expanded="true" />
+            <element signature="e#34530#34531#0" expanded="true" />
+            <element signature="e#34567#34568#0" expanded="true" />
+            <element signature="e#34602#34603#0" expanded="true" />
+            <element signature="e#34831#34832#0" expanded="true" />
+            <element signature="e#34862#34863#0" expanded="true" />
+            <element signature="e#34907#34908#0" expanded="true" />
+            <element signature="e#34947#34948#0" expanded="true" />
+            <element signature="e#34978#34979#0" expanded="true" />
+            <element signature="e#35007#35008#0" expanded="true" />
+            <element signature="e#35050#35051#0" expanded="true" />
+            <element signature="e#35086#35087#0" expanded="true" />
+            <element signature="e#35126#35127#0" expanded="true" />
+            <element signature="e#35165#35166#0" expanded="true" />
+            <element signature="e#35226#35227#0" expanded="true" />
+            <element signature="e#35282#35283#0" expanded="true" />
+            <element signature="e#39067#39068#0" expanded="true" />
+            <element signature="e#39147#39148#0" expanded="true" />
+            <element signature="e#39184#39185#0" expanded="true" />
+            <element signature="e#39248#39249#0" expanded="true" />
+            <element signature="e#39285#39286#0" expanded="true" />
+            <element signature="e#39321#39322#0" expanded="true" />
+            <element signature="e#39373#39374#0" expanded="true" />
+            <element signature="e#39420#39421#0" expanded="true" />
+            <element signature="e#39461#39462#0" expanded="true" />
+            <element signature="e#39500#39501#0" expanded="true" />
+            <element signature="e#39565#39566#0" expanded="true" />
+            <element signature="e#39621#39622#0" expanded="true" />
+            <element signature="e#39665#39666#0" expanded="true" />
+            <element signature="e#39701#39702#0" expanded="true" />
+            <element signature="e#39763#39764#0" expanded="true" />
+            <element signature="e#39813#39814#0" expanded="true" />
+            <element signature="e#39848#39849#0" expanded="true" />
+            <element signature="e#39882#39883#0" expanded="true" />
+            <element signature="e#39933#39934#0" expanded="true" />
+            <element signature="e#39979#39980#0" expanded="true" />
+            <element signature="e#40025#40026#0" expanded="true" />
+            <element signature="e#40067#40068#0" expanded="true" />
+            <element signature="e#40138#40139#0" expanded="true" />
+            <element signature="e#40200#40201#0" expanded="true" />
+            <element signature="e#40242#40243#0" expanded="true" />
+            <element signature="e#40280#40281#0" expanded="true" />
+            <element signature="e#40343#40344#0" expanded="true" />
+            <element signature="e#40397#40398#0" expanded="true" />
+            <element signature="e#40508#40509#0" expanded="true" />
+            <element signature="e#40539#40540#0" expanded="true" />
+            <element signature="e#40672#40673#0" expanded="true" />
+            <element signature="e#40712#40713#0" expanded="true" />
+            <element signature="e#40749#40750#0" expanded="true" />
+            <element signature="e#40782#40783#0" expanded="true" />
+            <element signature="e#40835#40836#0" expanded="true" />
+            <element signature="e#40879#40880#0" expanded="true" />
+            <element signature="e#40923#40924#0" expanded="true" />
+            <element signature="e#40980#40981#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/player/LogInUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="164" column="39" lean-forward="true" selection-start-line="164" selection-start-column="39" selection-end-line="164" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/GeneralUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="e#122#123#0" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/player/sets/XPBoostingItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/skilling/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="32" />
+          <folding>
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2580#2581#0" expanded="true" />
+            <element signature="e#2634#2635#0" expanded="true" />
+            <element signature="e#2673#2674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/item/HerbSack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="138" column="26" selection-start-line="138" selection-start-column="26" selection-end-line="138" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/ItemOnItemActionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="114" selection-start-line="13" selection-start-column="114" selection-end-line="13" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/skilling/Skilling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="712" lean-forward="true" selection-start-line="712" selection-end-line="712" />
+          <folding>
+            <element signature="e#31615#31616#0" expanded="true" />
+            <element signature="e#50746#50747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/phantasye/item/MythicalCape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/packet/WearItemPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="140" column="31" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="187" column="41" selection-start-line="187" selection-start-column="37" selection-end-line="187" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/core/ServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/Venom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/AttackPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="627" column="25" lean-forward="true" selection-start-line="627" selection-start-column="25" selection-end-line="627" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/CombatConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6263">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAmmoUsed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="58" column="103" selection-start-line="58" selection-start-column="98" selection-end-line="58" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/game/player/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+        <state relative-caret-position="77401">
+          <caret line="4771" column="23" selection-start-line="4771" selection-start-column="23" selection-end-line="4771" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27047">
+          <caret line="1651" column="58" selection-start-line="1651" selection-start-column="58" selection-end-line="1651" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedFormula.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5661">
+          <caret line="344" column="22" selection-start-line="344" selection-start-column="17" selection-end-line="344" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="142" column="18" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/vsplayer/range/RangedAttack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/WeaponSpeed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/item/ItemSlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4760">
+          <caret line="281" column="21" selection-start-line="281" selection-start-column="21" selection-end-line="281" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/osrs/global/items/item definition.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="127928" selection-start-line="127928" selection-end-line="127928" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/item/ItemAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="1626" column="36" selection-start-line="1626" selection-start-column="36" selection-end-line="1626" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/game/content/combat/Combat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="2431" column="61" selection-start-line="2431" selection-start-column="61" selection-end-line="2431" selection-end-column="61" />
         </state>
       </provider>
     </entry>

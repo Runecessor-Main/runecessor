@@ -1,0 +1,23 @@
+SLF4J: The requested version 1.5.8 by your slf4j binding is not compatible with [1.6, 1.7]
+SLF4J: See http://www.slf4j.org/codes.html#version_mismatch for further details.
+Feb 02, 2020 7:51:52 PM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\.server\data\
+File Name: repositories
+Extension: null
+--------------------------------------------------------
+Feb 02, 2020 7:51:52 PM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\system\
+File Name: repositories
+Extension: null
+--------------------------------------------------------
+Feb 02, 2020 7:51:52 PM org.menaphos.io.fs.FileRequest <init>
+INFO: --------------------------------------------------------
+File Request created with:
+Path: C:\Users\Phantasye\.menaphos\system\repositories\
+File Name: lootable-object-data
+Extension: .json
+--------------------------------------------------------

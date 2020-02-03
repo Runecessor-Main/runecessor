@@ -2,7 +2,6 @@ package game.content.skilling;
 
 
 import core.GameType;
-import core.ServerConfiguration;
 import core.ServerConstants;
 import game.content.achievement.Achievements;
 import game.content.achievement.PlayerTitle;
@@ -13,6 +12,7 @@ import game.content.interfaces.InterfaceAssistant;
 import game.content.miscellaneous.GameTimeSpent;
 import game.content.miscellaneous.RandomEvent;
 import game.content.miscellaneous.XpBonus;
+import game.content.phantasye.GeneralUtils;
 import game.content.profile.ProfileRank;
 import game.content.skilling.Runecrafting.Runes;
 import game.content.skilling.fishing.Fishing;
@@ -24,11 +24,9 @@ import game.npc.pet.PetData;
 import game.player.Area;
 import game.player.Player;
 import game.player.sets.XPBoostingItems;
+import utility.Misc;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import utility.Misc;
 
 /**
  * Skilling related.
@@ -541,7 +539,18 @@ public class Skilling {
 
             }
             if (player.hasItemEquipped(22114)) { //TODO REPLACE WITH CAPE ID
-                experience *= 3;
+                if (player.getPlayerDetails().getMythicalCapeCharges().value() >= 10) {
+                    if (player.getPlayerDetails().getMythicalCapeTier().value() == 0) {
+                        experience *= 1.5;
+                    } else if (player.getPlayerDetails().getMythicalCapeTier().value() == 1) {
+                        experience *= 2;
+                    } else if (player.getPlayerDetails().getMythicalCapeTier().value() == 2) {
+                        experience *= 2.5;
+                    } else if (player.getPlayerDetails().getMythicalCapeTier().value() == 3) {
+                        experience *= 3;
+                    }
+                    player.getPlayerDetails().getMythicalCapeCharges().subtract(10);
+                }
             }
 
             if (skill == ServerConstants.AGILITY) {
@@ -683,20 +692,24 @@ public class Skilling {
             }
         }
         int basepoints = 1;
-        int xpmod = originalExperience / 20;
-        int totalmod = (int) (player.skillExperience[skill] * 0.00000015);
-        //int points = basepoints + xpmod + totalmod;
-       // if (skill != 0 && skill != 1 && skill != 2 && skill != 3 && skill != 4 && skill != 5 && skill != 6)
-       //     addSkillingTokens(player, points);
+        int xpmod = originalExperience / 50;
+        int totalmod = (int) (player.skillExperience[skill] * 0.00000002);
+        double levelMod = GeneralUtils.getPercentValue(player.baseSkillLevel[skill], 99);
+        int points = (int) (((xpmod * levelMod) + (xpmod * totalmod))) + basepoints;
+        if (skill != 0 && skill != 1 && skill != 2 && skill != 3 && skill != 4 && skill != 5 && skill != 6)
+            addSkillingTokens(player, points);
         player.getPA().setSkillLevel(skill, player.baseSkillLevel[skill], player.skillExperience[skill]);
         updateSkillTabFrontTextMain(player, skill);
         announceMaxExperienceInASkill(player, skill);
     }
 
-   /* private static void addSkillingTokens(Player player, int amt) {
+    private static void addSkillingTokens(Player player, int amt) {
         final int TOKEN = 20527; //TODO REPLACE WITH TOKEN ID
-        ItemAssistant.addItem(player, TOKEN, amt);
-    }*/
+        if (player.getGameMode() == "GLADIATOR")
+            ItemAssistant.addItem(player, TOKEN, amt);
+        else
+            ItemAssistant.addItem(player, TOKEN, (amt/2) + 1);
+    }
 
     public static int getTotalLevel(Player player, boolean excludeCombat) {
         int total = 0;
@@ -757,7 +770,7 @@ public class Skilling {
                     "Your " + ServerConstants.SKILL_NAME[skill] + " level is now " + player.baseSkillLevel[skill] + ".", "", 9951, 200, -15, -17);
         } else {
             levelUpMessage(player, skill, levelUpIds2007[skill][0], levelUpIds2007[skill][1], levelUpIds2007[skill][2]);
-           // addSkillingTokens(player, player.baseSkillLevel[skill]);
+            // addSkillingTokens(player, player.baseSkillLevel[skill]);
         }
         player.playerAssistant.sendFilterableMessage("Congratulations! Your " + ServerConstants.SKILL_NAME[skill] + " level is now " + player.baseSkillLevel[skill] + ".");
         player.setDialogueAction(0);

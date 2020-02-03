@@ -1501,46 +1501,6 @@
       "face_action":"EAST"
    },
 	{
-		"npc_name":"Turael",
-		"npc_type":401,
-		"x":3110,
-		"y":3514,
-		"height":0,
-		"face_action":"NORTH"
-	},
-	{
-		"npc_name":"Mazchna",
-		"npc_type":402,
-		"x":3111,
-		"y":3514,
-		"height":0,
-		"face_action":"NORTH"
-	},
-	{
-		"npc_name":"Vannaka",
-		"npc_type":403,
-		"x":3112,
-		"y":3514,
-		"height":0,
-		"face_action":"NORTH"
-	},
-	{
-		"npc_name":"Chaeldar",
-		"npc_type":404,
-		"x":3113,
-		"y":3514,
-		"height":0,
-		"face_action":"NORTH"
-	},
-	{
-		"npc_name":"Duradel",
-		"npc_type":405,
-		"x":3114,
-		"y":3514,
-		"height":0,
-		"face_action":"NORTH"
-	},
-     {
     
       "npc_name":"events",
       "npc_type":11250,
@@ -2313,14 +2273,6 @@
       "y":2775,
       "height":0,
       "face_action":"EAST"
-   },
-   {
-      "npc_name":"skill",
-      "npc_type":5050,
-      "x":3092,
-      "y":3506,
-      "height":0,
-      "face_action":"SOUTH"
    },
    {
     "npc_name":"skill",

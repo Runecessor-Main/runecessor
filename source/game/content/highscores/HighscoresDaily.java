@@ -243,11 +243,11 @@ public class HighscoresDaily {
 		}
 	}
 
-	public void informHighscores(Player player) {
-		player.getPA().sendMessage(
-				ServerConstants.DARK_BLUE + "Daily highscores: " + currentDailyHighscores + ". #1 spot receives " + Misc.formatRunescapeStyle(getDailyHighscoresPrizeAmount()) + " "
-				+ ServerConstants.getMainCurrencyName().toLowerCase() + ".");
-	}
+	//public void informHighscores(Player player) {
+	//player.getPA().sendMessage(
+	//ServerConstants.DARK_BLUE + "Daily highscores: " + currentDailyHighscores + ". #1 spot receives " + Misc.formatRunescapeStyle(getDailyHighscoresPrizeAmount()) + " "
+	//+ ServerConstants.getMainCurrencyName().toLowerCase() + ".");
+	//} Removed hs notice
 
 	/**
 	 * @param targetHourTime Target hour time (event for example)
@@ -281,7 +281,7 @@ public class HighscoresDaily {
 		}
 		Announcement.announce(
 				highscoresList[199].name + " has won the daily " + currentDailyHighscores + " highscores and is awarded " + Misc.formatRunescapeStyle(prizeAmount) + " "
-				+ ServerConstants.getMainCurrencyName().toLowerCase() + "!", ServerConstants.DARK_BLUE);
+						+ ServerConstants.getMainCurrencyName().toLowerCase() + "!", ServerConstants.DARK_BLUE);
 		ClaimPrize.eventNames.add(highscoresList[199].name + "-" + prizeAmount);
 
 		for (int index = 0; index < DAILY_HIGHSCORES_LIST.length; index++) {
@@ -295,8 +295,8 @@ public class HighscoresDaily {
 			}
 		}
 		//Announcement.announce(
-			//	"The new daily highscores is " + currentDailyHighscores + ", the #1 spot will claim " + Misc.formatRunescapeStyle(getDailyHighscoresPrizeAmount()) + " "
-				//+ ServerConstants.getMainCurrencyName().toLowerCase() + " in 24h!", ServerConstants.DARK_BLUE);
+		//	"The new daily highscores is " + currentDailyHighscores + ", the #1 spot will claim " + Misc.formatRunescapeStyle(getDailyHighscoresPrizeAmount()) + " "
+		//+ ServerConstants.getMainCurrencyName().toLowerCase() + " in 24h!", ServerConstants.DARK_BLUE);
 
 		highscoresList = new HighscoresDaily[200];
 		for (int i = 0; i < 200; i++) {

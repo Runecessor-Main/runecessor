@@ -84,9 +84,9 @@ public class InformationTab {
 							"Highest bot killstreak: @gr3@" + player.playerBotHighestKillstreak,
 		 * 
 		 */
-		
-		
-		
+
+
+
 		if (GameType.isOsrsEco()) {
 			String[] content =
 					{
@@ -113,19 +113,19 @@ public class InformationTab {
 							"Melee main kills: @gr3@" + player.getMeleeMainKills(),
 							"Hybrid kills: @gr3@" + player.getHybridKills(),
 							"Berserker pure kills: @gr3@" + player.getBerserkerPureKills(),
-							"<img=35>@whi@ Global Information",
+							"<img=10>@whi@ Global Information",
 							playersOnlineString,
-							"<img=35>@whi@ Player Information",
+							"<img=10>@whi@ Player Information",
 							"Current Rank: " + player.highestDonatorRank(),
 							"Voting Points: @gr3@" + player.votingPoints,
 							"Token used: @gr3@" + player.donatorTokensRankUsed,
 							"Slayer Points: @gr3@" + (player.getPlayerDetails() != null ? player.getPlayerDetails().getSlayerPoints().value() : 0),
 							"Task Streak: @gr3@" + (player.getPlayerDetails() != null ? player.getPlayerDetails().getTaskStreak().value() : 0),
-							"Current Task: @gr3@" + SlayerSkill.getAssignmentName(player.getPlayerDetails().getSlayerTask()),
+							//"Current Task: @gr3@" + SlayerSkill.getAssignmentName(player.getPlayerDetails().getSlayerTask()),
 							"Agility Points: @gr3@" + player.agilityPoints,
 							"Boss score: @gr3@" + player.bossScoreUnCapped,
 							"Barrows runs: @gr3@" + player.getBarrowsRunCompleted(),
-							"<img=35>@whi@ Wilderness Information",
+							"<img=10>@whi@ Wilderness Information",
 							"Kills: @gr3@" + player.getWildernessKills(false),
 							"Deaths: @gr3@" + player.getWildernessDeaths(false),
 							"Kdr: @gr3@" + Misc.getKDR(player.getWildernessKills(false), player.getWildernessDeaths(false)),
@@ -140,19 +140,19 @@ public class InformationTab {
 		} else {
 			String[] content =
 					{
-						"<img=35>@whi@ Quick Panel",
-						"- View Drop table -",
-						"- View Presets -",
-						"- View Achievements -",
-						"- View Guidebook -",
-						"",
-							"<img=35>@whi@ Global Information",
+							"<img=10>@whi@ Quick Panel",
+							"- View Drop table -",
+							"- View Presets -",
+							"- View Achievements -",
+							"- View Guidebook -",
+							"",
+							"<img=10>@whi@ Global Information",
 							playersOnlineString,
 							"Wilderness: @gre@" + (ActivityTab.playersUnder30Wild + ActivityTab.playersOver30Wild + ActivityTab.playersInEdgeville),
 							updateTime(player),
 							updateDate(player),
 							"",
-							"<img=35>@whi@ Player Information",
+							"<img=10>@whi@ Player Information",
 							"Current Rank: " + player.highestDonatorRank(),
 							"Boss score: @gr3@" + player.bossScoreUnCapped,
 							"Barrows runs: @gr3@" + player.getBarrowsRunCompleted(),
@@ -160,9 +160,9 @@ public class InformationTab {
 							"Agility Points: @gr3@" + player.agilityPoints,
 							"Voting Points: @gr3@" + player.votingPoints,
 							"",
-							"<img=35>@whi@ Global Information",
-							
-							"<img=35>@whi@ Player Information",
+							"<img=10>@whi@ Global Information",
+
+							"<img=10>@whi@ Player Information",
 							updateTime(player),
 							updateDate(player),
 							playersOnlineString,
@@ -174,7 +174,7 @@ public class InformationTab {
 							"Agility Points: @gr3@" + player.agilityPoints,
 							"Voting Points: @gr3@" + player.votingPoints,
 							"",//SkillingStatistics.SLAYER_TASKS
-							"<img=35>@whi@ Wilderness Information",
+							"<img=10>@whi@ Wilderness Information",
 							"Kills: @gr3@" + player.getWildernessKills(false),
 							"Deaths: @gr3@" + player.getWildernessDeaths(false),
 							"Kdr: @gr3@" + Misc.getKDR(player.getWildernessKills(false), player.getWildernessDeaths(false)),
@@ -182,7 +182,7 @@ public class InformationTab {
 							"Hybrid kills: @gr3@" + player.getHybridKills(),
 							"Berserker pure kills: @gr3@" + player.getBerserkerPureKills(),
 							"Pure kills: @gr3@" + player.getPureKills(),
-						
+
 					};
 			for (int i = 0; i < content.length; i++) {
 				player.getPA().sendFrame126(content[i], interfaceIdStart + i);
@@ -221,7 +221,7 @@ public class InformationTab {
 				list.add("My hybrid kills are: " + player.getHybridKills());
 				list.add("My berserker pure kills are: " + player.getBerserkerPureKills());
 				list.add("My pure kills are: " + player.getPureKills());
-				
+
 			} else {
 				list.add("My boss score is: " + player.bossScoreUnCapped);
 				list.add("My barrows runs are: " + player.getBarrowsRunCompleted());

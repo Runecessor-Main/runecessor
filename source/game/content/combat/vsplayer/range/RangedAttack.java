@@ -95,7 +95,7 @@ public class RangedAttack {
 		}
 
 		// Toxic blowpipe
-		if (attacker.getWieldedWeapon() == 12926 && Misc.hasPercentageChance(25)) {
+		if ((attacker.getWieldedWeapon() == 12926 || attacker.getWieldedWeapon() == 6075) && Misc.hasPercentageChance(25)) {
 			damage.addEffect(new VenomEffect());
 		}
 		if (Combat.wearingFullKaril(attacker) && Misc.hasPercentageChance(25)) {

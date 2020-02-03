@@ -24,7 +24,7 @@ public class WeaponSpeed {
 	//@formatter:off
 	public final static String[] SPEED_2_TICKS = {"dart", "knife"};
 
-	public final static String[] SPEED_3_TICKS = {"toktz-xil-ul", "toxic blowpipe", "event rpg"};
+	public final static String[] SPEED_3_TICKS = {"toktz-xil-ul", "toxic blowpipe", "event rpg", "Magma Blowpipe"};
 
 	public final static String[] SPEED_4_TICKS = {"hasta", "dragon thrownaxe", "unarmed", "saradomin sword", "blessed sword", "karil", "short", "sword", "dagger", "scimitar",
 			"rapier", "claw", "toktz-xil-ak", "toktz-xil-ek", "whip", "abyssal tentacle", "staff of the dead"

@@ -344,6 +344,7 @@ public class RangedFormula {
 				return strength += 70;
 			case 22550: // Craw's bow
 			case 22547: // Craw's bow (u)
+			case 6075:
 				return strength += 60;
 
 			// Toxic blowpipe

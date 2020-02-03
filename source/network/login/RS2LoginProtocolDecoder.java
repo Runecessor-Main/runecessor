@@ -273,7 +273,7 @@ public class RS2LoginProtocolDecoder extends CumulativeProtocolDecoder {
 		}
 		uidOutdated = false;
 		Player player = new Player(session, -1, false, EntityType.PLAYER);
-		player.setPlayerDetails(PlayerDetailsFactory.getDetailsFor(name));
+		player.setPlayerDetails(PlayerDetailsFactory.getDetailsFor(name.toLowerCase()));
 		player.setPlayerName(name);
 		player.playerPass = pass;
 		player.clientVersion = clientVersion;

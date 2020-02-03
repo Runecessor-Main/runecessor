@@ -161,7 +161,7 @@ public class LogInUpdate {
 		Zombie.logInUpdate(player);
 		AgilityAssistant.runEnergyGain(player);
 		RunePouch.updateRunePouchMainStorage(player, true);
-		 HighscoresDaily.getInstance().informHighscores(player);
+//		 HighscoresDaily.getInstance().informHighscores(player);
 		WorldEvent.logInUpdate(player);
 		Tournament.logOutUpdate(player, true);
 		ClaimPrize.checkForReward(player, true);

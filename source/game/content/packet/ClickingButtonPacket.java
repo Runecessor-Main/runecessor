@@ -413,10 +413,6 @@ public class ClickingButtonPacket implements PacketType {
 			player.getPA().setSidebarInterface(2, 19500);
 			player.getPA().sendMessage("test");
 			break;
-
-		case 102096:
-			Tournament.talkToCowKiller(player);
-			break;
 		case 81069:
 			if (player.playerEquipment[ServerConstants.WEAPON_SLOT] != 1381
 					&& player.playerEquipment[ServerConstants.WEAPON_SLOT] != 1397) {

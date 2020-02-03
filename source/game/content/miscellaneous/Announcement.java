@@ -120,7 +120,7 @@ public class Announcement {
 								"Wild bosses reward up to " + getBossesLootPerHour() + " " + ServerConstants.getMainCurrencyName().toLowerCase() + " per hour!",
 								"::discord to communicate with fellow players.",
 								"Earn Youtube rank & " + Misc.formatRunescapeStyle(YoutubeRank.getRewardAmount()) + " " + ServerConstants.getMainCurrencyName()
-								+ " if your video meets the requirements ::yt",
+										+ " if your video meets the requirements ::yt",
 								"Max cape is only those worthy to wear it at maxed total.",
 								"Press F12 to save a screenshot.",
 								"::risk to quick chat your risk with protect item forced on.",
@@ -129,9 +129,9 @@ public class Announcement {
 								"You can purchase the Infernal cape at mounted cape stand!",
 								"::blacklist players to avoid being attacked by raggers in Edgeville.",
 								"The #1 daily highscores spot will receive " + Misc.formatRunescapeStyle(HighscoresDaily.getDailyHighscoresPrizeAmount()) + " " + ServerConstants
-										                                                                                                                                  .getMainCurrencyName()
-										                                                                                                                                  .toLowerCase()
-								+ "!",
+										.getMainCurrencyName()
+										.toLowerCase()
+										+ "!",
 								"Ice strykewyrm is weaker to magic.",
 								"All types of dragon bones and hides will be converted to " + ServerConstants.getMainCurrencyName().toLowerCase() + " on death.",
 								"Join the '" + ServerConstants.getServerName() + "' clan chat to meet other players.",
@@ -170,7 +170,7 @@ public class Announcement {
 				}
 				pendingAnnouncementSentTime = System.currentTimeMillis();
 				int indexRandom = Misc.random(announcementPendingList.size() - 1);
-				announce(announcementPendingList.get(indexRandom), "<img=35><col=713434>");
+				announce(announcementPendingList.get(indexRandom), "<img=10><col=713434>");
 				announcementPendingList.remove(indexRandom);
 			}
 
@@ -207,7 +207,7 @@ public class Announcement {
 					return;
 				}
 				staffAnnouncementSentTime = System.currentTimeMillis();
-				announce("Need help or guidance? Pm a staff member on ::staff", "<img=35><col=713434>");
+				announce("Need help or guidance? Pm a staff member on ::staff", "<img=10><col=713434>");
 			}
 
 			@Override
@@ -233,8 +233,8 @@ public class Announcement {
 						"M-boxes give 15 % more loot on average than anything else in the Donator shop! ::donate",
 						"Want to donate with osrs gold or rs3 gold pm Michael",
 						"Donators receive " + Artefacts.donatorBloodMoneyAmount + "-" + Artefacts.supremeDonatorBloodMoneyAmount + " raw " + ServerConstants.getMainCurrencyName()
-						                                                                                                                                    .toLowerCase()
-						+ " on every kill! ::donate",
+								.toLowerCase()
+								+ " on every kill! ::donate",
 				};
 		announcementPendingList.add(donateText[donateIndex]);
 		donateIndex++;

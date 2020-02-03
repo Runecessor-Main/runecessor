@@ -1136,6 +1136,7 @@ public class Combat {
 			case 10887:
 			case 12788: // Magic shortbow (i).
 			case 12926: // Toxic blowpipe.
+			case 6075:
 			case 4151: // Abyssal whip
 			case 12773: // Volcanic abyssal whip
 			case 12774: // Frozen abyssal whip
@@ -2058,6 +2059,7 @@ public class Combat {
 			case 12922:
 			case 12924:
 			case 12926:
+			case 6075:
 			case 12928:
 			case 12930:
 			case 12932:
@@ -2427,17 +2429,18 @@ public class Combat {
 				return 2;
 			}
 		}
-		if (WeaponSpeed.matching(WeaponSpeed.SPEED_3_TICKS, weaponName)) {
+		if (weaponName.equalsIgnoreCase("magma blowpipe") || WeaponSpeed.matching(WeaponSpeed.SPEED_3_TICKS, weaponName)) {
 			int speed = 3;
 			if (player.getCombatStyle(ServerConstants.ACCURATE) || player.getCombatStyle(ServerConstants.LONG_RANGED)) {
 				speed = 4;
 			}
-			if (player.getWieldedWeapon() == 12926) {
+			if (player.getWieldedWeapon() == 12926 || player.getWieldedWeapon() == 6075) {
 				if (player.getPlayerIdAttacking() > 0) {
 				} else if (player.getNpcIdAttacking() > 0) {
 					speed--;
 				}
 			}
+			System.out.println("SPEED: " + speed);
 			return speed;
 		}
 		if (WeaponSpeed.matching(WeaponSpeed.SPEED_7_TICKS, weaponName)) {
@@ -2738,6 +2741,7 @@ public class Combat {
 
 			case 11230:
 			case 12926:
+			case 6075:
 				return 231;
 			case 810:
 				return 230;

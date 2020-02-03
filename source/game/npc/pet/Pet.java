@@ -48,11 +48,11 @@ public class Pet {
 			String secondParse[] = data.split(" ");
 			if (secondParse.length > ItemAssistant.getFreeInventorySlots(player)) {
 				player.getPA()
-				      .sendMessage(ServerConstants.RED_COL + "Bank your inventory and relog to receive your pets!");
+						.sendMessage(ServerConstants.RED_COL + "Bank your inventory and relog to receive your pets!");
 				player.getPA()
-				      .sendMessage(ServerConstants.RED_COL + "Bank your inventory and relog to receive your pets!");
+						.sendMessage(ServerConstants.RED_COL + "Bank your inventory and relog to receive your pets!");
 				player.getPA()
-				      .sendMessage(ServerConstants.RED_COL + "Bank your inventory and relog to receive your pets!");
+						.sendMessage(ServerConstants.RED_COL + "Bank your inventory and relog to receive your pets!");
 				return;
 			}
 			for (int a = 0; a < secondParse.length; a++) {
@@ -115,17 +115,17 @@ public class Pet {
 	 * @param npcType The NPC type being interacted with.
 	 */
 	public static boolean pickUpPetRequirements(Player player, int index) {
-				if (NpcHandler.npcs[player.getNpcClickIndex()].getNpcPetOwnerId() == player.getPlayerId()) {
-					if (ItemAssistant.getFreeInventorySlots(player) > 0) {
+		if (NpcHandler.npcs[player.getNpcClickIndex()].getNpcPetOwnerId() == player.getPlayerId()) {
+			if (ItemAssistant.getFreeInventorySlots(player) > 0) {
 				pickUpPet(player, PetData.petData[index][0]);
-						return true;
-					} else {
-						player.playerAssistant.sendMessage("Not enough space in your inventory.");
-						return true;
-					}
-				} else {
-					player.playerAssistant.sendMessage("This is not your pet.");
-					return true;
+				return true;
+			} else {
+				player.playerAssistant.sendMessage("Not enough space in your inventory.");
+				return true;
+			}
+		} else {
+			player.playerAssistant.sendMessage("This is not your pet.");
+			return true;
 		}
 	}
 
@@ -200,7 +200,7 @@ public class Pet {
 	 * @param heightLevel The height of the pet.
 	 */
 	public static Npc summonNpc(Player player, int npcType, int x, int y, int heightLevel, boolean pet,
-	                            boolean secondPet) {
+								boolean secondPet) {
 		int slot = -1;
 		for (int i = 1; i < NpcHandler.NPC_INDEX_OPEN_MAXIMUM; i++) {
 			if (NpcHandler.npcs[i] == null) {
@@ -285,11 +285,11 @@ public class Pet {
 		boolean secondPet = player.getSecondPetSummoned() && player.getSecondPetId() > 0;
 		if (firstPet) {
 			Pet.summonNpcOnValidTile(player, player.getPetId(), false);
-			player.playerAssistant.sendMessage("Your loyal pet finds you!");
+			//player.playerAssistant.sendMessage("Your loyal pet finds you!");
 		}
 		if (secondPet) {
 			Pet.summonNpcOnValidTile(player, player.getSecondPetId(), true);
-			player.playerAssistant.sendMessage("Your loyal pet finds you!");
+			//player.playerAssistant.sendMessage("Your loyal pet finds you!");
 		}
 	}
 
@@ -351,7 +351,7 @@ public class Pet {
 			int arrayLength = petMetamorphosisData[index].length;
 			for (int i = 0; i < arrayLength - 1; i++) {
 				if (petMetamorphosisData[index][i] == npc.npcType
-				    && clickType == petMetamorphosisData[index][arrayLength - 1]) {
+						&& clickType == petMetamorphosisData[index][arrayLength - 1]) {
 					int nextIndex = i + 1;
 					if (nextIndex > arrayLength - 2) {
 						nextIndex = 0;
