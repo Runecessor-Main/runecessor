@@ -165,6 +165,25 @@ public class FirstClickObject {
 				player.receiveMessage("You disembark the boat...");
 				player.setPirateMinigameSession(null);
 				break;
+			case 21725:
+				player.receiveMessage("Uhh... Yea, HELL NO! I'm not going up there! I better find another way up...");
+				player.setPirateMinigameSession(null);
+				break;
+			case 21726:
+				player.getPA().movePlayer(2636 ,9517, 0);
+				player.receiveMessage("You can't always run from your Demons you know...");
+				player.setPirateMinigameSession(null);
+				break;
+			case 26880:
+				player.getPA().movePlayer(2670 ,9583, 2);
+				player.receiveMessage("You're getting warmer.");
+				player.setPirateMinigameSession(null);
+				break;
+			case 26882:
+				player.getPA().movePlayer(2674 ,9583, 0);
+				player.receiveMessage("That was pointless...");
+				player.setPirateMinigameSession(null);
+				break;
 		case 2640:
 		case 409:
 		case 10638:
@@ -892,13 +911,18 @@ public class FirstClickObject {
 		case 26797:
 			player.getPA().openWebsite("www.Runecessor.com", false);
 			break;
-			
+		case 26149:
+			Teleport.startTeleport(player, 3114 + Misc.random(1), 3557 + Misc.random(4), 0, "MODERN");
+			break;
 		// Deposit box.
 		case 26254:
 		case 6948:
 			Bank.sendDepositBox(player);
 			break;
-
+		// Abyss
+		case 27054:
+			player.getPA().sendMessage("I better stay on this side, I don't know what's over there...");
+			break;
 		// Lumbridge staircase.
 		case 1740:
 			player.getPA().movePlayer(player.getX(), player.getY(), 1);
@@ -1493,6 +1517,16 @@ public class FirstClickObject {
 		case 6436:
 			player.getPA().movePlayer(3074, 3495, 0);
 			break;
+		//ZMI
+		case 29635:
+			player.startAnimation(827);
+			player.getPA().movePlayer(3053, 5588, 0);
+			break;
+		case 29626:
+			player.startAnimation(828);
+			player.getPA().movePlayer(2453, 3231, 0);
+			break;
+		//
 		case 5491:// needfix
 			player.getPA().movePlayer(3111, 9690, 0);
 			break;

@@ -842,14 +842,6 @@
 		"face_action": "ROAM"
 	},
 	{
-	    "npc_name":"Tele Wizard",
-		"npc_type":4397, 
-		"x":3213,
-		"y":3435,
-		"height":0,
-		"face_action":"ROAM"
-	},
-	{
 	    "npc_name":"Shop assistant",
 		"npc_type":509, 
 		"x":3217,
@@ -1501,6 +1493,46 @@
       "face_action":"EAST"
    },
 	{
+		"npc_name":"Turael",
+		"npc_type":401,
+		"x":3110,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Mazchna",
+		"npc_type":402,
+		"x":3111,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Vannaka",
+		"npc_type":403,
+		"x":3112,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Chaeldar",
+		"npc_type":404,
+		"x":3113,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+	{
+		"npc_name":"Duradel",
+		"npc_type":405,
+		"x":3114,
+		"y":3514,
+		"height":0,
+		"face_action":"NORTH"
+	},
+     {
     
       "npc_name":"events",
       "npc_type":11250,
@@ -1922,14 +1954,6 @@
       "face_action":"SOUTH"
    },
    {
-      "npc_name":"Teleporter",
-      "npc_type":4397,
-      "x":3083,
-      "y":3500,
-      "height":0,
-      "face_action":"ROAM"
-   },
-   {
       "npc_name":"Banker",
       "npc_type":397,
       "x":3109,
@@ -1974,15 +1998,6 @@
       "npc_type":5832,
       "x":2820,
       "y":3461,
-      "height":0,
-      "face_action":"ROAM"
-   },
-   {
-     
-     "npc_name":"Mage of Zamorak",
-      "npc_type":2580,
-      "x":3080,
-      "y":3480,
       "height":0,
       "face_action":"ROAM"
    },

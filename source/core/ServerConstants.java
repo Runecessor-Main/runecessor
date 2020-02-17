@@ -1221,7 +1221,10 @@ public class ServerConstants {
 	public static int getResetKdrCost() {
 		return GameType.isOsrsEco() ? 185000000 : 100000;
 	}
-
+	
+	public static int getAbyssCost() {
+		return GameType.isOsrsEco() ? 1000000 : 100000;
+	}
 	public static int getDropItemValueInCombatFlag() {
 		return GameType.isOsrsPvp() ? 100 : 75000;
 	}

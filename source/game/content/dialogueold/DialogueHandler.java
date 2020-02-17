@@ -1,5 +1,7 @@
 package game.content.dialogueold;
 
+import java.text.NumberFormat;
+
 import core.GameType;
 import core.Plugin;
 import core.ServerConstants;
@@ -403,7 +405,11 @@ public class DialogueHandler {
 				           "Purchase Imbued guthix cape for " + Misc.formatRunescapeStyle(ServerConstants.getImbuedCapeCost()) + " " + ServerConstants.getMainCurrencyName()
 				                                                                                                                                      .toLowerCase() + ".");
 				break;
-
+	
+			case 20003:
+				sendOption("Teleport Me to the Abyss. (1,000,000 gp)", "No, nevermind.");
+				 break;
+			
 			case 203:
 				sendOption("Yes.", "No, nevermind.");
 				break;

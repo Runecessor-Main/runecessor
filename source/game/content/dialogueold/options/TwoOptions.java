@@ -103,8 +103,8 @@ public class TwoOptions {
 				RegularPrayer.updateRigourAndAugury(player);
 				player.getDH().sendItemChat("", "You study the scroll and learn a new prayer: @dre@Augury", 21079, 150, 10, 0);
 				break;
-
-			case 634:
+				
+				case 634:
 				ItemAssistant.deleteItemFromInventory(player, 21034, 1);
 				player.rigourUnlocked = true;
 				RegularPrayer.updateRigourAndAugury(player);
@@ -152,7 +152,19 @@ public class TwoOptions {
 				PlayerMiscContent.resetKdr(player);
 				player.getDH().sendItemChat("Resetting KDR", "You have reset your KDR back to", "0 kills and deaths.", "", 964, 200, 10, 0);
 				break;
-
+			case 20003:
+				amount = ServerConstants.getAbyssCost();
+					if (!ItemAssistant.hasItemAmountInInventory(player, ServerConstants.getMainCurrencyId(), amount)) {
+						player.getDH().sendStatement(
+								"You need @blu@" + Misc.formatRunescapeStyle(amount) + " " + ServerConstants.getMainCurrencyName().toLowerCase() + "@bla@ to teleport.");
+						return;
+					}
+					ItemAssistant.deleteItemFromInventory(player, ServerConstants.getMainCurrencyId(), amount);
+					player.getDH().sendItemChat("@red@ ** CAUTION **", "Monsters in this area are aggressive and will attack!", "Be careful moving around to the Passage leading to the Rift", "@red@ Notice: Abyss Monsters Drop Tiaras & Talasmins.", 964, 200, 10, 0);
+					player.getPA().movePlayer(3039, 4805, 0);				
+					player.getPA().sendMessage("You pay the toll and are teleported to the Abyss.");
+					break;
+					
 			// Vannaka, Yes option to upgrade slayer helmet.
 			case 21:
 				amount = Slayer.getSlayerHelmUpgradeCost();

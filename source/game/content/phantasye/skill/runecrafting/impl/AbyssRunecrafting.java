@@ -117,7 +117,7 @@ public class AbyssRunecrafting extends Runecrafting {
             case 26192:
                 return this.getPlayer().moveTo(new Location(3031, 0,4842));
             case 26208:
-                return this.getPlayer().moveTo(new Location(3038, 0,4853));
+                return this.getPlayer().moveTo(new Location(3042, 0,4844));
             case 26250:
                 return this.passObject(objectId) && this.getPlayer().moveTo(new Location(3038, 0,4853));
             case 26252:

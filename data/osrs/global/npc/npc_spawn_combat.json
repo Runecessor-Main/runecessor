@@ -5592,6 +5592,270 @@
     "face_action": "ROAM"
   },
   {
+    "npc_description": "Greater Demon",
+    "npc_type": 2025,
+    "x": 2633,
+    "y": 9492,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2025,
+    "x": 2631,
+    "y": 9507,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2026,
+    "x": 2644,
+    "y": 9505,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2027,
+    "x": 2639,
+    "y": 9505,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2028,
+    "x": 2635,
+    "y": 9505,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2028,
+    "x": 2638,
+    "y": 9501,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2027,
+    "x": 2631,
+    "y": 9515,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Greater Demon",
+    "npc_type": 2025,
+    "x": 2641,
+    "y": 9510,
+    "height": 2,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3015,
+    "y": 4825,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3016,
+    "y": 4830,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3017,
+    "y": 4834,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3013,
+    "y": 4838,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3017,
+    "y": 4841,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3019,
+    "y": 4844,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3014,
+    "y": 4848,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal ",
+    "npc_type": 2584,
+    "x": 3023,
+    "y": 4851,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3029,
+    "y": 4853,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3034,
+    "y": 4854,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3039,
+    "y": 4856,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3044,
+    "y": 4852,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3050,
+    "y": 4852,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3052,
+    "y": 4857,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3055,
+    "y": 4850,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3059,
+    "y": 4846,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3061,
+    "y": 4836,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3062,
+    "y": 4826,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3059,
+    "y": 4818,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3057,
+    "y": 4812,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3050,
+    "y": 4811,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3045,
+    "y": 4811,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Walker",
+    "npc_type": 2586,
+    "x": 3033,
+    "y": 4810,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Leech",
+    "npc_type": 2584,
+    "x": 3023,
+    "y": 4813,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Abyssal Guardian",
+    "npc_type": 2585,
+    "x": 3017,
+    "y": 4811,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+   {
     "npc_description": "Moss giant",
     "npc_type": 7262,
     "x": 2659,
@@ -9590,5 +9854,101 @@
     "y": 5104,
     "height": 0,
     "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Zamorak Mage",
+    "npc_type": 7422,
+    "x": 3012,
+    "y": 5613,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Warrior",
+    "npc_type": 7418,
+    "x": 3015,
+    "y": 5603,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Ranger",
+    "npc_type": 7420,
+    "x": 3011,
+    "y": 5597,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Crafter",
+    "npc_type": 7426,
+    "x": 3016,
+    "y": 5588,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Mage",
+    "npc_type": 7423,
+    "x": 3012,
+    "y": 5582,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Ranger",
+    "npc_type": 7421,
+    "x": 3020,
+    "y": 5579,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Warrior",
+    "npc_type": 7419,
+    "x": 3012,
+    "y": 5575,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Crafter",
+    "npc_type": 7426,
+    "x": 3016,
+    "y": 5574,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Ranger",
+    "npc_type": 7420,
+    "x": 3025,
+    "y": 5577,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Warrior",
+    "npc_type": 7418,
+    "x": 3028,
+    "y": 5573,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Crafter",
+    "npc_type": 7426,
+    "x": 3032,
+    "y": 5574,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Zamorak Mage",
+    "npc_type": 7423,
+    "x": 3030,
+    "y": 5578,
+    "height": 0,
+    "face_action": "ROAM"
   }
-]
+  ]

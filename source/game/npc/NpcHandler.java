@@ -405,7 +405,9 @@ public class NpcHandler {
                     npc.forceChat("Hail Saradomin!");
                 }
                 break;
-
+            case 7422:
+            case 7423:
+            case 7425:
             case 1610:
                 npc.endGfx = 78;
                 npc.bottomGfx = true;
@@ -641,6 +643,12 @@ public class NpcHandler {
                 // Sergeant Steelwill
                 npc.attackType = ServerConstants.MAGIC_ICON;
                 npc.projectileId = 1217;
+                break;
+            case 7420:
+            case 7421:
+                // Zamorak Ranger
+                npc.attackType = ServerConstants.RANGED_ICON;
+                npc.projectileId = 24;
                 break;
             case 2218:
                 // Sergeant Grimspike
