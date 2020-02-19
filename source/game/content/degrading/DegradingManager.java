@@ -96,6 +96,8 @@ public class DegradingManager {
 				/*
 				 * Degrading hits
 				 */
+				if (degrading.getKillsRemaining() > 0)
+					return;
 				degrading.decreaseHits();
 				/*
 				 * Notify
@@ -113,6 +115,133 @@ public class DegradingManager {
 				 * Finished
 				 */
 				if (degrading.getHitsRemaining() == 0) {
+					/*
+					 * Fully degraded
+					 */
+					if (item.getNextItem() == -1) {
+						/*
+						 * Reset weapon
+						 */
+						if (BODY_SLOTS[slot] == ServerConstants.WEAPON_SLOT) {
+							/*
+							 * Reset auto cast
+							 */
+							if (player.getAutoCasting() && player.usingOldAutocast) {
+								AutoCast.resetAutocast(player, true);
+							}
+							/*
+							 * Reset animation
+							 */
+							Combat.updatePlayerStance(player);
+							Combat.resetPlayerAttack(player);
+							/*
+							 * Reset special attack
+							 */
+							player.setUsingSpecialAttack(false);
+						}
+						player.getPA().sendMessage("Your " + name + " has fully degraded.");
+					} else {
+						player.getPA().sendMessage("Your " + name + " has degraded.");
+					}
+					/*
+					 * Degrades item
+					 */
+					ItemAssistant.setEquipment(player, item.getNextItem(),
+							item.getNextItem() == -1 ? 0 : 1, BODY_SLOTS[slot]);
+					ItemAssistant.updateSlot(player, BODY_SLOTS[slot]);
+				}
+				continue;
+			}
+			/*
+			 * Adds to list
+			 */
+			player.getDegrading().getDegradable()
+					.put(item.isDegradeOnCombat() ? item.getNextItem() : id, item);
+		}
+	}
+	
+	/**
+	 * Degrading weapon from npc death
+	 * 
+	 * @param player the player
+	 * @param attack on attack
+	 */
+	public static void degradeFromKills(Player player) {
+		/*
+		 * Loop through the slots
+		 */
+		for (int slot = 0; slot < BODY_SLOTS.length; slot++) {
+
+			/*
+			 * The weapon
+			 */
+			int id = player.playerEquipment[BODY_SLOTS[slot]];
+			/*
+			 * No weapon
+			 */
+			if (id < 1) {
+				continue;
+			}
+			/*
+			 * The name
+			 */
+			String name = ItemDefinition.DEFINITIONS[player.playerEquipment[BODY_SLOTS[slot]]].name;
+			/*
+			 * The definition
+			 */
+			DegradingItem item = DegradingItemJSONLoader.getItem(id);
+			/*
+			 * The item
+			 */
+			if (item == null) {
+				continue;
+			}
+			/*
+			 * Check existence
+			 */
+			if (player.playerEquipment[BODY_SLOTS[slot]] != item.getId()
+					&& player.playerEquipment[BODY_SLOTS[slot]] != item.getNextItem()) {
+				continue;
+			}
+			/*
+			 * Degrades on instant combat
+			 */
+			if (item.isDegradeOnCombat()
+					&& player.playerEquipment[BODY_SLOTS[slot]] != item.getNextItem()) {
+				ItemAssistant.setEquipment(player, item.getNextItem(), 1, BODY_SLOTS[slot]);
+				ItemAssistant.updateSlot(player, BODY_SLOTS[slot]);
+				player.getPA().sendMessage("Your " + name + " has degraded!");
+			}
+			/*
+			 * Already contains
+			 */
+			if (player.getDegrading().getDegradable().containsKey(id)) {
+				/*
+				 * The degrading item
+				 */
+				DegradingItem degrading = player.getDegrading().getDegradable().get(id);
+				/*
+				 * Degrading hits
+				 */
+				if (degrading.getHitsRemaining() > 0)
+					return;
+				degrading.decreaseKills();
+				
+				/*
+				 * Notify
+				 */
+				if (degrading.getKillsRemaining() == 100) {
+					player.getPA().sendMessage(degrading.getDefinition().name + ": has about 100 kills left!");
+				} else if (degrading.getKillsRemaining() < 50) {
+					if (degrading.getKillsRemaining() % 10 == 0) {
+						player.getPA().sendMessage(degrading.getDefinition().name + ": has about "
+								+ degrading.getKillsRemaining() + " kills left!");
+					}
+				}
+				/*
+				 * Finished
+				 */
+				if (degrading.getKillsRemaining() == 0) {
 					/*
 					 * Fully degraded
 					 */
@@ -186,11 +315,16 @@ public class DegradingManager {
 			/*
 			 * The charges left
 			 */
-			player.getPA().sendMessage(degrading.getDefinition().name + " has "
-					+ degrading.getHitsRemaining() + " charges left.");
+			if (degrading.getKillsRemaining() > 0) {
+				player.getPA().sendMessage(degrading.getDefinition().name + " has "+ degrading.getKillsRemaining() + " kills left.");
+			} else {
+				player.getPA().sendMessage(degrading.getDefinition().name + " has "+ degrading.getHitsRemaining() + " hits left.");
+			}
 		} else {
-			player.getPA().sendMessage(ItemDefinition.DEFINITIONS[id].name
-					+ " has not been affected and provides " + item.getHitsRemaining() + " charges.");
+			boolean killsRemaining = item.getKillsRemaining() > 0;
+			int amount = killsRemaining ? item.getKillsRemaining() : item.getHitsRemaining();
+			String type = killsRemaining ? "kills" : "hits";
+			player.getPA().sendMessage(ItemDefinition.DEFINITIONS[id].name + " has not been affected and provides "+ amount + " "+ type +".");
 		}
 		return true;
 	}

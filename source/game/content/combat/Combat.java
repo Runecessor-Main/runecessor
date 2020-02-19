@@ -4,11 +4,13 @@ package game.content.combat;
 import java.util.stream.IntStream;
 
 import core.GameType;
+import core.Server;
 import core.ServerConstants;
 import game.bot.BotCommunication;
 import game.bot.BotContent;
 import game.content.achievement.AchievementStatistics;
 import game.content.achievement.Achievements;
+import game.content.bank.Bank;
 import game.content.combat.damage.EntityDamage;
 import game.content.combat.damage.EntityDamageType;
 import game.content.combat.vsplayer.AttackPlayer;
@@ -28,6 +30,7 @@ import game.content.prayer.combat.impl.Wrath;
 import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.agility.AgilityAssistant;
+import game.content.starter.GameMode;
 import game.content.worldevent.BloodKey;
 import game.item.ItemAssistant;
 import game.npc.Npc;
@@ -120,6 +123,10 @@ public class Combat {
 		return player.playerEquipment[ServerConstants.HEAD_SLOT] == 21298 && player.playerEquipment[ServerConstants.BODY_SLOT] == 21301
 		       && player.playerEquipment[ServerConstants.LEG_SLOT] == 21304;
 	}
+	
+	public static boolean hasMagicFindRing(Player player) {
+		return player.playerEquipment[ServerConstants.RING_SLOT] == 21126;
+	}
 
 	public static boolean hasVoidTop(Player player) {
 		return player.playerEquipment[ServerConstants.BODY_SLOT] == 8839 || player.playerEquipment[ServerConstants.BODY_SLOT] == 13072;
@@ -158,6 +165,16 @@ public class Combat {
 		if (player.currentCombatSkillLevel[ServerConstants.MAGIC] > 105) {
 			player.currentCombatSkillLevel[ServerConstants.MAGIC] = 105;
 			Skilling.updateSkillTabFrontTextMain(player, ServerConstants.MAGIC);
+		}
+	}
+	
+	public static void dropMagicFindRing(Player player, Npc npc) {
+		// TODO A formula scaling off npc combat level or something for the drop rate.
+			// My math isn't good enough
+		if (ItemAssistant.hasItemInInventory(player, 21126)|| ItemAssistant.hasItemEquipped(player, 21126) || Bank.hasItemInBank(player, 21126))
+			return;
+		if (Misc.hasOneOutOf(200000)) { // 1/200000 chance drop from ANY killable npc
+			Server.itemHandler.createGroundItem(player, 21126, npc.getX(), npc.getY(), npc.getHeight(), 1, false, 0, true, npc.name, "", "", "", "magicFindRing");
 		}
 	}
 

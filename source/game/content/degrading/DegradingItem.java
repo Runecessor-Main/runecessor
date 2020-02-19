@@ -14,6 +14,11 @@ public class DegradingItem extends GameItem {
 	 * The hits remaining
 	 */
 	private int hitsRemaining;
+	
+	/**
+	 * The kills remaining
+	 */
+	private int killsRemaining;
 
 	/**
 	 * The slot
@@ -45,10 +50,11 @@ public class DegradingItem extends GameItem {
 	 * @param nextItem the next item
 	 * @param degradeOnCombat whether to degrade on combat
 	 */
-	public DegradingItem(int id, int hitsRemaining, int slot, int dropItem, int nextItem,
+	public DegradingItem(int id, int hitsRemaining, int killsRemaining, int slot, int dropItem, int nextItem,
 			boolean degradeOnCombat) {
 		super(id);
 		this.setHitsRemaining(hitsRemaining);
+		this.setKillsRemaining(killsRemaining);
 		this.slot = slot;
 		this.dropItem = dropItem;
 		this.nextItem = nextItem;
@@ -62,7 +68,7 @@ public class DegradingItem extends GameItem {
 	 * @param degradingItem the item
 	 */
 	public DegradingItem(int id, DegradingItem degradingItem) {
-		this(id, degradingItem.getHitsRemaining(), degradingItem.getSlot(),
+		this(id, degradingItem.getHitsRemaining(), degradingItem.getKillsRemaining(), degradingItem.getSlot(),
 				degradingItem.getDropItem(), degradingItem.getNextItem(),
 				degradingItem.isDegradeOnCombat());
 	}
@@ -75,12 +81,28 @@ public class DegradingItem extends GameItem {
 	public int getHitsRemaining() {
 		return hitsRemaining;
 	}
+	
+	/**
+	 * Gets the killsRemaining
+	 *
+	 * @return the killsRemaining
+	 */
+	public int getKillsRemaining() {
+		return killsRemaining;
+	}
 
 	/**
 	 * Decreases the hits
 	 */
 	public void decreaseHits() {
 		hitsRemaining--;
+	}
+	
+	/**
+	 * Decreases the kills left
+	 */
+	public void decreaseKills() {
+		killsRemaining--;
 	}
 
 	/**
@@ -90,6 +112,15 @@ public class DegradingItem extends GameItem {
 	 */
 	public void setHitsRemaining(int hitsRemaining) {
 		this.hitsRemaining = hitsRemaining;
+	}
+	
+	/**
+	 * Sets the killsRemaining
+	 * 
+	 * @param hitsRemaining the hitsRemaining
+	 */
+	public void setKillsRemaining(int killsRemaining) {
+		this.killsRemaining = killsRemaining;
 	}
 
 	/**

@@ -40,6 +40,7 @@ public class DegradingItemJSONLoader extends JSONLoader {
 	public void load(JsonObject reader, Gson builder) {
 		int id = reader.get("id").getAsInt();
 		int hitsRemaining = reader.get("hitsRemaining").getAsInt();
+		int killsRemaining = reader.get("killsRemaining").getAsInt();
 		int slot = reader.get("slot").getAsInt();
 		int dropItem = reader.get("dropItem").getAsInt();
 		int nextItem = reader.get("nextItem").getAsInt();
@@ -47,8 +48,7 @@ public class DegradingItemJSONLoader extends JSONLoader {
 		if (reader.has("degradeOnCombat")) {
 			degradeOnCombat = reader.get("degradeOnCombat").getAsBoolean();
 		}
-		DegradingItem item =
-				new DegradingItem(id, hitsRemaining, slot, dropItem, nextItem, degradeOnCombat);
+		DegradingItem item = new DegradingItem(id, hitsRemaining, killsRemaining, slot, dropItem, nextItem, degradeOnCombat);
 		getDegradables().put(id, item);
 	}
 

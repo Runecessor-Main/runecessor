@@ -1815,6 +1815,9 @@ public class NpcHandler {
                     }
                     npc.respawnTimer = respawnTimer;
                     dropLoot(npc);
+                    Player player = PlayerHandler.players[npc.getKilledBy()];
+                    Combat.dropMagicFindRing(player, npc);
+                    DegradingManager.degradeFromKills(player);
                     npc.afterDeath();
                     if (!npc.instancedNpcForceRespawn) {
                         npc.setX(0);

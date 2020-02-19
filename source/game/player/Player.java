@@ -361,6 +361,11 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         if (GameMode.getDifficulty(this, "GLADIATOR")) {
             modifier += 0.2;
         }
+        if (Combat.hasMagicFindRing(this)) { // Stacks with donator & gladiator modifiers
+        	modifier += 0.15;
+        }
+        if (modifier > 0.6)
+        	modifier = 0.6;
         return modifier * 100;
     }
 
