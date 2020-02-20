@@ -150,7 +150,7 @@ import utility.WebsiteRead;
  * @author Lava
  */
 public class Server {
-
+//phantasye likes boys
 	private static SQLNetwork sqlNetwork;
 
 	private static IoAcceptor acceptor;
