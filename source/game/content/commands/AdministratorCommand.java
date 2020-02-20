@@ -683,7 +683,7 @@ public class AdministratorCommand {
         if (command.equals("fade")) {
             player.getPA().sendFadingScreen("", PlayerAssistant.FadingScreenState.FADE_IN, (byte) 1, 5);
         }
-        if (command.equals("pp")) {
+        if (command.equals("minime")) {
             PlayerPet other = PlayerPetManager.getSingleton().create(player);
 
             player.setPlayerPet(other);
@@ -1438,7 +1438,7 @@ public class AdministratorCommand {
         } else if (command.startsWith("object")) {
             object(player, command);
             return true;
-        } else if (command.equals("npc") && ServerConfiguration.DEBUG_MODE) {
+        } else if (command.equals("npc")) {
             npc(player, command);
             return true;
         } else if (command.startsWith("update")) {
@@ -1469,10 +1469,10 @@ public class AdministratorCommand {
         } else if (command.startsWith("sound")) {
             sound(player, command);
             return true;
-        } else if (command.startsWith("item")) {
+        } else if (command.startsWith("get")) {
             item(player, command);
             return true;
-        } else if (command.startsWith("getid")) {
+        } else if (command.startsWith("id")) {
             getid(player, command);
             return true;
         } else if (command.startsWith("1hit")) {
@@ -1607,9 +1607,9 @@ public class AdministratorCommand {
             ClaimPrize.eventNames.add(name + "-" + amount);
             player.getPA().sendMessage("Added " + name + " with reward " + Misc.formatNumber(amount));
             return true;
-        } else if (command.startsWith("senditem")) {
+        } else if (command.startsWith("give")) {
             try {
-                command = command.replace("senditem ", "");
+                command = command.replace("give ", "");
                 String[] parse = command.split(" ");
                 String name = command.replace(parse[0] + " " + parse[1] + " ", "");
                 int itemId = Integer.parseInt(parse[0]);
@@ -2687,10 +2687,6 @@ public class AdministratorCommand {
      * @param playerCommand The command used by the player.
      */
     private static void npc(Player player, String playerCommand) {
-
-        if (!ServerConfiguration.DEBUG_MODE) {
-            return;
-        }
         try {
             int npcId = Integer.parseInt(playerCommand.substring(4));
 
@@ -2946,7 +2942,7 @@ public class AdministratorCommand {
     }
 
     public static void staffzone(Player player) {
-        Teleport.spellTeleport(player, 3109, 3096, 0, false);
+        Teleport.spellTeleport(player, 2847, 5086, 0, false);
     }
 
     public static void guest(Player player, String playerCommand) {

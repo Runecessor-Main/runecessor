@@ -68,7 +68,7 @@ public class ModeratorCommand {
 			}
 		}
 		
-		if (command.startsWith("accountban")) {
+		if (command.startsWith("ban")) {
 			Ban.ban(player, command, true);
 			return true;
 		}
