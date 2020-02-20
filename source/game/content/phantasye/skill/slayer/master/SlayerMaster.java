@@ -301,6 +301,7 @@ public class SlayerMaster implements NonPlayableCharacter {
                                 + BLOCK_COST
                                 + " Slayer Points.");
                         player.getPlayerDetails().setSlayerTask(null);
+                        player.getPlayerDetails().getSlayerPoints().subtract(BLOCK_COST);
                         player.saveDetails();
                     } else {
                         player.receiveMessage("You need at least "
