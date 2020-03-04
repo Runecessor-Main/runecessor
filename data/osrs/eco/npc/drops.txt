@@ -723,8 +723,7 @@ Npc: 6504
 128 5316 1 // Magic seed
 128 5315 1 // Yew seed
 128 1631 1 // Uncut dragonstone
-128 226 50 // Limpwurt root
-1000 12073 1 // Clue scroll (elite)
+100 12073 1 // Clue scroll (elite)
 42 224 500 // Red spiders' eggs
 32 1514 100 // Magic logs
 32 445 300 // Gold ore
@@ -734,6 +733,7 @@ Npc: 6504
 32 9243 100 // Diamond bolts (e)
 30 11941 1 // Looting bag
 25 9194 60 // Onyx bolt tips
+25 226 25 // Limpwurt root
 8 995 15000-20000 // Coins
 8 3024 3 // Super restore(4)
 8 11936 8 // Dark crab
@@ -777,9 +777,8 @@ Npc: 239
 // Dagannoth Supreme
 Npc: 2265
 5000 12643 1 pet // Pet dagannoth supreme
-1000 12073 1 // Clue scroll (elite)
-128 9431 1 // Runite limbs
-128 314 1-500 // Feather
+750 12073 1 // Clue scroll (elite)
+128 314 250-500 // Feather
 128 5304 1 // Torstol seed
 128 5303 1 // Dwarf weed seed
 128 5302 1 // Lantadyme seed
@@ -791,31 +790,31 @@ Npc: 2265
 128 6133 1 // Spined body
 128 6739 1 // Dragon axe
 128 6724 1 // Seercull
+128 3758 1 // Fremennik shield
+128 3757 1 // Fremennik blade
+64 9431 1 // Runite limbs
 42 12542 1 // Clue scroll (hard)
-32 207 1 // Grimy ranarr weed
-32 1518 25-140 // Maple logs
-32 1516 50-143 // Yew logs
-32 385 5 // Shark
+42 1518 15-65 // Maple logs
 32 5298 1 // Avantoe seed
 32 5296 1 // Toadflax seed
 32 5297 1 // Irit seed
 32 5106 1 // Poison ivy seed
 32 5280 1 // Cactus seed
 32 5281 1 // Belladonna seed
-32 3758 1 // Fremennik shield
-32 9144 2-14 // Runite bolts
-32 830 1-10 // Rune javelin
-32 805 5-10 // Rune thrownaxe
-32 866 31-69 // Mithril knife
-32 865 54-132 // Steel knife
-32 863 214-500 // Iron knife
-32 1357 1 // Adamant axe
+32 884 200-700 // Iron arrow
+25 9144 2-12 // Runite bolts
+25 805 5-10 // Rune thrownaxe
+25 886 50-250 // Steel arrow
+25 865 50-150 // Steel knife
+25 863 200-500 // Iron knife
+25 385 5 // Shark
+25 207 1 // Grimy ranarr weed
+25 1516 50-150 // Yew logs
+21 413 1 // Oyster pearls
 20 13492 1 // Ensouled dagannoth head
-8 413 1 // Oyster pearls
-8 995 900-3000 // Coins
-8 2489 1 // Red d'hide vamb
-8 886 54-98 // Steel arrow
-8 884 218-590 // Iron arrow
+18 2489 1 // Red d'hide vamb
+12 995 900-3000 // Coins
+12 866 25-50 // Mithril knife
 1 6155 1 // Dagannoth hide
 1 6729 1 // Dagannoth bones
 
@@ -834,30 +833,32 @@ Npc: 2266
 128 6139 1 // Skeletal top
 128 6739 1 // Dragon axe
 128 6562 1 // Mud battlestaff
-128 1392 110 // Battlestaff
-64 565 22-85 // Blood rune
+128 1392 1-10 // Battlestaff
+128 3758 1 // Fremennik shield
+128 3757 1 // Fremennik blade
+64 565 25-75 // Blood rune
+64 560 25-85 // Death rune
+64 4698 25-75 // Mud rune
 42 12542 1 // Clue scroll (hard)
-32 385 5 // Shark
-32 207 1 // Grimy ranarr weed
-32 7937 150 // Pure essence
 32 5298 1 // Avantoe seed
 32 5296 1 // Toadflax seed
 32 5297 1 // Irit seed
 32 5106 1 // Poison ivy seed
 32 5280 1 // Cactus seed
 32 5281 1 // Belladonna seed
-32 3758 1 // Fremennik shield
-32 560 22-85 // Death rune
-32 4698 32-44 // Mud rune
-32 556 155 // Air rune
-32 1445 180 // Water talisman
-32 1441 180 // Earth talisman
-32 1439 180 // Air talisman
+32 1397 1 // Air battlestaff
+25 207 1 // Grimy ranarr weed
+25 7937 150 // Pure essence
+25 1395 1 // Water battlestaff
+21 556 100-200 // Air rune
+21 413 1 // Oyster pearls
 20 13492 1 // Ensouled dagannoth head
-8 995 972-3000 // Coins
-8 1395 1 // Water battlestaff
-8 1399 1 // Earth battlestaff
-8 1397 1 // Air battlestaff
+18 1439 25-75 // Air talisman
+18 1445 1-76 // Water talisman
+12 995 900-3000 // Coins
+12 385 5 // Shark
+12 1441 25-75 // Earth talisman
+12 1399 1 // Earth battlestaff
 1 6155 1 // Dagannoth hide
 1 6729 1 // Dagannoth bones
 
@@ -872,23 +873,27 @@ Npc: 2267
 896 1448 1 // Mind talisman
 896 1438 1 // Air talisman
 750 12073 1 // Clue scroll (elite)
-128 2354 15-38 // Steel bar
+128 2354 15-30 // Steel bar
 128 441 150 // Iron ore
 128 6735 1 // Warrior ring
 128 6737 1 // Berserker ring
 128 2570 1 // Ring of life
 128 6130 1 // Rock-shell legs
 128 6129 1 // Rock-shell plate
+128 1359 1 // Rune axe
 128 6739 1 // Dragon axe
+128 3758 1 // Fremennik shield
+128 1315 1 // Mithril 2h sword
+64 3757 1 // Fremennik blade
+64 454 100 // Coal
+64 1123 1 // Adamant platebody
 42 12542 1 // Clue scroll (hard)
-32 207 1 // Grimy ranarr weed
-32 995 126-3000 // Coins
+42 2361 1 // Adamantite bar
+42 1273 1 // Mithril pickaxe
 32 385 5 // Shark
 32 373 5 // Swordfish
-32 365 5 // Bass
-32 454 100 // Coal
+32 1119 1 // Steel platebody
 32 448 25 // Mithril ore
-32 2361 1 // Adamantite bar
 32 129 1 // Restore potion(2)
 32 191 1 // Zamorak brew(2)
 32 165 1 // Super defence(2)
@@ -896,17 +901,13 @@ Npc: 2267
 32 147 1 // Super attack(2)
 32 141 1 // Prayer potion(2)
 32 2456 1 // Antifire potion(2)
-32 3758 1 // Fremennik shield
-32 1123 1 // Adamant platebody
-32 1359 1 // Rune axe
-32 1273 1 // Mithril pickaxe
-32 1315 1 // Mithril 2h sword
 20 13492 1 // Ensouled dagannoth head
 18 1357 1 // Adamant axe
-8 1119 1 // Steel platebody
-8 1193 1 // Steel kiteshield
-8 1343 1 // Mithril warhammer
-8 3757 1 // Fremennik blade
+18 207 1 // Grimy ranarr weed
+18 365 5 // Bass
+12 995 900-3000 // Coins
+11 1343 1 // Mithril warhammer
+7 1193 1 // Steel kiteshield
 1 6155 1 // Dagannoth hide
 1 6729 1 // Dagannoth bones
 
