@@ -1251,12 +1251,6 @@ public class NormalCommand {
 			player.currentCombatSkillLevel[3] = 1_000;
 			Skilling.updateSkillTabFrontTextMain(player, ServerConstants.HITPOINTS);
 			return true;
-		} else if (playerCommand.startsWith("item") || playerCommand.startsWith("pickup")) {
-			if (player.isAdministratorRank() || player.isStaffManagereratorRank()) {
-				return false;
-			}
-			player.getPA().sendMessage("Use the shops at home to buy items or check your bank.");
-			return true;
 		} else if (playerCommand.startsWith("blacklist")) {
 			Player playerAttackedMe = PlayerHandler.players[player.getLastAttackedBy()];
 			if (Area.inEdgevilleWilderness(player)) {

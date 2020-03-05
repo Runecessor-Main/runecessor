@@ -80,17 +80,20 @@ public class SlayerMaster implements NonPlayableCharacter {
         int points = basePointValue;
         player.getPlayerDetails().getTaskStreak().increment();
         player.getPlayerDetails().getTasksCompleted().increment();
-        if (player.getPlayerDetails().getTaskStreak().value() % 10 == 0) {
-            points *= 5;
-        } else if (player.getPlayerDetails().getTaskStreak().value() % 50 == 0) {
-            points *= 15;
-        } else if (player.getPlayerDetails().getTaskStreak().value() % 100 == 0) {
-            points *= 25;
+        
+        if (player.getPlayerDetails().getTaskStreak().value() % 1000 == 0) {
+            points *= 50;
         } else if (player.getPlayerDetails().getTaskStreak().value() % 250 == 0) {
             points *= 35;
-        } else if (player.getPlayerDetails().getTaskStreak().value() % 1000 == 0) {
-            points *= 50;
+        } else if (player.getPlayerDetails().getTaskStreak().value() % 100 == 0) {
+            points *= 25;
+        } else if (player.getPlayerDetails().getTaskStreak().value() % 50 == 0) {
+            points *= 15;
+        } else if (player.getPlayerDetails().getTaskStreak().value() % 10 == 0) {
+            points *= 5;
         }
+        
+        
 
         player.getPlayerDetails().getSlayerPoints().add(points);
         player.receiveMessage("You've completed " + player.getPlayerDetails().getTaskStreak().value()
@@ -304,15 +307,15 @@ public class SlayerMaster implements NonPlayableCharacter {
                         player.getPlayerDetails().getSlayerPoints().subtract(BLOCK_COST);
                         player.saveDetails();
                     } else {
-                        player.receiveMessage("You need at least "
-                                + BLOCK_COST
-                                + " Slayer Points to block a task.");
+                    	player.receiveMessage("You may only block up to "
+                                + player.getPlayerDetails().getBlockCap().value()
+                                + " tasks at a time. Please remove one.");
                     }
+                    
                 } else {
-                    player.receiveMessage("You may only block up to "
-                            + player.getPlayerDetails().getBlockCap().value()
-                            + " tasks at a time. Please remove one.");
+                	player.receiveMessage("You need at least "+ BLOCK_COST +" Slayer Points to block a task.");
                 }
+                
             } else {
                 player.receiveMessage("You may not block a boss task.");
             }
