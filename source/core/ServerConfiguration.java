@@ -9,7 +9,7 @@ public class ServerConfiguration {
 	/**
 	 * True, when developing.
 	 */
-	public static boolean DEBUG_MODE = true;
+	public static boolean DEBUG_MODE = false; //
 
 	/**
 	 * Determines whether or not basic information should be benchmarked or not.
@@ -34,7 +34,7 @@ public class ServerConfiguration {
 	/**
 	 * Port used.
 	 */
-	public static int PORT = 5555;
+	public static int PORT = 43594;
 
 	/**
 	 * True, to send a packet to the client informing it to force update items every game tick.
