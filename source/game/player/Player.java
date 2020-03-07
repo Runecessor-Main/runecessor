@@ -366,7 +366,7 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         }
         if (modifier > 0.6)
         	modifier = 0.6;
-        return (modifier * 100) + this.getMagicFindRating();
+        return this.getMagicFindRating() + (modifier * 100);
     }
 
     public int getSlayerPoints() {
