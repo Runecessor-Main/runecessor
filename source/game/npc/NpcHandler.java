@@ -1785,16 +1785,24 @@ public class NpcHandler {
                     startAnimation(npc, deathAnimation);// arlo
                     InformationTab.updateQuestTab(player);
                     SlayerSkill.slayerKill(player, npcs[i], NpcDefinition.getDefinitions()[npcs[i].npcType].hitPoints);
-                    player.getStopWatch().stop();
-                    if (player.getStopWatch().getElapsedMS() > 0) {
-                        final NpcMetric metric = NpcMetricFactory.getMetricForNpc(npc.npcType);
-                        final double killtime = Math.abs(player.getStopWatch().getElapsedMS() / 1000.0);
-                        metric.getKills().increment();
-                        metric.getKillTimeList().add(killtime);
-                        player.getStopWatch().reset();
-                        metric.updateAverage();
-                        NpcMetricRepositoryManager.getInstance().getRepository().create(metric);
-                        NpcMetricRepositoryManager.getInstance().updateRepository();
+                    try {
+                        if (player.getStopWatch() != null) {
+                            player.getStopWatch().stop();
+                            if (player.getStopWatch().getElapsedMS() > 0) {
+                                if (!player.hit1 && !player.getEquippedRing(773) && !player.getEquippedWeapon(6075)) {
+                                    final NpcMetric metric = NpcMetricFactory.getMetricForNpc(npc.npcType);
+                                    final double killtime = Math.abs(player.getStopWatch().getElapsedMS() / 1000.0);
+                                    metric.getKills().increment();
+                                    metric.getKillTimeList().add(killtime);
+                                    metric.updateAverage();
+                                    NpcMetricRepositoryManager.getInstance().getRepository().create(metric);
+                                    NpcMetricRepositoryManager.getInstance().updateRepository();
+                                }
+                                player.getStopWatch().reset();
+                            }
+                        }
+                    } catch(NullPointerException e) {
+
                     }
                     FightCaves.fightCavesReward(player, npc.npcType);
                     Barrows.killedBarrows(player, npc);

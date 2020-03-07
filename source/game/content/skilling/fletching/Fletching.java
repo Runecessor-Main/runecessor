@@ -109,6 +109,7 @@ public class Fletching {
 
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private static void attachTipToBoltEvent(final Player player) {
 		/*if (RandomEvent.isBannedFromSkilling(player)) {
 			return;
@@ -208,6 +209,7 @@ public class Fletching {
 
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private static void cutGemEvent(final Player player) {
 		/*if (RandomEvent.isBannedFromSkilling(player)) {
 			return;
@@ -279,12 +281,13 @@ public class Fletching {
 		MITHRIL_ARROW(53, 42, 888, 132, 45),
 		ADAMANT_ARROW(53, 43, 890, 170, 60),
 		RUNE_ARROW(53, 44, 892, 207, 75),
-		BRONZE_BOLT(314, 9375, 877, 5, 9),
-		IRON_BOLT(314, 9377, 9140, 15, 39),
-		STEEL_BOLT(314, 9378, 9141, 35, 46),
-		MITHRIL_BOLT(314, 9379, 9142, 50, 54),
-		ADAMANT_BOLT(314, 9380, 9143, 70, 61),
-		RUNE_BOLT(314, 9381, 9144, 100, 69),
+		BRONZE_BOLT(314, 9375, 877, 7, 9),
+		IRON_BOLT(314, 9377, 9140, 28, 39),
+		STEEL_BOLT(314, 9378, 9141, 52, 46),
+		MITHRIL_BOLT(314, 9379, 9142, 75, 54),
+		ADAMANT_BOLT(314, 9380, 9143, 105, 61),
+		RUNE_BOLT(314, 9381, 9144, 150, 69),
+		DRAGON_BOLT(314, 21930, 21905, 180, 84),
 
 		BRONZE_JAV(19570, 19584, 825, 15, 3),
 		IRON_JAV(19572, 19584, 826, 30, 17),
@@ -359,10 +362,10 @@ public class Fletching {
 				break;
 			}
 		}
-
 	}
 
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private static void combineArrowPartsEvent(final Player player) {
 		/*if (RandomEvent.isBannedFromSkilling(player)) {
 			return;
@@ -399,7 +402,7 @@ public class Fletching {
 				if (amount > amount2) {
 					amount = amount2;
 				}
-				if (!ItemAssistant.hasItemAmountInInventory(player, player.skillingData[0], 1)) {
+				if (!ItemAssistant.hasItemAmountInInventory(player, player.skillingData[0], 15)) {
 					player.getPA().sendMessage("You have run out of " + ItemAssistant.getItemName(player.skillingData[0]));
 					container.stop();
 					return;
@@ -413,6 +416,7 @@ public class Fletching {
 				if (!player.isInZombiesMinigame()) {
 					ItemAssistant.deleteItemFromInventory(player, player.skillingData[0], amount);
 				}
+				
 				ItemAssistant.deleteItemFromInventory(player, player.skillingData[1], amount);
 				ItemAssistant.addItem(player, player.skillingData[2], amount);
 				Skilling.addSkillExperience(player, player.skillingData[4], ServerConstants.FLETCHING, false);

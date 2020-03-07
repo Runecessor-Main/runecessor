@@ -55,6 +55,7 @@ public class Food {
 		COOKED_CHICKEN(2140, 3, "Cooked chicken", 0, "Food"),
 		COOKED_MEAT(2142, 3, "Cooked meat", 0, "Food"),
 		ROAST_BIRD_MEAT(9980, 6, "Roast bird meat", 0, "Food"),
+		UGTHANKI_KEBAB(1883, 19, "Ugthanki kebab", 0, "Food"),
 
 		//Potatos
 		BAKED_POTATO(6701, 4, "Baked potato", 0, "Food"),

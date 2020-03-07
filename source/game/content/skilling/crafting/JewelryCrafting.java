@@ -16,7 +16,9 @@ import game.player.event.CycleEventHandler;
 public class JewelryCrafting {
 
     public static boolean isJewelryInterfaceButton(Player player, int buttonId) {
-        if (buttonId >= 76055 && buttonId <= 76075) {
+        if (buttonId >= 76055 && buttonId <= 76082) {
+        	int lol = buttonId - 76055;
+        	System.out.println("."+ buttonId +" "+ lol +".");
             mouldJewelry(player, buttonId - 76055);
             return true;
         }
@@ -51,11 +53,12 @@ public class JewelryCrafting {
         int mouldId = 0;
         if (jewelryIndex <= 8) {
             mouldId = 1592;
-        } else if (jewelryIndex <= 13) {
+        } else if (jewelryIndex <= 15) {
             mouldId = 1597;
         } else {
             mouldId = 1595;
         }
+        System.out.println(jewelryIndex);
         if (!ItemAssistant.hasItemInInventory(player, mouldId) && !player.isInZombiesMinigame()) {
             player.getPA().sendMessage("You need a " + ItemAssistant.getItemName(mouldId) + ".");
             return;
@@ -226,6 +229,8 @@ public class JewelryCrafting {
                     {1601, 1662, 56, 90},
                     {1615, 1664, 72, 105},
                     {6573, 6577, 82, 120},
+                    {-1, -1, 100, 1}, //TODO fix
+                    {-1, -1, 100, 1},
 
                     // Amulets.
                     {2357, 1673, 8, 30},
@@ -234,7 +239,9 @@ public class JewelryCrafting {
                     {1603, 1679, 50, 85},
                     {1601, 1681, 70, 100},
                     {1615, 1683, 80, 150},
-                    {6573, 6579, 90, 165}
+                    {6573, 6579, 90, 165},
+                    {-1, -1, 100, 1}, //TODO fix
+                    {-1, -1, 100, 1}
             };
 
 
