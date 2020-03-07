@@ -12,7 +12,6 @@ public class PlayerDetailsFactory {
 
     public static PlayerDetails getDetailsFor(String username) {
         PlayerDetails playerDetails = playerDetailsMap.get(username);
-
         if (playerDetails == null) {
             final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager = new PlayerDetailsRepositoryManager();
             playerDetails = repositoryManager.getRepository().readByKey(username);

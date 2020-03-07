@@ -26,9 +26,7 @@ public class PlayerDetails {
     private AdjustableInteger mythicalCapeCharges;
     private AdjustableInteger mythicalCapeTier;
 
-    private GraveDiggerProperties graveDiggerProperties;
-    private boolean openedGift;
-    private List<Item> unlcaimedPrizes;
+    private AdjustableInteger magicFindRating;
 
     public PlayerDetails(String id) {
         this.id = id;
@@ -40,10 +38,9 @@ public class PlayerDetails {
         this.taskStreak = new AdjustableInteger(0);
         this.preferredTasks = new ArrayList<>();
         this.blockedTasks = new ArrayList<>();
-        this.graveDiggerProperties = new GraveDiggerProperties();
-        this.unlcaimedPrizes = new ArrayList<>();
         this.herbSack = new HashMap<>();
         this.paymentRunes = new ArrayList<>();
+        this.magicFindRating = new AdjustableInteger(0);
     }
 
     public void initialize() {
@@ -60,6 +57,10 @@ public class PlayerDetails {
         });
     }
 
+    public AdjustableInteger getMagicFindRating() {
+        return magicFindRating;
+    }
+
     public AdjustableInteger getMythicalCapeCharges() {
         return mythicalCapeCharges;
     }
@@ -74,26 +75,6 @@ public class PlayerDetails {
 
     public Map<Integer, AdjustableInteger> getHerbSack() {
         return herbSack;
-    }
-
-    public List<Item> getUnlcaimedPrizes() {
-        return unlcaimedPrizes;
-    }
-
-    public boolean hasOpenedGift() {
-        return openedGift;
-    }
-
-    public void setOpenedGift(boolean openedGift) {
-        this.openedGift = openedGift;
-    }
-
-    public GraveDiggerProperties getGraveDiggerProperties() {
-        return graveDiggerProperties;
-    }
-
-    public void setGraveDiggerProperties(GraveDiggerProperties graveDiggerProperties) {
-        this.graveDiggerProperties = graveDiggerProperties;
     }
 
     public int getSlayerMaster() {

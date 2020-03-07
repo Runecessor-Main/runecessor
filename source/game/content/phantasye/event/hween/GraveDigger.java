@@ -2,24 +2,19 @@ package game.content.phantasye.event.hween;
 
 import com.google.gson.Gson;
 import game.content.phantasye.PlayerDetails;
-import game.content.phantasye.PlayerDetailsRepository;
-import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.impl.HalloweenPaginatorListener;
-import game.item.ItemAssistant;
 import game.player.Player;
 import game.player.PlayerHandler;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.entity.impl.item.Item;
-import org.menaphos.model.loot.Loot;
-import org.menaphos.model.loot.LootableContainer;
-import org.menaphos.model.loot.LootableItem;
 import org.menaphos.model.loot.factory.LootFactory;
 import org.menaphos.model.math.impl.AdjustableInteger;
-import org.phantasye.RepositoryManager;
 
 import java.io.*;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class GraveDigger {
@@ -70,16 +65,16 @@ public class GraveDigger {
     }
 
     private boolean consumeAttempt(Player player) {
-        if (player.getPlayerDetails().getGraveDiggerProperties().getAttempts().greaterThan(0)) {
-            player.getPlayerDetails().getGraveDiggerProperties().getAttempts().decrement();
-            saveProperties(player);
-        } else if (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().greaterThan(0)) {
-            player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().decrement();
-            saveProperties(player);
-        } else {
-            player.receiveMessage("You do not have any attempts remaining.");
-            return false;
-        }
+//        if (player.getPlayerDetails().getGraveDiggerProperties().getAttempts().greaterThan(0)) {
+//            player.getPlayerDetails().getGraveDiggerProperties().getAttempts().decrement();
+//            saveProperties(player);
+//        } else if (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().greaterThan(0)) {
+//            player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().decrement();
+//            saveProperties(player);
+//        } else {
+//            player.receiveMessage("You do not have any attempts remaining.");
+//            return false;
+//        }
         return true;
     }
 
@@ -121,14 +116,14 @@ public class GraveDigger {
         if (consumeAttempt(player)) {
             player.loot(LootFactory.getLootableObject(2));
             communityPoints.increment();
-            player.getPlayerDetails().getGraveDiggerProperties().getPoints().add(10);
+//            player.getPlayerDetails().getGraveDiggerProperties().getPoints().add(10);
             saveProperties(player);
             saveEvent();
-            player.receiveMessage(
-                    "You consume an attempt and earn 10 Halloween Points. "
-                            + (player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value()
-                            + player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().value())
-                            + " Attempts Remaining.");
+//            player.receiveMessage(
+//                    "You consume an attempt and earn 10 Halloween Points. "
+//                            + (player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value()
+//                            + player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().value())
+//                            + " Attempts Remaining.");
             this.generateCommunityRewards();
         }
     }
@@ -140,7 +135,7 @@ public class GraveDigger {
         PlayerHandler.getPlayers().forEach(player -> {
             if (player.getPlayerDetails() != null) {
                 activeGift.getLootList().forEach(loot -> giveReward(player,loot.getItem()));
-                player.getPlayerDetails().setOpenedGift(false);
+//                player.getPlayerDetails().setOpenedGift(false);
                 player.receiveMessage("The Community has gathered " + communityPoints.value() + " points and a new gift has spawned!");
             } else {
                 player.setPlayerDetails(new PlayerDetails(player.getPlayerName()));
@@ -151,7 +146,7 @@ public class GraveDigger {
     }
 
     private void giveReward(Player player, Item item) {
-        player.getPlayerDetails().getUnlcaimedPrizes().add(item);
+//        player.getPlayerDetails().getUnlcaimedPrizes().add(item);
         player.saveDetails();
 //        final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager =
 //                new PlayerDetailsRepositoryManager();
@@ -192,37 +187,37 @@ public class GraveDigger {
     }
 
     public void openGift(Player player) {
-        if (!player.getPlayerDetails().hasOpenedGift()
-                && player.getPlayerDetails().getUnlcaimedPrizes() != null) {
-            player.getPlayerDetails().getUnlcaimedPrizes().forEach(item -> ItemAssistant.addItemToInventoryOrDrop(player,item.getId(),item.getAmount().value()));
-            player.receiveMessage("You open the Community Gift and receive an assortment of prizes!");
-            player.getPlayerDetails().getGraveDiggerProperties().getPoints().add(10 * activeGift.getTierMultiplier());
-            player.receiveMessage("You earned " + (10 * activeGift.getTierMultiplier()) + " points!");
-            final List<Loot> lootList = new ArrayList<>();
-
-            lootList.add(new Loot(new Item(16903,1),0.05f));
-            lootList.add(new Loot(new Item(16898,1),0.05f));
-            lootList.add(new Loot(new Item(16891,1),0.09f));
-            lootList.add(new Loot(new Item(16904,1),0.09f));
-            lootList.add(new Loot(new Item(21794,1),0.09f));
-            switch (activeGift.getTier()) {
-                case 4:
-                case 5:
-                case 6:
-                    LootableContainer lootableContainer = new LootableItem(-1,"dummy_item",lootList);
-                    player.loot(lootableContainer);
-                    break;
-            }
-
-            player.getPlayerDetails().setOpenedGift(true);
-            player.getPlayerDetails().getUnlcaimedPrizes().clear();
-            saveProperties(player);
-        } else {
-            player.receiveMessage("There is currently no gift available. Community Points: "
-                    + communityPoints.value()
-                    + " Next Reward at:"
-                    + getNextTier());
-        }
+//        if (!player.getPlayerDetails().hasOpenedGift()
+//                && player.getPlayerDetails().getUnlcaimedPrizes() != null) {
+//            player.getPlayerDetails().getUnlcaimedPrizes().forEach(item -> ItemAssistant.addItemToInventoryOrDrop(player,item.getId(),item.getAmount().value()));
+//            player.receiveMessage("You open the Community Gift and receive an assortment of prizes!");
+//            player.getPlayerDetails().getGraveDiggerProperties().getPoints().add(10 * activeGift.getTierMultiplier());
+//            player.receiveMessage("You earned " + (10 * activeGift.getTierMultiplier()) + " points!");
+//            final List<Loot> lootList = new ArrayList<>();
+//
+//            lootList.add(new Loot(new Item(16903,1),0.05f));
+//            lootList.add(new Loot(new Item(16898,1),0.05f));
+//            lootList.add(new Loot(new Item(16891,1),0.09f));
+//            lootList.add(new Loot(new Item(16904,1),0.09f));
+//            lootList.add(new Loot(new Item(21794,1),0.09f));
+//            switch (activeGift.getTier()) {
+//                case 4:
+//                case 5:
+//                case 6:
+//                    LootableContainer lootableContainer = new LootableItem(-1,"dummy_item",lootList);
+//                    player.loot(lootableContainer);
+//                    break;
+//            }
+//
+//            player.getPlayerDetails().setOpenedGift(true);
+//            player.getPlayerDetails().getUnlcaimedPrizes().clear();
+//            saveProperties(player);
+//        } else {
+//            player.receiveMessage("There is currently no gift available. Community Points: "
+//                    + communityPoints.value()
+//                    + " Next Reward at:"
+//                    + getNextTier());
+//        }
     }
 
     public CommunityGift getActiveGift() {
@@ -237,15 +232,15 @@ public class GraveDigger {
 
         @Override
         public void run() {
-            final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager =
-                    new PlayerDetailsRepositoryManager();
-
-            repositoryManager.getRepository().readAll()
-                    .stream()
-                    .filter(user -> user.getGraveDiggerProperties() != null)
-                    .forEach(user -> user.getGraveDiggerProperties().getAttempts().setValue(RESET_AMOUNT_BASE));
-
-            repositoryManager.updateRepository();
+//            final RepositoryManager<PlayerDetails, PlayerDetailsRepository> repositoryManager =
+//                    new PlayerDetailsRepositoryManager();
+//
+//            repositoryManager.getRepository().readAll()
+//                    .stream()
+//                    .filter(user -> user.getGraveDiggerProperties() != null)
+//                    .forEach(user -> user.getGraveDiggerProperties().getAttempts().setValue(RESET_AMOUNT_BASE));
+//
+//            repositoryManager.updateRepository();
         }
     }
 }
