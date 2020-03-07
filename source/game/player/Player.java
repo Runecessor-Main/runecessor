@@ -373,7 +373,19 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 //        }
         if (modifier > 0.6)
         	modifier = 0.6;
-        return modifier * 100;
+        return (modifier * 100) + this.getMagicFindRating();
+    }
+
+    public int getSlayerPoints() {
+        if(playerDetails != null)
+            return playerDetails.getSlayerPoints().value();
+        return 0;
+    }
+
+    public int getMagicFindRating() {
+        if(playerDetails != null)
+            return playerDetails.getMagicFindRating().value();
+        return 0;
     }
 
     @Override
@@ -8338,10 +8350,13 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         this.minigame = minigame;
     }
 
+<<<<<<< HEAD
 //    public int getSlayerPoints() {
 //        return slayerPoints;
 //    }
 
+=======
+>>>>>>> c32d15613357211e56b75306b84c6a7ce3cfca4a
     public void setSlayerPoints(int slayerPoints) {
         this.slayerPoints = slayerPoints;
     }

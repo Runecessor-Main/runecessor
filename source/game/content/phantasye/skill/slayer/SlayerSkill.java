@@ -256,10 +256,6 @@ public class SlayerSkill {
                             } else {
                                 completeTask(player);
                             }
-                            if (new Random().nextInt(1000) == 1000 && LocalDate.now().isAfter(LocalDate.parse("2019-11-6"))) {
-                                player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment();
-                                player.receiveMessage(ServerConstants.RED_COL + " You receive a free attempt to loot a grave from Slayer!");
-                            }
                             player.saveDetails();
                         }
                     }

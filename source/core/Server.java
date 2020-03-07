@@ -1,6 +1,10 @@
 package core;
 
 import com.google.common.collect.ImmutableList;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import core.benchmark.GameBenchmark;
 import core.maintick.Task;
 import core.maintick.TaskScheduler;
@@ -39,6 +43,8 @@ import game.content.miscellaneous.TeleportInterface;
 import game.content.miscellaneous.WelcomeMessage;
 import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
+import game.content.phantasye.PlayerDetailsRepository;
+import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.minigame.instance.boss.BossInstanceChest;
@@ -197,8 +203,27 @@ public class Server {
 	/**
 	 * Launch the server.
 	 */
+	public static JsonObject convertToJsonObject(Object payload) {
+		GsonBuilder builder = new GsonBuilder();
+		return (JsonObject) builder.setFieldNamingPolicy(FieldNamingPolicy.IDENTITY).
+				create().toJsonTree(payload);
+	}
+
 	public static void main(java.lang.String args[]) throws NullPointerException, IOException {
-		
+
+//		PlayerDetailsRepositoryManager repositoryManager = new PlayerDetailsRepositoryManager();
+//		Gson gson = new Gson();
+//		repositoryManager.getRepository().readAll().forEach(entry-> {
+//			JsonObject jsonObject = convertToJsonObject(entry);
+////			System.out.println(jsonObject.getAsJsonObject("graveDiggerProperties"));
+//			jsonObject.remove("graveDiggerProperties");
+//			jsonObject.remove("openedGift");
+//			jsonObject.remove("unlcaimedPrizes");
+////			System.out.println(jsonObject.entrySet());
+////			JsonObject jsonObject = gson
+////			jsonObj.getAsJsonObject("accounts").remove("email");
+//		});
+//		repositoryManager.updateRepository();
 		serverArguments(args);
 		new SimpleTimer();
 		//ScriptPlugin.filter.sort("serverArguments");
