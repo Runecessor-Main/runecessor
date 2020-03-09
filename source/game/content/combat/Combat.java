@@ -535,7 +535,7 @@ public class Combat {
 				return true;
 			}
 		}
-		if (player.getWieldedWeapon() == 9185 ||ItemAssistant.getItemName(player.getWieldedWeapon()).equals("Vorktah crossbow")|| ItemAssistant.getItemName(player.getWieldedWeapon()).equals("Armadyl crossbow") || player.getWieldedWeapon() == 21012) {
+		if (player.getWieldedWeapon() == 9185 ||ItemAssistant.getItemName(player.getWieldedWeapon()).equals("Vorktah crossbow")|| ItemAssistant.getItemName(player.getWieldedWeapon()).equals("Chaotic crossbow") || ItemAssistant.getItemName(player.getWieldedWeapon()).equals("Armadyl crossbow") || player.getWieldedWeapon() == 21012) {
 			return true;
 		}
 		return false;

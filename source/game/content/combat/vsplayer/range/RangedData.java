@@ -97,7 +97,7 @@ public class RangedData {
 		DRAGON_HUNTER_CROSSBOW("", 21012, 21950, GameType.OSRS),
 		DRAGON_CROSSBOW("", 21902, 21950, GameType.OSRS),
 		
-		CHAOTIC_CROSSBOW("", 18357, 9342, GameType.PRE_EOC);
+		CHAOTIC_CROSSBOW("Chaotic crossbow", 11135, 9342, GameType.ANY);
 
 		private String itemName = "";
 		private int weaponId, ammoId;
