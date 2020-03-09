@@ -112,6 +112,13 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private final StopWatch stopWatch = new StopWatch();
     private final Runecrafting runecrafting = new Runecrafting(this);
 
+    public int getSlayerPoints() {
+    	if(playerDetails != null) {
+    		return playerDetails.getSlayerPoints().value();
+    	}
+    	return 0;
+    }
+    
     public Runecrafting getRunecrafting() {
         return runecrafting;
     }
@@ -361,12 +368,25 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         if (GameMode.getDifficulty(this, "GLADIATOR")) {
             modifier += 0.2;
         }
-        if (Combat.hasMagicFindRing(this)) { // Stacks with donator & gladiator modifiers
-        	modifier += 0.15;
-        }
+//        if (Combat.hasMagicFindRing(this)) { // Stacks with donator & gladiator modifiers
+//        	modifier += 0.15;
+//        }
         if (modifier > 0.6)
         	modifier = 0.6;
-        return modifier * 100;
+        return this.getMagicFindRating() + (modifier * 100);
+
+    }
+
+    //public int getSlayerPoints() {
+      //  if(playerDetails != null)
+        //    return playerDetails.getSlayerPoints().value();
+        //return 0;
+    //}
+
+    public int getMagicFindRating() {
+        if(playerDetails != null)
+            return playerDetails.getMagicFindRating().value();
+        return 0;
     }
 
     @Override
@@ -8329,10 +8349,6 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     public void setMinigame(Minigame minigame) {
         this.minigame = minigame;
-    }
-
-    public int getSlayerPoints() {
-        return slayerPoints;
     }
 
     public void setSlayerPoints(int slayerPoints) {

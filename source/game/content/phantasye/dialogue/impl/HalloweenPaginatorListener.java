@@ -47,7 +47,7 @@ public class HalloweenPaginatorListener extends DialoguePaginatorClickListener {
                     break;
                 case 2:
                     player.getShops().openShop(44);
-                    player.receiveMessage("You have " + ServerConstants.RED_COL + player.getPlayerDetails().getGraveDiggerProperties().getPoints().value() + "</col> Slayer Points.");
+//                    player.receiveMessage("You have " + ServerConstants.RED_COL + player.getPlayerDetails().getGraveDiggerProperties().getPoints().value() + "</col> Slayer Points.");
                     break;
                 case 3:
                     DialogueOptionPaginator paginator3 =
@@ -60,32 +60,32 @@ public class HalloweenPaginatorListener extends DialoguePaginatorClickListener {
                         @Override
                         public void onOption(Player player, int option) {
                             switch (option) {
-                                case 1:
-                                    if (player.removeItemFromInventory(995, GraveDigger.ATTEMPT_COST_GP)) {
-                                        player.receiveMessage("You've purchased an attempt. You now have "
-                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment()
-                                                + player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value())
-                                                + " attempts.");
-                                        GraveDigger.getInstance().saveProperties(player);
-                                        player.getPA().closeInterfaces(true);
-                                    } else {
-                                        player.getPA().closeInterfaces(true);
-                                        player.receiveMessage("You do not have enough coins.");
-                                    }
-                                    break;
-                                case 2:
-                                    if (player.removeItemFromInventory(7478, GraveDigger.ATTEMPT_COST_DT)) {
-                                        player.receiveMessage("You've purchased an attempt. You now have "
-                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment()
-                                                + player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value())
-                                                + " attempts.");
-                                        GraveDigger.getInstance().saveProperties(player);
-                                        player.getPA().closeInterfaces(true);
-                                    } else {
-                                        player.getPA().closeInterfaces(true);
-                                        player.receiveMessage("You do not have enough tokens.");
-                                    }
-                                    break;
+//                                case 1:
+//                                    if (player.removeItemFromInventory(995, GraveDigger.ATTEMPT_COST_GP)) {
+//                                        player.receiveMessage("You've purchased an attempt. You now have "
+//                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment()
+//                                                + player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value())
+//                                                + " attempts.");
+//                                        GraveDigger.getInstance().saveProperties(player);
+//                                        player.getPA().closeInterfaces(true);
+//                                    } else {
+//                                        player.getPA().closeInterfaces(true);
+//                                        player.receiveMessage("You do not have enough coins.");
+//                                    }
+//                                    break;
+//                                case 2:
+//                                    if (player.removeItemFromInventory(7478, GraveDigger.ATTEMPT_COST_DT)) {
+//                                        player.receiveMessage("You've purchased an attempt. You now have "
+//                                                + (player.getPlayerDetails().getGraveDiggerProperties().getPaidAttempts().increment()
+//                                                + player.getPlayerDetails().getGraveDiggerProperties().getAttempts().value())
+//                                                + " attempts.");
+//                                        GraveDigger.getInstance().saveProperties(player);
+//                                        player.getPA().closeInterfaces(true);
+//                                    } else {
+//                                        player.getPA().closeInterfaces(true);
+//                                        player.receiveMessage("You do not have enough tokens.");
+//                                    }
+//                                    break;
                             }
                         }
                     })).start(player);

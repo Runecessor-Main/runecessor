@@ -270,7 +270,7 @@ public class NormalCommand {
 			}
 			return false;
 		case "droprate":
-			player.receiveMessage("Your magic find is: <col=db1c1c>3" + player.getMagicFind() + "%");
+			player.receiveMessage("Your magic find is: <col=db1c1c>" + player.getMagicFind() + "%");
 //			if (player.getPetId() == 11042) {
 //				player.getPA().sendMessage("Your Donator Pet increase your drop rate by <col=db1c1c>50%.");
 //			}
