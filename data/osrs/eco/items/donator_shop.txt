@@ -50,21 +50,29 @@ Sprite: 994
 
 Shop tab: Normal
 
-Name: Mystery box
-Price: 20
-Item reward: 16084
-
 Name: Super Mystery box
 Price: 50
 Item reward: 16086
 
 Name: Legendary Mystery box
-Price: 100
+Price: 250
 Item reward: 16088
 
 Name: Pet Mystery box
 Price: 200
 Item reward: 6199
+
+Name: Mega Mystery Box
+Price: 1500
+Item reward: 16436
+
+Name: Mega Mystery Box
+Price: 1500
+Item reward: 16436
+
+Name: Donator Token Mystery Box
+Price: 600
+Item reward: 16906
 
 Name: Stray dog pet
 Price: 100
@@ -98,6 +106,10 @@ Name: Ancestral robe top
 Price: 250
 Item reward: 21021
 
+Name: Ancestral robe top
+Price: 250
+Item reward: 21021
+
 Name: Ancestral robe bottom
 Price: 200
 Item reward: 21024
@@ -122,21 +134,9 @@ Name: Dinh's bulwark
 Price: 100
 Item reward: 21015
 
-Name: Rainbow partyhat
-Price: 2000
-Item reward: 11863
-
-Name: Christmas cracker
-Price: 490
-Item reward: 962
-
-Name: Green h'ween mask
-Price: 200
-Item reward: 1053
-
-Name: Blue h'ween mask
-Price: 200
-Item reward: 1055
+Name: Easter Basket
+Price: 300
+Item reward: 4565
 
 Name: Red h'ween mask
 Price: 200
@@ -146,54 +146,99 @@ Name: Black h'ween mask
 Price: 400
 Item reward: 11847
 
-Name: Wise old man's santa hat
-Price: 900
-Item reward: 21859
+Name: Santa hat
+Price: 240
+Item reward: 1050
 
 Name: Santa hat
 Price: 240
 Item reward: 1050
 
-Name: Black santa hat
-Price: 480
-Item reward: 13343
+Name: Santa hat (g)
+Price: 2555
+Item reward: 16434
 
 Name: Inverted santa hat
 Price: 480
 Item reward: 13344
 
-Name: Easter Basket
-Price: 300
-Item reward: 4565
+Name: Black santa hat
+Price: 480
+Item reward: 13343
 
-Name: Red Partyhat
-Price: 150
-Item reward: 1038
+Name: Wise old man's santa hat
+Price: 900
+Item reward: 21859
 
-Name: Yellow partyhat
-Price: 150
-Item reward: 1040
+Name: Christmas cracker
+Price: 490
+Item reward: 962
 
 Name: Blue partyhat
 Price: 150
 Item reward: 1042
 
-Name: Green partyhat
-Price: 150
-Item reward: 1044
-
-Name: Purple partyhat
-Price: 150
-Item reward: 1046
-
-Name: White Partyhat
-Price: 150
-Item reward: 1048
-
 Name: Black partyhat
 Price: 250
 Item reward: 11862
 
+Name: Rainbow partyhat
+Price: 2000
+Item reward: 11863
+
+Name: Partyhat & Specs
+Price: 3000
+Item reward: 12399
+
+Name: Specs
+Price: 400
+Item reward: 12337
+
+Name: Half moon specs
+Price: 100
+Item reward: 20053
+
 Name: Yoshi pet
-Price: 1000
+Price: 1500
 Item reward: 16020
+
+Name: Nocturnal Yoshi pet
+Price: 2500
+Item reward: 16399
+
+Name: Celestial Yoshi pet
+Price: 3000
+Item reward: 16327
+
+Name: Mythical Cape
+Price: 2500
+Item reward: 22114
+
+Name: Gnome Scarf
+Price: 150
+Item reward: 9470
+
+Name: Frozen Whip Mix
+Price: 500
+Item reward: 12769
+
+Name: Volcanic Whip Mix
+Price: 1000
+Item reward: 12771
+
+Name: Crystal Bow (Full)
+Price: 350
+Item reward: 4214
+
+Name: Twisted Bow (White)
+Price: 10000
+Item reward: 16282
+
+
+Name: Monkey Companion
+Price: 500
+Item reward: 16902
+
+Name: Phoenix
+Price: 5000
+Item reward: 20693

@@ -45,6 +45,7 @@ import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
 import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
+import game.content.phantasye.commands.RankPlayerCommandListener;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.minigame.instance.boss.BossInstanceChest;
@@ -127,6 +128,7 @@ import org.apache.mina.common.IoAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
 import org.menaphos.commands.CommandDispatcher;
+import org.menaphos.model.command.Command;
 import org.phantasye.RepositoryManager;
 import tools.discord.api.DiscordBot;
 import utility.CharacterBackup;
@@ -241,6 +243,10 @@ public class Server {
 
 //		GraveDigger.getInstance().initialize();
 //		BossInstanceChest.getInstance();
+
+		CommandDispatcher.init();
+		CommandDispatcher.getInstance().addCommand(new RankPlayerCommandListener(),"rank");
+
 		Server.loadSystems();
 		initiateConnections();
 		gameTick();
@@ -547,7 +553,7 @@ public class Server {
 			return;
 		}
 		ServerConfiguration.DISCORD = false;
-		ServerConfiguration.ENABLE_BOTS = true;
+		ServerConfiguration.ENABLE_BOTS = false;
 		ServerConfiguration.FORCE_ITEM_UPDATE = false;
 		ServerConfiguration.INSTANT_SWITCHING = false;
 		ServerConfiguration.SHOW_PACKETS = false;

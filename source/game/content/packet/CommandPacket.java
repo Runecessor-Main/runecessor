@@ -38,6 +38,8 @@ import game.player.punishment.RagBan;
 import java.util.ArrayList;
 import network.packet.PacketHandler;
 import network.packet.PacketType;
+import org.menaphos.commands.CommandContext;
+import org.menaphos.commands.CommandDispatcher;
 import utility.FileUtility;
 import utility.Misc;
 import utility.PacketLossTracker;
@@ -54,6 +56,7 @@ public class CommandPacket implements PacketType {
 		if (Misc.containsNewLineExploit(command)) {
 			return;
 		}
+
 		if (trackPlayer) {
 			PacketHandler.saveData(player.getPlayerName(), "playerCommand: " + command);
 		}
@@ -347,7 +350,7 @@ public class CommandPacket implements PacketType {
 				return;
 			}
 		}
-
+		CommandDispatcher.getInstance().dispatch(new CommandContext(command, player));
 		if (player.isModeratorRank()) {
 			if (ModeratorCommand.moderatorCommand(player, command)) {
 				return;
@@ -375,12 +378,7 @@ public class CommandPacket implements PacketType {
 				return;
 			}
 		}
-		if (Plugin.execute("command_" + command, player)) {
-		} else {
-			//player.getPA().sendMessage("This command does not exist: " + command);
-			//player.getPA().sendMessage("Check ::commands for a list of commands!");
-			unknownCommands.add(command + ", used by: " + player.getPlayerName());
-		}
+
 	}
 
 }
