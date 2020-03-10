@@ -553,7 +553,7 @@ public class Server {
 			return;
 		}
 		ServerConfiguration.DISCORD = false;
-		ServerConfiguration.ENABLE_BOTS = true;
+		ServerConfiguration.ENABLE_BOTS = false;
 		ServerConfiguration.FORCE_ITEM_UPDATE = false;
 		ServerConfiguration.INSTANT_SWITCHING = false;
 		ServerConfiguration.SHOW_PACKETS = false;
