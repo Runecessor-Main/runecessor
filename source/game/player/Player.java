@@ -30,6 +30,7 @@ import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
+import game.content.phantasye.skill.mining.Mining;
 import game.content.phantasye.skill.runecrafting.Runecrafting;
 import game.content.phantasye.skill.slayer.SlayerUnlocks;
 import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
@@ -111,6 +112,11 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private Player slayerPartner;
     private final StopWatch stopWatch = new StopWatch();
     private final Runecrafting runecrafting = new Runecrafting(this);
+    private final Mining mining = new Mining(this);
+
+    public Mining getMiningSkill() {
+        return mining;
+    }
 
     public int getSlayerPoints() {
     	if(playerDetails != null) {
