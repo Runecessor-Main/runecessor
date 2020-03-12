@@ -1,4 +1,4 @@
-Shop name: Melee shop
+Shop name: Horvik's Weapon & Gear Shop
 Shop id: 3
 Shop currency: 995
 1155 // Bronze full helm.
@@ -21,15 +21,10 @@ Shop currency: 995
 1077 // Black platelegs.
 1195 // Black kiteshield.
 1089 // Black plateskirt.
-
-Shop name: Equipment shop
-Shop id: 4
-Shop currency: 995
 1323 // Iron scimitar.
 1325 // Steel scimitar.
 1327 // Black scimitar.
 20756 // Hill giant club
-6528 // Tzhaar-ket-om.
 3105 // Rock climbing boots.
 4119 // Bronze boots.
 4121 // Iron boots.
@@ -37,7 +32,11 @@ Shop currency: 995
 4125 // Black boots.
 1540 // Anti-dragon shield.
 
-Shop name: Skilling shop
+Shop name: Coming Soon!
+Shop id: 4
+Shop currency: 995
+
+Shop name: Skilling Shop & Supplies
 Shop id: 5
 Shop currency: 995
 590 // Tinderbox.
@@ -71,6 +70,22 @@ Shop currency: 995
 1785 // Glassblowing pipe
 1776 // Molten glass
 10006 //bird snare.
+4418 // Guthix rest(4)
+1523 // Lockpick.
+3188 // Cleaning cloth.
+952 // Spade.
+19564 // Royal seed pod
+299 //Mithril Seeds
+820 //
+821 //
+822 //
+823 //
+824 //
+40 //
+41 //
+42 //
+43 //
+44 //
 
 Shop name: Farming supplies
 Shop id: 6
@@ -93,15 +108,9 @@ Shop currency: 995
 5343 // Seed dibber.
 5340 // Watering can(8).
 
-Shop name: Supplies shop
+Shop name: Coming Soon!
 Shop id: 7
 Shop currency: 995
-4418 // Guthix rest(4)
-1523 // Lockpick.
-3188 // Cleaning cloth.
-952 // Spade.
-19564 // Royal seed pod
-299 //Mithril Seeds
 
 Shop name: General store
 Shop id: 8
@@ -459,7 +468,7 @@ Shop currency: Points
 16241 1 // Puffin
 16242 1 // Baby Roc
 
-Shop name: Magic shop
+Shop name: Basic Clothing Shop
 Shop id: 19
 Shop currency: 995
 579 // Wizard hat.
@@ -683,12 +692,10 @@ Shop currency: 4067
 22114 500 // Mythical cape
 16073 800 // give x2 on exp
 
-
 Shop name: Scalper Shop
 Shop id: 101
 Shop currency: 995
 1464 15000 // Boss Tickets
-
 
 Shop name: Hats & robe sets shop
 Shop id: 41
@@ -1082,7 +1089,6 @@ Shop name: Mining shop
 Shop id: 59
 Shop currency: 995
 1265 // Bronze pickaxe.
-1273 // Mithril pickaxe.
 2347 // Hammer.
 
 Shop name: Blood money shop
@@ -1406,34 +1412,6 @@ Shop currency: 995
 1125 // Black platebody.
 1077 // Black platelegs.
 
-Shop name: Tournament supplies Main welfare
-Shop id: 76
-Shop currency: Free
-
-Shop name: Tournament supplies Main barrows
-Shop id: 77
-Shop currency: Free
-
-Shop name: Tournament supplies Pure
-Shop id: 78
-Shop currency: Free
-
-Shop name: Tournament supplies Berserker
-Shop id: 79
-Shop currency: Free
-
-Shop name: Tournament supplies Dharok
-Shop id: 80
-Shop currency: Free
-
-Shop name: Tournament supplies Max hybrid
-Shop id: 81
-Shop currency: Free
-
-Shop name: Tournament supplies Main Nh
-Shop id: 82
-Shop currency: Free
-
 Shop name: Clue casket shop
 Shop id: 83
 Shop currency: 995
@@ -1472,18 +1450,6 @@ Shop currency: 604
 9922 20 // Skeleton gloves
 9925 40 // Skeleton mask
 
-Shop name: Tournament supplies Barrows
-Shop id: 86
-Shop currency: Free
-2412
-Shop name: Tournament supplies F2P
-Shop id: 87
-Shop currency: Free
-
-Shop name: Pure supplies
-Shop id: 88
-Shop currency: 995
-
 Shop name: Cash shop
 Shop id: 89
 Shop currency: 995
@@ -1504,25 +1470,10 @@ Shop currency: 995
 16088 300000000
 16436 350000000
 
-Shop name: More Supplies!
+Shop name: Coming Soon!
 Shop id: 37
 Shop currency: 995
-820 //
-821 //
-822 //
-823 //
-824 //
-40 //
-41 //
-42 //
-43 //
-44 //
-314 //
 
-Shop name: Look Fly Super Shop.
-Shop id: 38
-Shop currency: 995
-
-Shop name: Runecessors Top Capes.
+Shop name: Coming Soon!
 Shop id: 39
 Shop currency: 995
