@@ -350,7 +350,7 @@ public class CommandPacket implements PacketType {
 				return;
 			}
 		}
-		CommandDispatcher.getInstance().dispatch(new CommandContext(command, player));
+
 		if (player.isModeratorRank()) {
 			if (ModeratorCommand.moderatorCommand(player, command)) {
 				return;
@@ -378,6 +378,8 @@ public class CommandPacket implements PacketType {
 				return;
 			}
 		}
+
+		CommandDispatcher.getInstance().dispatch(new CommandContext(command, player));
 
 	}
 
