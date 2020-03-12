@@ -99,7 +99,8 @@ public class FirstClickObject {
 		} else if (player.getRunecrafting().clickedAltar(objectId)) {
 			return;
 		} else if (Mining.isMiningObject(objectId)) {
-			Mining.doMiningObject(player, objectId);
+//			Mining.doMiningObject(player, objectId);
+			player.getMiningSkill().startMining(objectX,objectY,objectId);
 			return;
 		} else if (BrimhavenDungeon.isBrimhavenDungeonObject(player, objectId)) {
 			return;
