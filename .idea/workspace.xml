@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="Rollback Fix - Fixed rollback issues related to the player-details.json serialization">
+    <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33">
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Mining.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Ore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Pickaxe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/characters/players/milk man.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/characters/players/milk man.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/eventdebug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/eventdebug.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/player base/last date.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/player base/last date.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/staff/staff_presence_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/staff/staff_presence_data.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/system log/lag spike.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/lag spike.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/system log/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/save log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/save log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/tournament event.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/tournament event.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/unused objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/unused objects.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/META-INF/Runecessor_server.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/core/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/core/Server$Action1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action1.class" afterDir="false" />
@@ -20,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData$CrossBow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData$CrossBow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$17.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$18.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$9.class" afterDir="false" />
@@ -35,6 +46,7 @@
       <change beforePath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler$FacialAnimation.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler$FacialAnimation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/dialogueold/options/TwoOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/dialogueold/options/TwoOptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/CommandPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/CommandPacket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/gambling/DiceNPCBase$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/shop/ShopAssistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/shop/ShopAssistant.class" afterDir="false" />
@@ -65,7 +77,9 @@
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/commands/NormalCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/commands/NormalCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/Menaphos Server API.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/Menaphos Server API.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/CommandPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/CommandPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +92,7 @@
       <list>
         <option value="package-info" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -98,7 +113,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582247989610" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Runecessor_Client/Runecessor Client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -109,9 +124,9 @@
       <recent name="game.content.phantasye.minigame.pirate" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\libraries" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\data\osrs\eco\npc" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\data\osrs\eco\items" />
-      <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\libraries" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\backup\characters\players" />
       <recent name="C:\Users\Phantasye\Desktop\rsps\Clients\Og_Panda#6792\Runecessor\backup\characters" />
     </key>
@@ -178,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583594615935</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bug Fix - Fixed an issue causing Magic Find to be displayed incorrectly.">
+      <created>1583598628061</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583598628061</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33">
+      <created>1583798692106</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583798692106</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -231,13 +260,27 @@
     <MESSAGE value="Bug - Fixed a bug that allowed players to block tasks for free." />
     <MESSAGE value="Metrics - Metrics are no longer tracked for players wielding 'OP' modes or items" />
     <MESSAGE value="Rollback Fix - Fixed rollback issues related to the player-details.json serialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rollback Fix - Fixed rollback issues related to the player-details.json serialization" />
+    <MESSAGE value="Bug Fix - Fixed an issue causing Magic Find to be displayed incorrectly." />
+    <MESSAGE value="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="8" key="CommitChangelistDialog2" timestamp="1583594615086">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1583874198650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="347" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583594615086" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583874198650" />
+    <state x="349" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583800921291">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1583800921291" />
+    <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583879733052">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1583879733052" />
+    <state x="347" y="8" key="CommitChangelistDialog2" timestamp="1583798690822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="347" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583798690822" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583092122116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -246,38 +289,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="458" y="315" key="GitRewordDialog/0.0.1536.824@0.0.1536.824" timestamp="1583594452376" />
-    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1583596723784">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1583880316428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583596723784" />
-    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1583596723783">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583880316428" />
+    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1583880316427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583596723783" />
-    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1583596723783">
+    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583880316427" />
+    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1583880316427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583596723783" />
-    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1583596723783">
+    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583880316427" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1583880316427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583596723783" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583880316427" />
+    <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1583712712208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1583712712208" />
     <state x="457" y="123" key="RollbackChangesDialog" timestamp="1583590901866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583590901866" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583594629512">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583798697269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583594629512" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583798697269" />
     <state x="453" y="42" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583592816823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="453" y="42" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1583592816823" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583591531698">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583886186694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1583591531698" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1583886186694" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1583862658305">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1583862658305" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
