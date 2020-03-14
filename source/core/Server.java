@@ -2,7 +2,6 @@ package core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import core.benchmark.GameBenchmark;
@@ -43,19 +42,9 @@ import game.content.miscellaneous.TeleportInterface;
 import game.content.miscellaneous.WelcomeMessage;
 import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
-import game.content.phantasye.PlayerDetailsRepository;
-import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.commands.RankPlayerCommandListener;
 import game.content.phantasye.event.WildernessChestController;
-import game.content.phantasye.event.hween.GraveDigger;
-import game.content.phantasye.minigame.instance.boss.BossInstanceChest;
-import game.content.phantasye.skill.slayer.master.SlayerMaster;
-import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
-import game.content.phantasye.skill.slayer.master.SlayerMasterRepository;
-import game.content.phantasye.skill.slayer.master.SlayerMasterRepositoryManager;
-import game.content.phantasye.skill.slayer.master.impl.*;
-import game.content.phantasye.skill.slayer.task.BossTask;
-import game.content.phantasye.skill.slayer.task.SlayerTask;
+import game.content.phantasye.skill.Skill;
 import game.content.quest.Quest;
 import game.content.quest.tab.InformationTab;
 import game.content.shop.ShopHandler;
@@ -128,8 +117,6 @@ import org.apache.mina.common.IoAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
 import org.menaphos.commands.CommandDispatcher;
-import org.menaphos.model.command.Command;
-import org.phantasye.RepositoryManager;
 import tools.discord.api.DiscordBot;
 import utility.CharacterBackup;
 import utility.ChargebackPlayerAutoJail;
@@ -246,7 +233,6 @@ public class Server {
 
 		CommandDispatcher.init();
 		CommandDispatcher.getInstance().addCommand(new RankPlayerCommandListener(),"rank");
-
 		Server.loadSystems();
 		initiateConnections();
 		gameTick();

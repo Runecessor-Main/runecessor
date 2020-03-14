@@ -30,10 +30,12 @@ import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
-import game.content.phantasye.skill.mining.Mining;
-import game.content.phantasye.skill.runecrafting.Runecrafting;
-import game.content.phantasye.skill.slayer.SlayerUnlocks;
-import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
+import game.content.phantasye.skill.AbstractSkillBase;
+import game.content.phantasye.skill.gathering.TestSkill;
+import game.content.phantasye.skill.gathering.mining.Mining;
+import game.content.phantasye.skill.artisan.runecrafting.Runecrafting;
+import game.content.phantasye.skill.support.slayer.SlayerUnlocks;
+import game.content.phantasye.skill.support.slayer.task.PlayerSlayerTask;
 import game.content.prayer.Prayer;
 import game.content.prayer.PrayerManager;
 import game.content.prayer.book.regular.QuickPrayers;
@@ -113,6 +115,15 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private final StopWatch stopWatch = new StopWatch();
     private final Runecrafting runecrafting = new Runecrafting(this);
     private final Mining mining = new Mining(this);
+
+    public <S extends AbstractSkillBase<?> >S getSkill(Class<S> skillClass) {
+        try {
+            return skillClass.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public Mining getMiningSkill() {
         return mining;
@@ -7108,6 +7119,10 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         int x = getX() - pointX;
         int y = getY() - pointY;
         this.directionFacingPath = Misc.direction(getX(), getY(), x, y);
+    }
+
+    public void turnPlayerTo(Location location) {
+        this.turnPlayerTo(location.getXCoordinate(),location.getZCoordinate());
     }
 
     private void appendSetFocusDestination(Stream str) {

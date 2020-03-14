@@ -1,6 +1,6 @@
 package game.npc.impl.superior;
 
-import game.content.phantasye.skill.slayer.SlayerAssignment;
+import game.content.phantasye.skill.support.slayer.SlayerAssignment;
 import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.Slayer;

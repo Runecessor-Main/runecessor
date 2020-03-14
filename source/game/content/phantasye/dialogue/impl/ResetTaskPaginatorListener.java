@@ -2,7 +2,7 @@ package game.content.phantasye.dialogue.impl;
 
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
-import game.content.phantasye.skill.slayer.master.SlayerMaster;
+import game.content.phantasye.skill.support.slayer.master.SlayerMaster;
 import game.player.Player;
 
 public class ResetTaskPaginatorListener extends DialoguePaginatorClickListener {

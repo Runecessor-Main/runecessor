@@ -13,7 +13,7 @@ import game.content.miscellaneous.RunePouch;
 import game.content.miscellaneous.Teleport;
 import game.content.miscellaneous.Wolpertinger;
 import game.content.phantasye.item.HerbSack;
-import game.content.phantasye.skill.slayer.item.SlayerGem;
+import game.content.phantasye.skill.support.slayer.item.SlayerGem;
 import game.content.skilling.Slayer;
 import game.content.skilling.summoning.Summoning;
 import game.item.ItemAssistant;

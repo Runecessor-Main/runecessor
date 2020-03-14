@@ -1,11 +1,7 @@
 package game.content.phantasye.minigame.instance.boss;
 
-import game.content.dialogue.DialogueChain;
 import game.content.miscellaneous.Teleport;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
-import game.content.phantasye.dialogue.impl.SlayerMasterUnlockListener;
-import game.content.phantasye.skill.slayer.SlayerUnlocks;
-import game.item.ItemAssistant;
 import game.npc.NpcHandler;
 import game.player.Player;
 import org.menaphos.model.world.location.Location;

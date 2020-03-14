@@ -1,21 +1,15 @@
 package game.content.packet;
 
-import game.content.combat.Combat;
 import game.content.dialogue.DialogueChain;
-import game.content.phantasye.skill.slayer.master.SlayerMaster;
-import game.content.phantasye.skill.slayer.master.SlayerMasterFactory;
+import game.content.phantasye.skill.support.slayer.master.SlayerMaster;
 import game.entity.EntityType;
 import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.player.Area;
 import game.player.Player;
 import game.player.PlayerHandler;
-import game.player.event.CycleEvent;
-import game.player.event.CycleEventContainer;
-import game.player.event.CycleEventHandler;
 import game.player.pet.PlayerPet;
 import network.packet.PacketType;
-import utility.Misc;
 
 public class ItemOnPlayerPacket implements PacketType {
 	@Override

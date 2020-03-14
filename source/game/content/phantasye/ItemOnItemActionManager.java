@@ -1,6 +1,6 @@
 package game.content.phantasye;
 
-import game.content.phantasye.skill.slayer.SlayerSkill;
+import game.content.phantasye.skill.support.slayer.SlayerSkill;
 import game.player.Player;
 import org.menaphos.action.impl.item.BaseItemOnItemAction;
 

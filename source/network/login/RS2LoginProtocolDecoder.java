@@ -6,6 +6,7 @@ import core.ServerConstants;
 import game.bot.BotManager;
 import game.content.combat.Combat;
 import game.content.commands.AdministratorCommand;
+import game.content.phantasye.PlayerDetails;
 import game.content.phantasye.PlayerDetailsFactory;
 import game.entity.EntityType;
 import game.player.Player;
@@ -15,6 +16,8 @@ import game.player.event.impl.IdentifierSetAnalysisEvent;
 import game.player.punishment.Blacklist;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import network.connection.InvalidAttempt;
 import network.packet.Packet;
 import network.packet.PacketHandler;
@@ -273,6 +276,11 @@ public class RS2LoginProtocolDecoder extends CumulativeProtocolDecoder {
 		}
 		uidOutdated = false;
 		Player player = new Player(session, -1, false, EntityType.PLAYER);
+		final StringBuilder sb = new StringBuilder();
+		for (byte entry:name.getBytes()) {
+			sb.append(entry);
+		}
+		final String uuid = sb.toString();
 		player.setPlayerDetails(PlayerDetailsFactory.getDetailsFor(name.toLowerCase()));
 		player.setPlayerName(name);
 		player.playerPass = pass;

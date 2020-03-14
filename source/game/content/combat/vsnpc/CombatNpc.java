@@ -30,7 +30,7 @@ import game.content.miscellaneous.GameTimeSpent;
 import game.content.miscellaneous.OverlayTimer;
 import game.content.miscellaneous.RandomEvent;
 import game.content.miscellaneous.SpecialAttackTracker;
-import game.content.phantasye.skill.slayer.SlayerSkill;
+import game.content.phantasye.skill.support.slayer.SlayerSkill;
 import game.content.skilling.Skilling;
 import game.content.skilling.Slayer;
 import game.entity.Entity;
@@ -53,8 +53,6 @@ import game.player.event.CycleEventHandler;
 import game.player.movement.Follow;
 import game.player.movement.Movement;
 import utility.Misc;
-
-import java.time.LocalTime;
 
 /**
  * Player vs Npc combat.

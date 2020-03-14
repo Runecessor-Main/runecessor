@@ -16,8 +16,6 @@ import game.content.miscellaneous.PlayerMiscContent;
 import game.content.miscellaneous.RunePouch;
 import game.content.miscellaneous.SpiritShieldCrafting;
 import game.content.phantasye.ItemOnItemActionManager;
-import game.content.phantasye.event.hween.GraveDigger;
-import game.content.phantasye.skill.slayer.SlayerSkill;
 import game.content.skilling.Firemaking;
 import game.content.skilling.Skilling;
 import game.content.skilling.crafting.BattlestaffMaking;

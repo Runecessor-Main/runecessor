@@ -16,8 +16,7 @@ import game.content.miscellaneous.BraceletOfEthereum;
 import game.content.miscellaneous.CompletionistCape;
 import game.content.miscellaneous.MagicCapeSpellbookSwap;
 import game.content.miscellaneous.Teleport;
-import game.content.phantasye.skill.slayer.item.SlayerGem;
-import game.content.skilling.Slayer;
+import game.content.phantasye.skill.support.slayer.item.SlayerGem;
 import game.player.Player;
 import utility.Misc;
 

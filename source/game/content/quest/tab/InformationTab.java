@@ -1,11 +1,6 @@
 package game.content.quest.tab;
 
 import core.GameType;
-import game.content.donator.DonatorTokenUse;
-import game.content.phantasye.skill.slayer.SlayerAssignment;
-import game.content.phantasye.skill.slayer.SlayerSkill;
-import game.content.skilling.SkillingStatistics;
-import game.content.skilling.Slayer;
 import game.player.Player;
 import game.player.PlayerHandler;
 import java.util.ArrayList;

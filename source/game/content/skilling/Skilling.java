@@ -552,7 +552,6 @@ public class Skilling {
                     player.getPlayerDetails().getMythicalCapeCharges().subtract(10);
                 }
             }
-
             if (skill == ServerConstants.AGILITY) {
                 experience *= 1.6;
             } else if (skill == ServerConstants.MINING || skill == ServerConstants.SMITHING) {

@@ -4,7 +4,7 @@ import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
-import game.content.phantasye.skill.slayer.master.SlayerMaster;
+import game.content.phantasye.skill.support.slayer.master.SlayerMaster;
 import game.npc.data.NpcDefinition;
 import game.player.Player;
 

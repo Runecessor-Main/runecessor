@@ -25,7 +25,7 @@ import game.content.music.SoundSystem;
 import game.content.phantasye.metric.NpcMetric;
 import game.content.phantasye.metric.NpcMetricFactory;
 import game.content.phantasye.metric.NpcMetricRepositoryManager;
-import game.content.phantasye.skill.slayer.SlayerSkill;
+import game.content.phantasye.skill.support.slayer.SlayerSkill;
 import game.content.profile.NpcKillTracker;
 import game.content.quest.tab.InformationTab;
 import game.content.skilling.Skilling;
@@ -55,8 +55,6 @@ import game.player.PlayerHandler;
 import game.player.movement.Follow;
 import game.player.movement.Movement;
 
-import java.time.LocalTime;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -64,7 +62,6 @@ import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Consumer;
 
-import org.phantasye.RepositoryManager;
 import utility.Misc;
 import utility.WebsiteLogInDetails;
 

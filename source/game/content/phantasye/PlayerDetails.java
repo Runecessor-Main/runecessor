@@ -1,8 +1,6 @@
 package game.content.phantasye;
 
-import game.content.phantasye.event.hween.GraveDiggerProperties;
-import game.content.phantasye.skill.slayer.task.PlayerSlayerTask;
-import org.menaphos.entity.impl.item.Item;
+import game.content.phantasye.skill.support.slayer.task.PlayerSlayerTask;
 import org.menaphos.model.math.impl.AdjustableInteger;
 
 import java.util.*;
@@ -41,6 +39,8 @@ public class PlayerDetails {
         this.herbSack = new HashMap<>();
         this.paymentRunes = new ArrayList<>();
         this.magicFindRating = new AdjustableInteger(0);
+        this.mythicalCapeCharges = new AdjustableInteger(0);
+        this.mythicalCapeTier = new AdjustableInteger(0);
     }
 
     public void initialize() {

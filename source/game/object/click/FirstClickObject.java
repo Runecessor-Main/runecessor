@@ -19,11 +19,15 @@ import game.content.minigame.single_minigame.vorkath.VorkathSinglePlayerMinigame
 import game.content.minigame.zombie.Zombie;
 import game.content.miscellaneous.*;
 import game.content.packet.preeoc.ClickObjectPreEoc;
+import game.content.phantasye.actions.skill.gathering.impl.MineRockAction;
 import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.minigame.instance.boss.BossInstanceChest;
 import game.content.phantasye.minigame.instance.boss.BossInstanceController;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
-import game.content.phantasye.skill.runecrafting.impl.AbyssRunecrafting;
+import game.content.phantasye.skill.Skill;
+import game.content.phantasye.skill.SkillContext;
+import game.content.phantasye.skill.artisan.runecrafting.impl.AbyssRunecrafting;
+import game.content.phantasye.skill.gathering.TestSkill;
 import game.content.quicksetup.QuickSetUp;
 import game.content.skilling.Farming;
 import game.content.skilling.Mining;
@@ -101,6 +105,7 @@ public class FirstClickObject {
 		} else if (Mining.isMiningObject(objectId)) {
 //			Mining.doMiningObject(player, objectId);
 			player.getMiningSkill().startMining(objectX,objectY,objectId);
+//			player.getSkill(TestSkill.class).perform(new MineRockAction());
 			return;
 		} else if (BrimhavenDungeon.isBrimhavenDungeonObject(player, objectId)) {
 			return;

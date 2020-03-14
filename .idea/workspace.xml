@@ -2,22 +2,231 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33">
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Mining.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Ore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Pickaxe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/actions/skill/AbstractSkillAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/actions/skill/gathering/AbstractGatheringSkillAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/actions/skill/gathering/impl/GatherNodeAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/actions/skill/gathering/impl/MineRockAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/item/ItemFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/SkillContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/artisan/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/chain/SkillChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/chain/impl/AbstractPrerequisiteChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/chain/impl/InventoryPrerequisiteChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/chain/impl/LevelPrerequisiteChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/chain/impl/PrerequisiteChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/chain/impl/ToolPrerequisiteChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/combat/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/GatheringSkillBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/TestSkill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/ExperienceNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/NodeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/ReplishableNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/SkillNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/impl/GatheringNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/impl/ReplenishingGatheringNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/nodes/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/123.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/1234.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/2312312312.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/357mag iron.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/357mag.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/7up.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/99 hp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/a9m4 m9gm959.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ac3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/adolf hitler.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/afk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ahspects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/aj.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/aliz.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/alk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/alkeo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/alt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/alter.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/anthony.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/apocalypse.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/astro.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/astromania.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/aw.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/baba.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bacon.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ballsecesser.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bearclaw23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/beast.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/berta.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bewb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/big lips mcg.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bigfoot.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/biggo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/biggs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bio.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/blade sora.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bleh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bliss.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bomberio.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/boom.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/boomiron.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bored aussie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bossman.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bosstr1p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/bot.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/brady.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/breakingdabs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/byte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/cap.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/carolus rex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/cat lady.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/chaos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/clown.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/cody.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/crios.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/crystaldummy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/crystall77.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/crystall777.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/crytall777.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/cumrag.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/daily grind.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dairymilk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dakota.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dark shadow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dark v2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dark.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/darth yoda.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dfhdgfh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/diemonds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dotskillz.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/double drop.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dougbolden.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/droptable.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/durial321.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dutchtouch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/dyno.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/earfquake v2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/earfquake.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/earfquake2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ecstacy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/eddymanman.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/elbow room.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/esql.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/esses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/evil.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ez (Runecessor Reloaded's conflicted copy 2019-08-20).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ez.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/faulty noob.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/fezo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/fezor2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/fezor2s.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/fix.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/flempy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/founder.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/founder1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/fpk merk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/fqs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/frank.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gamer4life.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gamermarcos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gator soup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gekko.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gf.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gimme crack.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gladiator.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gladtomeatyo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/googilyboo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/greeds envy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/gussj.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/haunted.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/hawk.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/hc alter.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/i k3 skill.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/i own noobs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ibox.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/indomitable.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/insane.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/iron crafts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/iron mike.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/iron rocknot.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/iron.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ironblock.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ironman.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/ironman1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/jordfromikov.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/jose19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/joshua12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kamv123.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kenny.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kids ranqe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/king.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kingduffy1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kingwalabee.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kira.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kiwii.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kliff.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/kraze.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/l o s t.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/l u t h e r.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/lee991.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/lewa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/little fade.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/logan.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/logic.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/logic1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/loki.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/lt michael.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/luther.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/mag.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/makkers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/maus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/mbox.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/meye.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/mhallice.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/michael (Runecessor Reloaded's conflicted copy 2019-08-20).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/michael.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/michaelw.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/mikehunt.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/characters/players/milk man.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/characters/players/milk man.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/mini flow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/monkey.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/monkley.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/mortality.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/navy.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/neeger.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/neno.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/newbie.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/not an alt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/notabot.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/nouu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/number 1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/officialmm (Runecessor Reloaded's conflicted copy 2019-08-20 (1)).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/officialmm (Runecessor Reloaded's conflicted copy 2019-08-20).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/officialmm.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/officialmm2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/characters/players/og crystal.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/characters/players/phantasye.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/donations/bmt_payments_today.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/bmt_payments_today.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/donations/daily_custom_payments_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/daily_custom_payments_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/donations/daily_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/daily_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/donations/daily_osrs_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/daily_osrs_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/donations/on_offer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/donations/on_offer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/double_items_sink.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/double_items_sink.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/eventdebug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/eventdebug.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/given_items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/given_items.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/player base/daily current playercount.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/player base/daily current playercount.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/player base/daily playercount history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/player base/daily playercount history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/player base/daily playercount time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/player base/daily playercount time.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/player base/last date.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/player base/last date.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/staff/staff_activity_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/staff/staff_activity_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/staff/staff_activity_sent_times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/staff/staff_activity_sent_times.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/staff/staff_presence_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/staff/staff_presence_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/staff/staff_presence_sent_time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/staff/staff_presence_sent_time.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/lag spike.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/lag spike.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/save log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/save log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/tournament event.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/tournament event.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/unused objects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/unused objects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/META-INF/Runecessor_server.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/META-INF/Runecessor_server.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/bin/META-INF/Runecessor_server.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/core/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/core/Server$Action1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/core/Server$Action2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action2.class" afterDir="false" />
@@ -30,9 +239,32 @@
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/Combat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsnpc/CombatNpc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData$CrossBow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/combat/vsplayer/range/RangedData$CrossBow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$16.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$17.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1A.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1PlayerTableEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$1PlayerTableEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/AdministratorCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/ModeratorCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/ModeratorCommand.class" afterDir="false" />
@@ -40,16 +272,37 @@
       <change beforePath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/commands/NormalCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Food$FoodToEat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Food$FoodToEat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/consumable/Potions.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/consumable/Potions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/degrading/DegradingItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/degrading/DegradingItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/degrading/DegradingItemJSONLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/degrading/DegradingItemJSONLoader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/degrading/DegradingManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/degrading/DegradingManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler$FacialAnimation.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler$FacialAnimation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/dialogueold/DialogueHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/dialogueold/options/TwoOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/dialogueold/options/TwoOptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ClickNpcPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ClickNpcPacket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/packet/CommandPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/CommandPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ItemOnItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ItemOnItemPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ItemOnPlayerPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ItemOnPlayerPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/SecondClickItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/SecondClickItemPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/ThirdClickItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/ThirdClickItemPacket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/PlayerDetails.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/gambling/DiceNPCBase$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$Boss.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$BossDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController$BossDialogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/minigame/instance/boss/BossInstanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/phantasye/skill/AbstractSkillBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/phantasye/skill/AbstractSkillBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/quest/tab/InformationTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/quest/tab/InformationTab.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/shop/ShopAssistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/shop/ShopAssistant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/Skilling.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/Skilling.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/crafting/JewelryCrafting$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/crafting/JewelryCrafting$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/crafting/JewelryCrafting$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/crafting/JewelryCrafting$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/crafting/JewelryCrafting$StringAmuletData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/crafting/JewelryCrafting$StringAmuletData.class" afterDir="false" />
@@ -61,8 +314,19 @@
       <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/fletching/Fletching$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/fletching/Fletching$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/fletching/Fletching$ArrowAndBoltData.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/fletching/Fletching$ArrowAndBoltData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/content/skilling/fletching/Fletching.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/skilling/fletching/Fletching.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/item/OperateItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/item/OperateItem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/npc/NpcHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/NpcHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FirstClickNpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FourthClickNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FourthClickNpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/FourthClickNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/FourthClickNpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/SecondClickNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/SecondClickNpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/SecondClickNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/SecondClickNpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/ThirdClickNpc$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/ThirdClickNpc$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/clicknpc/ThirdClickNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/clicknpc/ThirdClickNpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/impl/superior/SuperiorNpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/impl/superior/SuperiorNpc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$3.class" afterDir="false" />
@@ -71,16 +335,93 @@
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/object/click/FirstClickObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/LogOutUpdate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/LogOutUpdate$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/LogOutUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/LogOutUpdate.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/Menaphos Server API.jar" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/Menaphos Server API.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game/content/packet/CommandPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/CommandPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder$UniqueIdentifierSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder$UniqueIdentifierSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/network/login/RS2LoginProtocolDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/combat/vsnpc/CombatNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/commands/AdministratorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/consumable/Potions.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/consumable/Potions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/ClickNpcPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/ClickNpcPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/ItemOnItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/ItemOnItemPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/ItemOnPlayerPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/ItemOnPlayerPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/SecondClickItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/SecondClickItemPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/ThirdClickItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/ThirdClickItemPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/ItemOnItemActionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/ItemOnItemActionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/PlayerDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/ResetTaskPaginatorListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterTalkToListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterUnlockListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/dialogue/impl/SlayerMasterUnlockListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/minigame/instance/boss/BossInstanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/AbstractSkillBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/AbstractSkillBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/HunterSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/hunter/Trap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/TrapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/hunter/TrapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Mining.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/mining/Mining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Ore.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/mining/Ore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/mining/Pickaxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/gathering/mining/Pickaxe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Rune.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/artisan/runecrafting/Rune.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/Runecrafting.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/artisan/runecrafting/Runecrafting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/ZMIAltarBankNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/artisan/runecrafting/ZMIAltarBankNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/runecrafting/impl/AbyssRunecrafting.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/artisan/runecrafting/impl/AbyssRunecrafting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/Locations.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/Locations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/SlayerAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/SlayerSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/SlayerUnlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/SlayerUnlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/item/SlayerGem.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/item/SlayerGem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/SlayerMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMasterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/SlayerMasterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMasterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/SlayerMasterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/SlayerMasterRepositoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/SlayerMasterRepositoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/AbstractAssignmentChainBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/AbstractAssignmentChainBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/AssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/AssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/DuoPlayerAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/DuoPlayerAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/SoloSlayerAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/SoloSlayerAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/AssignTaskAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/impl/AssignTaskAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/CheckBlockedTaskAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/impl/CheckBlockedTaskAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/CheckLevelAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/impl/CheckLevelAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/CheckTaskAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/impl/CheckTaskAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/assignment/impl/CheckTaskLevelAssignmentChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/assignment/impl/CheckTaskLevelAssignmentChain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Chaeldar.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/data/Chaeldar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Duradel.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/data/Duradel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Mazchna.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/data/Mazchna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Nieve.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/data/Nieve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Turael.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/data/Turael.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/data/Vannaka.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/data/Vannaka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterChaeldar.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/impl/SlayerMasterChaeldar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterDuradel.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/impl/SlayerMasterDuradel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterMazchna.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/impl/SlayerMasterMazchna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterNieve.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/impl/SlayerMasterNieve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterTurael.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/impl/SlayerMasterTurael.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/master/impl/SlayerMasterVannaka.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/master/impl/SlayerMasterVannaka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/BossTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/task/BossTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/PlayerSlayerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/task/PlayerSlayerTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/SlayerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/task/SlayerTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/task/TaskGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/phantasye/skill/slayer/task/TaskPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/phantasye/skill/support/slayer/task/TaskPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/quest/tab/InformationTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/skilling/Skilling.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/skilling/Skilling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/skilling/crafting/JewelryCrafting.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/skilling/crafting/JewelryCrafting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/item/OperateItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/item/OperateItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/NpcHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/NpcHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/clicknpc/FirstClickNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/clicknpc/FourthClickNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/clicknpc/FourthClickNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/clicknpc/SecondClickNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/clicknpc/SecondClickNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/clicknpc/ThirdClickNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/clicknpc/ThirdClickNpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/impl/superior/SuperiorNpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/impl/superior/SuperiorNpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/player/LogOutUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/LogOutUpdate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/game/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/network/login/RS2LoginProtocolDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/network/login/RS2LoginProtocolDecoder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +432,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -207,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583798692106</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update - Re-wrote the mining skill to handle ore respawning and slower mining times.">
+      <created>1583886294877</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583886294877</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -262,25 +610,26 @@
     <MESSAGE value="Rollback Fix - Fixed rollback issues related to the player-details.json serialization" />
     <MESSAGE value="Bug Fix - Fixed an issue causing Magic Find to be displayed incorrectly." />
     <MESSAGE value="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33" />
+    <MESSAGE value="Update - Re-wrote the mining skill to handle ore respawning and slower mining times." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update - Re-wrote the mining skill to handle ore respawning and slower mining times." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1583874198650">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1583971129597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583874198650" />
-    <state x="349" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583800921291">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583971129597" />
+    <state x="349" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1583950621876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1583800921291" />
+    <state x="349" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1583950621876" />
     <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583879733052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1583879733052" />
-    <state x="347" y="8" key="CommitChangelistDialog2" timestamp="1583798690822">
+    <state x="246" y="8" key="CommitChangelistDialog2" timestamp="1584149157912">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="347" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583798690822" />
+    <state x="246" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584149157912" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1583092122116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -289,22 +638,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="458" y="315" key="GitRewordDialog/0.0.1536.824@0.0.1536.824" timestamp="1583594452376" />
-    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1583880316428">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1584149012369">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583880316428" />
-    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1583880316427">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584149012369" />
+    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1584149012369">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583880316427" />
-    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1583880316427">
+    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584149012369" />
+    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1584149012368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583880316427" />
-    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1583880316427">
+    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584149012368" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1584149012369">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583880316427" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584149012369" />
     <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1583712712208">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -313,18 +662,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="123" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583590901866" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583798697269">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583886341987">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583798697269" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583886341987" />
     <state x="453" y="42" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583592816823">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="453" y="42" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1583592816823" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583886186694">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584149050753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1583886186694" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584149050753" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1583862658305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

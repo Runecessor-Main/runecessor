@@ -2,9 +2,8 @@ package game.content.skilling.crafting;
 
 import core.ServerConstants;
 import game.content.interfaces.InterfaceAssistant;
-import game.content.miscellaneous.RandomEvent;
 import game.content.music.SoundSystem;
-import game.content.phantasye.skill.slayer.SlayerUnlocks;
+import game.content.phantasye.skill.support.slayer.SlayerUnlocks;
 import game.content.skilling.Skilling;
 import game.content.skilling.SkillingStatistics;
 import game.item.ItemAssistant;

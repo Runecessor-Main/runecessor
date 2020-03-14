@@ -3,9 +3,8 @@ package game.content.phantasye.dialogue.impl;
 import game.content.dialogue.DialogueChain;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
-import game.content.phantasye.skill.slayer.SlayerSkill;
-import game.content.phantasye.skill.slayer.SlayerUnlocks;
-import game.content.skilling.Slayer;
+import game.content.phantasye.skill.support.slayer.SlayerSkill;
+import game.content.phantasye.skill.support.slayer.SlayerUnlocks;
 import game.player.Player;
 
 public class SlayerMasterUnlockListener extends DialoguePaginatorClickListener {
