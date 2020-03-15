@@ -125,6 +125,10 @@ public class LogInUpdate {
 		CombatInterface.addSpecialBar(player, player.getWieldedWeapon());
 		Follow.resetFollow(player);
 		player.getPA().sendFrame36(172, player.getAutoRetaliate(), false);
+		//TODO Reinstate day/night cycle
+		//player.getPA().sendFrame36(166, Server.dayCycle.getTimeOfDay().getBrightness(), false); // Set time of day to current running time of day period
+		player.getPA().sendFrame36(166, 3, false); // force set time of day to Daytime brightness on login
+		
 		Skull.startSkullTimerEvent(player);
 		Pet.ownerLoggedIn(player);
 		player.getPA().sendFrame214();

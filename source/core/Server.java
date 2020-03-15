@@ -42,6 +42,7 @@ import game.content.miscellaneous.TeleportInterface;
 import game.content.miscellaneous.WelcomeMessage;
 import game.content.miscellaneous.YoutubePaid;
 import game.content.miscellaneous.YoutubeRank;
+import game.content.peep.cycledays.DayCycle;
 import game.content.phantasye.commands.RankPlayerCommandListener;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.skill.Skill;
@@ -171,6 +172,8 @@ public class Server {
 	public static CommandHandler commands = new CommandHandler();
 
 	private static WorldMinigameManager minigameManager = new WorldMinigameManager(new WorldMinigameCodeLoader().load());
+	
+	public static DayCycle dayCycle = new DayCycle();
 
 	/**
 	 * True, if a server update countdown timer is active.
@@ -236,7 +239,9 @@ public class Server {
 		Server.loadSystems();
 		initiateConnections();
 		gameTick();
-
+		
+		//TODO Reinstate day/night cycle
+		//dayCycle.init();
 
 
 //		RepositoryManager<SlayerMaster, SlayerMasterRepository> repositoryManager = new SlayerMasterRepositoryManager();
