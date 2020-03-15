@@ -1421,7 +1421,7 @@ public class AdministratorCommand {
         } else if (command.startsWith("object")) {
             object(player, command);
             return true;
-        } else if (command.equals("npc")) {
+        } else if (command.startsWith("npc")) {
             npc(player, command);
             return true;
         } else if (command.startsWith("update")) {
@@ -2724,9 +2724,9 @@ public class AdministratorCommand {
      * @param playerCommand The command used by the player.
      */
     private static void object(Player player, String playerCommand) {
-        if (!ServerConfiguration.DEBUG_MODE) {
+        /*if (!ServerConfiguration.DEBUG_MODE) {
             return;
-        }
+        }*/
         String[] args = playerCommand.split(" ");
         int face = 0;
         if (args.length >= 3) {
