@@ -9,6 +9,7 @@ import game.content.miscellaneous.MithrilSeeds;
 import game.content.miscellaneous.RandomEvent;
 import game.content.miscellaneous.Transform;
 import game.content.music.SoundSystem;
+import game.content.peep.cycledays.DesertHeat;
 import game.object.ObjectEvent;
 import game.player.Player;
 import game.player.PlayerHandler;

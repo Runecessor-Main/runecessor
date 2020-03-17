@@ -116,6 +116,10 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private final Runecrafting runecrafting = new Runecrafting(this);
     private final Mining mining = new Mining(this);
 
+    public Location getLocation() {
+        return new Location(this.getX(),this.getHeight(),this.getY());
+    }
+
     public <S extends AbstractSkillBase<?> >S getSkill(Class<S> skillClass) {
         try {
             return skillClass.newInstance();
