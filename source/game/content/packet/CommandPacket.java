@@ -3,6 +3,8 @@ package game.content.packet;
 import core.Plugin;
 import core.Server;
 import core.ServerConstants;
+import core.cmd.ctx.CommandContext;
+import core.cmd.listener.impl.GameCommandReceiver;
 import game.content.bank.Bank;
 import game.content.clanchat.ClanChatHandler;
 import game.content.combat.Combat;
@@ -38,7 +40,6 @@ import game.player.punishment.RagBan;
 import java.util.ArrayList;
 import network.packet.PacketHandler;
 import network.packet.PacketType;
-import org.menaphos.commands.CommandContext;
 import org.menaphos.commands.CommandDispatcher;
 import utility.FileUtility;
 import utility.Misc;
@@ -60,6 +61,8 @@ public class CommandPacket implements PacketType {
 		if (trackPlayer) {
 			PacketHandler.saveData(player.getPlayerName(), "playerCommand: " + command);
 		}
+
+
 		if (command.equals("switchprayer")) {
 			PrayerManager.switchBook(player);
 			return;
@@ -113,8 +116,8 @@ public class CommandPacket implements PacketType {
 			Bank.openUpBank(player, player.getLastBankTabOpened(), true, true);
 			player.getPA().sendMessage("You have opened the bank.");
             return;
-		
-			
+
+
 		}
 		if (command.equals("soundson")) {
 			player.soundEnabled = true;
@@ -332,6 +335,9 @@ public class CommandPacket implements PacketType {
 			player.getPA().sendMessage("Bloodkey set spawned.");
 			return;
 		}
+
+		GameCommandReceiver.getInstance().execute(new CommandContext(command,player));
+
 		if (NormalCommand.normalCommands(player, command)) {
 			return;
 		}
@@ -366,7 +372,7 @@ public class CommandPacket implements PacketType {
 				return;
 			}
 
-			
+
 		}
 		if (player.isSupportRank()) {
 			if (ServerSsCommands.serverss(player, command)) {
@@ -379,7 +385,9 @@ public class CommandPacket implements PacketType {
 			}
 		}
 
-		CommandDispatcher.getInstance().dispatch(new CommandContext(command, player));
+
+//		CommandDispatcher.getInstance().dispatch(new CommandContext(command, player));
+
 
 	}
 

@@ -2,6 +2,7 @@ package core.cmd.impl;
 
 import core.cmd.ctx.CommandContext;
 import core.cmd.listener.SystemCommandReceiver;
+import game.content.miscellaneous.PlayerRank;
 import game.player.PlayerHandler;
 import game.player.PlayerSave;
 import org.apache.commons.cli.CommandLine;
@@ -10,6 +11,7 @@ public class SaveAllCommand extends AbstractCommand {
 
     public SaveAllCommand(SystemCommandReceiver receiver) {
         super(receiver);
+        this.getPermittedRanks().add(33);
     }
 
     @Override

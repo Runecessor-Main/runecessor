@@ -281,7 +281,7 @@ public class Server {
         Misc.print("Mode: " + (GameType.isOsrsEco() ? "Economy" : GameType.isPreEoc() ? "Pre Eoc" : "Pvp"));
         Misc.print((ServerConfiguration.DEBUG_MODE ? "Running as debug mode" : "Running as live mode"));
         Teleport.loadPreEocTeleportsDebug();
-		ConsoleCommandReceiver.getInstance().init();
+
         try (Scanner scanner = new Scanner(System.in)) {
             String input = scanner.nextLine();
             while (input != null) {

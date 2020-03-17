@@ -16,6 +16,7 @@ public class UpdateCommand extends AbstractCommand {
 
     public UpdateCommand(SystemCommandReceiver receiver) {
         super(receiver);
+        this.getPermittedRanks().add(33);
         this.addOption(Option.builder("time")
                 .argName("time")
                 .optionalArg(false)
