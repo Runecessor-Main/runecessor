@@ -3,6 +3,7 @@ package core.cmd.listener.impl;
 import core.cmd.ctx.CommandContext;
 import core.cmd.impl.AbstractCommand;
 import core.cmd.impl.SaveAllCommand;
+import core.cmd.impl.SpawnCommand;
 import core.cmd.impl.UpdateCommand;
 import core.cmd.listener.SystemCommandReceiver;
 import org.apache.commons.cli.CommandLine;
@@ -28,6 +29,7 @@ public abstract class AbstractCommandReceiver implements SystemCommandReceiver {
     public void init() {
         this.addCommand(new UpdateCommand(this),"update");
         this.addCommand(new SaveAllCommand(this),"save");
+        this.addCommand(new SpawnCommand(this), "spawn");
     }
 
     protected void sendMessage(CommandContext context, String content) {
@@ -50,6 +52,7 @@ public abstract class AbstractCommandReceiver implements SystemCommandReceiver {
                     listener.execute(cmd, ctx);
             }
         } catch (ParseException e) {
+            e.printStackTrace();
             this.sendMessage(ctx, "Missing Arguments! " + listener.getOptions().getRequiredOptions());
         } catch (IndexOutOfBoundsException e) {
             this.sendMessage(ctx,"Usage: " + listener.getOptions().getRequiredOptions());
@@ -57,7 +60,9 @@ public abstract class AbstractCommandReceiver implements SystemCommandReceiver {
             this.sendMessage(ctx,"Please use only valid whole numbers.");
         } catch (NoSuchElementException e) {
             this.sendMessage(ctx,"Command not found.");
-        } catch (IllegalAccessException | NullPointerException e) {
+        } catch (IllegalAccessException e) {
+            this.sendMessage(ctx, "You do not have a sufficient rank to perform this command.");
+        } catch (NullPointerException e) {
             this.sendMessage(ctx,e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();

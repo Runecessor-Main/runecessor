@@ -22,6 +22,14 @@ public abstract class AbstractCommand implements Command {
         this.permittedRanks = new ArrayList<>();
     }
 
+    protected String getArgWithSpaces(String[] args) {
+        final StringBuilder sb = new StringBuilder();
+        for (String arg: args) {
+            sb.append(arg).append(" ");
+        }
+        return sb.toString();
+    }
+
     public boolean canExecute(CommandContext ctx) throws IllegalAccessException {
         final PlayableCharacter player = ctx.getAuthor();
 
