@@ -9,6 +9,7 @@ import game.content.dialogueold.DialogueHandler.FacialAnimation;
 import game.content.item.ItemInteractionManager;
 import game.content.miscellaneous.Ectofuntus.Bonemeal;
 import game.content.miscellaneous.RevenantCavesNpc;
+import game.content.phantasye.gambling.DiceNPCBase;
 import game.content.skilling.summoning.pet.SummoningPetManager;
 import game.content.skilling.summoning.pet.impl.BabyTroll;
 import game.content.skilling.thieving.Stalls.StallItems;
@@ -21,6 +22,8 @@ import game.player.event.CycleEvent;
 import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import utility.Misc;
+
+import java.util.Objects;
 
 public class ItemOnNpc {
 

@@ -47,6 +47,8 @@ import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import utility.Misc;
 
+import java.util.Objects;
+
 /**
  * First click on NPC interactions.
  *
@@ -152,7 +154,7 @@ public class FirstClickNpc {
 				GraveDigger.getInstance().talkToDeath(player);
 				break;
 			case 2713:
-				DiceNPCBase.getInstance(NpcHandler.getNpcByNpcId(2713).npcIndex).talkTo(player);
+				DiceNPCBase.getInstance(Objects.requireNonNull(NpcHandler.getNpcByNpcId(2713)).npcIndex).talkTo(player);
 				break;
 			// Gambler
 			case NpcDoubleItemsInterface.NPC_ID :

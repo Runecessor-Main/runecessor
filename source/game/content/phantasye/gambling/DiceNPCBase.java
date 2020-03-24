@@ -3,14 +3,17 @@ package game.content.phantasye.gambling;
 import core.GameType;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
+import game.content.starter.GameMode;
 import game.item.GameItem;
 import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.npc.CustomNpcComponent;
 import game.npc.Npc;
 import game.npc.NpcHandler;
+import game.npc.pet.BossPetDrops;
 import game.player.Player;
 import game.type.GameTypeIdentity;
+import org.menaphos.Menaphos;
 import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.entity.impl.item.container.ItemContainer;
@@ -18,8 +21,10 @@ import org.menaphos.entity.impl.item.container.impl.DefaultItemContainerImpl;
 
 import org.menaphos.entity.impl.item.container.impl.MerchandiseItemContainerImpl;
 
+import org.menaphos.model.loot.Loot;
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
+import org.menaphos.model.task.Task;
 import org.menaphos.model.world.location.Location;
 import utility.Misc;
 
@@ -156,21 +161,21 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     }
 
     private void payout() {
-        playersWager.forEach(item->payPlayer(item.getId(),item.getAmount()));
+        playersWager.forEach(item -> payPlayer(item.getId(), item.getAmount()));
         this.reset();
     }
 
     private void payPlayer(int id, int amount) {
         final int payout = amount * 2;
-        if(!removeItemFromInventory(id,payout)) {
-             removeItemFromInventory(COINS,ItemDefinition.getDefinitions()[id].price * amount);
+        if (!removeItemFromInventory(id, payout)) {
+            removeItemFromInventory(COINS, ItemDefinition.getDefinitions()[id].price * amount);
         }
         if (ItemAssistant.getItemAmount(player, id) + payout < Integer.MAX_VALUE && id != COINS) {
             player.addItemToInventory(id, payout);
-        } else if(id == COINS){
+        } else if (id == COINS) {
             payoutDispenseChain.payout(payout);
         } else {
-            payoutDispenseChain.payout((ItemDefinition.getDefinitions()[id].price * amount) * 2) ;
+            payoutDispenseChain.payout((ItemDefinition.getDefinitions()[id].price * amount) * 2);
         }
     }
 
@@ -220,6 +225,26 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
         }
     }
 
+    private void announce(String text) {
+        NpcHandler.getNpcByNpcId(this.getId()).forceChat(text);
+    }
+
+    public boolean instantItemGamble(int itemId, Player player) {
+        switch (itemId) {
+            case 6570:
+                this.announce(player.getPlayerName() + " is gambling their Fire Cape for a Jad pet, good luck!");
+                if (Misc.hasOneOutOf(GameMode.getDropRate(player, BossPetDrops.DROP_RATE_JAD_PET))) {
+                    BossPetDrops.awardBoss(player, 13225, 13225, 6506, "BOSS");
+                } else {
+                    player.receiveMessage("You lose.");
+                    this.announce(player.getPlayerName() + " has lost their Fire Cape! Better luck next time.");
+                    player.removeItemFromInventory(6570,1);
+                }
+                return true;
+        }
+        return false;
+    }
+
     public void announce() {
         if (player == null) {
             this.sendMessage("I am now accepting trades! Use the item(s) you wish to wager on me!");
@@ -240,8 +265,6 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
             } else {
                 this.sendMessage("I'm currently dicing with " + this.player.getPlayerName() + " please come back in a bit.");
             }
-        } else {
-            this.talkTo(player);
         }
         return false;
     }
@@ -294,7 +317,8 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
 
     @Override
     public void sendMessage(String s) {
-        NpcHandler.getNpcByNpcId(this.getId()).forceChat(s);
+//        NpcHandler.getNpcByNpcId(this.getId()).forceChat(s);
+        player.setDialogueChain(new DialogueChain().npc(this.getDefinition(), DialogueHandler.FacialAnimation.DEFAULT).statement(s)).start(player);
     }
 
     @Override
