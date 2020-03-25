@@ -1153,7 +1153,8 @@ public class Combat {
 			case 10887:
 			case 12788: // Magic shortbow (i).
 			case 12926: // Toxic blowpipe.
-			case 6075:
+			case 6075: // Magma Blowpipe
+			case 6077: // Craw's OP
 			case 4151: // Abyssal whip
 			case 12773: // Volcanic abyssal whip
 			case 12774: // Frozen abyssal whip
@@ -2077,6 +2078,7 @@ public class Combat {
 			case 12924:
 			case 12926:
 			case 6075:
+			case 6077:
 			case 12928:
 			case 12930:
 			case 12932:
@@ -2446,7 +2448,7 @@ public class Combat {
 				return 2;
 			}
 		}
-		if (weaponName.equalsIgnoreCase("magma blowpipe") || WeaponSpeed.matching(WeaponSpeed.SPEED_3_TICKS, weaponName)) {
+		if (weaponName.equalsIgnoreCase("Craw's Op Bow") || weaponName.equalsIgnoreCase("magma blowpipe") || WeaponSpeed.matching(WeaponSpeed.SPEED_3_TICKS, weaponName)) {
 			int speed = 3;
 			if (player.getCombatStyle(ServerConstants.ACCURATE) || player.getCombatStyle(ServerConstants.LONG_RANGED)) {
 				speed = 4;
@@ -2651,6 +2653,7 @@ public class Combat {
 
 			case 22550: // Craw's bow
 			case 22547: // Craw's bow (u)
+			case 6077:
 				return 1611;
 
 			case 20849: // Dragon thrownaxe

@@ -28,7 +28,7 @@ public class Mining {
 
 	public static final int RUNE_ESSENCE_ITEM = 1436;
 
-	public static final int ESSENCE_ORE = 1436;
+	public static final int ESSENCE_ORE = 7471;
 
 	public static final int CLAY = 7454;
 

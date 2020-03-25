@@ -1629,9 +1629,11 @@ public class ItemAssistant {
 		if (ItemDefinition.getDefinitions()[itemId] != null) {
 			return ItemDefinition.getDefinitions()[itemId].name;
 		}
+		if(itemId == 6077) {
+			return "Craw's Op Bow";
+		}
 		return "Unarmed";
 	}
-
 	public static int getItemId(String itemName, boolean notedOnly) {
 		for (int i = 0; i < ServerConstants.MAX_ITEM_ID; i++) {
 			if (ItemDefinition.getDefinitions()[i] != null) {

@@ -56,7 +56,7 @@ public class RangedAmmoUsed {
 		}
 
 		// Toxic blowpipe, Crystal bow full, Craw's bow
-		if (player.getDroppedRangedWeaponUsed() == 6075 || player.getDroppedRangedWeaponUsed() == 12926 || player.getDroppedRangedWeaponUsed() == 4214 || player.getDroppedRangedWeaponUsed() == 22550 || player.getDroppedRangedWeaponUsed() == 22547) {
+		if (player.getDroppedRangedWeaponUsed() == 6075 || player.getDroppedRangedWeaponUsed() == 6077 || player.getDroppedRangedWeaponUsed() == 12926 || player.getDroppedRangedWeaponUsed() == 4214 || player.getDroppedRangedWeaponUsed() == 22550 || player.getDroppedRangedWeaponUsed() == 22547) {
 			return;
 		}
 		if (ItemAssistant.hasItemEquippedSlot(player, player.getDroppedRangedWeaponUsed(), ServerConstants.WEAPON_SLOT)) {

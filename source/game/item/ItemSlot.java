@@ -279,7 +279,8 @@ public class ItemSlot {
 			case 20756 : // Hill giant club
 			case 12899 : // Trident of the swamp.
 			case 12926 : // Toxic blowpipe.
-			case 6075:
+			case 6075:	 // Magma Blowpipe.
+			case 6077:	 // Craw's OP.
 			case 13263 : // Abyssal buldgeon.
 			case 19918 : // Nunchaku
 			case 19941 : // Heavy casket

@@ -132,6 +132,7 @@ public class RangedData {
 			{4214, 1, 0}, // Crystal bow
 		{22547, 1, 0}, // Craw's bow (u)
 		{22550, 1, 0}, // Craw's bow
+		{6077, 1, 0}, // Craw's bow OP
 			{6522, 0, 1}, // Toktz-xil-ul.
 			{10033, 0, 1}, // grey chin
 			{10034, 0, 1}, // red chin
@@ -142,6 +143,7 @@ public class RangedData {
 			{11959, 0, 1}, // black chin
 			{12926, 1, 1}, // Toxic blowpipe.
 			{6075, 1, 1}, // Toxic blowpipe.
+			{6077, 1, 1}, // Toxic blowpipe.
 			{20849, 0, 1}, // Dragon thrownaxe
 		{22634, 1, 1}, // Morrigan's throwing axe
 		{22636, 1, 1}, // Morrigan's javelin
@@ -257,6 +259,7 @@ public class RangedData {
 			case 12926: // Toxic blowpipe.
 			case 6075:
 				return 5061;
+
 			case 6522:
 				// Toktz-xil-ul (tzhaar range weapon, looks like a hoolahoop)
 				return 2614;

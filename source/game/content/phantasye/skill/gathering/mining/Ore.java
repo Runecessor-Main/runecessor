@@ -1,7 +1,8 @@
 package game.content.phantasye.skill.gathering.mining;
 
 public enum Ore {
-
+	
+	ESSENCE(1, 18, 2, 7936, 7471),
     COPPER(1, 18, 3, 436, 7484, 7453),
     TIN(1, 18, 3, 438, 7485, 7486),
     CLAY(1, 10, 3, 434, 7454, 7487),

@@ -466,7 +466,7 @@ public class CombatNpc {
             maximum *= 1.2;
         }
 
-        if (attacker.getWieldedWeapon() == 22550 || attacker.getWieldedWeapon() == 6075) {
+        if (attacker.getWieldedWeapon() == 22550 || attacker.getWieldedWeapon() == 6075 || attacker.getWieldedWeapon() == 6077) {
             rangedAttack *= 2.5;
             maximum *= 2.3;
         }
@@ -1631,7 +1631,7 @@ public class CombatNpc {
                 }
 
                 // Blowpipe
-                if ((attacker.getWieldedWeapon() == 12926 || attacker.getWieldedWeapon() == 6075) && Misc.hasOneOutOf(4)) {
+                if ((attacker.getWieldedWeapon() == 12926 || attacker.getWieldedWeapon() == 6077 || attacker.getWieldedWeapon() == 6075) && Misc.hasOneOutOf(4)) {
                     if (Venom.ENABLE_VENOM) {
                         applyVenomOnNpc(attacker, npc);
                     } else {
@@ -1640,7 +1640,7 @@ public class CombatNpc {
                 }
                 RangedAmmoUsed.dropAmmo(attacker, npc.getX(), npc.getY(), npc.getHeight());
                 npc.underAttack = true;
-                if(attacker.getWieldedWeapon() != 6075) {
+                if(attacker.getWieldedWeapon() != 6075 || attacker.getWieldedWeapon() != 6077) {
                     CombatNpc.applyHitSplatOnNpc(attacker, npc, damage, ServerConstants.NORMAL_HITSPLAT_COLOUR,
                             ServerConstants.RANGED_ICON, 1);
                 } else {

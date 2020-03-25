@@ -338,7 +338,9 @@ public class RangedFormula {
 				return strength += 117;
 			case 22636: // Morrigan's javelin
 				return strength += 145;
-
+			//craws op
+			case 6077:
+				return strength += 116;	
 			// Crystal bow, this stops arrows and bolts giving extra damage.
 			case 4214:
 				return strength += 70;

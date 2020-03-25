@@ -25,7 +25,7 @@ public enum Chargeable {
 			Sets.newHashSet(new GameItem(21820, 16_000)),
 			Sets.newHashSet(new GameItem(21820, 1)),
 			Sets.newHashSet(new GameItem(21820, 1_000)));
-
+	
 	private final int id;
 
 	private final int unchargedId;
