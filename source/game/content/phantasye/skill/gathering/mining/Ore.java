@@ -35,7 +35,7 @@ public enum Ore {
     }
 
     public int getRespawnTime() {
-        return respawnTime;
+        return respawnTime/2;
     }
 
     public int getItemId() {
