@@ -501,6 +501,14 @@ public class FirstClickObject {
 			player.agility4 = System.currentTimeMillis();
 			player.getPA().movePlayer(3126, 3832, 0);
 			break;
+		case 29210:
+		case 29217:
+		case 29216:
+		case 29215:
+		case 29214:
+		case 29213:
+		case 29212:
+		case 29218:
 		case 29211: // skillcape shop
 			player.getShops().openShop(9);
 			break;

@@ -26,50 +26,50 @@
 	{
 		"npc_name":"Turael",
 		"npc_type":401,
-		"x":3110,
-		"y":3514,
+		"x":3077,
+		"y":3493,
 		"height":0,
-		"face_action":"NORTH"
+		"face_action":"EAST"
 	},
 	{
 		"npc_name":"Mazchna",
 		"npc_type":402,
-		"x":3111,
-		"y":3514,
+		"x":3077,
+		"y":3492,
 		"height":0,
-		"face_action":"NORTH"
+		"face_action":"EAST"
 	},
 	{
 		"npc_name":"Vannaka",
 		"npc_type":403,
-		"x":3112,
-		"y":3514,
+		"x":3077,
+		"y":3494,
 		"height":0,
-		"face_action":"NORTH"
+		"face_action":"EAST"
 	},
 	{
 		"npc_name":"Chaeldar",
 		"npc_type":404,
-		"x":3113,
-		"y":3514,
+		"x":3077,
+		"y":3495,
 		"height":0,
-		"face_action":"NORTH"
+		"face_action":"EAST"
 	},
 	{
 		"npc_name":"Duradel",
 		"npc_type":405,
-		"x":3114,
-		"y":3514,
+		"x":3077,
+		"y":3496,
 		"height":0,
-		"face_action":"NORTH"
+		"face_action":"EAST"
 	},
 	{
 		"npc_name":"Dice Man",
 		"npc_type": 2713,
-		"x":3087,
+		"x":3091,
 		"y":3497,
 		"height":0,
-		"face_action":"WEST"
+		"face_action":"EAST"
 	},
 	{
       "npc_name":"Martin the Master Gardener",
@@ -749,9 +749,9 @@
 		"npc_name": "Adam",
 		"npc_type": 311,
 		"x": 3078,
-		"y": 3506,
+		"y": 3507,
 		"height": 0,
-		"face_action": "SOUTH"
+		"face_action": "NORTH"
 	},
 	{
 	"npc_name": "Adam",
@@ -1016,8 +1016,8 @@
 	{
 	    "npc_name":"Guide",
 		"npc_type":3312, 
-		"x":3209,
-		"y":3435,
+		"x":3091,
+		"y":3506,
 		"height":0,
 		"face_action":"SOUTH"
 	},
@@ -1032,10 +1032,10 @@
 	{
 	    "npc_name":"Vote Manager",
 		"npc_type":7283, 
-		"x":3214,
-		"y":3425,
+		"x":3091,
+		"y":3496,
 		"height":0,
-		"face_action":"SOUTH"
+		"face_action":"EAST"
 	},
 	{
 	    "npc_name":"Lowe",
@@ -1044,30 +1044,6 @@
 		"y":3421,
 		"height":0,
 		"face_action":"ROAM"
-	},
-	{
-	    "npc_name":"Piles",
-		"npc_type":13, 
-		"x":3082,
-		"y":3507,
-		"height":0,
-		"face_action":"NORTH"
-	},
-	{
-	    "npc_name":"Thug Life",
-		"npc_type":784, 
-		"x":3084,
-		"y":3508,
-		"height":0,
-		"face_action":"WEST"
-	},
-	{
-	    "npc_name":"Capes",
-		"npc_type":4784, 
-		"x":3092,
-		"y":3488,
-		"height":0,
-		"face_action":"NORTH"
 	},
 	{
 	    "npc_name":"Banker",
@@ -1136,6 +1112,54 @@
 		"height":0,
 		"face_action":"WEST",
 		"behind_wall_distance":2
+	},
+	{
+		"npc_name":"Banker",
+		"npc_type":395,
+		"x":3096,
+		"y":3494,
+		"height":0,
+		"face_action":"WEST"
+	},
+		{
+		"npc_name":"Banker",
+		"npc_type":394,
+		"x":3096,
+		"y":3493,
+		"height":0,
+		"face_action":"WEST"
+	},
+		{
+		"npc_name":"Banker",
+		"npc_type":394,
+		"x":3096,
+		"y":3492,
+		"height":0,
+		"face_action":"WEST"
+	},
+		{
+		"npc_name":"Banker",
+		"npc_type":395,
+		"x":3096,
+		"y":3491,
+		"height":0,
+		"face_action":"WEST"
+	},
+		{
+		"npc_name":"Banker",
+		"npc_type":396,
+		"x":3096,
+		"y":3490,
+		"height":0,
+		"face_action":"WEST"
+	},
+		{
+		"npc_name":"Banker",
+		"npc_type":395,
+		"x":3096,
+		"y":3489,
+		"height":0,
+		"face_action":"WEST"
 	},
 	{
 	    "npc_name":"Zaff",
@@ -1342,10 +1366,9 @@
       "npc_name":"shop",
       "npc_type":517,
       "x":3079,
-      "y":3506,
+      "y":3507,
       "height":0,
-      "face_action":"SOUTH",
-      "behind_wall_distance": 1
+      "face_action":"NORTH"
    },
     {
       "npc_name":"shop",
@@ -1484,6 +1507,78 @@
       "height":0,
       "face_action":"EAST"
    },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":3913,
+      "x":3087,
+      "y":3498,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":635,
+      "x":3088,
+      "y":3499,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":1506,
+      "x":3088,
+      "y":3500,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":3914,
+      "x":3087,
+      "y":3501,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":3913,
+      "x":3086,
+      "y":3501,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":635,
+      "x":3085,
+      "y":3500,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":1506,
+      "x":3085,
+      "y":3499,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":3914,
+      "x":3108,
+      "y":3489,
+      "height":0,
+      "face_action":"EAST"
+   },
+       {
+      "npc_name":"Fishing spot",
+      "npc_type":3914,
+      "x":3086,
+      "y":3498,
+      "height":0,
+      "face_action":"EAST"
+   },
    {
       "npc_name":"Fishing spot",
       "npc_type":3913,
@@ -1522,41 +1617,41 @@
       "npc_name":"Zeke",
       "npc_type":527,
 		"x": 3076,
-		"y": 3512,
+		"y": 3509,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"EAST"
    },
     {
       "npc_name":"horvik",
       "npc_type":535,
-		"x": 3077,
-		"y": 3512,
+		"x": 3076,
+		"y": 3510,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"EAST"
    },
     {
       "npc_name":"archer",
       "npc_type":6066,
-		"x": 3078,
-		"y": 3512,
+		"x": 3076,
+		"y": 3511,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"EAST"
    },
      {
       "npc_name":"mager",
       "npc_type":3246,
-		"x": 3079,
+		"x": 3076,
 		"y": 3512,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"EAST"
    },
     {
       "npc_name":"giles",
       "npc_type":5438,
-		"x": 3080,
-		"y": 3512,
+		"x": 3076,
+		"y": 3508,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"EAST"
    },
    {
       "npc_name":"giles",
@@ -1577,8 +1672,8 @@
     {
       "npc_name":"pure",
       "npc_type":4414,
-		"x": 3081,
-		"y": 3512,
+		"x": 3077,
+		"y": 3513,
       "height":0,
       "face_action":"SOUTH"
    },
@@ -1593,16 +1688,16 @@
     {
       "npc_name":"wiseoldman",
       "npc_type":2108,
-		"x": 3082,
-		"y": 3512,
+		"x": 3078,
+		"y": 3513,
       "height":0,
       "face_action":"SOUTH"
    },
     {
       "npc_name":"Skilling",
       "npc_type":513,
-		"x": 3083,
-		"y": 3512,
+		"x": 3079,
+		"y": 3513,
       "height":0,
       "face_action":"SOUTH"
    },
@@ -1860,8 +1955,8 @@
    {
       "npc_name":"Makeover mage",
       "npc_type":1306,
-     	"x": 3084,
-		"y": 3512,
+     	"x": 3083,
+		"y": 3513,
       "height":0,
       "face_action":"SOUTH"
    },
@@ -1876,24 +1971,8 @@
    {
       "npc_name":"Bob",
       "npc_type":505,
-      "x":3093,
+      "x":3092,
       "y":3513,
-      "height":0,
-      "face_action":"SOUTH"
-   },
-   {
-      "npc_name":"Guide",
-      "npc_type":3312,
-      "x":3100,
-      "y":3506,
-      "height":0,
-      "face_action":"SOUTH"
-   },
-   {
-      "npc_name":"Vote Manager",
-      "npc_type":7283,
-      "x":3093,
-      "y":3499,
       "height":0,
       "face_action":"SOUTH"
    },
@@ -1908,10 +1987,10 @@
    {
 	  "npc_name": "Sir Prysin",
 	  "npc_type": 5083,
-      "x":3099,
-      "y":3513,
+      "x":3082,
+      "y":3497,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"WEST"
    },
    {
       "npc_name":"Banker",
@@ -2172,10 +2251,10 @@
    {
       "npc_name":"Void Knight",
       "npc_type":1758,
-      "x":3090,
-      "y":3513,
+      "x":3082,
+      "y":3496,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"WEST"
    },
    {
       "npc_name":"TzHaar-Hur-Tel",
@@ -2228,16 +2307,16 @@
    {
       "npc_name":"Hatius Cosaintus",
       "npc_type":5523,
-      "x":3092,
-      "y":3499,
+      "x":3091,
+      "y":3495,
       "height":0,
-      "face_action":"SOUTH"
+      "face_action":"EAST"
    },
    {
       "npc_name":"title",
       "npc_type":8045,
-      "x":3091,
-      "y":3506,
+      "x":3093,
+      "y":3513,
       "height":0,
       "face_action":"SOUTH"
    },
@@ -2268,8 +2347,8 @@
    {
       "npc_name":"Barbarian",
       "npc_type":7285,
-      "x":3093,
-      "y":3506,
+      "x":3091,
+      "y":3513,
       "height":0,
       "face_action":"SOUTH"
    },

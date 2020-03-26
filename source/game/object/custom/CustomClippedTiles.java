@@ -342,8 +342,21 @@ public class CustomClippedTiles {
 			Region.addObject(3194, 3096, 3514, 0, 10, 0, false); // Chest.
 			Region.addObject(3194, 3112, 3516, 0, 10, 0, false); // Chest.
 		}
-		Region.addObject(9758, 3089, 3507,  0, 0, 1, false); // Chest
-
+		//Region.addObject(9758, 3089, 3507,  0, 0, 1, false); // Chest
+		//home
+		Region.addObject(1, 3086, 3498,  0, 0, 1, false); // blank
+		Region.addObject(1, 3087, 3498,  0, 0, 1, false); // blank
+		Region.addObject(1, 3088, 3498,  0, 0, 1, false); // blank
+		Region.addObject(1, 3088, 3499,  0, 0, 1, false); // blank
+		Region.addObject(1, 3088, 3500,  0, 0, 1, false); // blank
+		Region.addObject(1, 3088, 3501,  0, 0, 1, false); // blank
+		Region.addObject(1, 3087, 3501,  0, 0, 1, false); // blank
+		Region.addObject(1, 3086, 3501,  0, 0, 1, false); // blank
+		Region.addObject(1, 3085, 3501,  0, 0, 1, false); // blank
+		Region.addObject(1, 3085, 3500,  0, 0, 1, false); // blank
+		Region.addObject(1, 3085, 3499,  0, 0, 1, false); // blank
+		Region.addObject(1, 3085, 3498,  0, 0, 1, false); // blank
+	
 		// Staff zone
 		Region.addObjectActionTile(3194, 2698, 3250, 0, 1, 1); // Chest
 		Region.addObjectActionTile(24452, 2699, 3250, 0, 1, 1); // Staff activity booth
