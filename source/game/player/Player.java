@@ -63,6 +63,7 @@ import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.npc.Npc;
 import game.npc.NpcHandler;
+import game.npc.data.NpcDefinition;
 import game.object.clip.ObjectDefinitionServer;
 import game.object.clip.Region;
 import game.object.custom.Object;
@@ -90,6 +91,7 @@ import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.model.finance.transaction.currency.Currency;
 import org.menaphos.model.finance.transaction.currency.CurrencyRequest;
+import org.menaphos.model.math.Range;
 import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.content.shop.model.PurchaseRequest;
 import org.menaphos.model.world.content.shop.model.shopper.session.ShoppingSession;
@@ -181,6 +183,15 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     @Override
     public void receiveDropFrom(NonPlayableCharacter npc, org.menaphos.model.loot.Loot loot, Location location) {
+        if(Range.within(loot.getPercentDrop() * 100,new Range(1,4))) {
+            Announcement.announce(ServerConstants.GREEN_COL + GameMode.getGameModeName(this)
+                    + " has received a Legendary drop of one " + ItemAssistant.getItemName(loot.getItem().getId()) + " from "
+                    + NpcDefinition.getDefinitions()[npc.getId()].name + "!");
+        } else if(Range.within(loot.getPercentDrop() * 100,new Range(5,9))) {
+            Announcement.announce(ServerConstants.GREEN_COL + GameMode.getGameModeName(this)
+                    + " has received a very rare drop of one " + ItemAssistant.getItemName(loot.getItem().getId()) + " from "
+                    + NpcDefinition.getDefinitions()[npc.getId()].name + "!");
+        }
         if (this.getPetId() == 11024 && !(loot.getItem().getId() == 13307)) {
             this.receiveMessage("<col=0099ff>Yoshi Pet Collected item to your bank.");
             this.receiveMessage("Item Name: <col=0099ff>" + ItemAssistant.getItemName(loot.getItem().getId()));
