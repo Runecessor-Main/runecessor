@@ -1,6 +1,8 @@
 package game.npc;
 
 import core.*;
+import game.content.achievement.AchievementStatistics;
+import game.content.achievement.Achievements;
 import game.content.combat.Combat;
 import game.content.combat.Poison;
 import game.content.combat.Venom;
@@ -1821,6 +1823,8 @@ public class NpcHandler {
                     npc.respawnTimer = respawnTimer;
                     dropLoot(npc);
                     Player player = PlayerHandler.players[npc.getKilledBy()];
+                    player.getNpcKillTrackerForNpc(npc.npcType).increment();
+                    Achievements.checkCompletionMultiple(player,"31");
 //                    Combat.dropMagicFindRing(player, npc);
 //                    DegradingManager.degradeFromKills(player);
                     npc.afterDeath();

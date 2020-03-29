@@ -130,3 +130,17 @@ Requirements Sub Text: 99 in all skills &
 Requirements Sub Text: Hard achievements completed
 Title Id: 53
 Complete Amount: 2079
+
+Title: Dickhead
+Title After Name: No
+Requirements Sub Text: Kill 150 Rock Crabs
+Requirements Sub Text:
+Title Id: 100
+Complete Amount: 150
+
+Title: Dickhead
+Title After Name: No
+Requirements Sub Text: Kill 150 Rock Crabs
+Requirements Sub Text:
+Title Id: 100
+Complete Amount: 150

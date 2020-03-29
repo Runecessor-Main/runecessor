@@ -77,6 +77,8 @@ public class Achievements {
 			case 29:
 			case 30:
 				return player.getF2pKills();
+			case 31:
+				return player.getKillCountForNpc(100);
 		}
 		String achievementSaveName = "";
 		for (int index = 0; index < AchievementDefinitions.idAndSaveName.size(); index++) {
@@ -151,7 +153,7 @@ public class Achievements {
 		player.achievementPoint += pointsAmount;
 		player.achievementPointHistory += pointsAmount;
 		player.gfx100(199);
-		boolean announce = false;
+		boolean announce = player.achievementsCompleted.size() >= AchievementDefinitions.getDefinitions().length;
 		if (!player.achievementDifficultyCompleted[EASY]) {
 			player.achievementDifficultyCompleted[EASY] = true;
 		}

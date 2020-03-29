@@ -364,6 +364,9 @@ public class PlayerTitle {
 			case 64:
 			case 65:
 				return Achievements.getArraylistCount("rareDrops", player.achievementProgress);
+			case 100:
+			case 101:
+				return player.getKillCountForNpc(100);
 		}
 		return Achievements.getArraylistCount(titleSaveName, player.achievementProgress);
 	}

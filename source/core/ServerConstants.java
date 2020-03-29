@@ -11,6 +11,10 @@ import utility.Misc;
  * Constants regarding whole server.
  */
 public class ServerConstants {
+	public static final double GLADIATOR_COMBAT_XP_MULTIPLIER = 40.0d;
+	public static final double GLADIATOR_XP_MULTIPLIER = 20.0d;
+	public static final double COMBAT_XP_MULTIPLIER = 80.0d;
+	public static final double XP_MULTIPLIER = 45.0d;
 	/**
 	 * All custom donator item requests.
 	 */

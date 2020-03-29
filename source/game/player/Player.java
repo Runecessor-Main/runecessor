@@ -90,6 +90,7 @@ import org.menaphos.entity.impl.impl.NonPlayableCharacter;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.model.finance.transaction.currency.Currency;
 import org.menaphos.model.finance.transaction.currency.CurrencyRequest;
+import org.menaphos.model.math.impl.AdjustableInteger;
 import org.menaphos.model.world.content.shop.model.PurchaseRequest;
 import org.menaphos.model.world.content.shop.model.shopper.session.ShoppingSession;
 import org.menaphos.model.world.location.Location;
@@ -116,11 +117,24 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private final Runecrafting runecrafting = new Runecrafting(this);
     private final Mining mining = new Mining(this);
 
-    public Location getLocation() {
-        return new Location(this.getX(),this.getHeight(),this.getY());
+    public int getKillCountForNpc(int npcId) {
+        if (playerDetails.getNpcKillMap().get(npcId) != null)
+            return playerDetails.getNpcKillMap().get(npcId).value();
+        return 0;
     }
 
-    public <S extends AbstractSkillBase<?> >S getSkill(Class<S> skillClass) {
+    public AdjustableInteger getNpcKillTrackerForNpc(int npcId) {
+        if (playerDetails.getNpcKillMap().get(npcId) != null)
+            return playerDetails.getNpcKillMap().get(npcId);
+        playerDetails.getNpcKillMap().put(npcId, new AdjustableInteger(0));
+        return playerDetails.getNpcKillMap().get(npcId);
+    }
+
+    public Location getLocation() {
+        return new Location(this.getX(), this.getHeight(), this.getY());
+    }
+
+    public <S extends AbstractSkillBase<?>> S getSkill(Class<S> skillClass) {
         try {
             return skillClass.newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
@@ -134,12 +148,12 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     public int getSlayerPoints() {
-    	if(playerDetails != null) {
-    		return playerDetails.getSlayerPoints().value();
-    	}
-    	return 0;
+        if (playerDetails != null) {
+            return playerDetails.getSlayerPoints().value();
+        }
+        return 0;
     }
-    
+
     public Runecrafting getRunecrafting() {
         return runecrafting;
     }
@@ -393,19 +407,19 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 //        	modifier += 0.15;
 //        }
         if (modifier > 0.6)
-        	modifier = 0.6;
+            modifier = 0.6;
         return this.getMagicFindRating() + (modifier * 100);
 
     }
 
     //public int getSlayerPoints() {
-      //  if(playerDetails != null)
-        //    return playerDetails.getSlayerPoints().value();
-        //return 0;
+    //  if(playerDetails != null)
+    //    return playerDetails.getSlayerPoints().value();
+    //return 0;
     //}
 
     public int getMagicFindRating() {
-        if(playerDetails != null)
+        if (playerDetails != null)
             return playerDetails.getMagicFindRating().value();
         return 0;
     }
@@ -7126,7 +7140,7 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     public void turnPlayerTo(Location location) {
-        this.turnPlayerTo(location.getXCoordinate(),location.getZCoordinate());
+        this.turnPlayerTo(location.getXCoordinate(), location.getZCoordinate());
     }
 
     private void appendSetFocusDestination(Stream str) {

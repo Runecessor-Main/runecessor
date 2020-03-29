@@ -267,3 +267,21 @@ Item Rewards: 2665 2661 2663 3479 2667
 Achievement Save Name:
 Complete Amount: 150
 Achievement Id: 30
+
+Achievement title: Kill 150 Rock Crabs
+Description Sub Text: Kill 150 Rock Crabs
+Description Sub Text:
+Title Unlocked: Dickhead
+Item Rewards: 1040
+Achievement Save Name:
+Complete Amount: 150
+Achievement Id: 31
+
+Achievement title: Kill 500 Rock Crabs
+Description Sub Text: Kill 500 Rock Crabs
+Description Sub Text:
+Title Unlocked: Dickhead
+Item Rewards: 1040
+Achievement Save Name:
+Complete Amount: 500
+Achievement Id: 32

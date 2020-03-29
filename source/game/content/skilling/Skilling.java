@@ -502,15 +502,15 @@ public class Skilling {
     /**
      * Get the base experience multiplier.
      */
-    private static int getBaseExperience(Player player, int skill) {
+    private static double getBaseExperience(Player player, int skill) {
         if (GameType.isOsrsPvp()) {
             return 25;
         }
 
         if (isCombatSkill(skill)) {
-            return GameMode.getDifficulty(player, "GLADIATOR") ? 40 : 80;
+            return GameMode.getDifficulty(player, "GLADIATOR") ? ServerConstants.GLADIATOR_COMBAT_XP_MULTIPLIER : ServerConstants.COMBAT_XP_MULTIPLIER;
         }
-        return GameMode.getDifficulty(player, "GLADIATOR") ? 20 : 45;
+        return GameMode.getDifficulty(player, "GLADIATOR") ? ServerConstants.GLADIATOR_XP_MULTIPLIER : ServerConstants.XP_MULTIPLIER;
     }
 
     /**
@@ -552,54 +552,54 @@ public class Skilling {
                     player.getPlayerDetails().getMythicalCapeCharges().subtract(10);
                 }
             }
-            if (skill == ServerConstants.AGILITY) {
-                experience *= 1.6;
-            } else if (skill == ServerConstants.MINING || skill == ServerConstants.SMITHING) {
-                experience *= 1.2;
-            } else if (skill == ServerConstants.FARMING) {
-                experience *= 1.6;
-            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 13258 && skill == ServerConstants.FISHING
-                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 13259 && skill == ServerConstants.FISHING
-                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 13260 && skill == ServerConstants.FISHING
-                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 13261 && skill == ServerConstants.FISHING) {
-
-                experience *= 2.5;
-
-            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 10941
-                    && skill == ServerConstants.WOODCUTTING
-                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 10939
-                    && skill == ServerConstants.WOODCUTTING && player.playerEquipment[ServerConstants.LEG_SLOT] == 10940
-                    && skill == ServerConstants.WOODCUTTING
-                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 10933
-                    && skill == ServerConstants.WOODCUTTING) {
-
-                experience *= 2.5;
-
-            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 20708 && skill == ServerConstants.FIREMAKING
-                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 20704 && skill == ServerConstants.FIREMAKING
-                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 20706 && skill == ServerConstants.FIREMAKING
-                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 20710
-                    && skill == ServerConstants.FIREMAKING) {
-
-            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 13646 && skill == ServerConstants.FARMING
-                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 13642 && skill == ServerConstants.FARMING
-                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 13640 && skill == ServerConstants.FARMING
-                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 13644
-                    && skill == ServerConstants.FARMING) {
-
-                experience *= 2.5;
-            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 12013 && skill == ServerConstants.MINING
-                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 12014 && skill == ServerConstants.MINING
-                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 12015 && skill == ServerConstants.MINING
-                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 12016
-                    && skill == ServerConstants.MINING) {
-
-                experience *= 2.5;
-
-
-            } else if (player.getPetId() == 11062) {
-                experience *= 2.00;
-            }
+//            if (skill == ServerConstants.AGILITY) {
+//                experience *= 1.6;
+//            } else if (skill == ServerConstants.MINING || skill == ServerConstants.SMITHING) {
+//                experience *= 1.2;
+//            } else if (skill == ServerConstants.FARMING) {
+//                experience *= 1.6;
+//            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 13258 && skill == ServerConstants.FISHING
+//                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 13259 && skill == ServerConstants.FISHING
+//                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 13260 && skill == ServerConstants.FISHING
+//                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 13261 && skill == ServerConstants.FISHING) {
+//
+//                experience *= 2.5;
+//
+//            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 10941
+//                    && skill == ServerConstants.WOODCUTTING
+//                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 10939
+//                    && skill == ServerConstants.WOODCUTTING && player.playerEquipment[ServerConstants.LEG_SLOT] == 10940
+//                    && skill == ServerConstants.WOODCUTTING
+//                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 10933
+//                    && skill == ServerConstants.WOODCUTTING) {
+//
+//                experience *= 2.5;
+//
+//            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 20708 && skill == ServerConstants.FIREMAKING
+//                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 20704 && skill == ServerConstants.FIREMAKING
+//                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 20706 && skill == ServerConstants.FIREMAKING
+//                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 20710
+//                    && skill == ServerConstants.FIREMAKING) {
+//
+//            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 13646 && skill == ServerConstants.FARMING
+//                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 13642 && skill == ServerConstants.FARMING
+//                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 13640 && skill == ServerConstants.FARMING
+//                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 13644
+//                    && skill == ServerConstants.FARMING) {
+//
+//                experience *= 2.5;
+//            } else if (player.playerEquipment[ServerConstants.HEAD_SLOT] == 12013 && skill == ServerConstants.MINING
+//                    && player.playerEquipment[ServerConstants.BODY_SLOT] == 12014 && skill == ServerConstants.MINING
+//                    && player.playerEquipment[ServerConstants.LEG_SLOT] == 12015 && skill == ServerConstants.MINING
+//                    && player.playerEquipment[ServerConstants.FEET_SLOT] == 12016
+//                    && skill == ServerConstants.MINING) {
+//
+//                experience *= 2.5;
+//
+//
+//            } else if (player.getPetId() == 11062) {
+//                experience *= 2.00;
+//            }
 
 
             if (Area.inDonatorZone(player.getX(), player.getY())) {
