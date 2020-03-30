@@ -38,12 +38,9 @@ Shop currency: 995
 1073 // Adamant platelegs.
 1199 // Adamant kiteshield.
 1091 // Adamant plateskirt.
-1163 // Rune full helm.
-1127 // Rune platebody.
-1079 // Rune platelegs.
-1201 // Rune kiteshield.
 1147 // Rune med helm.
 1113 // Rune chainbody.
+1079 // Rune platelegs.
 1093 // Rune plateskirt.
 1185 // Rune sq shield.
 3753 // Warrior helm.
@@ -65,7 +62,6 @@ Shop currency: 995
 1319 // Rune 2h sword.
 20756 // Hill giant club
 6528 // Tzhaar-ket-om.
-4587 // Dragon scimitar.
 1215 // Dragon dagger.
 1377 // Dragon battleaxe.
 1305 // Dragon longsword.
@@ -106,8 +102,6 @@ Shop currency: 995
 1624 // Uncut sapphire.
 1622 // Uncut emerald.
 1620 // Uncut ruby.
-1618 // Uncut diamond.
-1632 // Uncut dragonstone.
 1733 // Needle.
 1734 // Thread.
 303 // Small fishing net.
@@ -119,16 +113,10 @@ Shop currency: 995
 13431 // Sandworms
 314 // Feather.
 775 // Cooking gauntlets.
-1778 // Bow string.
 1592 // Ring mould.
 1595 // Amulet mould.
 1597 // Necklace mould.
-2358 // Gold bar.
 1760 // Ball of wool.
-439 // Tin ore
-437 // Copper ore
-441 // Iron ore.
-454 // Coal.
 1926 // Bucket.
 1932 // Pot.
 233 // Pestle and mortar
@@ -137,7 +125,6 @@ Shop currency: 995
 10008 // Box trap
 1785 // Glassblowing pipe
 1776 // Molten glass
-1392 // Battlestaff
 
 Shop name: Farming supplies
 Shop id: 6
@@ -178,19 +165,11 @@ Shop currency: 995
 2453 // Antifire(4)
 12906 // Anti-venom(4)
 12914 // Anti-venom+(4)
-3145 // Cooked karambwan
-386 // Shark.
-392 // Manta ray
-7947 // Monkfish.
 2298 // Anchovy pizza.
-374 // Swordfish.
-380 // Lobster.
-362 // Tuna.
 330 // Salmon.
 334 // Trout.
 316 // Shrimps.
 4418 // Guthix rest(4)
-527 // Bones.
 1523 // Lockpick.
 3188 // Cleaning cloth.
 952 // Spade.
@@ -365,7 +344,6 @@ Shop currency: 995
 3753 // Warrior helm.
 3751 // Berserker helm.
 10828 // Helm of neitiznot.
-4587 // Dragon scimitar.
 1215 // Dragon dagger.
 1377 // Dragon battleaxe.
 1305 // Dragon longsword.
@@ -416,8 +394,6 @@ Shop currency: 995
 1624 // Uncut sapphire.
 1622 // Uncut emerald.
 1620 // Uncut ruby.
-1618 // Uncut diamond.
-1632 // Uncut dragonstone.
 1733 // Needle.
 1734 // Thread.
 303 // Small fishing net.
@@ -429,21 +405,14 @@ Shop currency: 995
 13431 // Sandworms
 314 // Feather.
 775 // Cooking gauntlets.
-1778 // Bow string.
 1592 // Ring mould.
 1595 // Amulet mould.
 1597 // Necklace mould.
-2358 // Gold bar.
 1760 // Ball of wool.
-439 // Tin ore
-437 // Copper ore
-441 // Iron ore.
-454 // Coal.
 1926 // Bucket.
 1932 // Pot.
 11261 // Impling jar.
 10010 // Butterfly net.
-1512 // Logs.
 1785 // Glassblowing pipe
 1776 // Molten glass
 1392 // Battlestaff
@@ -452,20 +421,6 @@ Shop currency: 995
 556 // Air rune.
 557 // Earth rune.
 558 // Mind rune.
-562 // Chaos rune.
-559 // Body rune.
-9075 // Astral rune.
-560 // Death rune.
-4695 // Mist rune 
-564 // Cosmic rune.
-563 // Law rune.
-4696 // Dust rune 
-4698 // Mud rune 
-4697 // Smoke rune 
-4694 // Steam rune 
-4699 // Lava rune 
-561 // Nature rune.
-565 // Blood rune.
 7583 // Hell-kitten.
 
 Shop name: Custom Donator pet points store
@@ -622,22 +577,6 @@ Shop currency: 995
 555 // Water rune.
 556 // Air rune.
 557 // Earth rune.
-558 // Mind rune.
-562 // Chaos rune.
-559 // Body rune.
-564 // Cosmic rune.
-563 // Law rune.
-561 // Nature rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
-4695 // Mist rune 
-4696 // Dust rune 
-4698 // Mud rune 
-4697 // Smoke rune 
-4694 // Steam rune 
-4699 // Lava rune 
 1379 // Staff.
 1381 // Staff of air.
 1383 // Staff of water.
@@ -645,15 +584,8 @@ Shop currency: 995
 1385 // Staff of earth.
 1389 // Magic staff.
 6603 // Magic staff.
-20730 // Mist battlestaff
-20736 // Dust battlestaff
-6562 // Mud battlestaff
-11998 // Smoke battlestaff
 11787 // Steam battlestaff
 3053 // Lava battlestaff
-2415 // Saradomin staff.
-2416 // Guthix staff.
-2417 // Zamorak staff.
 4675 // Ancient staff.
 3842 // Unholy book.
 3840 // Holy book.
@@ -707,18 +639,6 @@ Shop currency: 995
 6324 // Snakeskin chaps.
 6330 // Snakeskin vambraces.
 6328 // Snakeskin boots.
-1135 // Green d'hide body.
-1099 // Green d'hide chaps.
-1065 // Green d'hide vamb.
-2499 // Blue d'hide body.
-2493 // Blue d'hide chaps.
-2487 // Blue d'hide vamb.
-2501 // Red d'hide body.
-2495 // Red d'hide chaps.
-2489 // Red d'hide vamb.
-2503 // Black d'hide body.
-2497 // Black d'hide chaps.
-2491 // Black d'hide vamb.
 6131 // Spined helm.
 6133 // Spined body.
 6135 // Spined chaps.
@@ -730,34 +650,19 @@ Shop currency: 995
 882 // Bronze arrow.
 884 // Iron arrow.
 886 // Steel arrow.
-888 // Mithril arrow.
-890 // Adamant arrow.
-892 // Rune arrow.
-21326 // Amethyst arrow
 841 // Shortbow.
 843 // Oak shortbow.
 849 // Willow shortbow.
 853 // Maple shortbow.
 857 // Yew shortbow.
-861 // Magic shortbow.
 877 // Bronze bolts.
 9140 // Iron bolts.
 9141 // Steel bolts.
-9142 // Mithril bolts.
-9143 // Adamant bolts.
-9144 // Runite bolts.
-9242 // Ruby bolts (e)
-9245 // Onyx bolt (e)
-9243 // Diamond bolts (e).
-9244 // Dragon bolts (e).
 9185 // Rune crossbow.
 864 // Bronze knife.
 863 // Iron knife.
 865 // Steel knife.
 869 // Black knife.
-866 // Mithril knife.
-867 // Adamant knife.
-868 // Rune knife.
 6522 // Toktz-xil-ul (Obby ranged weapon hoola hoop)
 20849 // Dragon thrownaxe
 19484 // Dragon javelin
@@ -1277,11 +1182,6 @@ Shop currency: 995
 1023 // Cape.
 1027 // Cape.
 1031 // Cape.
-3777 // Fremennik cloak.
-3759 // Fremennik cloak.
-3761 // Fremennik cloak.
-3763 // Fremennik cloak.
-3765 // Fremennik cloak.
 1029 // Cape.
 4304 // Ham cloak.
 1052 // Cape of legends.
@@ -1296,8 +1196,6 @@ Shop currency: 995
 1624 // Uncut sapphire.
 1622 // Uncut emerald.
 1620 // Uncut ruby.
-1618 // Uncut diamond.
-1632 // Uncut dragonstone.
 
 Shop name: Gloves & books shop
 Shop id: 57
@@ -1674,412 +1572,35 @@ Shop currency: 995
 1123 // Adamant platebody.
 1073 // Adamant platelegs.
 1163 // Rune full helm.
-1127 // Rune platebody.
 1079 // Rune platelegs.
 
 Shop name: Tournament supplies Main welfare
 Shop id: 76
 Shop currency: Free
-12954 // Dragon defender
-7462 // Gloves
-6570 // Fire cape
-10551 // Fighter torso.
-10548 // Fighter hat.
-12791 // Rune pouch
-4151 // Abyssal whip
-1163 // Rune full helm.
-1079 // Rune platelegs.
-1147 // Rune med helm.
-1113 // Rune chainbody.
-1093 // Rune plateskirt.
-3753 // Warrior helm.
-3751 // Berserker helm.
-10828 // Helm of neitiznot.
-12831 // Blessed spirit shield
-4587 // Dragon scimitar.
-5698 // Dragon dagger p++.
-1434 // Dragon mace.
-3204 // Dragon halberd.
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-3105 // Rock climbing boots.
-4131 // Rune boots.
-6109 // Ghostly hood.
-6107 // Ghostly robetop.
-6108 // Ghostly bottoms.
-6111 // Ghostly cloak.
-6106 // Ghostly boots.
-4089 // Mystic hat.
-4091 // Mystic robe top.
-4093 // Mystic robe bottom.
-4097 // Mystic boots.
-4109 // Mystic hat.
-4111 // Mystic robe top.
-4113 // Mystic robe bottom.
-4117 // Mystic boots.
-4099 // Mystic hat.
-4101 // Mystic robe top.
-4103 // Mystic robe bottom.
-4107 // Mystic boots.
-3755 // Farseer helm.
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-555 // Water rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
-4675 // Ancient staff.
-3842 // Unholy book.
-2503 // Black d'hide body.
-2497 // Black d'hide chaps.
-579 // Wizard hat.
-656 // Hat.
-658 // Hat.
-660 // Hat.
-662 // Hat.
-664 // Hat.
-2940 // Hat.
-2900 // Hat.
-2910 // Hat.
-2920 // Hat.
-2930 // Hat.
-3040 // Magic potion(4).
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-12695 // Super combat potion(4)
-11936 // Dark crab
 
 Shop name: Tournament supplies Main barrows
 Shop id: 77
 Shop currency: Free
-11840 // Dragon boots
-6920 // Infinity boots
-4724 // Guthan's helm
-4745 // Torag's helm
-4753 // Verac's helm
-4708 // Ahrim's hood
-12831 // Blessed spirit shield
-12954 // Dragon defender
-7462 // Gloves
-12612 // Book of darkness
-6570 // Fire cape
-10548 // Fighter hat.
-12791 // Rune pouch
-4151 // Abyssal whip
-12006 // Abyssal tentacle
-1163 // Rune full helm.
-1127 // Rune platebody.
-1079 // Rune platelegs.
-1147 // Rune med helm.
-1113 // Rune chainbody.
-1093 // Rune plateskirt.
-3753 // Warrior helm.
-3751 // Berserker helm.
-10828 // Helm of neitiznot.
-4587 // Dragon scimitar.
-5698 // Dragon dagger p++.
-1434 // Dragon mace.
-3204 // Dragon halberd.
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-3105 // Rock climbing boots.
-4131 // Rune boots.
-4089 // Mystic hat.
-4091 // Mystic robe top.
-4093 // Mystic robe bottom.
-4097 // Mystic boots.
-4109 // Mystic hat.
-4111 // Mystic robe top.
-4113 // Mystic robe bottom.
-4117 // Mystic boots.
-4099 // Mystic hat.
-4101 // Mystic robe top.
-4103 // Mystic robe bottom.
-4107 // Mystic boots.
-3755 // Farseer helm.
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-555 // Water rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
-4675 // Ancient staff.
-3842 // Unholy book.
-579 // Wizard hat.
-656 // Hat.
-658 // Hat.
-660 // Hat.
-662 // Hat.
-664 // Hat.
-2940 // Hat.
-2900 // Hat.
-2910 // Hat.
-2920 // Hat.
-2930 // Hat.
-3040 // Magic potion(4).
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-12695 // Super combat potion(4)
-11936 // Dark crab
 
 Shop name: Tournament supplies Pure
 Shop id: 78
 Shop currency: Free
-7459 // Gloves
-6570 // Fire cape
-12791 // Rune pouch
-6528 // Tzhaar-ket-om.
-4587 // Dragon scimitar.
-5698 // Dragon dagger p++.
-1434 // Dragon mace.
-3204 // Dragon halberd.
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-3105 // Rock climbing boots.
-6109 // Ghostly hood.
-6107 // Ghostly robetop.
-6108 // Ghostly bottoms.
-6111 // Ghostly cloak.
-6106 // Ghostly boots.
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-555 // Water rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
-4675 // Ancient staff.
-3842 // Unholy book.
-2497 // Black d'hide chaps.
-1129 // Leather body.
-1169 // Coif.
-10499 // Ava's accumulator.
-861 // Magic shortbow.
-892 // Rune arrow.
-9244 // Dragon bolts (e).
-811 // Rune dart
-9185 // Rune crossbow.
-579 // Wizard hat.
-656 // Hat.
-658 // Hat.
-660 // Hat.
-662 // Hat.
-664 // Hat.
-2940 // Hat.
-2900 // Hat.
-2910 // Hat.
-2920 // Hat.
-2930 // Hat.
-2444 // Ranging potion(4).
-3040 // Magic potion(4).
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-12695 // Super combat potion(4)
-11936 // Dark crab
 
 Shop name: Tournament supplies Berserker
 Shop id: 79
 Shop currency: Free
-8850 // Rune defender.
-7462 // Gloves
-6570 // Fire cape
-10551 // Fighter torso.
-10548 // Fighter hat.
-12791 // Rune pouch
-1163 // Rune full helm.
-1127 // Rune platebody.
-1079 // Rune platelegs.
-1147 // Rune med helm.
-1113 // Rune chainbody.
-1093 // Rune plateskirt.
-3753 // Warrior helm.
-3751 // Berserker helm.
-6528 // Tzhaar-ket-om.
-4587 // Dragon scimitar.
-5698 // Dragon dagger p++.
-1434 // Dragon mace.
-3204 // Dragon halberd.
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-3105 // Rock climbing boots.
-4131 // Rune boots.
-6109 // Ghostly hood.
-6107 // Ghostly robetop.
-6108 // Ghostly bottoms.
-6111 // Ghostly cloak.
-6106 // Ghostly boots.
-4089 // Mystic hat.
-4091 // Mystic robe top.
-4093 // Mystic robe bottom.
-4097 // Mystic boots.
-4109 // Mystic hat.
-4111 // Mystic robe top.
-4113 // Mystic robe bottom.
-4117 // Mystic boots.
-4099 // Mystic hat.
-4101 // Mystic robe top.
-4103 // Mystic robe bottom.
-4107 // Mystic boots.
-3755 // Farseer helm.
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-555 // Water rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
-4675 // Ancient staff.
-3842 // Unholy book.
-2503 // Black d'hide body.
-2497 // Black d'hide chaps.
-579 // Wizard hat.
-656 // Hat.
-658 // Hat.
-660 // Hat.
-662 // Hat.
-664 // Hat.
-2940 // Hat.
-2900 // Hat.
-2910 // Hat.
-2920 // Hat.
-2930 // Hat.
-3040 // Magic potion(4).
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-12695 // Super combat potion(4)
-11936 // Dark crab
 
 Shop name: Tournament supplies Dharok
 Shop id: 80
 Shop currency: Free
-6570 // Fire cape
-10551 // Fighter torso.
-10548 // Fighter hat.
-4587 // Dragon scimitar.
-1434 // Dragon mace.
-3204 // Dragon halberd.
-1187 // Dragon sq shield
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-557 // Earth rune.
-9075 // Astral rune.
-560 // Death rune.
-12695 // Super combat potion(4)
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-11936 // Dark crab
 
 Shop name: Tournament supplies Max hybrid
 Shop id: 81
 Shop currency: Free
-11770 // Seers' ring (i)
-6570 // Fire cape
-12831 // Blessed spirit shield
-10548 // Fighter hat.
-20784 // Dragon claws
-11802 // Armadyl godsword
-13576 // Dragon warhammer
-12791 // Rune pouch
-3751 // Berserker helm.
-5698 // Dragon dagger (p++)
-1434 // Dragon mace.
-3204 // Dragon halberd.
-3755 // Farseer helm.
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-555 // Water rune.
-565 // Blood rune.
-560 // Death rune.
-566 // Soul rune.
-3040 // Magic potion(4).
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-12695 // Super combat potion(4)
-11936 // Dark crab
 
 Shop name: Tournament supplies Main Nh
 Shop id: 82
 Shop currency: Free
-9244 // Dragon bolts (e).
-9185 // Rune crossbow.
-5698 // Dragon dagger (p++)
-20784 // Dragon claws
-11802 // Armadyl godsword
-13576 // Dragon warhammer
-12954 // Dragon defender
-7462 // Gloves
-6570 // Fire cape
-10551 // Fighter torso.
-10548 // Fighter hat.
-12791 // Rune pouch
-4151 // Abyssal whip
-1163 // Rune full helm.
-1127 // Rune platebody.
-1079 // Rune platelegs.
-1147 // Rune med helm.
-1113 // Rune chainbody.
-1093 // Rune plateskirt.
-3753 // Warrior helm.
-3751 // Berserker helm.
-10828 // Helm of neitiznot.
-12831 // Blessed spirit shield
-4587 // Dragon scimitar.
-5698 // Dragon dagger p++.
-1434 // Dragon mace.
-3204 // Dragon halberd.
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-3105 // Rock climbing boots.
-4131 // Rune boots.
-4089 // Mystic hat.
-4091 // Mystic robe top.
-4093 // Mystic robe bottom.
-4097 // Mystic boots.
-4109 // Mystic hat.
-4111 // Mystic robe top.
-4113 // Mystic robe bottom.
-4117 // Mystic boots.
-4099 // Mystic hat.
-4101 // Mystic robe top.
-4103 // Mystic robe bottom.
-4107 // Mystic boots.
-3755 // Farseer helm.
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-555 // Water rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
-4675 // Ancient staff.
-3842 // Unholy book.
-2503 // Black d'hide body.
-2497 // Black d'hide chaps.
-579 // Wizard hat.
-656 // Hat.
-658 // Hat.
-660 // Hat.
-662 // Hat.
-664 // Hat.
-2940 // Hat.
-2900 // Hat.
-2910 // Hat.
-2920 // Hat.
-2930 // Hat.
-3040 // Magic potion(4).
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-2444 // Ranging potion(4).
-12695 // Super combat potion(4)
-11936 // Dark crab
 
 Shop name: Clue casket shop
 Shop id: 83
@@ -2122,82 +1643,14 @@ Shop currency: 604
 Shop name: Tournament supplies Barrows
 Shop id: 86
 Shop currency: Free
-2412 // Saradomin cape.
-2413 // Guthix cape.
-2414 // Zamorak cape.
-6570 // Fire cape
-10548 // Fighter hat.
-3842 // Unholy book.
-1187 // Dragon sq shield
-1725 // Amulet of strength.
-1712 // Amulet of glory(4).
-555 // Water rune.
-565 // Blood rune.
-560 // Death rune.
-12695 // Super combat potion(4)
-6685 // Saradomin brew(4).
-3024 // Super restore(4).
-2444 // Ranging potion(4).
-11936 // Dark crab
-4718 // Dh axe
-4720 // Dh body
-4716 // Dh helm
-4722 // Dh legs
-4710 // Ahrim's staff
-4712 // Ahrim's top
-4708 // Ahrim's hood
-4714 // Ahrim's skirt
-4734 // Karil's c'bow
-4736 // Karil's body
-4732 // Karils coif
-4738 // Karil's skirt
-11840 // Dragon boots
-6737 // Berserker ring
-6920 // Infinity boots
-6731 // Seer's ring
-7462 // Gloves
-2577 // Ranger boots
-6733 // Archer's ring
-4740 // Bolt rack
 
 Shop name: Tournament supplies F2P
 Shop id: 87
 Shop currency: Free
-113 // Strength potion.
-890 // Adamant arrow.
-373 // Swordfish.
-1333 // Rune scimitar.
-1319 // Rune 2h sword.
-20756 // Hill giant club.
-1099 // Green d'hide chaps.
-7380 // Green d'hide chaps (t).
-7378 // Green d'hide chaps (g).
-1065 // Green d'hide vamb.
-853 // Maple shortbow.
-1169 // Coif.
-1129 // Leather body.
-1061 // Leather boots.
-542 // Monk's robe bottoms.
-544 // Monk's robe top.
-20202 // Monk's robe bottoms (g).
-20199 // Monk's robe top (g).
-1725 // Amulet of strength.
-1731 // Amulet of power.
-1101 // Iron chainbody.
-12972 // Iron set (lg).
-12974 // Iron set (sk).
-12976 // Iron trimmed set (lg).
-12978 // Iron trimmed set (sk).
-12980 // Iron gold-trimmed set (lg).
-12982 // Iron gold-trimmed set (sk).
-20211 // Team cape zero.
-9005 // Fancy boots.
-9006 // Fighting boots.
 
 Shop name: Pure supplies
 Shop id: 88
 Shop currency: 995
-4587 // Dragon scimitar.
 5698 // Dragon dagger p++.
 1434 // Dragon mace.
 3204 // Dragon halberd.
@@ -2213,10 +1666,6 @@ Shop currency: 995
 2413 // Guthix cape.
 2414 // Zamorak cape.
 555 // Water rune.
-565 // Blood rune.
-9075 // Astral rune.
-560 // Death rune.
-566 // Soul rune.
 4675 // Ancient staff.
 3842 // Unholy book.
 2497 // Black d'hide chaps.
