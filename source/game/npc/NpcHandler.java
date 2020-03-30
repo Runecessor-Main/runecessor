@@ -1823,7 +1823,11 @@ public class NpcHandler {
                     npc.respawnTimer = respawnTimer;
                     dropLoot(npc);
                     Player player = PlayerHandler.players[npc.getKilledBy()];
-                    player.getNpcKillTrackerForNpc(npc.npcType).increment();
+                    try {
+                        player.getNpcKillTrackerForNpc(npc.npcType).increment();
+                    } catch(NullPointerException e) {
+                        System.out.println(e.getMessage());
+                    }
                     Achievements.checkCompletionMultiple(player,"31");
 //                    Combat.dropMagicFindRing(player, npc);
 //                    DegradingManager.degradeFromKills(player);
