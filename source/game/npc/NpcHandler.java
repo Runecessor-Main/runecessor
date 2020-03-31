@@ -1825,10 +1825,11 @@ public class NpcHandler {
                     Player player = PlayerHandler.players[npc.getKilledBy()];
                     try {
                         player.getNpcKillTrackerForNpc(npc.npcType).increment();
+                        Achievements.checkCompletionMultiple(player,"31");
                     } catch(NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
-                    Achievements.checkCompletionMultiple(player,"31");
+
 //                    Combat.dropMagicFindRing(player, npc);
 //                    DegradingManager.degradeFromKills(player);
                     npc.afterDeath();
