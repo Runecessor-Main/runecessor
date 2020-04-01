@@ -34,7 +34,7 @@ public class WeaponSpeed {
 			"spear", "tzhaar-ket-em"
 	};
 
-	public final static String[] SPEED_6_TICKS = {"ahrims staff", "godsword", "battleaxe", "warhammer", "toktz-mej-tal", "chaotic maul", "javelin", "elder maul",};
+	public final static String[] SPEED_6_TICKS = {"blood maul","ahrims staff", "godsword", "battleaxe", "warhammer", "toktz-mej-tal", "chaotic maul", "javelin", "elder maul",};
 
 	public final static String[] SPEED_7_TICKS = {"hand cannon", "anchor", "greataxe", "halberd", "granite maul", "2h", "tzhaar-ket-om", "hill giant club"};
 

@@ -1,5 +1,24 @@
 [
   {
+    "npc_name": "Vampyre",
+    "npc_type": 4487,
+    "roam_distance": 6,
+    "size": 1,
+    "aggressive": true,
+    "attack_animation": 393,
+    "block_animation": 404,
+    "death_animation": 836,
+    "death_delete_ticks": 4,
+    "attack_speed": 4,
+    "attack_distance": 6,
+    "hitpoints": 200,
+    "attack": 800,
+    "melee_defence": 500,
+    "ranged_defence": 750,
+    "magic_defence": 750,
+    "maximum_damage": 40
+  },
+  {
     "npc_name": "Jungle demon",
     "npc_type": 1443,
     "roam_distance": 6,

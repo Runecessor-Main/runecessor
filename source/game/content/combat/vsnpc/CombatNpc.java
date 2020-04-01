@@ -7,6 +7,8 @@ import game.content.combat.Combat;
 import game.content.combat.CombatConstants;
 import game.content.combat.CombatInterface;
 import game.content.combat.Venom;
+import game.content.combat.damage.EntityDamage;
+import game.content.combat.effect.BloodRapierEffect;
 import game.content.combat.effect.TwistedBow;
 import game.content.combat.special.SpecialAttackBase;
 import game.content.combat.vsplayer.AttackPlayer;
@@ -1593,6 +1595,7 @@ public class CombatNpc {
                 if (Combat.hasAbyssalTentacle(attacker, attacker.getWieldedWeapon()) && Misc.hasPercentageChance(25)) {
                     CombatNpc.applyPoisonOnNpc(attacker, npc, 4);
                 }
+
                 CombatNpc.applyMeleeDamageOnNpc(attacker, npc, 1, attacker.meleeFirstDamage);
 
                 if (attacker.getMultipleDamageSpecialAttack()) {
@@ -1777,6 +1780,9 @@ public class CombatNpc {
         if (damage > 0 && guthansEffect) {
             player.addToHitPoints(damage);
             npc.gfx0(398);
+        }
+        if((player.getWieldedWeapon() == 16389 || player.getWieldedWeapon() == 20529 || player.getWieldedWeapon() == 20528) && Misc.hasPercentageChance(30) && damage > 0) {
+            BloodRapierEffect.applyForNpc(player,npc,damage);
         }
         npc.underAttack = true;
         player.killingNpcIndex = player.getNpcIdAttacking();

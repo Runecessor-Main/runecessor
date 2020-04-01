@@ -7,11 +7,11 @@ public class TwistedBow {
 
     public static double getAccuracyOnNpc(Npc npc) {
         final NpcDefinition definition = NpcDefinition.getDefinitions()[npc.npcType];
-        final double npcMagicLevel = ((double)definition.attack / 3) - 100;
+        final double npcMagicLevel = (((double)definition.attack * 4) / 3) - 100;
         final double value1 = ((npcMagicLevel * 3) - 10) / 100;
         final double value2 = Math.pow((npcMagicLevel * 3) / 10 - 100,2) / 100;
         final double finalValue = 140 + value1 - value2;
-        if(finalValue > 140) {
+        if(finalValue > 140 || finalValue <= 0) {
             return 140;
         }
         return finalValue;
@@ -19,7 +19,7 @@ public class TwistedBow {
 
     public static double getDamageOnNpc(Npc npc) {
         final NpcDefinition definition = NpcDefinition.getDefinitions()[npc.npcType];
-        int enemyMagicLevel = definition.attack /3;
+        int enemyMagicLevel = (definition.attack * 4) /3;
         double enemyMagicLevelAdjusted = enemyMagicLevel - (enemyMagicLevel * .9);
         double leftTopValue = enemyMagicLevelAdjusted * 3 - 14;
         double leftValue = leftTopValue / 100;
@@ -27,7 +27,7 @@ public class TwistedBow {
         double rightValue = (rightTopValue / 100); //2116
 
         double finalValue = (200 + leftValue - rightValue);
-        if(finalValue > 200) {
+        if(finalValue > 200 || finalValue <= 0) {
             return 100;
         }
         return finalValue;

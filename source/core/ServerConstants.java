@@ -19,6 +19,8 @@ public class ServerConstants {
 	 * All custom donator item requests.
 	 */
 	private final static int[] IMMORTAL_DONATOR_ITEMS_OSRS = {
+			20528, //blood longsword
+			20529,//blood maul
 					16052, // Rainbow Twisted bow for Locals
 					16055, // Blue Abyssal tentacle for Verticle
 					16056, // Black and orange Twisted bow for Thuggahhh
@@ -737,7 +739,8 @@ public class ServerConstants {
 			6611, 8059, 414, 448, // Vet'ion, vorkath, banshee, crawling hand
 			6815, 26, // ghost, zombie
 			11007, 11009, 11010, 8062,// old revs
-			1337 // max hit dummy
+			1337, // max hit dummy
+			4487//vampyre
 	};
 	//@formatter:on
 

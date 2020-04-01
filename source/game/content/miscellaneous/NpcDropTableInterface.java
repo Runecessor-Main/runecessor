@@ -2,6 +2,7 @@ package game.content.miscellaneous;
 
 import core.ServerConstants;
 import game.content.interfaces.InterfaceAssistant;
+import game.entity.combat_strategy.impl.NpcCombatStrategy;
 import game.item.ItemAssistant;
 import game.npc.NpcDrops;
 import game.npc.NpcDrops.NpcIdList;
@@ -11,8 +12,10 @@ import game.player.Player;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import org.menaphos.io.fs.repository.LootableNpcRepositoryManager;
 import org.menaphos.model.loot.LootableContainer;
 import org.menaphos.model.loot.factory.LootFactory;
+import org.menaphos.model.math.impl.AdjustableInteger;
 import utility.Misc;
 
 /**
@@ -83,21 +86,36 @@ public class NpcDropTableInterface {
         } else {
             npcLocalListIds = player.npcDropTableSearchList;
         }
+        LootableNpcRepositoryManager.getInstance().getRepository().readAll()
+                .stream()
+                .filter(lootableNpc -> !npcLocalListIds.contains(lootableNpc.getId()))
+                .forEach(lootableNpc -> {
+                    try {
+                        NpcDrops.npcIdOrder.add(lootableNpc.getId());
+                        npcLocalListIds.add(lootableNpc.getId());
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                        System.out.println("FAILED: " + lootableNpc.getId());
+                    }
+                });
         int offset = 0;
         for (int index = 0; index < NpcDrops.npcIdOrder.size(); index++) {
-            String name = "";
-            if (index <= npcLocalListIds.size() - 1) {
-                int npcId = npcLocalListIds.get(index);
-                name = NpcDefinition.getDefinitions()[npcId].name;
-                int maximumNameLength = 18;
-                if (name.length() > maximumNameLength) {
-                    name = name.substring(0, maximumNameLength);
-                }
-            } else {
+            try {
+                String name = "";
+                if (index <= npcLocalListIds.size() - 1) {
+                    int npcId = npcLocalListIds.get(index);
+                    name = NpcDefinition.getDefinitions()[npcId].name;
+                    int maximumNameLength = 18;
+                    if (name.length() > maximumNameLength) {
+                        name = name.substring(0, maximumNameLength);
+                    }
+                } else {
 
+                }
+                player.getPA().sendFrame126(name, 27702 + index + offset);
+                offset++;
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("FAILED: " + npcLocalListIds.get(index) + " INDEX: " + index);
             }
-            player.getPA().sendFrame126(name, 27702 + index + offset);
-            offset++;
         }
         int scrollLength = (int) Misc.getDoubleRoundedUp((double) npcLocalListIds.size() * 18);
         int minimumScrollLength = 232;
@@ -132,6 +150,7 @@ public class NpcDropTableInterface {
                 }
                 npcId = player.npcDropTableSearchList.get(indexButton);
             }
+            System.out.println("NPC: " + npcId);
             int interfaceId = 33301;
             int dropsLength;
             final LootableContainer npc = LootFactory.getLootableNpc(npcId);
@@ -153,18 +172,18 @@ public class NpcDropTableInterface {
                     if (npc != null) {
                         DecimalFormat df = new DecimalFormat("###.##");
                         chance = df.format(npc.getLoot().get(index).getPercentDrop() * 100) + "%";
-                        if(npc.getLoot().get(index).getPercentDrop() == 1.0) {
+                        if (npc.getLoot().get(index).getPercentDrop() == 1.0) {
                             chance = "always";
                         }
                         itemId = npc.getLoot().get(index).getItem().getId();
-                        if(npc.getLoot().get(index).getRange() != null) {
+                        if (npc.getLoot().get(index).getRange() != null) {
                             minimumAmount = npc.getLoot().get(index).getRange().getMin();
                             maximumAmount = npc.getLoot().get(index).getRange().getMax();
                         } else {
                             minimumAmount = npc.getLoot().get(index).getItem().getAmount().value();
                             maximumAmount = minimumAmount;
                         }
-                        if(minimumAmount == 0) {
+                        if (minimumAmount == 0) {
                             minimumAmount = 1;
                         }
                         minimumPrice = Misc.formatRunescapeStyle(ServerConstants.getItemValue(itemId) * minimumAmount);

@@ -48,6 +48,10 @@ import game.content.miscellaneous.YoutubeRank;
 import game.content.phantasye.commands.RankPlayerCommandListener;
 import game.content.phantasye.event.WildernessChestController;
 import game.content.phantasye.skill.Skill;
+import game.content.phantasye.skill.support.slayer.master.SlayerMaster;
+import game.content.phantasye.skill.support.slayer.master.SlayerMasterRepository;
+import game.content.phantasye.skill.support.slayer.master.SlayerMasterRepositoryManager;
+import game.content.phantasye.skill.support.slayer.master.impl.*;
 import game.content.quest.Quest;
 import game.content.quest.tab.InformationTab;
 import game.content.shop.ShopHandler;
@@ -123,6 +127,7 @@ import org.apache.mina.common.IoAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
 import org.menaphos.commands.CommandDispatcher;
+import org.phantasye.RepositoryManager;
 import tools.discord.api.DiscordBot;
 import utility.CharacterBackup;
 import utility.ChargebackPlayerAutoJail;
@@ -244,23 +249,23 @@ public class Server {
         gameTick();
 
 
-//		RepositoryManager<SlayerMaster, SlayerMasterRepository> repositoryManager = new SlayerMasterRepositoryManager();
-//
-//		SlayerMaster turael = new SlayerMasterTurael();
-//        SlayerMaster mazchna = new SlayerMasterMazchna();
-//        SlayerMaster vannaka = new SlayerMasterVannaka();
-//        SlayerMaster chaeldar = new SlayerMasterChaeldar();
-//        SlayerMaster nieve = new SlayerMasterNieve();
-//        SlayerMaster duradel = new SlayerMasterDuradel();
-//
-//		repositoryManager.getRepository().create(turael);
-//        repositoryManager.getRepository().create(mazchna);
-//        repositoryManager.getRepository().create(vannaka);
-//        repositoryManager.getRepository().create(chaeldar);
-//        repositoryManager.getRepository().create(nieve);
-//        repositoryManager.getRepository().create(duradel);
-//
-//		repositoryManager.updateRepository();
+		RepositoryManager<SlayerMaster, SlayerMasterRepository> repositoryManager = new SlayerMasterRepositoryManager();
+
+		SlayerMaster turael = new SlayerMasterTurael();
+        SlayerMaster mazchna = new SlayerMasterMazchna();
+        SlayerMaster vannaka = new SlayerMasterVannaka();
+        SlayerMaster chaeldar = new SlayerMasterChaeldar();
+        SlayerMaster nieve = new SlayerMasterNieve();
+        SlayerMaster duradel = new SlayerMasterDuradel();
+
+		repositoryManager.getRepository().create(turael);
+        repositoryManager.getRepository().create(mazchna);
+        repositoryManager.getRepository().create(vannaka);
+        repositoryManager.getRepository().create(chaeldar);
+        repositoryManager.getRepository().create(nieve);
+        repositoryManager.getRepository().create(duradel);
+
+		repositoryManager.updateRepository();
 
         CommandDispatcher.init();
         WildernessChestController.getInstance().initialize();

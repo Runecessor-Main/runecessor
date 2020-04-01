@@ -11,6 +11,7 @@ public final class ItemOnItemActionManager {
                 SlayerSkill.enchantItem(player, sourceId, targetId)
                         || SlayerSkill.dyeSlayerHelm(player, sourceId, targetId)
                         || player.getActionInvoker().perform(new BaseItemOnItemAction(player, 22315, 6570, 21295))
-                        || player.getActionInvoker().perform(new BaseItemOnItemAction(player, 22315, 6570, 21295));
+                        || player.getActionInvoker().perform(new BaseItemOnItemAction(player, 22315, 6570, 21295))
+                || SlayerSkill.applyDiamondEffect(player,sourceId,targetId);
     }
 }

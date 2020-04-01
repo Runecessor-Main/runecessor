@@ -9,7 +9,8 @@ public enum SlayerUnlocks {
     REMOTE_TASKS(100, "The ability to remote contact your Slayer Master"),
     AUTO_SMASH_VIALS(200, "The ability to smash vials after finishing them."),
     RING_BLING(300, "The ability to craft Slayer Rings"),
-    BIGGER_AND_BADDER(150, "The ability to fight Superior slayer monsters.");
+    BIGGER_AND_BADDER(150, "The ability to fight Superior slayer monsters."),
+    SOCKETING(500,"The ability to socket Chaotic weaponry.");
 
     private final int cost;
     private final String description;
