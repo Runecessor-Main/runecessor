@@ -89,9 +89,13 @@ public class NpcDropTableInterface {
         LootableNpcRepositoryManager.getInstance().getRepository().readAll()
                 .stream()
                 .filter(lootableNpc -> !npcLocalListIds.contains(lootableNpc.getId()))
+                .filter(lootableNpc -> !NpcIdList.npcIdStoredList.stream().anyMatch(npcIdList -> npcIdList.npcId.contains(lootableNpc.getId())))
                 .forEach(lootableNpc -> {
                     try {
                         NpcDrops.npcIdOrder.add(lootableNpc.getId());
+                        final ArrayList ids = new ArrayList();
+                        ids.add(lootableNpc.getId());
+                        NpcIdList.npcIdStoredList.add(new NpcIdList(ids));
                         npcLocalListIds.add(lootableNpc.getId());
                     } catch (ArrayIndexOutOfBoundsException e) {
                         System.out.println("FAILED: " + lootableNpc.getId());
@@ -140,8 +144,11 @@ public class NpcDropTableInterface {
 
             int npcId = 0;
             if (player.npcDropTableSearchList.isEmpty()) {
+                System.out.println("ID: " + buttonId);
+                System.out.println("BUTTON : " + indexButton);
+                System.out.println("SIZE: " + NpcIdList.npcIdStoredList.size());
                 if (indexButton > NpcIdList.npcIdStoredList.size() - 1) {
-                    return true;
+                    indexButton = ((buttonId - 108252) - 748) + 100;
                 }
                 npcId = NpcIdList.npcIdStoredList.get(indexButton).npcId.get(0);
             } else {
