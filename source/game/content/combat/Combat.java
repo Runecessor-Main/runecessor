@@ -1430,7 +1430,7 @@ public class Combat {
 			weaponRoamAnimations(player, 7508, 7510, 7509);
 			return;
 		}
-		if (weapon.contains("chaotic maul")) {
+		if (weapon.contains("maul")) {
 			weaponRoamAnimations(player, 7518, 7520, 7519);
 			return;
 		}
@@ -2315,6 +2315,7 @@ public class Combat {
 			case 11808:
 			case 11838:
 			case 12808: // Sara's blessed sword.
+			case 20529:
 				return 7056;
 
 			case 3190:

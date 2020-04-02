@@ -1,6 +1,8 @@
 package game.content.phantasye.skill.support.slayer;
 
 import core.ServerConstants;
+import game.content.dialogue.DialogueChain;
+import game.content.dialogue.listener.impl.ClickOptionDialogueListener;
 import game.content.miscellaneous.Teleport;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
@@ -92,7 +94,7 @@ public class SlayerSkill {
                     return player.getActionInvoker().perform(new BaseItemOnItemAction(player, ENCHANTMENT_SCROLL, targetId, 19649));
                 case 21264:
                     return player.getActionInvoker().perform(new BaseItemOnItemAction(player, ENCHANTMENT_SCROLL, targetId, 21266));
-                    case 13072:
+                case 13072:
                     return player.getActionInvoker().perform(new BaseItemOnItemAction(player, ENCHANTMENT_SCROLL, targetId, 5562));
                 case 13073:
                     return player.getActionInvoker().perform(new BaseItemOnItemAction(player, ENCHANTMENT_SCROLL, targetId, 5563));
@@ -129,6 +131,94 @@ public class SlayerSkill {
                     return enchantItem(player, ENCHANTMENT_SCROLL, sourceId);
                 default:
                     return false;
+            }
+        }
+        return false;
+    }
+
+    public static boolean applyDiamondEffect(Player player, int sourceId, int targetId) {
+        if (player.getPlayerDetails().getUnlocksList().contains(SlayerUnlocks.SOCKETING.ordinal())) {
+            if (isChaotic(sourceId) && isDiamond(targetId))
+                return applyDiamondEffect(player, targetId, sourceId);
+            else {
+                if (targetId == 6605) {
+                    switch (sourceId) {
+                        case 4670: //gfx effect 1176 creating effect 1002
+                            player.setDialogueChain(new DialogueChain().option((p, option) -> {
+                                switch (option) {
+                                    case 1:
+                                        p.receiveMessage(ServerConstants.RED_COL + "You socket the Blood Diamond into your Rapier's hilt.");
+                                        p.performAnimation(887);
+                                        p.gfxDelay(1002, 60, 0);
+                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 16389));
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                    case 2:
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                }
+                            }, "Socket Item? (This Action Can't Be Undone)", "Yes", "No")).start(player);
+                            return true;
+                    }
+                } else if(targetId == 6607) {
+                    switch (sourceId) {
+                        case 4670: //gfx effect 1176 creating effect 1002
+                            player.setDialogueChain(new DialogueChain().option((p, option) -> {
+                                switch (option) {
+                                    case 1:
+                                        p.receiveMessage(ServerConstants.RED_COL + "You socket the Blood Diamond into your longsword's hilt.");
+                                        p.performAnimation(887);
+                                        p.gfxDelay(1002, 60, 0);
+                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 20528));
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                    case 2:
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                }
+                            }, "Socket Item? (This Action Can't Be Undone)", "Yes", "No")).start(player);
+                            return true;
+                    }
+                } else if(targetId == 6609) {
+                    switch (sourceId) {
+                        case 4670: //gfx effect 1176 creating effect 1002
+                            player.setDialogueChain(new DialogueChain().option((p, option) -> {
+                                switch (option) {
+                                    case 1:
+                                        p.receiveMessage(ServerConstants.RED_COL + "You socket the Blood Diamond into your maul's handle.");
+                                        p.performAnimation(887);
+                                        p.gfxDelay(1002, 60, 0);
+                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 20529));
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                    case 2:
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                }
+                            }, "Socket Item? (This Action Can't Be Undone)", "Yes", "No")).start(player);
+                            return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean isChaotic(int itemId) {
+        final int[] items = {6605, 6607, 6609};
+        for (int i = 0; i < items.length; i++) {
+            if (itemId == items[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isDiamond(int itemId) {
+        final int[] items = {4670, 4671, 4672, 4673};
+        for (int i = 0; i < items.length; i++) {
+            if (itemId == items[i]) {
+                return true;
             }
         }
         return false;

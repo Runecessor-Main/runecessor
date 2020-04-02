@@ -1,5 +1,37 @@
 [
   {
+    "npc_description": "Vampyre",
+    "npc_type": 4487,
+    "x": 2654,
+    "y": 5076,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Vampyre",
+    "npc_type": 4487,
+    "x": 2654,
+    "y": 5081,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Vampyre",
+    "npc_type": 4487,
+    "x": 2658,
+    "y": 5081,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Vampyre",
+    "npc_type": 4487,
+    "x": 2658,
+    "y": 5077,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
     "npc_description": "Demonic Gorilla",
     "npc_type": 7144,
     "x": 3103,

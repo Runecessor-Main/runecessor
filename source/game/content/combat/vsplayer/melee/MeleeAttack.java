@@ -7,13 +7,7 @@ import game.bot.BotContent;
 import game.content.combat.Combat;
 import game.content.combat.damage.EntityDamage;
 import game.content.combat.damage.EntityDamageType;
-import game.content.combat.effect.AkrisaeRobeEffect;
-import game.content.combat.effect.DominionGloveEffect;
-import game.content.combat.effect.GuthanSetEffect;
-import game.content.combat.effect.PoisonEffect;
-import game.content.combat.effect.SaveDamage;
-import game.content.combat.effect.ToragSetEffect;
-import game.content.combat.effect.VenomEffect;
+import game.content.combat.effect.*;
 import game.content.combat.vsplayer.AttackPlayer;
 import game.content.miscellaneous.TradeAndDuel;
 import game.content.prayer.PrayerManager;
@@ -81,6 +75,7 @@ public class MeleeAttack {
 		if (Combat.wearingFullTorag(attacker) && Misc.hasPercentageChance(25) && damageAmount > 0) {
 			damage.addEffect(new ToragSetEffect());
 		}
+
 
 		if (GameType.isPreEoc()) {
 			if (DominionGloveEffect.hasGoliathGloves(attacker)) {

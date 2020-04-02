@@ -26,7 +26,8 @@ public enum Nieve {
     WYVERNS(SlayerAssignment.WYVERNS,new Range(5,15),new Range(50,70),5),
     STEEL_DRAGONS(SlayerAssignment.STEEL_DRAGONS,new Range(30,60),new Range(40,60),5),
     TUROTHS(SlayerAssignment.TUROTHS,new Range(120,185),new Range(0,0),3),
-    TZHARR(SlayerAssignment.TZHARR,new Range(110,180),new Range(0,0),10);
+    TZHARR(SlayerAssignment.TZHARR,new Range(110,180),new Range(0,0),10),
+    VAMPYRE(SlayerAssignment.VAMPYRE,new Range(10,20),new Range(100,150),4);
 
 
     private final SlayerAssignment assignment;

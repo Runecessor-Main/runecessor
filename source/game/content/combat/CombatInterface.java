@@ -264,6 +264,7 @@ public class CombatInterface {
 			case "tzhaar-ket-om":
 			case "granite maul":
 			case "chaotic maul":
+			case "blood maul":
 				if (player.getCombatStyle(ServerConstants.DEFENSIVE)) {
 					player.getPA().sendFrame36(43, 2, false);
 					set = true;

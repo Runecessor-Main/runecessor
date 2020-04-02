@@ -28,7 +28,8 @@ public enum Duradel {
     WYVERNS(SlayerAssignment.WYVERNS,new Range(10,20),new Range(50,70),8),
     STEEL_DRAGONS(SlayerAssignment.STEEL_DRAGONS,new Range(10,20),new Range(40,60),7),
     TZHARR(SlayerAssignment.TZHARR,new Range(90,150),new Range(0,0),10),
-    RED_DRAGONS(SlayerAssignment.RED_DRAGONS,new Range(30,65),new Range(0,0),8);
+    RED_DRAGONS(SlayerAssignment.RED_DRAGONS,new Range(30,65),new Range(0,0),8),
+    VAMPYRE(SlayerAssignment.VAMPYRE,new Range(20,30),new Range(150,200),10);
 
 
     private final SlayerAssignment assignment;

@@ -70,11 +70,11 @@ public class MeleeData {
 			SoundSystem.sendSound(player, victim, 793, 270);
 			return 386;
 		}//arlo
-		if (weaponName.contains("chaotic rapier")) {
+		if (weaponName.contains("rapier")) {
 			SoundSystem.sendSound(player, victim, 793, 270);
 			return 386;
 		}
-		if (weaponName.contains("chaotic maul")) {
+		if (weaponName.contains("maul")) {
 			SoundSystem.sendSound(player, victim, 396, 400);
 			return 2661;
 		}

@@ -68,7 +68,8 @@ public enum SlayerAssignment {
     VENANITIS(110,new Locations[]{Locations.VENANITIS},6504),
     VETION(110,new Locations[]{Locations.VETION},6611),
     VORKATH(120,new Locations[]{Locations.VORKATH},8059),
-    ZULRAH(120,new Locations[]{Locations.ZULRAH},2042,2043,2044);
+    ZULRAH(120,new Locations[]{Locations.ZULRAH},2042,2043,2044),
+    VAMPYRE(85,new Locations[] {Locations.SHADOW_CAVE},4487);
 
 
     private final int level;

@@ -2707,6 +2707,14 @@ Npc: 70
 8 882 5 // Bronze arrow
 1 526 1 // Bones
 
+// Vampyre
+Npc: 4487
+20 11941 1 // Looting bag
+5000 12746 1 // Mysterious emblem
+8 948 1 // Bear fur
+143 2136 1 // Bear meat
+1 526 1 // Bones
+
 // Zombie
 Npc: 26
 256 221 1 // Eye of newt
@@ -3527,30 +3535,6 @@ Npc: 481
 456 223 1 // Red spider eggs
 215 36 1 // Candle
 8 995 3-8 // Coins
-1 526 1 // Bones
-
-// Rock slug
-Npc: 421
-110500 4115 1 // Mystic gloves (light)
-375000 1249 1 // Dragon spear
-2400 1247 1 // Rune spear
-261 830 5 // Rune javelin
-57900 985 1 // Tooth half of key
-12900 987 1 // Loop half of key
-211 1452 1 // Chaos talisman
-32 1619 1 // Uncut ruby
-8 1621 1 // Uncut emerald
-8 1623 1 // Uncut sapphire
-2022 6430 3-7 // Chaos rune
-2022 6426 2-7 // Earth rune
-8 454 1 // Coal
-157 440 1 // Iron ore
-1600 2349 1 // Bronze bar
-2755 2351 1 // Iron bar
-59 436 1 // Copper ore
-46 438 1 // Tin ore
-32 447 2 // Mithril ore
-8 995 11-110 // Coins
 1 526 1 // Bones
 
 // Big frog

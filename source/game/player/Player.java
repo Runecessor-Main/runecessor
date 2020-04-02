@@ -126,10 +126,13 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     }
 
     public AdjustableInteger getNpcKillTrackerForNpc(int npcId) {
-        if (playerDetails.getNpcKillMap().get(npcId) != null)
+        if (playerDetails.getNpcKillMap() != null) {
+            if (playerDetails.getNpcKillMap().get(npcId) != null)
+                return playerDetails.getNpcKillMap().get(npcId);
+            playerDetails.getNpcKillMap().put(npcId, new AdjustableInteger(0));
             return playerDetails.getNpcKillMap().get(npcId);
-        playerDetails.getNpcKillMap().put(npcId, new AdjustableInteger(0));
-        return playerDetails.getNpcKillMap().get(npcId);
+        }
+        throw new NullPointerException("Error Initializing Player Details");
     }
 
     public Location getLocation() {
@@ -183,11 +186,11 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     @Override
     public void receiveDropFrom(NonPlayableCharacter npc, org.menaphos.model.loot.Loot loot, Location location) {
-        if(Range.within(loot.getPercentDrop() * 100,new Range(1,4))) {
+        if (Range.within(loot.getPercentDrop() * 100, new Range(1, 4))) {
             Announcement.announce(ServerConstants.GREEN_COL + GameMode.getGameModeName(this)
                     + " has received a Legendary drop of one " + ItemAssistant.getItemName(loot.getItem().getId()) + " from "
                     + NpcDefinition.getDefinitions()[npc.getId()].name + "!");
-        } else if(Range.within(loot.getPercentDrop() * 100,new Range(5,9))) {
+        } else if (Range.within(loot.getPercentDrop() * 100, new Range(5, 9))) {
             Announcement.announce(ServerConstants.GREEN_COL + GameMode.getGameModeName(this)
                     + " has received a very rare drop of one " + ItemAssistant.getItemName(loot.getItem().getId()) + " from "
                     + NpcDefinition.getDefinitions()[npc.getId()].name + "!");
