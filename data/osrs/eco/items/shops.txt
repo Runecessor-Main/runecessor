@@ -1032,6 +1032,7 @@ Shop currency: Points
 8842 115 // Void knight gloves.
 13072 325 // Elite void top
 13073 325 // Elite void botto
+13116 300 // Bonecrusher
 
 Shop name: Runecrafting shop
 Shop id: 47

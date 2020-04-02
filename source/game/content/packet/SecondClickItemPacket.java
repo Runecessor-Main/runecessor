@@ -34,7 +34,6 @@ public class SecondClickItemPacket implements PacketType {
 	@Override
 	public void processPacket(Player player, int packetType, int packetSize, boolean trackPlayer) {
 		int itemId = player.getInStream().readSignedWordA();
-
 		if (trackPlayer) {
 			PacketHandler.saveData(player.getPlayerName(), "itemId: " + itemId);
 		}

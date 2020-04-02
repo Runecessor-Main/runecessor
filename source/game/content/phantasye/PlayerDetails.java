@@ -21,6 +21,7 @@ public class PlayerDetails {
     private Map<Integer,AdjustableInteger> herbSack;
     private List<Integer> paymentRunes;
     private Map<Integer,AdjustableInteger> npcKillMap;
+    private Map<Integer,AdjustableInteger> skillingItemChargeMap;
 
     private AdjustableInteger mythicalCapeCharges;
     private AdjustableInteger mythicalCapeTier;
@@ -43,6 +44,7 @@ public class PlayerDetails {
         this.mythicalCapeCharges = new AdjustableInteger(0);
         this.mythicalCapeTier = new AdjustableInteger(0);
         this.npcKillMap = new HashMap<>();
+        this.skillingItemChargeMap = new HashMap<>();
     }
 
     public void initialize() {
@@ -57,6 +59,10 @@ public class PlayerDetails {
                 e.printStackTrace();
             }
         });
+    }
+
+    public Map<Integer, AdjustableInteger> getSkillingItemChargeMap() {
+        return skillingItemChargeMap;
     }
 
     public Map<Integer, AdjustableInteger> getNpcKillMap() {

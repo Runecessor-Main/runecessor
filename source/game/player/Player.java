@@ -28,6 +28,8 @@ import game.content.miscellaneous.*;
 import game.content.phantasye.PlayerDetails;
 import game.content.phantasye.PlayerDetailsRepository;
 import game.content.phantasye.PlayerDetailsRepositoryManager;
+import game.content.phantasye.item.degradable.impl.Bonecrusher;
+import game.content.phantasye.item.degradable.impl.DragonboneNecklace;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.content.phantasye.skill.AbstractSkillBase;
@@ -45,9 +47,11 @@ import game.content.quest.QuestHandler;
 import game.content.quest.QuestReward;
 import game.content.shop.ShopAssistant;
 import game.content.skilling.HitPointsRegeneration;
+import game.content.skilling.Skill;
 import game.content.skilling.SkillMenu;
 import game.content.skilling.Skilling;
 import game.content.skilling.hunter.Hunter;
+import game.content.skilling.prayer.BuryBone;
 import game.content.skilling.summoning.Summoning;
 import game.content.skilling.summoning.pet.SummoningPetManager;
 import game.content.starter.GameMode;
@@ -118,6 +122,22 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private final StopWatch stopWatch = new StopWatch();
     private final Runecrafting runecrafting = new Runecrafting(this);
     private final Mining mining = new Mining(this);
+
+    public int getChargesRemainingFor(int itemId) {
+        if (playerDetails.getSkillingItemChargeMap().get(itemId) != null)
+            return playerDetails.getSkillingItemChargeMap().get(itemId).value();
+        return 0;
+    }
+
+    public AdjustableInteger getChargesFor(int itemId) {
+        if (playerDetails.getSkillingItemChargeMap() != null) {
+            if (playerDetails.getSkillingItemChargeMap().get(itemId) != null)
+                return playerDetails.getSkillingItemChargeMap().get(itemId);
+            playerDetails.getSkillingItemChargeMap().put(itemId, new AdjustableInteger(0));
+            return playerDetails.getSkillingItemChargeMap().get(itemId);
+        }
+        throw new NullPointerException("Error Initializing Player Details");
+    }
 
     public int getKillCountForNpc(int npcId) {
         if (playerDetails.getNpcKillMap().get(npcId) != null)
@@ -195,7 +215,16 @@ public class Player extends Entity implements PlayableCharacter, Customer {
                     + " has received a very rare drop of one " + ItemAssistant.getItemName(loot.getItem().getId()) + " from "
                     + NpcDefinition.getDefinitions()[npc.getId()].name + "!");
         }
-        if (this.getPetId() == 11024 && !(loot.getItem().getId() == 13307)) {
+        if (this.hasItem(Bonecrusher.ID, 1) && this.getChargesRemainingFor(Bonecrusher.ID) > 0 && Bonecrusher.getBones(loot.getItem().getId()).isPresent()) {
+            final BuryBone.Bones bones = Bonecrusher.getBones(loot.getItem().getId()).orElse(null);
+            final int xp = (bones.getXP() * loot.getItem().getAmount().value()) / 2;
+            Skilling.addSkillExperience(this, xp, Skill.PRAYER.getId(), true);
+            this.getChargesFor(Bonecrusher.ID).decrement();
+            this.getPA().sendFilterableMessage("Your Bonecrusher crushes the " + ServerConstants.RED_COL + ItemAssistant.getItemName(loot.getItem().getId()) + "</col> and grants you: " + ServerConstants.RED_COL + xp + "</col> Prayer XP.");
+            if(this.getEquippedAmulet(DragonboneNecklace.ID)) {
+                BuryBone.dragonboneEffect(this,bones.getItemId());
+            }
+        } else if (this.getPetId() == 11024 && !(loot.getItem().getId() == 13307)) {
             this.receiveMessage("<col=0099ff>Yoshi Pet Collected item to your bank.");
             this.receiveMessage("Item Name: <col=0099ff>" + ItemAssistant.getItemName(loot.getItem().getId()));
 

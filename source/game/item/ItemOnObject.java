@@ -148,6 +148,8 @@ public class ItemOnObject {
 							break;
 
 						case 17119:
+						case 17116:
+						case 17117:
 							if (itemId == 1925) {
 								Ectofuntus.FillBucket(player);
 							}

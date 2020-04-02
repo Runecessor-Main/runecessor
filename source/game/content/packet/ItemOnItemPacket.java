@@ -16,6 +16,7 @@ import game.content.miscellaneous.PlayerMiscContent;
 import game.content.miscellaneous.RunePouch;
 import game.content.miscellaneous.SpiritShieldCrafting;
 import game.content.phantasye.ItemOnItemActionManager;
+import game.content.phantasye.item.degradable.impl.Bonecrusher;
 import game.content.skilling.Firemaking;
 import game.content.skilling.Skilling;
 import game.content.skilling.crafting.BattlestaffMaking;
@@ -118,6 +119,15 @@ public class ItemOnItemPacket implements PacketType {
 
         if (itemUsedId == 21816 && itemUsedWithId == 21820 || itemUsedId == 21820 && itemUsedWithId == 21816) {
             player.getPA().sendMessage("You'll need to uncharge your bracelet before adding more ether.");
+            return;
+        }
+
+        if(itemUsedId == Bonecrusher.ID && itemUsedWithId == Bonecrusher.CHARGE_ID || itemUsedId == Bonecrusher.CHARGE_ID  && itemUsedWithId == Bonecrusher.ID) {
+            final int amount = ItemAssistant.getItemAmount(player,Bonecrusher.CHARGE_ID);
+            player.getChargesFor(Bonecrusher.ID).add(amount);
+            player.removeItemFromInventory(Bonecrusher.CHARGE_ID,amount);
+            player.receiveMessage("You add " + ServerConstants.RED_COL + amount +"</col> charges to your Bonecrusher. You now have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(Bonecrusher.ID) + "</col> charges.");
+            player.saveDetails();
             return;
         }
 

@@ -123,14 +123,14 @@ public class Ectofuntus {
 	public static void BoneGrinding(Player player) {
 		for (final Bonemeal b : Bonemeal.values()) {
 			int amount = ItemAssistant.getItemAmount(player, b.getBoneId());
-			if (!ItemAssistant.hasItemInInventory(player, b.getBoneId()) || !ItemAssistant.hasItemInInventory(player, 1931)) // Pot
+			if (!player.hasItem(b.boneId,1) || !player.hasItem(1931,1)) // Pot
 			{
 				continue;
 			}
 			if (Skilling.cannotActivateNewSkillingEvent(player)) {
 				return;
 			}
-			if (ItemAssistant.hasItemAmountInInventory(player, b.getBoneId(), amount) && ItemAssistant.hasItemAmountInInventory(player, 1931, amount)) {
+			if (player.hasItem(b.boneId,amount) && player.hasItem(1931,amount)) {
 				player.cannotIssueMovement = true;
 				CycleEventHandler.getSingleton().addEvent(player, new CycleEvent() {
 					int i = 0;

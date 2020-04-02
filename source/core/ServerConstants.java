@@ -1,6 +1,7 @@
 package core;
 
 import game.bot.BotManager;
+import game.content.phantasye.item.degradable.impl.Bonecrusher;
 import game.content.shop.ShopAssistant;
 import game.item.BloodMoneyPrice;
 import game.item.ItemAssistant;
@@ -19,6 +20,7 @@ public class ServerConstants {
 	 * All custom donator item requests.
 	 */
 	private final static int[] IMMORTAL_DONATOR_ITEMS_OSRS = {
+			Bonecrusher.ID,
 			20528, //blood longsword
 			20529,//blood maul
 					16052, // Rainbow Twisted bow for Locals

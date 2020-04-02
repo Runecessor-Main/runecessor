@@ -19,6 +19,7 @@ import game.content.miscellaneous.*;
 import game.content.music.SoundSystem;
 import game.content.packet.preeoc.ClickItemPreEoc;
 import game.content.phantasye.item.HerbSack;
+import game.content.phantasye.item.degradable.impl.Bonecrusher;
 import game.content.phantasye.skill.gathering.hunter.Trap;
 import game.content.phantasye.skill.gathering.hunter.TrapController;
 import game.content.phantasye.skill.support.slayer.SlayerSkill;
@@ -145,8 +146,12 @@ public class FirstClickItemPacket implements PacketType {
         if (ClickItemPreEoc.firstClickItemPreEoc(player, itemId, itemSlot)) {
             return;
         }
-
         switch (itemId) {
+
+            case Bonecrusher
+                    .ID:
+                player.receiveMessage("You have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(itemId) + "</col> charges remaining.");
+                break;
             case 13226:
                 HerbSack.getInstanceForPlayer(player).fill();
                 break;
