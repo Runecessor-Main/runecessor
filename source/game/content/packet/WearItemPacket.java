@@ -91,40 +91,6 @@ public class WearItemPacket implements PacketType {
 				}
 				break;
 
-		/*	case 9813:
-			case 13068:
-				if (!player.getQuestFunction().hasCompletedAll()) {
-					player.getPA()
-							.sendMessage("You must have completed all quests in order to wear this cape.");
-					return;
-				}
-				break;
-			case 1305:
-			case 1215:
-			case 1231:
-			case 5680:
-			case 5698:
-				if (GameMode.getGameMode(player, "STANDARD IRON MAN")
-						|| GameMode.getGameMode(player, "ULTIMATE IRON MAN")
-						|| GameMode.getGameMode(player, "HARDCORE IRON MAN")
-								&& player.getQuest(3).getStage() != 4) {
-					player.getDH().sendItemChat("",
-							"You must have completed @blu@Lost City@bla@ to wield this",
-							"item as an Ironman.", wearId, 200, 0, 0);
-					return;
-				}
-				break;
-			case 4587:
-				if (GameMode.getGameMode(player, "STANDARD IRON MAN")
-						|| GameMode.getGameMode(player, "ULTIMATE IRON MAN")
-						|| GameMode.getGameMode(player, "HARDCORE IRON MAN")
-								&& player.getQuest(5).getStage() != 7) {
-					player.getDH().sendItemChat("",
-							"You must have completed @blu@Monkey Madness@bla@ to wield this",
-							"item as an Ironman.", wearId, 200, 0, 0);
-					return;
-				}
-				break;*/
 			default:
 				if (Plugin.execute("equip_item_" + wearId, player)) {
 				}

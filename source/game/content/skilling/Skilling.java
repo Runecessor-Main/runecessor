@@ -13,6 +13,7 @@ import game.content.miscellaneous.GameTimeSpent;
 import game.content.miscellaneous.RandomEvent;
 import game.content.miscellaneous.XpBonus;
 import game.content.phantasye.GeneralUtils;
+import game.content.phantasye.item.MythicalCape;
 import game.content.profile.ProfileRank;
 import game.content.skilling.Runecrafting.Runes;
 import game.content.skilling.fishing.Fishing;
@@ -538,18 +539,21 @@ public class Skilling {
                 }
 
             }
-            if (player.hasItemEquipped(22114)) { //TODO REPLACE WITH CAPE ID
-                if (player.getPlayerDetails().getMythicalCapeCharges().value() >= 10) {
+            double multiplier = 1;
+            if (player.hasItemEquipped(MythicalCape.ID)) {
+                if (player.getChargesRemainingFor(MythicalCape.ID) >= 10) {
                     if (player.getPlayerDetails().getMythicalCapeTier().value() == 0) {
-                        experience *= 1.5;
+                        multiplier = 1.5;
                     } else if (player.getPlayerDetails().getMythicalCapeTier().value() == 1) {
-                        experience *= 2;
+                        multiplier = 2;
                     } else if (player.getPlayerDetails().getMythicalCapeTier().value() == 2) {
-                        experience *= 2.5;
+                        multiplier = 2.5;
                     } else if (player.getPlayerDetails().getMythicalCapeTier().value() == 3) {
-                        experience *= 3;
+                        multiplier = 3;
                     }
-                    player.getPlayerDetails().getMythicalCapeCharges().subtract(10);
+                    experience *= multiplier;
+                    player.getPA().sendFilterableMessage("Your " + ServerConstants.RED_COL + "</col> Mythical Cape grants you a x" + ServerConstants.RED_COL +  multiplier + "</col> XP multiplier.");
+                    player.getChargesFor(MythicalCape.ID).subtract(10);
                 }
             }
 //            if (skill == ServerConstants.AGILITY) {
@@ -707,7 +711,7 @@ public class Skilling {
         if (player.getGameMode() == "GLADIATOR")
             ItemAssistant.addItem(player, TOKEN, amt);
         else
-            ItemAssistant.addItem(player, TOKEN, (amt/2) + 1);
+            ItemAssistant.addItem(player, TOKEN, (amt / 2) + 1);
     }
 
     public static int getTotalLevel(Player player, boolean excludeCombat) {

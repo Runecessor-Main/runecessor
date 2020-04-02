@@ -19,6 +19,7 @@ import game.content.miscellaneous.*;
 import game.content.music.SoundSystem;
 import game.content.packet.preeoc.ClickItemPreEoc;
 import game.content.phantasye.item.HerbSack;
+import game.content.phantasye.item.MythicalCape;
 import game.content.phantasye.item.degradable.impl.Bonecrusher;
 import game.content.phantasye.skill.gathering.hunter.Trap;
 import game.content.phantasye.skill.gathering.hunter.TrapController;
@@ -35,6 +36,7 @@ import game.content.skilling.prayer.BuryBone;
 import game.content.skilling.summoning.Summoning;
 import game.content.skilling.summoning.familiar.SummoningFamiliar;
 import game.item.ItemAssistant;
+import game.item.ItemSlot;
 import game.player.Area;
 import game.player.Player;
 import game.player.event.CycleEvent;
@@ -91,7 +93,6 @@ public class FirstClickItemPacket implements PacketType {
         }
 
         player.setFirstItemClicked(itemId);
-
         if (LootFactory.getLootableItem(itemId) != null) {
             player.loot(LootFactory.getLootableItem(itemId));
             return;
@@ -147,7 +148,6 @@ public class FirstClickItemPacket implements PacketType {
             return;
         }
         switch (itemId) {
-
             case Bonecrusher
                     .ID:
                 player.receiveMessage("You have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(itemId) + "</col> charges remaining.");

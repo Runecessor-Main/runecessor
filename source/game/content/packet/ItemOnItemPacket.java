@@ -16,6 +16,8 @@ import game.content.miscellaneous.PlayerMiscContent;
 import game.content.miscellaneous.RunePouch;
 import game.content.miscellaneous.SpiritShieldCrafting;
 import game.content.phantasye.ItemOnItemActionManager;
+import game.content.phantasye.item.MythicalCape;
+import game.content.phantasye.item.degradable.DegradableItemBase;
 import game.content.phantasye.item.degradable.impl.Bonecrusher;
 import game.content.skilling.Firemaking;
 import game.content.skilling.Skilling;
@@ -124,9 +126,20 @@ public class ItemOnItemPacket implements PacketType {
 
         if(itemUsedId == Bonecrusher.ID && itemUsedWithId == Bonecrusher.CHARGE_ID || itemUsedId == Bonecrusher.CHARGE_ID  && itemUsedWithId == Bonecrusher.ID) {
             final int amount = ItemAssistant.getItemAmount(player,Bonecrusher.CHARGE_ID);
-            player.getChargesFor(Bonecrusher.ID).add(amount);
-            player.removeItemFromInventory(Bonecrusher.CHARGE_ID,amount);
-            player.receiveMessage("You add " + ServerConstants.RED_COL + amount +"</col> charges to your Bonecrusher. You now have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(Bonecrusher.ID) + "</col> charges.");
+            final int charges = DegradableItemBase.addCharge(amount,player.getChargesRemainingFor(Bonecrusher.ID));
+            player.getChargesFor(Bonecrusher.ID).add(charges);
+            player.removeItemFromInventory(Bonecrusher.CHARGE_ID,charges);
+            player.receiveMessage("You add " + ServerConstants.RED_COL + charges +"</col> charges to your Bonecrusher. You now have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(Bonecrusher.ID) + "</col> charges.");
+            player.saveDetails();
+            return;
+        }
+
+        if(itemUsedId == MythicalCape.ID && itemUsedWithId == MythicalCape.CHARGE_ID || itemUsedId == MythicalCape.CHARGE_ID  && itemUsedWithId == MythicalCape.ID) {
+            final int amount = ItemAssistant.getItemAmount(player,MythicalCape.CHARGE_ID);
+            final int charges = DegradableItemBase.addCharge(amount,player.getChargesRemainingFor(MythicalCape.ID));
+            MythicalCape.upgrade(player,charges);
+            player.removeItemFromInventory(MythicalCape.CHARGE_ID,charges);
+            player.receiveMessage("You add " + ServerConstants.RED_COL + charges +"</col> charges to your Mythical Cape. You now have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(MythicalCape.ID) + "</col> charges.");
             player.saveDetails();
             return;
         }

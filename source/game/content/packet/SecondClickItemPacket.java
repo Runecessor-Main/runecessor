@@ -13,6 +13,7 @@ import game.content.miscellaneous.MagicCapeSpellbookSwap;
 import game.content.miscellaneous.PlayerMiscContent;
 import game.content.miscellaneous.RunecrafterHat;
 import game.content.phantasye.item.HerbSack;
+import game.content.phantasye.item.MythicalCape;
 import game.content.phantasye.skill.support.slayer.SlayerSkill;
 import game.content.phantasye.skill.support.slayer.item.SlayerGem;
 import game.item.ItemAssistant;
@@ -83,6 +84,10 @@ public class SecondClickItemPacket implements PacketType {
 			return;
 		}
 		switch (itemId) {
+			case MythicalCape
+					.ID:
+				player.receiveMessage("You have: " + ServerConstants.RED_COL + player.getChargesRemainingFor(itemId) + "</col> charges remaining.");
+				break;
 			case 11866:
 			case 11867:
 			case 11868:
