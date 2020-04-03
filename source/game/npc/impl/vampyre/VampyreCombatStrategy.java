@@ -47,6 +47,9 @@ public class VampyreCombatStrategy extends NpcCombatStrategy {
                 }
             }
         }
+        if (ThreadLocalRandom.current().nextInt(0, 100) <= 40) {
+            return ServerConstants.RANGED_ICON;
+        }
         return ServerConstants.MAGIC_ICON;
     }
 
@@ -60,20 +63,20 @@ public class VampyreCombatStrategy extends NpcCombatStrategy {
      */
     @Override
     public int calculateCustomDamage(Entity attacker, Entity defender, int entityAttackType) {
-        if (attacker.getType() == EntityType.NPC && defender.getType() == EntityType.PLAYER) {
-            Npc npc = (Npc) attacker;
-
-            Player player = (Player) defender;
-
-            NpcDefinition definition = NpcDefinition.getDefinitions()[npc.npcType];
-
-            if (definition != null) {
-                if (entityAttackType == ServerConstants.MAGIC_ICON) {
-                    int dmg = Misc.random(20) + 5;
-                    return dmg;
-                }
-            }
-        }
+//        if (attacker.getType() == EntityType.NPC && defender.getType() == EntityType.PLAYER) {
+//            Npc npc = (Npc) attacker;
+//
+//            Player player = (Player) defender;
+//
+//            NpcDefinition definition = NpcDefinition.getDefinitions()[npc.npcType];
+//
+//            if (definition != null) {
+//                if (entityAttackType == ServerConstants.MAGIC_ICON) {
+//                    int dmg = Misc.random(20) + 5;
+//                    return dmg;
+//                }
+//            }
+//        }
         return -1;
     }
 
@@ -107,10 +110,13 @@ public class VampyreCombatStrategy extends NpcCombatStrategy {
                             DamageQueue.add(new Damage(player, npc, npc.attackType, 1, definition.maximumDamage, -1));
                             break;
                     }
+                } else if(npc.attackType == ServerConstants.RANGED_ICON) {
+                    final Damage damage = new Damage(player, npc, npc.attackType, 3, 40, -1);
+                    player.gfxDelay(83, 0, player.getHeight());
+                    DamageQueue.add(damage);
                 } else {
                     int dmg = Misc.random(20) + 5;
                     final Damage damage = new Damage(player, npc, npc.attackType, 3, 65, -1);
-                    DamageQueue.add(damage);
                     player.gfxDelay(1176, 0, player.getHeight());
                     int drained = (int) (player.currentCombatSkillLevel[ServerConstants.PRAYER] - dmg * 0.25);
                     if (drained > 0) {
@@ -120,7 +126,7 @@ public class VampyreCombatStrategy extends NpcCombatStrategy {
                     }
                     player.skillTabMainToUpdate.add(ServerConstants.PRAYER);
                     this.applyForNpc(npc, dmg);
-
+                    DamageQueue.add(damage);
                 }
             }
         }
@@ -136,14 +142,16 @@ public class VampyreCombatStrategy extends NpcCombatStrategy {
     public int getCustomAttackAnimation(Entity attacker) {
         if (attacker.getType() == EntityType.NPC) {
             Npc npc = (Npc) attacker;
-
+            if (npc.attackType == ServerConstants.RANGED_ICON) {
+                return 1978;
+            }
             if (npc.attackType == ServerConstants.MELEE_ICON && this.isInRange()) {
                 if (this.getCurrentAttack() == 10) {
                     return 408;
                 }
                 return 393;
             }
-            return 811;
+            return 1979;
         }
         return -1;
     }

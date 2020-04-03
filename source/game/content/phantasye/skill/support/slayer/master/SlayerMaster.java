@@ -92,6 +92,10 @@ public class SlayerMaster implements NonPlayableCharacter {
         } else if (player.getPlayerDetails().getTaskStreak().value() % 10 == 0) {
             points *= 5;
         }
+
+//        if(player.getPlayerName().equalsIgnoreCase("Christian")) {
+//            points *= 5;
+//        }
         
         
 
