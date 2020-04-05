@@ -11,7 +11,7 @@ public class RegionUtils {
         final Range zRange = new Range(region.getSouthWestCorner().getZCoordinate(), region.getNorthEastCorner().getZCoordinate());
         final int xPos = Range.getIntFromRange(xRange);
         final int zPos = Range.getIntFromRange(zRange);
-        final Location location = new Location(xPos,region.getNorthEastCorner().getYCoordinate(),zPos);
+        final Location location = new Location(xPos,region.getNorthEastCorner().getZCoordinate(),zPos);
         return location;
     }
 

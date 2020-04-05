@@ -21,8 +21,8 @@ public class ServerConstants {
 	 */
 	private final static int[] IMMORTAL_DONATOR_ITEMS_OSRS = {
 			Bonecrusher.ID,
-			20528, //blood longsword
-			20529,//blood maul
+			19515, //blood longsword
+			19517,//blood maul
 					16052, // Rainbow Twisted bow for Locals
 					16055, // Blue Abyssal tentacle for Verticle
 					16056, // Black and orange Twisted bow for Thuggahhh

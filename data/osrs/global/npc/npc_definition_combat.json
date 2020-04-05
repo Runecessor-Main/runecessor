@@ -19,6 +19,25 @@
     "maximum_damage": 40
   },
   {
+    "npc_name": "Ice Queen",
+    "npc_type": 4922,
+    "roam_distance": 6,
+    "size": 1,
+    "aggressive": false,
+    "attack_animation": 393,
+    "block_animation": 404,
+    "death_animation": 836,
+    "death_delete_ticks": 4,
+    "attack_speed": 6,
+    "attack_distance": 6,
+    "hitpoints": 1000,
+    "attack": 300,
+    "melee_defence": 500,
+    "ranged_defence": 1000,
+    "magic_defence": 800,
+    "maximum_damage": 70
+  },
+  {
     "npc_name": "Jungle demon",
     "npc_type": 1443,
     "roam_distance": 6,

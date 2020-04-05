@@ -8,6 +8,14 @@
 		"face_action": "ROAM"
 	},
 	{
+		"npc_name": "Ice Queen",
+		"npc_type": 4922,
+		"x": 2866,
+		"y": 9955,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+	{
 		"npc_name": "Crazy Archaeologist",
 		"npc_type": 6618,
 		"x": 2977,

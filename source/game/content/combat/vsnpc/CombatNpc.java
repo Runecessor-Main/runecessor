@@ -1781,7 +1781,7 @@ public class CombatNpc {
             player.addToHitPoints(damage);
             npc.gfx0(398);
         }
-        if((player.getWieldedWeapon() == 16389 || player.getWieldedWeapon() == 20529 || player.getWieldedWeapon() == 20528) && Misc.hasPercentageChance(30) && damage > 0) {
+        if((player.getWieldedWeapon() == 16389 || player.getWieldedWeapon() == 19515 || player.getWieldedWeapon() == 19517) && Misc.hasPercentageChance(30) && damage > 0) {
             BloodRapierEffect.applyForNpc(player,npc,damage);
         }
         npc.underAttack = true;

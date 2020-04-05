@@ -123,6 +123,10 @@ public class Player extends Entity implements PlayableCharacter, Customer {
     private final Runecrafting runecrafting = new Runecrafting(this);
     private final Mining mining = new Mining(this);
 
+    public Location getCurrentLocation() {
+        return new Location(this.getX(),this.getY(),this.getHeight());
+    }
+
     public int getChargesRemainingFor(int itemId) {
         if (playerDetails.getSkillingItemChargeMap().get(itemId) != null)
             return playerDetails.getSkillingItemChargeMap().get(itemId).value();

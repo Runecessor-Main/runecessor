@@ -22,6 +22,7 @@ import core.ServerConstants;
 import core.benchmark.GameBenchmark;
 import game.NamedPosition;
 import game.npc.NpcWalkToEvent;
+import game.npc.impl.ice.IceQueen;
 import game.position.Position;
 import game.position.PositionUtils;
 import game.bot.BotCommunication;
@@ -161,7 +162,7 @@ public class AdministratorCommand {
             return true;
         }
         if (command.equals("tt")) {
-            TradingPost.displayTradingPost(player);
+            IceQueen.createInstance(player);
         }
         if (command.equals("doubleitems")) {
             int loops = 100_000;

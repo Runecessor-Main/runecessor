@@ -169,7 +169,7 @@ public class SlayerSkill {
                                         p.receiveMessage(ServerConstants.RED_COL + "You socket the Blood Diamond into your longsword's hilt.");
                                         p.performAnimation(887);
                                         p.gfxDelay(1002, 60, 0);
-                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 20528));
+                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 19515));
                                         p.getPA().closeInterfaces(true);
                                         break;
                                     case 2:
@@ -188,7 +188,7 @@ public class SlayerSkill {
                                         p.receiveMessage(ServerConstants.RED_COL + "You socket the Blood Diamond into your maul's handle.");
                                         p.performAnimation(887);
                                         p.gfxDelay(1002, 60, 0);
-                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 20529));
+                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 19517));
                                         p.getPA().closeInterfaces(true);
                                         break;
                                     case 2:
