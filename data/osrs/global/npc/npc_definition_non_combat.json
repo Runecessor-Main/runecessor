@@ -14,6 +14,16 @@
 		"npc_type": 2195,
 		"roam_distance": 5
 	},
+		{
+		"npc_name": "City Clerk",
+		"npc_type": 4255,
+		"roam_distance": 5
+	},
+		{
+		"npc_name": "Fightslave",
+		"npc_type": 1217,
+		"roam_distance": 5
+	},
 	{
 		"npc_name": "Scalper",
 		"npc_type": 3463,

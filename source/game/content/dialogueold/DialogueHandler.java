@@ -2144,6 +2144,51 @@ public class DialogueHandler {
 			case 720:
 				break;
 
+			// SKILL CITY
+				
+			case 721:
+				sendNpcChat("Ah! Hello There Noobie!", "You must be new I've never seen you here before.", "Well, let me give you a quick breakdown of the city layout.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 722;
+				break;
+			case 722:
+				sendNpcChat("To the left of us is a small fishinga are between 2 wells.", "We also have a nice little General store for the basics.", "Behind my humble home we have the bank I want robbed.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 723;
+				break;
+			case 723:
+				sendNpcChat("Hahaha!...", ".........Hehe", "Whewww...", FacialAnimation.EVIL_LAUGH.getAnimationId());
+				player.nextDialogue = 724;
+				break;
+			case 724:
+				sendNpcChat("Ah!", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 725;
+				break;
+			case 725:
+				sendNpcChat("Anyways, there are a few of my friends.. uh I mean crooks", "Locked away waiting to catch train which can be harassed.", "This city doesn't take to criminals, however", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 726;
+				break;
+			case 726:
+				sendNpcChat("We do have Stalls by the bank next to Charley...", "I mean the shady Character always buying stolen goods", "So you can train your theiving.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 727;
+				break;
+			case 727:
+				sendNpcChat("To our right you may notice some Trees and Ore Deposits.", "The locals consider that to be a good place to train your", "Woodcutting and Mining Skills.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 728;
+				break;
+			case 728:
+				sendNpcChat("Finally, we have my humble home.", "The God's must not like me because my doors never shut.", "Because of this I have left my home open to strangers.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 729;
+				break;
+			case 729:
+				sendNpcChat("Here you can use the Furnace or Anvil to Smith, Range,", "and my Ex-Wifes Spinning wheel to train Crafting", "or for Bow String so you can Fletch bows.", FacialAnimation.SAD.getAnimationId());
+				player.nextDialogue = 730;
+				break;
+			case 730:
+				sendNpcChat("Afterall, That is the only thing I got to keep", "after our Divorce was finalized....", "*CRYING UNCONTROLLABLY*", FacialAnimation.NEARLY_CRYING.getAnimationId());
+				player.nextDialogue = 731;
+				break;
+			case 731:
+				sendNpcChat("If you have any questions feel free to ask a Staff Member.", "Welcome to Skill City and thank you for dropping in", "...Unannounced", FacialAnimation.DISINTERESTED.getAnimationId());
+				break;
 			default:
 				Plugin.execute("chat_" + dialogue, player);
 				break;

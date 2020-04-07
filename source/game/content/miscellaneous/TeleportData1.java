@@ -38,25 +38,27 @@ public enum TeleportData1 {
 	KING(17047, 52134, "KBD", "KBD", 240, 0, "Random", "@red@Hard", TeleportType1.BOSSES, 2271,4680, 0, 10, false, 10, new int[] { 12653, 11286, 11920, 12073, -1, -1, -1, -1}),
 
 	//Skilling
-	NEW_1( 17031, 52119, "Entrana Skilling Zone", "Entrana Skilling Zone", 0, 0, "", "", TeleportType1.SKILLING,  2866, 3337, 0, 79, false, 10, new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
+	NEW_2( 17031, 52119, "Skill City", "Skill City", 0, 0, "", "", TeleportType1.SKILLING,  2981, 3226, 0, 79, false, 10, new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
+	}),
+	NEW_3( 17031, 52120, "Entrana Skilling Zone", "Entrana Skilling Zone", 0, 0, "", "", TeleportType1.SKILLING,  2866, 3337, 0, 79, false, 10, new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
 		}),
-	NEW_2( 17031, 52120, "Dwarven Mine", "Dwarven Mine", 0, 0, "", "", TeleportType1.SKILLING, 3023, 9739, 0, 79, true, 260
+	NEW_4( 17031, 52121, "Dwarven Mine", "Dwarven Mine", 0, 0, "", "", TeleportType1.SKILLING, 3023, 9739, 0, 79, true, 260
 			, new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
 		    		}),
-	NEW_3( 17031, 52121, "Agility", "Agility",  0, 0, "", "", TeleportType1.SKILLING, 2998 ,3906, 0, -1, true, -1
+	NEW_5( 17031, 52122, "Agility", "Agility",  0, 0, "", "", TeleportType1.SKILLING, 2998 ,3906, 0, -1, true, -1
 			, new int[] {-1, -1, -1, -1, -1, -1, -1, -1 
 		    		}),
-	NEW_4( 17031, 52122, "Hunter", "Hunter", 0, 0, "", "", TeleportType1.SKILLING,  2340 , 3584, 0,  -1, true, -1,
+	NEW_6( 17031, 52123, "Hunter", "Hunter", 0, 0, "", "", TeleportType1.SKILLING,  2340 , 3584, 0,  -1, true, -1,
 			new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
     		}),
 	
-	NEW_5( 17031, 52123, "Mining", "Mining", 0, 0, "", "", TeleportType1.SKILLING,  3023 ,9739, 0,  -1, true, -1,
+	NEW_7( 17031, 52124, "Mining", "Mining", 0, 0, "", "", TeleportType1.SKILLING,  3023 ,9739, 0,  -1, true, -1,
 			new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
     		}),
-	NEW_6( 17031, 52124, "Smithing", "Smithing", 0, 0, "", "", TeleportType1.SKILLING,  2469, 3436, 0,  -1, true, -1,
+	NEW_8( 17031, 52125, "Smithing", "Smithing", 0, 0, "", "", TeleportType1.SKILLING,  2469, 3436, 0,  -1, true, -1,
 			new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
     		}),
-	NEW_7( 17031, 52125, "Fishing", "Fishing", 0, 0, "", "", TeleportType1.SKILLING,  2552, 3563, 0,  -1, true, -1,
+	NEW_9( 17031, 52126, "Fishing", "Fishing", 0, 0, "", "", TeleportType1.SKILLING,  2552, 3563, 0,  -1, true, -1,
 			new int[] { -1, -1, -1, -1, -1, -1, -1, -1 
     		}),
 	//Wilderness

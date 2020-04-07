@@ -36,8 +36,15 @@ public class Achievements {
 			}
 		}
 		switch (achievementId) {
-
+		// NEW ACHIEVEMENTS } UNDER THE OLD ACHIEVEMENTS
+		
 			case 1:
+			return player.getKillCountForNpc(100);
+			
+		// END OF NEW ACHIEVEMENTS
+		// OLD ACHIEVEMENTS
+		
+			/*	case 1:
 			case 2:
 			case 3:
 			case 4:
@@ -76,9 +83,9 @@ public class Achievements {
 			case 28:
 			case 29:
 			case 30:
-				return player.getF2pKills();
-			case 31:
-				return player.getKillCountForNpc(100);
+				return player.getF2pKills(); 
+				*/ 
+			// END OF OLD ACHIEVEMENTS
 		}
 		String achievementSaveName = "";
 		for (int index = 0; index < AchievementDefinitions.idAndSaveName.size(); index++) {

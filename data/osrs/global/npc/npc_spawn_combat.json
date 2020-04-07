@@ -31,6 +31,54 @@
     "height": 0,
     "face_action": "ROAM"
   },
+    {
+    "npc_description": "Goblin",
+    "npc_type": 3029,
+    "x": 2991,
+    "y": 3246,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Skeleton",
+    "npc_type": 70,
+    "x": 2993,
+    "y": 3246,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Ghost",
+    "npc_type": 6815,
+    "x": 2997,
+    "y": 3246,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Chaos Druid",
+    "npc_type": 2878,
+    "x": 2995,
+    "y": 3246,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Bandit",
+    "npc_type": 2878,
+    "x": 2993,
+    "y": 3242,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Zombie",
+    "npc_type": 26,
+    "x": 2989,
+    "y": 3242,
+    "height": 0,
+    "face_action": "ROAM"
+  },
   {
     "npc_description": "Demonic Gorilla",
     "npc_type": 7144,

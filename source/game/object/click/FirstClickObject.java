@@ -506,6 +506,7 @@ public class FirstClickObject {
 		case 29216:
 		case 29215:
 		case 29214:
+		case 29191:
 		case 29213:
 		case 29212:
 		case 29218:

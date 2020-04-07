@@ -174,6 +174,7 @@ public class ItemOnObject {
 						case 2732:
 						case 5249: // Fire.
 						case 26181:
+						case 7183:
 						case 26185: // Fire
 						case 21302: //Oven
 						case 12269:

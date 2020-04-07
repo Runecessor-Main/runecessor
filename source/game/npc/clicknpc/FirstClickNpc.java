@@ -348,12 +348,18 @@ public class FirstClickNpc {
 			case 517: //general store
 				player.getShops().openShop(8);
 				break;
+			case 1217: //stalls npc
+				player.getDH().sendNpcChat("It hasn't always been like this you know...?", "Once I was a free man like my brother.", "It wasn't until I got caught stealing from the city stalls...", DialogueHandler.FacialAnimation.CALM_2.getAnimationId());
+				break;
 			case 508: //general store in varrock
 				player.getShops().openShop(8);
 				break;
 			// Cave kraken pet
 			case 6640:
 				player.getDH().sendDialogues(365);
+				break;
+			case 4255:
+				player.getDH().sendDialogues(721);
 				break;
 			// Vet'ion Jr.
 			case 5537:

@@ -1,1 +1,1 @@
-<col=0101DF>Welcome to Runcessor!</col> <col=A000B9>New Server!, Dedicated To Our Community, Frequent Updates
+<col=0101DF>Welcome to Runcessor!</col><col=218500> 100% Uptime!</col>

@@ -20,30 +20,42 @@ public class PanelTab {
 	 */
 	public static boolean isPanelTabButton(Player player, int buttonId) {
 		switch (buttonId) {
-			case 90072: // Eco, Quest tab, Panels tab, Achievement button
+			case 90072: // ACHIEVEMENTS
 				Achievements.displayAchievementInterface(player);
 				return true;
 
-			case 90077: // Eco, Quest tab, Panels tab, Titles button
-				PlayerTitle.displayInterface(player);
+			case 90077: // NPC DROP TABLE
+				player.getPA().displayInterface(29050);
+				// PlayerTitle.displayInterface(player); // REPLACED THE TITLE INTERFACE
 				return true;
 
-			case 90082: // Eco, Quest tab, Panels tab, Profile button
+			case 90082: // MY PROFILE
 				Profile.openUpProfileInterface(player);
 				return true;
-
-			case 90087: // Eco, Quest tab, Panels tab, Npc drops button
-				NpcDropTableInterface.displayInterface(player, true);
+								
+			case 90087: // DISCORD
+				player.getPA().openWebsite("www.discord.gg/tmVQaGc", false);
+				// NpcDropTableInterface.displayInterface(player, true); // REPLACED THE NPC DROP TABLE INERFACE
 				return true;
 
-			case 90092: // Eco, Quest tab, Panels tab, Presets button
-				QuickSetUp.displayInterface(player);
+			case 90092: // FORUM 
+				player.getPA().openWebsite("www.runecessor.com/forum", false);
+				// QuickSetUp.displayInterface(player); // REPLACED THE QUICK SETUP INTERFACE
 				return true;
 
-			case 90097: // Eco, Quest tab, Panels tab, Pets button
+			case 90097: // DONATE
+				player.getPA().openWebsite("www.runecessor.com/forum/index.php?/store/", false);
 				return true;
-
-			case 90102: // Eco, Quest tab, Panels tab, Guide button
+			case 90102: // HISCORES
+				player.getPA().openWebsite("www.runecessor.com/forum/index.php?/highscores/", false);
+				return true;
+			case 90107: // VOTE
+				player.getPA().openWebsite("www.runecessor.com/forum/index.php?/vote/", false);
+				return true;
+			case 90112: // YOUTUBE
+				player.getPA().openWebsite("www.youtube.com/channel/UCpX7kvYqFB_DZgo-63hFnZQ?view_as=subscriber", false);
+				return true;
+			case 90117: // GUIDE BOOK
 				GuideBook.displayGuideInterface(player);
 				return true;
 		}

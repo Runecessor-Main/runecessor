@@ -32,6 +32,7 @@ public class Smithing {
 			case 2030:
 			case 26300:
 			case 21303:
+			case 6189:
 			case 12100:
 				return true;
 		}

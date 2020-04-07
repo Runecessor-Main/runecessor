@@ -97,7 +97,8 @@ public class TeleportInterface {
 		 * skilling.add("Runecrafting ; 3039 4835 0");
 		 * skilling.add("Hunter ; 2334 3578 0");
 		 */
-
+		
+		add(skilling, "*NEW* Skill City ; 2981 3226 0", GameType.ANY);
 		add(skilling, "Entrana Skilling Zone ; 2866 3337 0", GameType.ANY);
 		add(skilling, "Dwarven Mine ; 3023 9739 0", GameType.ANY);
 		add(skilling, "Agility ; 2998 3906 0", GameType.ANY);
