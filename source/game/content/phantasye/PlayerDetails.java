@@ -22,6 +22,7 @@ public class PlayerDetails {
     private List<Integer> paymentRunes;
     private Map<Integer,AdjustableInteger> npcKillMap;
     private Map<Integer,AdjustableInteger> skillingItemChargeMap;
+    private List<Integer> socketList;
 
     private AdjustableInteger mythicalCapeCharges;
     private AdjustableInteger mythicalCapeTier;
@@ -45,6 +46,7 @@ public class PlayerDetails {
         this.mythicalCapeTier = new AdjustableInteger(0);
         this.npcKillMap = new HashMap<>();
         this.skillingItemChargeMap = new HashMap<>();
+        this.socketList = new ArrayList<>();
     }
 
     public void initialize() {
@@ -59,6 +61,10 @@ public class PlayerDetails {
                 e.printStackTrace();
             }
         });
+    }
+
+    public List<Integer> getSocketList() {
+        return socketList;
     }
 
     public Map<Integer, AdjustableInteger> getSkillingItemChargeMap() {

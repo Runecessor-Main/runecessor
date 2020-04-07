@@ -51,6 +51,9 @@ public class SecondClickObject {
 		
 
 		switch (objectId) {
+			case 2634:
+				player.getMiningSkill().startMining(objectX,objectY,objectId);
+				break;
 			case 9380:
 				player.getPA().sendMessage("This trap is set up, and ready to catch chinchompas.");
 				break;

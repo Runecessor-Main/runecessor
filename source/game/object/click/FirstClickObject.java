@@ -19,6 +19,7 @@ import game.content.minigame.single_minigame.vorkath.VorkathSinglePlayerMinigame
 import game.content.minigame.zombie.Zombie;
 import game.content.miscellaneous.*;
 import game.content.packet.preeoc.ClickObjectPreEoc;
+import game.content.phantasye.IceDungeon;
 import game.content.phantasye.actions.skill.gathering.impl.MineRockAction;
 import game.content.phantasye.event.hween.GraveDigger;
 import game.content.phantasye.minigame.instance.boss.BossInstanceChest;
@@ -149,6 +150,9 @@ public class FirstClickObject {
 			return;
 		}
 		switch (objectId) {
+			case 2634:
+				player.setDialogueChain(new DialogueChain().statement("This looks like it can be mined with a pick."));
+				break;
 			case 26273:
 				BossInstanceChest.getInstance().openFor(player);
 				break;
@@ -790,6 +794,8 @@ public class FirstClickObject {
 				ObjectEvent.climbDownLadder(player, 2884, 9798, 0);
 			} else if (player.getObjectX() == 3088 && player.getObjectY() == 3571) {
 				ObjectEvent.climbDownLadder(player, 3089, 9971, 0);
+			} else {
+				IceDungeon.climbLadder(player.getX(),player.getY(),player);
 			}
 			break;
 
@@ -809,6 +815,8 @@ public class FirstClickObject {
 				ObjectEvent.climbUpLadder(player, 3074, 3495, 0);
 			} else if (player.getObjectX() == 3209 && player.getObjectY() == 9616) {
 				ObjectEvent.climbUpLadder(player, 3210, 3216, 0);
+			} else {
+				IceDungeon.climbLadder(player.getX(),player.getY(),player);
 			}
 			break;
 

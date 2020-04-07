@@ -8,6 +8,7 @@ import game.player.Player;
 import utility.Misc;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * The content on the achievement tab and the achievement interface.
@@ -160,6 +161,8 @@ public class Achievements {
 		player.achievementPoint += pointsAmount;
 		player.achievementPointHistory += pointsAmount;
 		player.gfx100(199);
+		Arrays.stream(AchievementDefinitions.getDefinitions()[achievementIndex].itemRewards)
+				.forEach(value -> player.addItemToInventory(value,1));
 		boolean announce = player.achievementsCompleted.size() >= AchievementDefinitions.getDefinitions().length;
 		if (!player.achievementDifficultyCompleted[EASY]) {
 			player.achievementDifficultyCompleted[EASY] = true;

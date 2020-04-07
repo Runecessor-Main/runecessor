@@ -2283,11 +2283,19 @@
    {
       "npc_name":"Gnome glider",
       "npc_type":1446,
-      "x":2464,
-      "y":3501,
-      "height":3,
-      "face_action":"ROAM"
+      "x":3090,
+      "y":3493,
+      "height":0,
+      "face_action":"WEST"
    },
+	{
+		"npc_name":"Gnome glider",
+		"npc_type":1446,
+		"x":2464,
+		"y":3501,
+		"height":3,
+		"face_action":"ROAM"
+	},
    {
       "npc_name":"Gnome glider",
       "npc_type":1446,

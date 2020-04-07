@@ -13,7 +13,8 @@ public enum Ore {
     GOLD(40, 65, 98, 444, 7491, 7458),
     MITHRIL(55, 80, 155, 447, 7492, 7459),
     ADAMANT(70, 95, 315, 449, 7493, 7460),
-    RUNITE(85, 125, 970, 451, 7494, 7461);
+    RUNITE(85, 125, 970, 451, 7494, 7461),
+    WHITE_WOLF_MOUNTAIN_ROCKSLIDE(50,500,970,-1,2634);
 
     private int levelRequirements, xp, respawnTime, itemId;
     private int[] oreId;

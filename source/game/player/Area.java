@@ -510,7 +510,7 @@ public class Area {
 				|| isWithInArea(x, y, 2974, 3000, 4368, 4400)
 
 				|| isWithInArea(x, y, 2950, 3132, 4737, 4860)
-
+				|| isWithInArea(x,y, 2852 ,9920,2878, 9965)
 		// End of Wilderness multi zones.
 		) {
 			return true;

@@ -1552,7 +1552,7 @@ public class CombatNpc {
                 }
             }
         }
-        if(!Combat.wasAttackedByNpc(attacker)) {
+        if (!Combat.wasAttackedByNpc(attacker)) {
             attacker.getStopWatch().start();
         }
     }
@@ -1643,7 +1643,7 @@ public class CombatNpc {
                 }
                 RangedAmmoUsed.dropAmmo(attacker, npc.getX(), npc.getY(), npc.getHeight());
                 npc.underAttack = true;
-                if(attacker.getWieldedWeapon() != 6075 || attacker.getWieldedWeapon() != 6077) {
+                if (attacker.getWieldedWeapon() != 6075 || attacker.getWieldedWeapon() != 6077) {
                     CombatNpc.applyHitSplatOnNpc(attacker, npc, damage, ServerConstants.NORMAL_HITSPLAT_COLOUR,
                             ServerConstants.RANGED_ICON, 1);
                 } else {
@@ -1781,8 +1781,12 @@ public class CombatNpc {
             player.addToHitPoints(damage);
             npc.gfx0(398);
         }
-        if((player.getWieldedWeapon() == 16389 || player.getWieldedWeapon() == 19515 || player.getWieldedWeapon() == 19517) && Misc.hasPercentageChance(30) && damage > 0) {
-            BloodRapierEffect.applyForNpc(player,npc,damage);
+        if ((player.getWieldedWeapon() == 16389 ||
+                player.getWieldedWeapon() == 19515 ||
+                player.getWieldedWeapon() == 19517 ||
+                (player.getWieldedWeapon() == 6077 && player.getPlayerDetails().getSocketList().contains(SlayerSkill.Socket.BLOOD_DIAMOND.ordinal())))
+                && Misc.hasPercentageChance(30) && damage > 0) {
+            BloodRapierEffect.applyForNpc(player, npc, damage);
         }
         npc.underAttack = true;
         player.killingNpcIndex = player.getNpcIdAttacking();

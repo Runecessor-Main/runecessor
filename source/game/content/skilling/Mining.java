@@ -107,7 +107,8 @@ public class Mining {
 					RUNITE_ORE,
 					RUNITE_ORE_OTHER,
 					CHOCOLATE,
-					CHOCOLATE_OTHER
+					CHOCOLATE_OTHER,
+
 			};
 
 	public static int getRockGolemPetType(int objectId) {

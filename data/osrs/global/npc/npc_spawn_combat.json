@@ -8,6 +8,54 @@
     "face_action": "ROAM"
   },
   {
+    "npc_description": "Icelord",
+    "npc_type": 852,
+    "x": 870,
+    "y": 9952,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icelord",
+    "npc_type": 852,
+    "x": 2848,
+    "y": 9968,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icelord",
+    "npc_type": 852,
+    "x": 2850,
+    "y": 9970,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icelord",
+    "npc_type": 852,
+    "x": 2856,
+    "y": 9969,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icelord",
+    "npc_type": 853,
+    "x": 2853,
+    "y": 9971,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icelord",
+    "npc_type": 853,
+    "x": 2853,
+    "y": 9968,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
     "npc_description": "Vampyre",
     "npc_type": 4487,
     "x": 2654,

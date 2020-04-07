@@ -198,14 +198,39 @@ public class SlayerSkill {
                             }, "Socket Item? (This Action Can't Be Undone)", "Yes", "No")).start(player);
                             return true;
                     }
+                } else if(targetId == 6077) {
+                    switch (sourceId) {
+                        case 4670: //gfx effect 1176 creating effect 1002
+                            player.setDialogueChain(new DialogueChain().option((p, option) -> {
+                                switch (option) {
+                                    case 1:
+                                        p.receiveMessage(ServerConstants.RED_COL + "You socket the Blood Diamond into your bow's handle.");
+                                        p.performAnimation(887);
+                                        p.gfxDelay(1002, 60, 0);
+                                        p.getActionInvoker().perform(new BaseItemOnItemAction(p, sourceId, targetId, 6077));
+                                        p.getPA().closeInterfaces(true);
+                                        p.getPlayerDetails().getSocketList().add(Socket.BLOOD_DIAMOND.ordinal());
+                                        p.saveDetails();
+                                        break;
+                                    case 2:
+                                        p.getPA().closeInterfaces(true);
+                                        break;
+                                }
+                            }, "Socket Item? (This Action Can't Be Undone)", "Yes", "No")).start(player);
+                            return true;
+                    }
                 }
             }
         }
         return false;
     }
 
+    public static enum Socket {
+        BLOOD_DIAMOND,ICE_DIAMOND;
+    }
+
     private static boolean isChaotic(int itemId) {
-        final int[] items = {6605, 6607, 6609};
+        final int[] items = {6605, 6607, 6609,6077};
         for (int i = 0; i < items.length; i++) {
             if (itemId == items[i]) {
                 return true;

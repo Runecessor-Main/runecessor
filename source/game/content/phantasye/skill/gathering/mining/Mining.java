@@ -1,21 +1,23 @@
 package game.content.phantasye.skill.gathering.mining;
 
+import core.Server;
 import core.ServerConstants;
 import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.SkillingStatistics;
 import game.item.ItemAssistant;
 import game.object.custom.Object;
+import game.object.custom.ObjectManagerServer;
 import game.player.Player;
 import game.player.PlayerHandler;
 import game.player.event.CycleEvent;
 import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import org.menaphos.model.loot.factory.LootFactory;
+import org.menaphos.model.world.location.Location;
 import utility.Misc;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * New and improved mining based off the woodcutting class
@@ -117,7 +119,7 @@ public class Mining {
                     - ((pickList.get(pickId).getEfficiency() * (pickList.get(
                     pickId).getEfficiency() * 0.75)) + level);
             if (timer < 3.0)
-                return 3 + Misc.random(5 +  oreList.get(oreId).getLevelRequirements());
+                return 2 + Misc.random(3 + (level / (level - oreList.get(oreId).getLevelRequirements())));
         }
         return (int) timer;
     }
@@ -128,7 +130,7 @@ public class Mining {
             miningTimer = getTimer(oreId, getPick(),
                     player.baseSkillLevel[Skill.MINING.getId()]);
             player.startAnimation(anim);
-            this.startMiningEvent(x,y,oreId);
+            this.startMiningEvent(x, y, oreId);
             return true;
         }
         return false;
@@ -178,20 +180,34 @@ public class Mining {
         }
     }
 
+    private boolean containsOre(Ore ore, int id) {
+        return Arrays.stream(ore.getOreId()).anyMatch(value -> value == id);
+    }
+
     private void mineRock(int respawnTime, int x, int y, int ore) {
         Skilling.petChance(player, oreList.get(ore).getXp(), 125, 3800, ServerConstants.MINING, null);
         player.skillingStatistics[SkillingStatistics.ORES_MINED]++;
-        new Object(10081, x, y, 0, 0, 10, ore, respawnTime);
-        for (int t = 0; t < PlayerHandler.players.length; t++) {
-            if (PlayerHandler.players[t] != null) {
-                if (PlayerHandler.players[t].getObjectX() == x
-                        && PlayerHandler.players[t].getObjectY() == y) {
-                    PlayerHandler.players[t].playerAssistant.stopAllActions();
-                    PlayerHandler.players[t].startAnimation(65535);
-                    PlayerHandler.players[t].setObjectX(0);
-                    PlayerHandler.players[t].setObjectY(0);
+        if (!containsOre(Ore.WHITE_WOLF_MOUNTAIN_ROCKSLIDE, ore)) {
+            new Object(10081, x, y, 0, 0, 10, ore, respawnTime);
+            for (int t = 0; t < PlayerHandler.players.length; t++) {
+                if (PlayerHandler.players[t] != null) {
+                    if (PlayerHandler.players[t].getObjectX() == x
+                            && PlayerHandler.players[t].getObjectY() == y) {
+                        PlayerHandler.players[t].playerAssistant.stopAllActions();
+                        PlayerHandler.players[t].startAnimation(65535);
+                        PlayerHandler.players[t].setObjectX(0);
+                        PlayerHandler.players[t].setObjectY(0);
+                    }
                 }
             }
+        } else {
+            new Object(-1, x, y, 0, 0, 10, ore, respawnTime);
+            player.playerAssistant.stopAllActions();
+            player.startAnimation(65535);
+            player.setObjectX(0);
+            player.setObjectY(0);
+            player.moveTo(new Location(2839,3517));
         }
+
     }
 }

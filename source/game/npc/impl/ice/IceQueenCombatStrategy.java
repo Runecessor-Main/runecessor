@@ -148,14 +148,18 @@ public class IceQueenCombatStrategy extends NpcCombatStrategy {
 
                     break;
                 case GROUND:
-                    final Region targetedRegion = new Region(new Location(player.getX() - 3,player.getHeight(), player.getY() - 3), new Location(player.getX() + 3,player.getHeight(), player.getY() + 3));
-                    while (icicleLocations.size() < 5) {
-                        Location potentialLocation = RegionUtils.getLocationInRegion(targetedRegion);
-                        if (!icicleLocations.contains(potentialLocation))
-                            icicleLocations.add(potentialLocation);
-                    }
-                    icicleLocations.add(player.getCurrentLocation());
-                    attacker.getLocalPlayers().forEach(p -> this.crashIcicle(npc, p));
+
+
+                    attacker.getLocalPlayers().forEach(p -> {
+                        final Region targetedRegion = new Region(new Location(p.getX() - 1,p.getHeight(), p.getY() - 1), new Location(p.getX() + 1,p.getHeight(), p.getY() + 1));
+                        while (icicleLocations.size() < 5 * attacker.getLocalPlayers().size()) {
+                            Location potentialLocation = RegionUtils.getLocationInRegion(targetedRegion);
+                            if (!icicleLocations.contains(potentialLocation))
+                                icicleLocations.add(potentialLocation);
+                        }
+                        icicleLocations.add(p.getCurrentLocation());
+                        this.crashIcicle(npc, p);
+                    });
                     break;
             }
         }
