@@ -77,7 +77,6 @@ public class TeleportInterface {
 		add(monster, "Training Dungeon ; 3112 9676 0", GameType.ANY);
 		add(monster, "Slayer tower ; 3428 3537 0", GameType.ANY);
 		add(monster,"Shadow Cave ; 2740 5111 0", GameType.ANY);
-		add(monster,"Ice Dungeon ; 2847 9913 0", GameType.ANY);
 		add(monster,"Lumbridge Swamp Dungeon ; 3180 9589 0",GameType.ANY);
 		add(monster, "Brimhaven dungeon ; 2713 9564 0", GameType.ANY);
 		add(monster, "Bandit camp ; 3169 2990 0", GameType.ANY);
