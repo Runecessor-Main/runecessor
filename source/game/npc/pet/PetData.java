@@ -1026,6 +1026,18 @@ public class PetData {
 					{
 							11205, 16327, 1
 					},
+					// Yveltal Pet
+					{
+							11216, 16917, 1
+					},
+					// Yveltal Pet
+					{
+							11217, 16918, 1
+					},
+					// Ajax Pet
+					{
+							114, 16890, 1
+					},
 					// Death pet with lime robes for Syntaxed
 					{
 							11206, 16328, 1
