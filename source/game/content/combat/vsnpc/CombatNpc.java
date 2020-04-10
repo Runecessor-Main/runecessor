@@ -458,6 +458,7 @@ public class CombatNpc {
             rangedAttack *= 1.3;
             maximum *= 1.3;
         }
+
         if (attacker.getPetId() == 6631) {
             rangedAttack *= 1.100;
             maximum *= 1.100;
@@ -599,6 +600,11 @@ public class CombatNpc {
                     npc.gfx0(749);
                 }
             }
+        }
+
+        if ((attacker.getWieldedWeapon() == 6077 && attacker.getPlayerDetails().getSocketList().contains(SlayerSkill.Socket.BLOOD_DIAMOND.ordinal()))
+                && Misc.hasPercentageChance(30) && damage > 0) {
+            BloodRapierEffect.applyForNpc(attacker, npc, damage);
         }
 
         // Diamond bolts (e)
@@ -1781,10 +1787,10 @@ public class CombatNpc {
             player.addToHitPoints(damage);
             npc.gfx0(398);
         }
+
         if ((player.getWieldedWeapon() == 16389 ||
                 player.getWieldedWeapon() == 19515 ||
-                player.getWieldedWeapon() == 19517 ||
-                (player.getWieldedWeapon() == 6077 && player.getPlayerDetails().getSocketList().contains(SlayerSkill.Socket.BLOOD_DIAMOND.ordinal())))
+                player.getWieldedWeapon() == 19517)
                 && Misc.hasPercentageChance(30) && damage > 0) {
             BloodRapierEffect.applyForNpc(player, npc, damage);
         }
