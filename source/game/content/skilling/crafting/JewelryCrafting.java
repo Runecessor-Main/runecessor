@@ -76,8 +76,7 @@ public class JewelryCrafting {
                         container.stop();
                         return;
                     }
-                    if ((ItemAssistant.hasItemInInventory(player, 2357) || player.isInZombiesMinigame()) && ItemAssistant.hasItemInInventory(player, required)) {
-
+                    if (ItemAssistant.hasItemInInventory(player, 2357) && ItemAssistant.hasItemInInventory(player, required)) {
                         ItemAssistant.deleteItemFromInventory(player, 2357, 1);
                         ItemAssistant.deleteItemFromInventory(player, required, 1);
                         ItemAssistant.addItem(player, itemId, 1);
