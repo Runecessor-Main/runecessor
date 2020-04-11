@@ -15,6 +15,16 @@
 		"roam_distance": 5
 	},
 		{
+		"npc_name": "Bunny Slayer",
+		"npc_type": 539,
+		"roam_distance": 2
+	},
+			{
+		"npc_name": "Rabbit",
+		"npc_type": 3665,
+		"roam_distance": 2
+	},
+		{
 		"npc_name": "City Clerk",
 		"npc_type": 4255,
 		"roam_distance": 5

@@ -1714,6 +1714,20 @@ Shop currency: 995
 16088 300000000
 16436 350000000
 
+Shop name: Bunny Slayer's Collection
+Shop id: 90
+Shop currency: 11025
+16919 10 // Rabbit Pet
+16909 25000 // Carrot Sword
+16911 2500 // Painted egg
+16912 2500 // Unpainted Egg
+16913 30000 // Bunnyman Mask
+21214 8000 // Egg Helm
+22351 20000 // Egg Platebody
+22353 12000 // Egg Platelegs
+4565 50000 // Basket of Eggs
+16502 3000 // Easter Key
+
 Shop name: More Supplies!
 Shop id: 37
 Shop currency: 995

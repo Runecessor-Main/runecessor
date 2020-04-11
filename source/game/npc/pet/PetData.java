@@ -1034,6 +1034,10 @@ public class PetData {
 					{
 							11217, 16918, 1
 					},
+					// Rabbit Pet
+					{
+							3665, 16919, 1
+					},
 					// Ajax Pet
 					{
 							114, 16890, 1

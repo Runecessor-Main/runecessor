@@ -558,7 +558,14 @@ public class FirstClickNpc {
 			case 5523:
 				player.getDH().sendDialogues(257);
 				break;
-
+			// 2020 Easter Event
+			case 539:
+				player.getDH().sendDialogues(732);
+				break;	
+				
+				
+				
+			//
 			case 2800:
 				if (System.currentTimeMillis() - player.flaxDelay <= 4000) {
 					return true;

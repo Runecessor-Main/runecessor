@@ -2189,6 +2189,45 @@ public class DialogueHandler {
 			case 731:
 				sendNpcChat("If you have any questions feel free to ask a Staff Member.", "Welcome to Skill City and thank you for dropping in", "...Unannounced", FacialAnimation.DISINTERESTED.getAnimationId());
 				break;
+				
+			// END OF SKILL CITY
+			// 2020 EASTER EVENT
+				
+			case 732:
+				sendNpcChat("Oh!", "Hello there, please, don't mind me.", "It's Rabbit season, I wait all year for this season.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 733;
+				break;
+			case 733:
+				sendNpcChat("Unfortunately this year not many Rabbits are coming out.", "Though, I could have sworn the other day I saw something..", "I couldn't really make out what it was exactly.", FacialAnimation.SAD.getAnimationId());
+				player.nextDialogue = 734;
+				break;
+			case 734:
+				sendNpcChat("If I didn't know any better I would've thought it", "was a large oversized Rabbid Bunny crawling into one of", "Those holes over there. Although I may be mistaken.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 735;
+				break;
+			case 735:
+				sendNpcChat("Who knows... All this heat, and standing here for hours...", "It was probably nothing but would you mind taking a look?", "I lost some belongings when I was last down there.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 736;
+				break;
+			case 736:
+				sendNpcChat("I'll tell you what. If you go take a look and happen", "to stumble across any of my loose things I'd be happy to", "let you trade me for some items.", FacialAnimation.HAPPY.getAnimationId());
+				player.nextDialogue = 737;
+				break;
+			case 737:
+				sendNpcChat("I even have my Chest just right over there.", "If you find any keys of mine you are welcome to open it.", "Well anyways, these Bunny's won't catch themselves. Ttyl.", FacialAnimation.HAPPY.getAnimationId());
+				break;	
+			
+			//	
+			case 738:
+				player.getDH().sendItemChat("@red@ ** CAUTION **", "Monsters in this area are aggressive and will attack!", "@red@ Notice: Collect Chocolate Chunks & Easter Key's!.", 964, 200, 10, 0);
+				player.nextDialogue = 739;
+				break;
+			case 739:
+				player.getPA().movePlayer(1759, 4711, 4);
+				player.getPA().sendMessage(ServerConstants.RED_COL + "You have entered a dagerous combat area. Protection rules no longer apply.");
+				break;	
+			// END OF 2020 EASTER EVENT
+		
 			default:
 				Plugin.execute("chat_" + dialogue, player);
 				break;

@@ -124,9 +124,16 @@ public class SecondClickNpc {
 				break;
 			case 5523://arlo
 				DonatorShop.openLastDonatorShopTab(player);
-
 				break;
-			//Gnome Glider.
+			// 2020 EASTER EVENT
+			
+			case 539:
+				player.getShops().openShop(90);
+				break;
+				
+			// END OF 2020 EASTER EVENT
+			
+				//Gnome Glider.
 			case 1446:
 				player.setActionIdUsed(2650);
 				player.getPA().displayInterface(802);

@@ -23,6 +23,46 @@
     "height": 0,
     "face_action": "ROAM"
   },
+    {
+    "npc_description": "Bad Bunny",
+    "npc_type": 385,
+    "x": 1762,
+    "y": 4701,
+    "height": 4,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Eggcellent Guardian",
+    "npc_type": 300,
+    "x": 1763,
+    "y": 4705,
+    "height": 4,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Eggcellent Guardian",
+    "npc_type": 300,
+    "x": 1760,
+    "y": 4705,
+    "height": 4,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Eggcellent Guardiany",
+    "npc_type": 300,
+    "x": 1763,
+    "y": 4709,
+    "height": 4,
+    "face_action": "ROAM"
+  },
+     {
+    "npc_description": "Eggcellent Guardian",
+    "npc_type": 300,
+    "x": 1760,
+    "y": 4708,
+    "height": 4,
+    "face_action": "ROAM"
+  },
   {
     "npc_description": "Icelord",
     "npc_type": 852,

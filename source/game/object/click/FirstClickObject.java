@@ -1550,6 +1550,21 @@ public class FirstClickObject {
 			player.getPA().movePlayer(2453, 3231, 0);
 			break;
 		//
+			
+		// 2020 EASTER EVENT
+		case 19337:
+			player.getDH().sendDialogues(738);
+			break;	
+
+		case 21800:
+			player.startAnimation(749);
+			player.getPA().movePlayer(3080, 3485, 0);
+			break;	
+			
+		
+			
+		// END OF 2020 EASTER EVENT
+			
 		case 5491:// needfix
 			player.getPA().movePlayer(3111, 9690, 0);
 			break;
@@ -1707,8 +1722,8 @@ public class FirstClickObject {
 		case 4483:
 		case 28861:
 		case 26707:
-		case 30267:
 		case 21301:
+		//30267
 		case 30087:
 		case 10562:
 		case 28595:

@@ -465,7 +465,9 @@ public class Area {
 
 				// Vorkath area
 				isWithInArea(x, y, 2262, 2282, 4056, 4076) ||
-
+				// 2020 EASTER EVENT
+				isWithInArea(x, y, 1745, 4691, 1775, 4721) ||
+				// END OF 2020 EASTER EVENT
 				// KQ area
 				isWithInArea(x, y, 3460, 3509, 9480, 9520) ||
 				// King black dragon.
