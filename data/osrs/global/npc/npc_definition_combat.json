@@ -30,11 +30,11 @@
     "death_delete_ticks": 2,
     "attack_speed": 2,
     "attack_distance": 2,
-    "hitpoints": 900,
+    "hitpoints": 250,
     "attack": 900,
-    "melee_defence": 600,
-    "ranged_defence": 750,
-    "magic_defence": 750,
+    "melee_defence": 150,
+    "ranged_defence": 100,
+    "magic_defence": 250,
     "maximum_damage": 65
   },
     {
@@ -49,11 +49,11 @@
     "death_delete_ticks": 1,
     "attack_speed": 4,
     "attack_distance": 2,
-    "hitpoints": 199,
+    "hitpoints": 200,
     "attack": 250,
-    "melee_defence": 200,
-    "ranged_defence": 350,
-    "magic_defence": 350,
+    "melee_defence": 50,
+    "ranged_defence": 85,
+    "magic_defence": 85,
     "maximum_damage": 25
   },
   {

@@ -2219,7 +2219,7 @@ public class DialogueHandler {
 			
 			//	
 			case 738:
-				player.getDH().sendItemChat("@red@ ** CAUTION **", "Monsters in this area are aggressive and will attack!", "@red@ Notice: Collect Chocolate Chunks & Easter Key's!.", 964, 200, 10, 0);
+				player.getDH().sendItemChat("@red@ ** CAUTION **", "Monsters in this area are aggressive and will attack!", "@red@ Notice: Collect Chocolate Chunks & Easter Keys!.", 964, 200, 10, 0);
 				player.nextDialogue = 739;
 				break;
 			case 739:
