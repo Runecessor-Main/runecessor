@@ -1,30 +1,42 @@
 #Pvm Rare Drops
 Empty.
 
+#Current Staff
+FOUNDER:
+- Michael
+--
+DEVELOPMENT DIRECTOR:
+- Phantasye
+--
+COMMUNITY DIRECTOR:
+- Crystall777
+--
+COMMUNITY MANAGER:
+- Chief
+--
+SERVER MODERATOR:
+- Droo
+- Obito
+
 #Teleporting
 To teleport, use a spellbook button to open up the teleport
 interface.
---
-You may also talk to the Teleporter just west of Edgeville
-bank.
 
 #Economy info
 - Main currency?
-This server is an Rsps based around Blood money rather
-than the old fashioned coins. Earn blood money through
-Pking, Pvming, Voting & even Skilling!
+Our Economy has 2 types.
+- The main being Gold, Second being Blood Money.
+Gold is the most common form of Currency in Runecessor.
+However, Bloodmoney is the most Rare but Valuable.
+Blood Money is worth up to 5x the price of 1gp.
 --
 - Where do i spend my blood money?
-You may spend them at the blood money void npc at ::shops
+You may spend them at the blood money void npc 
+located in the building west of Edgeville Bank.
 --
 
 #Shops
-Shops are located north west of Edgeville bank. You may
-teleport there using ::shops
---
-You will find most Npcs you would need at the ::shops area.
-Be sure to right click the npcs and fully explore their
-options!
+Shops are located north west of Edgeville bank.
 
 #Money Making
 - Pking:
@@ -77,31 +89,26 @@ The altar is located in the building north of Edgeville bank.
 All untradeables are kept on death except for Rune pouch
 which is sent to the untradeable shop. It can be purchased
 back for 10% of its price right clicking the Void Knight
-npc at ::shops
+npc in the building west of Edgeville Bank.
 
 #Commands
 You may view the entire command list by typing in
 ::commands
 
 #Market
-To buy/sell items, please head over to ::market
-Use the command ::type yourAdvertismentHere
-to enable the auto chat system. It is only useable
-in the market area. To turn it off, use the
-command ::type
+To buy and sell items from player to player please visit the 
+Market section of the Discord or Forum.
 
 #Achievements
 Go to Quest tab > Achievement button.
-You may use your unlocked titles at the fairy located
-at ::shops. You can also buy your unlocked items
-by talking to Achievement rewards npc at the shops area.
+- Achievements are Rewarded into inventory when done.
 
 #Player titles
-Talk to the Fairy at ::shops to view all player titles.
+Talk to Sir Tiffy located North of the Edgeville Bank.
 
 #Donate
 You can help support this server and help it grow by
-Donating. You will be rewarded alot of wealth.
+Donating. You will be rewarded a lot of wealth.
 There are also tonnes of perks for Donators!
 Type in ::donate to view the full list of perks!
 
@@ -124,15 +131,7 @@ To know the exact rewards, type in ::pkingloot
 
 #Detailed guides
 You may view more detailed guides created by players
-by typing in ::guides
-
-#Set combat skill
-You may change your combat skill by right clicking the
-specific skill icon in the skill tab.
-
---
-No experience will be lost if you set your stats to a
-lower level.
+by visiting the Forum.
 
 #Wild protection
 - If you have not left Edgeville 1-5 wild, then you will
@@ -145,27 +144,31 @@ at Edgeville only.
 - Happy pking!
 
 #Make-over mage
-You can find him inside Edgeville bank.
+You can find him inside the General Shop 
+found north of Edgeville Bank
 
 #Slayer master
-There is one global Slayer master located in Edgeville bank.
+There is one global Slayer master located in the building 
+west of Edgeville Bank.
+- There are also several other Slayer Masters, 
+for different ranks & tasks located there.
 
 #Max cape
 If you max out every non-combat skill, you may purchase
 the Max cape which comes in many colours at the Max cape
-stand in the building north of Edgeville bank.
+stand in the building west of the Bank in Edgeville.
 
 #Infernal cape
 If you have infernal Stone (Check Drop table), you may purchase
-the overpowered Infernal cape at the Cape stand in the
-building north of Edgeville bank.
+the over powered Infernal cape at the Cape stand in the
+building west of the Bank in Edgeville.
 
 #Highscores
-You may view the top this server players at the statue
-in the building north of Edgeville bank.
+To view the Hiscores you can use the Tools & More Menu 
+located under your Quest Tab, Purple Icon.
 
 #Pets
-On this server there are 25+ pets to collect!
+On this server there are 50+ pets to collect!
 Including every skilling pet through skilling, Pvm pets
 through Pvming & even a Dharok pet & Karil pet from
 Pking!

@@ -2926,7 +2926,7 @@ public class AdministratorCommand {
     }
 
     public static void staffzone(Player player) {
-        Teleport.spellTeleport(player, 2847, 5086, 0, false);
+        Teleport.spellTeleport(player, 3032, 2984, 0, false);
     }
 
     public static void guest(Player player, String playerCommand) {

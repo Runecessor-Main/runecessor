@@ -16,7 +16,7 @@ public class IdleLogoutPacket implements PacketType {
 	 */
 	@Override
 	public void processPacket(final Player player, int packetType, int packetSize, boolean trackPlayer) {
-		//AfkChair.afk(player);
+		AfkChair.afk(player);
 		LogOutUpdate.manualLogOut(player );
 	}
 }

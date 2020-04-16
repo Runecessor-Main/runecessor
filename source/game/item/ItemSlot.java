@@ -79,6 +79,7 @@ public class ItemSlot {
 			case 10378: // Guthix dragonhide
 			case 10370: // Zamorak d'hide
 			case 10386: // Saradomin d'hide
+			case 16920:
 				return ServerConstants.BODY_SLOT;
 
 			case 4225: // Crystal shield
@@ -92,6 +93,7 @@ public class ItemSlot {
 			case 6404: // Menaphite robe.
 			case 6752: // Black desert robe.
 			case 5563:
+			case 16921:
 				return ServerConstants.LEG_SLOT;
 
 			case 11019: // Chicken feet.
@@ -254,6 +256,7 @@ public class ItemSlot {
 			case 20704: // Pyromancer garb
 			case 22490:
 			case 21468:
+			case 16920:
 				return ServerConstants.BODY_SLOT;
 
 			case 20044: // Samurai greaves
@@ -264,6 +267,7 @@ public class ItemSlot {
 			case 12443: // Musketeer pants
 			case 13260: // Angler waders
 			case 20706: // Pyromancer robe
+			case 16921:
 				return ServerConstants.LEG_SLOT;
 
 			case 13237: // Pegasian boots.
@@ -437,6 +441,7 @@ public class ItemSlot {
 					"torso",
 					"chestplate",
 					"jacket",
+					"void top",
 					"runecrafter robe",
 			};
 
