@@ -27,6 +27,7 @@ public enum Chaeldar {
     IRON_DRAGONS(SlayerAssignment.IRON_DRAGONS,new Range(25,45),new Range(60,100),12),
     BRONZE_DRAGONS(SlayerAssignment.IRON_DRAGONS,new Range(10,20),new Range(30,50),11),
     GREATER_DEMONS(SlayerAssignment.GREATER_DEMONS,new Range(110,170),new Range(150,200),9),
+    ICELORDS(SlayerAssignment.ICELORDS,new Range(110,170),new Range(150,200),8),
     BLACK_DEMONS(SlayerAssignment.BLACK_DEMONS,new Range(110,170),new Range(150,200),10);
 
     private final SlayerAssignment assignment;

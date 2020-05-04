@@ -14,6 +14,8 @@ public class PlayerToNpcDamageQueue extends EntityDamageQueue<Npc, Player> {
 
 	@Override
 	public void apply(EntityDamage<Npc, Player> damage) {
+		damage.setEffectCalculated(true);
+		damage.getEffects().forEach(effect -> effect.onApply(damage));
 		CombatNpc.applyHitSplatOnNpc(damage.getSender(), damage.getTarget(), damage.getDamage(),
 				damage.getDamageType().getPreEocHitsplatColour(), damage.getDamageType().getPreEocHitsplatIcon(), 1);
 	}

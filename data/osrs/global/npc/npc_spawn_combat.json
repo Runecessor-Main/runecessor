@@ -8,6 +8,220 @@
     "face_action": "ROAM"
   },
   {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2844,
+    "y": 9944,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2847,
+    "y": 9944,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2844,
+    "y": 9942,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2847,
+    "y": 9947,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2840,
+    "y": 9945,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+
+  {
+    "npc_description": "Ice Wolf",
+    "npc_type": 710,
+    "x": 2834,
+    "y": 9938,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Wolf",
+    "npc_type": 710,
+    "x": 2835,
+    "y": 9939,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Wolf",
+    "npc_type": 710,
+    "x": 2832,
+    "y": 9938,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Wolf",
+    "npc_type": 710,
+    "x": 2834,
+    "y": 9938,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Wolf",
+    "npc_type": 710,
+    "x": 2832,
+    "y": 9939,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+
+  {
+    "npc_description": "Icefiend",
+    "npc_type": 3140,
+    "x": 2818,
+    "y": 9927,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icefiend",
+    "npc_type": 3140,
+    "x": 2818,
+    "y": 9927,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icefiend",
+    "npc_type": 3140,
+    "x": 2818,
+    "y": 9927,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icefiend",
+    "npc_type": 3140,
+    "x": 2818,
+    "y": 9927,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Icefiend",
+    "npc_type": 3140,
+    "x": 2818,
+    "y": 9927,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+
+  {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2819,
+    "y": 9948,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2819,
+    "y": 9950,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2820,
+    "y": 9948,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+
+  {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2837,
+    "y": 9958,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2838,
+    "y": 9958,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2837,
+    "y": 9958,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2837,
+    "y": 9958,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2837,
+    "y": 9958,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Strykewyrm",
+    "npc_type": 11006,
+    "x": 2890,
+    "y": 9937,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Strykewyrm",
+    "npc_type": 11006,
+    "x": 2890,
+    "y": 9937,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  {
+    "npc_description": "Ice Strykewyrm",
+    "npc_type": 11006,
+    "x": 2890,
+    "y": 9937,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+
+
+  {
     "npc_description": "Icelord",
     "npc_type": 852,
     "x": 870,

@@ -1141,6 +1141,13 @@ public class Npc extends Entity implements NonPlayableCharacter {
         }
     }
 
+    public void cureVenom() {
+        venomDamage = 0;
+        venomHitsplatsLeft = 0;
+        venomEvent = false;
+        venomHits = 0;
+    }
+
     private CycleEventContainer<Entity> poisonCycleEvent;
 
     public String zombieOwner = "";

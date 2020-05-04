@@ -31,9 +31,13 @@ public enum SlayerAssignment {
     GREEN_DRAGONS(1,new Locations[]{Locations.EAST_DRAGONS},260,261,264),
     HELL_HOUNDS(1,new Locations[]{Locations.TAVERLY_DUNGEON,Locations.CERBERUS},104,15256,5862),
     HILL_GIANTS(1,new Locations[]{Locations.EDGEVILLE_DUNGEON},7261),
-    ICE_GIANTS(1,new Locations[]{Locations.ICE_STRYKEWYRMS},2085),
-    ICE_STRYKEWYRMS(1,new Locations[]{Locations.ICE_STRYKEWYRMS},9463),
-    ICE_WARRIORS(1,new Locations[]{Locations.ICE_STRYKEWYRMS},2841),
+    ICELORDS(60,new Locations[]{Locations.ICE_DUNGEON},852,853),
+    ICE_GIANTS(1,new Locations[]{Locations.ICE_STRYKEWYRMS,Locations.ICE_DUNGEON},2085,2086,2087,2088,2089),
+    ICE_STRYKEWYRMS(93,new Locations[]{Locations.ICE_STRYKEWYRMS, Locations.ICE_DUNGEON},11006),
+    ICE_WARRIORS(1,new Locations[]{Locations.ICE_STRYKEWYRMS, Locations.ICE_DUNGEON},2841,2842,2851),
+    ICE_SPIDERS(1,new Locations[]{Locations.ICE_DUNGEON},3022),
+    ICE_FIENDS(1,new Locations[]{Locations.ICE_DUNGEON},3140,4813),
+    ICE_WOLVES(1,new Locations[]{Locations.ICE_DUNGEON},710,711,712,713,714,715),
     INFERNAL_MAGES(45,new Locations[]{Locations.SLAYER_TOWER},443),
     IRON_DRAGONS(1,new Locations[]{Locations.BRIMHAVEN_DUNGEON},272),
     KURASKS(70,new Locations[]{Locations.FREMENNIK_DUNGEON},410,7405),
@@ -69,7 +73,8 @@ public enum SlayerAssignment {
     VETION(110,new Locations[]{Locations.VETION},6611),
     VORKATH(120,new Locations[]{Locations.VORKATH},8059),
     ZULRAH(120,new Locations[]{Locations.ZULRAH},2042,2043,2044),
-    VAMPYRE(85,new Locations[] {Locations.SHADOW_CAVE},4487);
+    VAMPYRE(85,new Locations[] {Locations.SHADOW_CAVE},4487),
+    ICE_QUEEN(90,new Locations[]{Locations.ICE_DUNGEON},4922);
 
 
     private final int level;

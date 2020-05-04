@@ -4,6 +4,7 @@ import core.GameType;
 import core.ServerConstants;
 import game.content.achievement.Achievements;
 import game.content.miscellaneous.RandomEvent;
+import game.content.phantasye.skill.gathering.mining.Ore;
 import game.content.skilling.crafting.GemCrafting;
 import game.item.ItemAssistant;
 import game.npc.NpcHandler;
@@ -15,6 +16,8 @@ import game.player.event.CycleEvent;
 import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 import utility.Misc;
 
 /**
@@ -537,13 +540,8 @@ public class Mining {
 	 * @return true, if the object is an ore.
 	 */
 	public static boolean isMiningObject(final int objectType) {
-		for (int i = 0; i < miningObject.length; i++) {
-			if (objectType == miningObject[i]) {
-				return true;
-			}
-		}
-
-		return false;
+		return Arrays.stream(Ore.values()).anyMatch(ore -> Arrays.stream(ore.getOreId())
+		.anyMatch(o->o == objectType));
 	}
 
 	/**

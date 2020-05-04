@@ -8,7 +8,9 @@ import game.content.combat.CombatConstants;
 import game.content.combat.CombatInterface;
 import game.content.combat.Venom;
 import game.content.combat.damage.EntityDamage;
+import game.content.combat.damage.EntityDamageType;
 import game.content.combat.effect.BloodRapierEffect;
+import game.content.combat.effect.IceDiamondEffect;
 import game.content.combat.effect.TwistedBow;
 import game.content.combat.special.SpecialAttackBase;
 import game.content.combat.vsplayer.AttackPlayer;
@@ -606,7 +608,9 @@ public class CombatNpc {
                 && Misc.hasPercentageChance(30) && damage > 0) {
             BloodRapierEffect.applyForNpc(attacker, npc, damage);
         }
-
+        if ((attacker.getWieldedWeapon() == 6077 && attacker.getPlayerDetails().getSocketList().contains(SlayerSkill.Socket.ICE_DIAMOND.ordinal()))
+                && Misc.hasPercentageChance(30) && damage > 0) {
+        }
         // Diamond bolts (e)
         if (Misc.random(9) == 1 && (attacker.playerEquipment[ServerConstants.ARROW_SLOT] == 9243
                 || attacker.playerEquipment[ServerConstants.ARROW_SLOT] == 21946)) {
@@ -1777,6 +1781,10 @@ public class CombatNpc {
         if (npc.getCurrentHitPoints() - damage < 0) {
             damage = npc.getCurrentHitPoints();
         }
+        int delay = Combat.getHitDelay(player, ItemAssistant.getItemName(player.getWieldedWeapon()).toLowerCase());
+
+        EntityDamage<Npc, Player> entityDamage = new EntityDamage<>(npc, player, damage, delay, EntityDamageType.MELEE, damage, true, false);
+
         boolean guthansEffect = false;
         if (Combat.wearingFullGuthan(player)) {
             if (Misc.random(3) == 1) {
@@ -1787,6 +1795,8 @@ public class CombatNpc {
             player.addToHitPoints(damage);
             npc.gfx0(398);
         }
+
+
 
         if ((player.getWieldedWeapon() == 16389 ||
                 player.getWieldedWeapon() == 19515 ||
@@ -1807,8 +1817,14 @@ public class CombatNpc {
                 }
                 break;
         }
-        CombatNpc.applyHitSplatOnNpc(player, npc, damage, ServerConstants.NORMAL_HITSPLAT_COLOUR,
-                ServerConstants.MELEE_ICON, damageMask);
+        if(player.getEquippedHelm(1040)) {
+            entityDamage.addEffect(new IceDiamondEffect());
+        }
+//        player.getIncomingNpcDamage().apply(entityDamage);
+        npc.getIncomingPlayerDamage().apply(entityDamage);
+//
+//            CombatNpc.applyHitSplatOnNpc(player, npc, damage, ServerConstants.NORMAL_HITSPLAT_COLOUR,
+//                ServerConstants.MELEE_ICON, damageMask);
         player.setSpecEffect(0);
     }
 

@@ -35,7 +35,6 @@ public abstract class EntityDamageQueue<T extends Entity, S extends Entity> {
 
 		while (!effects.isEmpty()) {
 			EntityDamageEffect<T, S> effect = effects.poll();
-
 			if (effect != null && !damage.getEffectCalculated()) {
 				EntityDamage<T, S> calculated = effect.onCalculation(damage);
 				if (calculated != null) {

@@ -24,17 +24,25 @@ public class NpcDefinition {
 
 	public final int deathAnimation;
 
-	public final int attackSpeed;
+	public int attackSpeed;
 
 	public final int attackDistance;
 
 	public int hitPoints;
 
+	public void setAttackSpeed(int attackSpeed) {
+		this.attackSpeed = attackSpeed;
+	}
+
 	public void setHitpoints(int amount) {
 		this.hitPoints = amount;
 	}
 
-	public final int attack;
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
+
+	public int attack;
 
 	public final int meleeDefence;
 

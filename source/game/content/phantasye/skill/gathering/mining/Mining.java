@@ -6,6 +6,9 @@ import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.SkillingStatistics;
 import game.item.ItemAssistant;
+import game.npc.NpcHandler;
+import game.npc.impl.ice.IceQueen;
+import game.npc.impl.ice.IceQueenCombatStrategy;
 import game.object.custom.Object;
 import game.object.custom.ObjectManagerServer;
 import game.player.Player;
@@ -184,10 +187,15 @@ public class Mining {
         return Arrays.stream(ore.getOreId()).anyMatch(value -> value == id);
     }
 
+    private boolean isException(int oreId) {
+        final Ore[] exceptions = new Ore[] {Ore.WHITE_WOLF_MOUNTAIN_ROCKSLIDE,Ore.ICE_BLOCK};
+        return Arrays.stream(exceptions).anyMatch(ore-> Arrays.stream(ore.getOreId()).anyMatch(id->id == oreId));
+    }
+
     private void mineRock(int respawnTime, int x, int y, int ore) {
         Skilling.petChance(player, oreList.get(ore).getXp(), 125, 3800, ServerConstants.MINING, null);
         player.skillingStatistics[SkillingStatistics.ORES_MINED]++;
-        if (!containsOre(Ore.WHITE_WOLF_MOUNTAIN_ROCKSLIDE, ore)) {
+        if (!isException(ore)) {
             new Object(10081, x, y, 0, 0, 10, ore, respawnTime);
             for (int t = 0; t < PlayerHandler.players.length; t++) {
                 if (PlayerHandler.players[t] != null) {
@@ -200,13 +208,19 @@ public class Mining {
                     }
                 }
             }
-        } else {
+        } else if (containsOre(Ore.WHITE_WOLF_MOUNTAIN_ROCKSLIDE, ore)) {
             new Object(-1, x, y, 0, 0, 10, ore, respawnTime);
             player.playerAssistant.stopAllActions();
             player.startAnimation(65535);
             player.setObjectX(0);
             player.setObjectY(0);
-            player.moveTo(new Location(2839,3517));
+            player.moveTo(new Location(2839, 3517));
+        } else if (containsOre(Ore.ICE_BLOCK, ore)) {
+            player.playerAssistant.stopAllActions();
+            player.startAnimation(65535);
+            player.setObjectX(0);
+            player.setObjectY(0);
+            ((IceQueenCombatStrategy)NpcHandler.getNpcByNpcId(4922).getCombatStrategyOrNull()).breakIceBlock(NpcHandler.getNpcByNpcId(4922));
         }
 
     }

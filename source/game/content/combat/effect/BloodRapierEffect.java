@@ -19,7 +19,6 @@ public class BloodRapierEffect implements EntityDamageEffect {
         Npc victim = (Npc) damage.getTarget();
         victim.gfx100(1176);
         int heal = (int) (damage.getDamage() * 0.25);
-        System.out.println("HEALED: " + heal);
     }
 
     public static void applyForNpc(Player player, Npc npc, int damage) {

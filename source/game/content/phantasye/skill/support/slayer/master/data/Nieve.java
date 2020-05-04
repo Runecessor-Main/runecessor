@@ -21,6 +21,7 @@ public enum Nieve {
     HELL_HOUNDS(SlayerAssignment.HELL_HOUNDS,new Range(120,185),new Range(0,0),8),
     IRON_DRAGONS(SlayerAssignment.IRON_DRAGONS,new Range(30,60),new Range(60,100),5),
     KURASKS(SlayerAssignment.KURASKS,new Range(120,185), new Range(0,0),3),
+    ICELORDS(SlayerAssignment.ICELORDS,new Range(120,185),new Range(150,200),7),
     NECHRYAELS(SlayerAssignment.NECHRYAELS,new Range(110,170),new Range(200,250),7),
     RED_DRAGONS(SlayerAssignment.RED_DRAGONS,new Range(30,80),new Range(0,0),5),
     WYVERNS(SlayerAssignment.WYVERNS,new Range(5,15),new Range(50,70),5),

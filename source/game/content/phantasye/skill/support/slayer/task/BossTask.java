@@ -20,7 +20,8 @@ public enum BossTask {
     VENANITIS(110,6504),
     VETION(110,6611),
     VORKATH(120,8059),
-    ZULRAH(120,2042,2043,2044);
+    ZULRAH(120,2042,2043,2044),
+    ICE_QUEEN(120,4922);
 
     private final int combatLevel;
     private final int[] npcs;

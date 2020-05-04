@@ -16,7 +16,11 @@ public enum Mazchna {
     ICE_WARRIORS(SlayerAssignment.ICE_WARRIORS,new Range(60,120),new Range(0,0),7),
     SKELETONS(SlayerAssignment.SKELETONS,new Range(15,50),new Range(0,0),7),
     SCORPIONS(SlayerAssignment.SCORPIONS,new Range(40,70),new Range(0,0),7),
-    ZOMBIES(SlayerAssignment.ZOMBIES,new Range(15,50),new Range(0,0),7);
+    ZOMBIES(SlayerAssignment.ZOMBIES,new Range(15,50),new Range(0,0),7),
+    ICE_GIANTS(SlayerAssignment.ICE_GIANTS,new Range(60,120),new Range(0,0),7),
+    ICE_WOLVES(SlayerAssignment.ICE_WOLVES,new Range(60,120),new Range(0,0),5),
+    ICE_SPIDERS(SlayerAssignment.ICE_SPIDERS,new Range(60,120),new Range(0,0),5),
+    ICE_FIENDS(SlayerAssignment.ICE_FIENDS,new Range(60,120),new Range(0,0),4);
 
 
     private final SlayerAssignment assignment;

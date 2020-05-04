@@ -1825,7 +1825,7 @@ public class NpcHandler {
                     Player player = PlayerHandler.players[npc.getKilledBy()];
                     try {
                         player.getNpcKillTrackerForNpc(npc.npcType).increment();
-                        Achievements.checkCompletionMultiple(player,"31");
+                        Achievements.checkCompletionMultiple(player,"1");
                     } catch(NullPointerException e) {
                         System.out.println(e.getMessage());
                     }

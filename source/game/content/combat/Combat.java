@@ -809,6 +809,22 @@ public class Combat {
 		applyPrayerReduction(null, victim, prayerReduceAmount, false);
 	}
 
+	public static void fireProjectilePlayer(Npc npc, Player victim, int gfx) {
+		if (victim.getPlayerId() > 0) {
+			if (victim != null) {
+				final int pX = npc.getX();
+				final int pY = npc.getY();
+				int oX = victim.getX();
+				int oY = victim.getY();
+				final int offX = (pY - oY) * -1;
+				final int offY = (pX - oX) * -1;
+					victim.getPA().createPlayersProjectile2(pX, pY, offX, offY, 50, getProjectileSpeed(victim) , gfx, getProjectileStartHeight(victim),
+							getProjectileEndHeight(victim), -victim.getPlayerId() - 1, getStartDelay(victim), getProjectileSlope(victim),
+							npc.getHeight());
+			}
+		}
+	}
+
 	public static void fireProjectilePlayer(Player player, Player victim) {
 		if (victim.getPlayerId() > 0) {
 			if (victim != null) {

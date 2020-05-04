@@ -4,5 +4,5 @@ Description Sub Text:
 Title Unlocked:Crab Killa
 Item Rewards: 526
 Achievement Save Name: Crab Killa
-Complete Amount: 25
+Complete Amount: 3
 Achievement Id: 1

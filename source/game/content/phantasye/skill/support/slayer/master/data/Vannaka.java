@@ -23,6 +23,7 @@ public enum Vannaka {
     GOBLINS(SlayerAssignment.GOBLINS,new Range(15,50),new Range(0,0),7),
     ICE_GIANTS(SlayerAssignment.ICE_GIANTS,new Range(40,80),new Range(0,0),7),
     ICE_WARRIORS(SlayerAssignment.ICE_WARRIORS,new Range(60,120),new Range(0,0),7),
+    ICE_WOLVES(SlayerAssignment.ICE_WOLVES,new Range(60,120),new Range(0,0),4),
     INFERNAL_MAGES(SlayerAssignment.INFERNAL_MAGES,new Range(60,120),new Range(0,0),8),
     KURASKS(SlayerAssignment.KURASKS,new Range(120,185),new Range (0,0),3),
     MOSS_GIANTS(SlayerAssignment.MOSS_GIANTS,new Range(60,120),new Range(0,0),7),
