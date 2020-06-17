@@ -79,6 +79,8 @@ public class RangedData {
 			{857, 890},
 			// Magic shortbow, Rune arrow, Amethyst arrow.
 			{861, 892, 21326},
+			// Rain-Bow, Rune arrow, Amethyst arrow.
+			{16922, 892, 21326},
 			// Magic longbow, Rune arrow, Amethyst arrow.
 			{859, 892, 21326},};
 

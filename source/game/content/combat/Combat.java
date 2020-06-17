@@ -1148,6 +1148,7 @@ public class Combat {
 			case 5698:
 			case 13901:
 			case 13899:
+			case 16922: // Rain-Bow
 			case 1305:
 			case 20849: // Dragon thrownaxe
 			case 1434:
@@ -2095,6 +2096,7 @@ public class Combat {
 			case 12926:
 			case 6075:
 			case 6077:
+			case 16922: // Rain-Bow
 			case 12928:
 			case 12930:
 			case 12932:
@@ -2660,6 +2662,7 @@ public class Combat {
 
 			// Crystal bow full
 			case 4214:
+			case 16922: // Rain-Bow
 				return 250;
 
 			case 22634: // Morrigan's throwing axe

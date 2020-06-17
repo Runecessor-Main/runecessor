@@ -12,6 +12,9 @@ public class Item {
 		if (itemId == 21463) {
 			return true;
 		}
+		if (itemId == 16923) {
+			return true;
+		}
 		return ItemDefinition.getDefinitions()[itemId].fullBody;
 	}
 
@@ -23,6 +26,9 @@ public class Item {
 	public static boolean isNormalHelm(int itemId) {
 		if (itemId <= 0) {
 			return false;
+		}
+		if (itemId == 16926) {
+			return true;
 		}
 		return ItemDefinition.getDefinitions()[itemId].helm;
 	}

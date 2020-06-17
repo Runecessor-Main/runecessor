@@ -1653,7 +1653,7 @@ public class CombatNpc {
                 }
                 RangedAmmoUsed.dropAmmo(attacker, npc.getX(), npc.getY(), npc.getHeight());
                 npc.underAttack = true;
-                if (attacker.getWieldedWeapon() != 6075 || attacker.getWieldedWeapon() != 6077) {
+                if (attacker.getWieldedWeapon() != 6075 || attacker.getWieldedWeapon() != 6077 || attacker.getWieldedWeapon() != 16922) {
                     CombatNpc.applyHitSplatOnNpc(attacker, npc, damage, ServerConstants.NORMAL_HITSPLAT_COLOUR,
                             ServerConstants.RANGED_ICON, 1);
                 } else {

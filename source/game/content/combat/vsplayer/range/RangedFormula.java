@@ -418,6 +418,10 @@ public class RangedFormula {
 			case 16282:
 				strength += 20;
 				break;
+			// Rain-Bow
+			case 16922:
+				strength += 10;
+				break;
 
 		}
 		switch (arrow) {
