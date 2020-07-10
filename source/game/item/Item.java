@@ -15,6 +15,21 @@ public class Item {
 		if (itemId == 16923) {
 			return true;
 		}
+		if (itemId == 16954) {
+			return true;
+		}
+		if (itemId == 16959) {
+		return true;
+		}
+		if (itemId == 16965) {
+		return true;
+		}
+		if (itemId == 16995) {
+			return true;
+		}
+		if (itemId == 17000) {
+		return true;
+		}
 		return ItemDefinition.getDefinitions()[itemId].fullBody;
 	}
 
@@ -27,7 +42,7 @@ public class Item {
 		if (itemId <= 0) {
 			return false;
 		}
-		if (itemId == 16926) {
+		if (itemId == 16927) {
 			return true;
 		}
 		return ItemDefinition.getDefinitions()[itemId].helm;
@@ -41,6 +56,15 @@ public class Item {
 	public static boolean isFullMask(int itemId) {
 		if (itemId <= 0) {
 			return false;
+		}
+		if (itemId == 16985) {
+			return true;
+		}
+		if (itemId == 16994) {
+			return true;
+		}
+		if (itemId == 17002) {
+			return true;
 		}
 		return ItemDefinition.getDefinitions()[itemId].mask;
 	}

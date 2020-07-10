@@ -269,6 +269,17 @@ public class NormalCommand {
 				return true;
 			}
 			return false;
+		case "test":
+			if (player.isAdministratorRank()) {
+				Teleport.spellTeleport(player, 2654, 4650, 0, false);
+
+			} else {
+				player.getPA()
+						.sendMessage("Nice try! You must be a <img=30><col=c511ff>Developer</col> to go here!");
+
+			}
+
+			return true;
 		case "droprate":
 			player.receiveMessage("Your magic find is: <col=db1c1c>" + player.getMagicFind() + "%");
 //			if (player.getPetId() == 11042) {

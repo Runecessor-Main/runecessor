@@ -105,7 +105,35 @@ public class ItemRequirement {
 			case 10450: // Zamorak cloak
 				player.itemRequirement[ServerConstants.PRAYER] = 40;
 				return;
-
+			// Maxed Capes
+			case 16981:
+			case 16980:
+			case 16971:
+			case 16970:
+				player.itemRequirement[ServerConstants.ATTACK] = 99;
+				player.itemRequirement[ServerConstants.DEFENCE] = 99;
+				player.itemRequirement[ServerConstants.STRENGTH] = 99;
+				player.itemRequirement[ServerConstants.MAGIC] = 99;
+				player.itemRequirement[ServerConstants.RANGED] = 99;
+				player.itemRequirement[ServerConstants.HITPOINTS] = 99;
+				player.itemRequirement[ServerConstants.FLETCHING] = 99;
+				player.itemRequirement[ServerConstants.PRAYER] = 99;
+				player.itemRequirement[ServerConstants.WOODCUTTING] = 99;
+				player.itemRequirement[ServerConstants.COOKING] = 99;
+				player.itemRequirement[ServerConstants.FIREMAKING] = 99;
+				player.itemRequirement[ServerConstants.CRAFTING] = 99;
+				player.itemRequirement[ServerConstants.FISHING] = 99;
+				player.itemRequirement[ServerConstants.SMITHING] = 99;
+				player.itemRequirement[ServerConstants.MINING] = 99;
+				player.itemRequirement[ServerConstants.HERBLORE] = 99;
+				player.itemRequirement[ServerConstants.AGILITY] = 99;
+				player.itemRequirement[ServerConstants.THIEVING] = 99;
+				player.itemRequirement[ServerConstants.SLAYER] = 99;
+				player.itemRequirement[ServerConstants.FARMING] = 99;
+				player.itemRequirement[ServerConstants.HUNTER] = 99;
+				player.itemRequirement[ServerConstants.RUNECRAFTING] = 99;
+				return;
+			// End Maxed Capes
 			case 11061: // Ancient mace
 				player.itemRequirement[ServerConstants.ATTACK] = 15;
 				player.itemRequirement[ServerConstants.PRAYER] = 25;

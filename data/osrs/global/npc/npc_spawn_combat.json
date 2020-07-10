@@ -7,11 +7,252 @@
     "height": 0,
     "face_action": "ROAM"
   },
+    {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2863,
+    "y": 9952,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2865,
+    "y": 9948,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2869,
+    "y": 9949,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2868,
+    "y": 9945,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2874,
+    "y": 9944,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2867,
+    "y": 9940,
+    "height": 0,
+    "face_action": "ROAM"
+  },
   {
     "npc_description": "Ice Warrior",
     "npc_type": 2841,
-    "x": 2844,
-    "y": 9944,
+    "x": 2871,
+    "y": 9954,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2828,
+    "y": 9924,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2827,
+    "y": 9915,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2825,
+    "y": 3510,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2821,
+    "y": 3512,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2825,
+    "y": 9900,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+        {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2836,
+    "y": 9905,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+        {
+    "npc_description": "Ice Warrior",
+    "npc_type": 2841,
+    "x": 2847,
+    "y": 9911,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2870,
+    "y": 9913,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+      {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2890,
+    "y": 9952,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+        {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2886,
+    "y": 9957,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2847,
+    "y": 3515,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2845,
+    "y": 3519,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2842,
+    "y": 3516,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2884,
+    "y": 9964,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+        {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2860,
+    "y": 9972,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Spider",
+    "npc_type": 3022,
+    "x": 2832,
+    "y": 9971,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2879,
+    "y": 9968,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+            {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2829,
+    "y": 9966,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+            {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2879,
+    "y": 9968,
+    "height": 0,
+    "face_action": "ROAM"
+  },          
+  {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2828,
+    "y": 9960,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+  
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2886,
+    "y": 9957,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2874,
+    "y": 9971,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+          {
+    "npc_description": "Ice Giant",
+    "npc_type": 2085,
+    "x": 2868,
+    "y": 9973,
+    "height": 0,
+    "face_action": "ROAM"
+  },
+    {
+    "npc_description": "Sotetseg",
+    "npc_type": 8387,
+    "x": 3029,
+    "y": 5230,
     "height": 0,
     "face_action": "ROAM"
   },

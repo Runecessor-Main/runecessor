@@ -229,6 +229,7 @@ public class ItemSlot {
 			case 12855: // Hunter's honour.
 			case 12856: // Rogue's revenge.
 			case 16392 : // Defender icon
+			case 16927 : // Old School Runescape Helm
 				return ServerConstants.HEAD_SLOT;
 
 			case 19970 : // Dark bow tie
@@ -246,6 +247,13 @@ public class ItemSlot {
 			case 12514 : // Explorer backpack.
 			case 19556 : // Monkey
 			case 14011 : // Completionist cape
+			case 16928 : // Bow Worn
+			case 16929 : // Bow Worn
+			case 22390 : //
+			case 22392 : //
+			case 22394 : //
+			case 22396 : //
+			case 16989 : // Slain Dragon Wings
 				return ServerConstants.CAPE_SLOT;
 
 			case 20240: // Crier coat
@@ -269,6 +277,7 @@ public class ItemSlot {
 			case 13260: // Angler waders
 			case 20706: // Pyromancer robe
 			case 16921:
+			case 16991: // Tri Void Robe
 				return ServerConstants.LEG_SLOT;
 
 			case 13237: // Pegasian boots.
@@ -303,6 +312,7 @@ public class ItemSlot {
 			case 16259 : // Dhin's bulwark
 			case 12727 : // Event rpg
 			case 12439 : // Royal sceptre.
+			case 16926 : // Zamorakian Blow Pipe
 				return ServerConstants.WEAPON_SLOT;
 
 			case 16359 : // Attacker icon
@@ -319,6 +329,7 @@ public class ItemSlot {
 			case 11924 : // Malediction ward
 			case 11926 : // Odium ward
 			case 18340 : // anti poison totem
+			case 22416 : // The Turncloak
 				return ServerConstants.SHIELD_SLOT;
 
 			case 19961 : // Dark tuxedo cuffs

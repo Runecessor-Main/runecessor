@@ -1825,3 +1825,64 @@ Shop currency: 995
 13122 // Ardy Cape 2
 13123 // Ardy Cape 3
 13124 // Ardy Cape 4
+
+Shop name: Boss Barterer (Boss Crest's)
+Shop id: 44
+Shop currency: 17006
+16929 500 // Holstered Bow
+16928 500 // Holstered Bow
+13108 500 // Wilderness Sword (White)
+13110 800 // Wilderness Sword (Blue)
+13109 1000 // Wilderness Sword (Red)
+13111 1500 // Wilderness Sword (Purp)
+20050 5000 // Obsidian Cape (R)
+16925 5000 // Gauntlet Cape
+11840 1250 // Dragon Boots
+16924 10000 // Corrupted Leggings
+16923 20000 // Corrupted Body
+16982 5000 // Corrupted Helm
+16926 17000 // Zamorakian Blowpipe
+22323 25500 // Sanguinesti Staff
+22322 30000 // Avernic Defender
+22552 25000 // Thammaron's Sceptre (U)
+21012 20000 // Dragon Hunter Crossbow
+16416 45000 // Armadyl Crossbow (Red)
+16370 60000 // Elysian Spirit Shield (Red)
+16435 65000 // Armadyl Godsword (Red)
+16231 75000 // Bandos Blue Top
+16232 50000 // Bandos Tassets Blue
+21018 200000 // Ancestral Hat
+21021 300000 // Ancestral Robe Top
+21024 250000 // Ancestral Robe Bottom
+16373 450000 // Ancestral Hat
+16345 500000 // Ancestral Robe Top
+16346 475000 // Ancestral Robe Bottom
+16420 2500000 // Red & Black Party Hat
+
+Shop name: Master Capes (Skiling Tokens)
+Shop id: 43
+Shop currency: 20527
+16930 120000 // Attack
+16934 120000 // Defence
+16949 120000 // Strength
+16939 120000 // Constitution
+16942 120000 // Magic
+16945 120000 // Range
+16944 120000 // Prayer
+16931 120000 // Agility
+16947 120000 // Slayer
+16983 120000 // Cooking
+16937 120000 // Fishing
+16936 120000 // Firemaking
+16952 120000 // Woodcutting
+16933 120000 // Crafting
+16946 120000 // Runecrafting
+16932 120000 // Construction
+16950 120000 // Summoning
+16951 120000 // Thieving
+16948 120000 // Smithing
+16943 120000 // Mining
+16940 120000 // Herblore
+16935 120000 // Farming
+16938 120000 // Fletching
+16941 120000 // Hunter

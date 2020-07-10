@@ -263,7 +263,10 @@ public class FirstClickNpc {
 			case 2132:
 				player.getDH().sendDialogues(702);
 				break;
-
+			// Show off
+			case 6989:
+				player.getDH().sendDialogues(740);
+				break;
 			// Scorpia's offspring
 			case 5561:
 				player.getDH().sendDialogues(657);
@@ -562,9 +565,6 @@ public class FirstClickNpc {
 			case 539:
 				player.getDH().sendDialogues(732);
 				break;	
-				
-				
-				
 			//
 			case 2800:
 				if (System.currentTimeMillis() - player.flaxDelay <= 4000) {
@@ -626,6 +626,14 @@ public class FirstClickNpc {
 			case 1174:
 				player.getShops().openShop(50);
 				break;
+			// Boss Trader
+			case 8278:
+					player.getShops().openShop(44);
+					break;
+			// Master Cape Seller
+			case 8269:
+					player.getShops().openShop(43);
+					break;
 
 			// Shop assistant.
 			case 513:
@@ -896,6 +904,7 @@ public class FirstClickNpc {
 			// Bankers.
 			case 494:
 			case 6538:
+			case 7900:
 			case 2182: // TzHaar-Ket-Zuh
 				player.setUsingBankSearch(false);
 				Bank.openUpBank(player, player.getLastBankTabOpened(), true, true);

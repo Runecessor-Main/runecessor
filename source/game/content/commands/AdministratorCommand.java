@@ -2782,11 +2782,11 @@ public class AdministratorCommand {
                         }
                         player.playerAssistant.sendMessage("You have jailed " + target.getPlayerName() + ".");
                         target.playerAssistant.sendMessage("You have been jailed.");
-                        int[][] random = {{2698, 4012}, {2694, 4012}, {2698, 4021}, {2694, 4021},
-                                {2693, 4024}, {2694, 4027},};
+                        int[][] random = {{3056, 2966}, {3059, 2966}, {3062, 2966}, {3062, 2972},
+                                {3058, 2972}, {3055, 2972}, {3056, 2978}, {3059, 2978}, {3062, 2978},};
                         int value = Misc.random(random.length - 1);
                         if (target.isAdministratorRank() || target.isModeratorRank() || target.isSupportRank()) {
-                            target.getPA().movePlayer(2692, 4016, 0);
+                            target.getPA().movePlayer(3053, 2972, 0);
                         } else {
                             target.getPA().movePlayer(random[value][0], random[value][1], 0);
                             target.setJailed(true);

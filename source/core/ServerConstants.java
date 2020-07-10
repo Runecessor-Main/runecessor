@@ -619,6 +619,7 @@ public class ServerConstants {
 					"chode",
 					"damn",
 					"dick",
+					"d1ck",
 					"faggit",
 					"gay",
 					"homo",
@@ -640,7 +641,6 @@ public class ServerConstants {
 	public static final String offensiveLanguage[] =
 			{
 					"sex",
-					"idiot",
 					"fuck",
 					"kanker",
 					"cancer",
@@ -658,7 +658,6 @@ public class ServerConstants {
 					"cunt",
 					"asshole",
 					"nigger",
-					"gay",
 					"lesbian",
 					"bastard",
 					"blowjob",
@@ -675,7 +674,6 @@ public class ServerConstants {
 					"cock",
 					"nigga",
 					"retard",
-					"stfu",
 					"fag",
 					"fgt",
 					"cnt"

@@ -15,8 +15,28 @@
 		"roam_distance": 5
 	},
 		{
+		"npc_name": "Boss Trader",
+		"npc_type": 8278,
+		"roam_distance": 5
+	},		{
+		"npc_name": "Master Capes",
+		"npc_type": 8269,
+		"roam_distance": 5
+	},
+	
+		{
 		"npc_name": "Bunny Slayer",
 		"npc_type": 539,
+		"roam_distance": 2
+	},
+			{
+		"npc_name": "Show Off",
+		"npc_type": 6989,
+		"roam_distance": 2
+	},
+				{
+		"npc_name": "Staff Butler",
+		"npc_type": 7900,
 		"roam_distance": 2
 	},
 			{

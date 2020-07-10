@@ -39,6 +39,38 @@
 		"height": 0,
 		"face_action": "SOUTH"
 	},
+			{
+		"npc_description": "Show Off",
+		"npc_type": 6989,
+		"x": 3083,
+		"y": 3508,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+				{
+		"npc_description": "Staff Butler",
+		"npc_type": 7900,
+		"x": 3032,
+		"y": 2967,
+		"height": 0,
+		"face_action": "ROAM"
+	},
+					{
+		"npc_description": "Boss Trader",
+		"npc_type": 8278,
+		"x": 3081,
+		"y": 3500,
+		"height": 0,
+		"face_action": "NORTH"
+	},
+					{
+		"npc_description": "Boss Trader",
+		"npc_type": 8269,
+		"x": 3082,
+		"y": 3495,
+		"height": 0,
+		"face_action": "WEST"
+	},
 		{
 		"npc_description": "City Clerk",
 		"npc_type": 517,

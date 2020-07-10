@@ -291,6 +291,25 @@ public class NpcHandler {
             case 1677:
                 npc.hitThroughPrayerAmount = 1.0;
                 break;
+            case 8387:
+            	npc.hitThroughPrayerAmount = 1.0;
+                if (withInMeleeDistance(npcX, npcY, player.getX(), player.getY(), npc.npcType)) {
+                    random = Misc.random(2);
+                } else {
+
+                    random = Misc.random(1);
+                }
+                if (random == 1) {
+                    npc.attackType = ServerConstants.MAGIC_ICON;
+                    npc.startingGfx = 129;
+                    npc.projectileId = 130;
+                    npc.endGfx = 131;
+                    npc.forceNormalNpcFixedDamage = 1;
+                }  else if (random == 2) {
+                    npc.attackType = ServerConstants.MELEE_ICON;
+                    npc.forceNormalNpcFixedDamage = 2;
+                }
+                break;
 
             // Infernal mage.
             case 443:

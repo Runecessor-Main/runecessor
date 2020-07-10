@@ -207,9 +207,21 @@ public class PetData {
 					{
 							7368, 20693, 2
 					},
+					// Ice Spider
+					{
+							11253, 16993, 2
+					},
+					// Crawling Hand
+					{
+							11254, 4133, 2
+					},
 					// Tangleroot (Farming)
 					{
 							7335, 20661, 2
+					},
+					// Sotetseg
+					{
+							11255, 17005, 2
 					},
 					// Rift guardian (Runecrafting)
 					{

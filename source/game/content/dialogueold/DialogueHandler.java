@@ -2227,7 +2227,18 @@ public class DialogueHandler {
 				player.getPA().sendMessage(ServerConstants.RED_COL + "You have entered a dagerous combat area. Protection rules no longer apply.");
 				break;	
 			// END OF 2020 EASTER EVENT
-		
+			case 740:
+				sendNpcChat("Are you #1?", "Yea.. didn't think so..", "Stop wasting my time, come back when you are.", FacialAnimation.HAPPY.getAnimationId());
+				break;	
+			case 741:
+				player.getDH().sendItemChat("@red@ ** CAUTION **", "You are entering a Boss Zone!", "@red@ Prepare yourself for immidiate combat!", 964, 200, 10, 0);
+				player.nextDialogue = 742;
+				break;
+			case 742:
+				player.getPA().sendMessage(ServerConstants.RED_COL + "You have entered a dagerous combat area. Protection rules no longer apply.");
+				player.getPA().movePlayer(3037, 5228, 0);
+				break;
+			// END DIALOGUE
 			default:
 				Plugin.execute("chat_" + dialogue, player);
 				break;
