@@ -34,7 +34,6 @@ import game.content.wildernessbonus.KillReward;
 import game.content.wildernessbonus.WildernessRisk;
 import game.content.worldevent.BloodKey;
 import game.content.worldevent.Tournament;
-import game.item.GroundItem;
 import game.item.ItemAssistant;
 import game.player.Area;
 import game.player.Player;
@@ -44,7 +43,6 @@ import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
 import game.player.movement.Movement;
 import game.player.punishment.BannedData;
-import org.menaphos.model.world.content.shop.factory.ShopFactory;
 import utility.Misc;
 
 /**
@@ -397,7 +395,7 @@ public class Death {
                 }
             }
         }
-        final ChargeableCollection collection = victim.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY);
+        final ChargeableCollection collection = victim.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY);
         collection.onDeath(killer, victim);
 
         ItemsKeptOnDeath.getItemsKeptOnDeath(victim, false, false);
@@ -489,8 +487,8 @@ public class Death {
                 killer.getTradeAndDuel().duelVictory();
                 killer.safeKills++;
                 if (GameType.isPreEoc()) {
-                    victim.getAttributes().increase(TrackingHelmet.DUEL_DEATHS);
-                    killer.getAttributes().increase(TrackingHelmet.DUEL_KILLS);
+                    victim.getAttributeMap().increase(TrackingHelmet.DUEL_DEATHS);
+                    killer.getAttributeMap().increase(TrackingHelmet.DUEL_KILLS);
                 }
                 victim.getPA().sendMessage("You have lost the duel.");
                 killer.getPA().sendMessage("You have won the duel!");
@@ -565,8 +563,8 @@ public class Death {
             }
             if (GameType.isPreEoc()) {
                 if (Area.inEdgevilleWilderness(victim) && Area.inEdgevilleWilderness(killer)) {
-                    killer.getAttributes().increase(TrackingHelmet.EDGE_KILLS);
-                    victim.getAttributes().increase(TrackingHelmet.EDGE_DEATHS);
+                    killer.getAttributeMap().increase(TrackingHelmet.EDGE_KILLS);
+                    victim.getAttributeMap().increase(TrackingHelmet.EDGE_DEATHS);
                 }
             }
             WildernessRisk.carriedWealth(killer, false);

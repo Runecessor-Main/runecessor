@@ -8,8 +8,6 @@ import game.content.phantasye.item.degradable.impl.Bonecrusher;
 import game.player.Player;
 import game.type.GameTypeIdentity;
 
-import java.text.NumberFormat;
-
 @ItemInteractionComponent(
         identities = {@GameTypeIdentity(type = GameType.ANY, identity = 22114),})
 public class MythicalCape implements ItemInteraction {

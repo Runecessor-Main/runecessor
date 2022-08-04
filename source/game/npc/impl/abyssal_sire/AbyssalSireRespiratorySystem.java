@@ -86,7 +86,7 @@ public class AbyssalSireRespiratorySystem extends Npc implements EntityCombatStr
 	 */
 	@Override
 	public int calculateCustomDamageTaken(Entity attacker, Entity defender, int damage, int attackType) {
-		if (!getAttributes().getOrDefault(AbyssalSire.AWAKE, false)) {
+		if (!getAttributeMap().getOrDefault(AbyssalSire.AWAKE, false)) {
 			if (attacker.getType() == EntityType.PLAYER && defender.getType() == EntityType.NPC) {
 				Npc defenderAsNpc = (Npc) defender;
 

@@ -72,7 +72,7 @@ public class FishingSpot extends Npc {
 				 * Stop all players fishing
 				 */
 				getLocalPlayers().stream().filter(Objects::nonNull).filter(
-						p -> p.getAttributes().getOrDefault(Fishing.FISHING_SPOT) != currentPosition)
+						p -> p.getAttributeMap().getOrDefault(Fishing.FISHING_SPOT) != currentPosition)
 						.forEach(t -> t.forceStopSkillingEvent = true);
 				/*
 				 * Change position

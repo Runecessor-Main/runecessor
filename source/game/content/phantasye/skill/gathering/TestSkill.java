@@ -1,12 +1,8 @@
 package game.content.phantasye.skill.gathering;
 
-import game.content.phantasye.actions.skill.AbstractSkillAction;
 import game.content.phantasye.actions.skill.gathering.AbstractGatheringSkillAction;
-import game.content.phantasye.actions.skill.gathering.impl.GatherNodeAction;
 import game.content.phantasye.actions.skill.gathering.impl.MineRockAction;
 import game.content.phantasye.skill.SkillContext;
-import game.content.phantasye.skill.chain.impl.PrerequisiteChain;
-import game.content.skilling.Skill;
 
 public class TestSkill<T extends MineRockAction> extends GatheringSkillBase<T> {
 

@@ -1,16 +1,13 @@
 package game.content.phantasye.skill.gathering.mining;
 
-import core.Server;
 import core.ServerConstants;
 import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.SkillingStatistics;
 import game.item.ItemAssistant;
 import game.npc.NpcHandler;
-import game.npc.impl.ice.IceQueen;
 import game.npc.impl.ice.IceQueenCombatStrategy;
 import game.object.custom.Object;
-import game.object.custom.ObjectManagerServer;
 import game.player.Player;
 import game.player.PlayerHandler;
 import game.player.event.CycleEvent;
@@ -20,7 +17,9 @@ import org.menaphos.model.loot.factory.LootFactory;
 import org.menaphos.model.world.location.Location;
 import utility.Misc;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * New and improved mining based off the woodcutting class

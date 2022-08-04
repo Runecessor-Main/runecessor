@@ -68,7 +68,7 @@ public class Zulrah extends Npc {
 			return;
 		}
 		spawnState = SpawnState.SPAWNED;
-		getAttributes().put(PERMANENT_KILLER_ID, attacker.getPlayerId());
+		getAttributeMap().put(PERMANENT_KILLER_ID, attacker.getPlayerId());
 		strategy.transform(this, attacker);
 	}
 
@@ -119,7 +119,7 @@ public class Zulrah extends Npc {
 		}
 
 		if (getKillerId() == 0) {
-			setKillerId(getAttributes().getOrDefault(PERMANENT_KILLER_ID, 0));
+			setKillerId(getAttributeMap().getOrDefault(PERMANENT_KILLER_ID, 0));
 		}
 	}
 

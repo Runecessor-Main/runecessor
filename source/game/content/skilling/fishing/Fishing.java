@@ -6,7 +6,6 @@ import game.position.Position;
 import game.content.achievement.Achievements;
 import game.content.donator.DonatorTokenUse;
 import game.content.donator.DonatorTokenUse.DonatorRankSpentData;
-import game.content.miscellaneous.RandomEvent;
 import game.content.music.SoundSystem;
 import game.content.skilling.Skilling;
 import game.content.skilling.SkillingStatistics;
@@ -59,7 +58,7 @@ public class Fishing {
 		/*
 		 * Set position
 		 */
-		player.getAttributes().put(FISHING_SPOT,
+		player.getAttributeMap().put(FISHING_SPOT,
 				new Position(npc.getX(), npc.getY(), npc.getHeight()));
 		/*
 		 * Fishing action
@@ -327,7 +326,7 @@ public class Fishing {
 		if (player.fishTimerAmount >= 0) {
 			player.startAnimation(65535);
 			player.fishTimerAmount = -1;
-			player.getAttributes().put(FISHING_SPOT, new Position(0, 0, 0));
+			player.getAttributeMap().put(FISHING_SPOT, new Position(0, 0, 0));
 		}
 	}
 }

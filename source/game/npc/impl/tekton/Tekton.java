@@ -3,7 +3,6 @@ package game.npc.impl.tekton;
 import com.google.common.collect.ImmutableList;
 import core.GameType;
 import core.ServerConfiguration;
-import game.entity.Entity;
 import game.entity.attributes.AttributeKey;
 import game.entity.attributes.TransientAttributeKey;
 import game.entity.combat_strategy.EntityCombatStrategy;
@@ -11,7 +10,6 @@ import game.npc.CustomNpcComponent;
 import game.npc.Npc;
 import game.npc.NpcWalkToEvent;
 import game.player.Player;
-import game.player.event.CycleEventContainer;
 import game.position.Position;
 import game.position.PositionUtils;
 import game.position.distance.DistanceAlgorithms;
@@ -112,8 +110,8 @@ public class Tekton extends Npc {
         setNeverRandomWalks(true);
         setWalkingHomeDisabled(true);
 
-        getAttributes().put(TRANSFORMATION);
-        getAttributes().put(STATE);
+        getAttributeMap().put(TRANSFORMATION);
+        getAttributeMap().put(STATE);
     }
 
     @Override
@@ -124,13 +122,13 @@ public class Tekton extends Npc {
             return;
         }
 
-        if (getAttributes().isNot(TRIGGERED)) {
+        if (getAttributeMap().isNot(TRIGGERED)) {
             if (!getLocalPlayers().isEmpty()) {
                 trigger();
             }
         }
 
-        TektonState state = getAttributes().getOrDefault(STATE);
+        TektonState state = getAttributeMap().getOrDefault(STATE);
 
         if (ServerConfiguration.DEBUG_MODE) {
             //System.out.println("State: " + state + ", Enraged: " + getAttributes().is(ENRAGED));
@@ -147,7 +145,7 @@ public class Tekton extends Npc {
                 resetFace();
             }
 
-            if (getAttributes().is(TRIGGERED)) {
+            if (getAttributeMap().is(TRIGGERED)) {
                 if (fireAttackEvent != null) {
                     if (fireAttackEvent.isFailed()) {
                         getEventHandler().stopIfEventEquals(fireAttackEvent);
@@ -163,13 +161,13 @@ public class Tekton extends Npc {
                 Player local = getLocalPlayers().stream().findAny().orElse(null);
 
                 if (local == null) {
-                    getAttributes().put(STATE, TektonState.WALKING_TO_ANVIL);
+                    getAttributeMap().put(STATE, TektonState.WALKING_TO_ANVIL);
                     return;
                 }
                 if (getCurrentHitPoints() < maximumHitPoints && enrageIsAvailable()) {
-                    getAttributes().put(ENRAGED, true);
+                    getAttributeMap().put(ENRAGED, true);
                     retransform();
-                    getAttributes().put(TIME_OF_ENRAGE, System.currentTimeMillis());
+                    getAttributeMap().put(TIME_OF_ENRAGE, System.currentTimeMillis());
                 }
                 walkingEvent = new NpcWalkToEvent(20, new Position(local), 1);
                 getEventHandler().addEvent(this, walkingEvent, 1);
@@ -183,8 +181,8 @@ public class Tekton extends Npc {
                     getEventHandler().stopIfEventEquals(walkingEvent);
                     walkingEvent = null;
                     lastDamageTaken = System.currentTimeMillis();
-                    getAttributes().put(STATE, TektonState.ATTACKING);
-                    getAttributes().put(CONSECUTIVE_ATTACKS, 0);
+                    getAttributeMap().put(STATE, TektonState.ATTACKING);
+                    getAttributeMap().put(CONSECUTIVE_ATTACKS, 0);
                     transform(TektonTransformation.DEFENSIVE);
                 } else if (walkingEvent.isFailed()) {
                     reset();
@@ -203,15 +201,15 @@ public class Tekton extends Npc {
                 if (walkingEvent.isDestinationReached()) {
                     getEventHandler().stopIfEventEquals(walkingEvent);
                     walkingEvent = null;
-                    getAttributes().put(ENRAGED, false);
-                    getAttributes().put(STATE, TektonState.HAMMERING);
+                    getAttributeMap().put(ENRAGED, false);
+                    getAttributeMap().put(STATE, TektonState.HAMMERING);
                     transform(TektonTransformation.HAMMERING);
                     setFacingEntityDisabled(false);
                     setClippingIgnored(false);
                 } else if (walkingEvent.isFailed()) {
                     getEventHandler().stopIfEventEquals(walkingEvent);
                     walkingEvent = null;
-                    getAttributes().put(STATE, TektonState.HAMMERING);
+                    getAttributeMap().put(STATE, TektonState.HAMMERING);
                     transform(TektonTransformation.HAMMERING);
                     move(new Position(3336, 5328, getHeight()));
                     setFacingEntityDisabled(false);
@@ -219,16 +217,16 @@ public class Tekton extends Npc {
                 }
             }
         } else if (state == TektonState.ATTACKING) {
-            if (getAttributes().getOrDefault(Tekton.CONSECUTIVE_ATTACKS) >= 16) {
-                getAttributes().put(Tekton.CONSECUTIVE_ATTACKS, 0);
-                getAttributes().put(Tekton.STATE, TektonState.WALKING_TO_ANVIL);
+            if (getAttributeMap().getOrDefault(Tekton.CONSECUTIVE_ATTACKS) >= 16) {
+                getAttributeMap().put(Tekton.CONSECUTIVE_ATTACKS, 0);
+                getAttributeMap().put(Tekton.STATE, TektonState.WALKING_TO_ANVIL);
                 transform(TektonTransformation.WALKING);
                 return;
             }
             if (getLocalPlayers().stream().noneMatch(local ->
                     PositionUtils.withinDistance(this, new Position(local), 1, DistanceAlgorithms.EUCLIDEAN))) {
-                getAttributes().put(Tekton.STATE, TektonState.WALKING_TO_ANVIL);
-                getAttributes().put(Tekton.CONSECUTIVE_ATTACKS, 0);
+                getAttributeMap().put(Tekton.STATE, TektonState.WALKING_TO_ANVIL);
+                getAttributeMap().put(Tekton.CONSECUTIVE_ATTACKS, 0);
                 transform(TektonTransformation.WALKING);
                 resetFollowing();
                 resetFace();
@@ -238,27 +236,27 @@ public class Tekton extends Npc {
         }
 
         if (state == TektonState.ATTACKING && System.currentTimeMillis() - lastDamageTaken > 120_000
-                || getAttributes().is(TRIGGERED) && getLocalPlayers().isEmpty()) {
+                || getAttributeMap().is(TRIGGERED) && getLocalPlayers().isEmpty()) {
             reset();
-            getAttributes().put(TRIGGERED, false);
+            getAttributeMap().put(TRIGGERED, false);
         }
 
-        if (getAttributes().is(ENRAGED) && System.currentTimeMillis() - getAttributes().getOrDefault(TIME_OF_ENRAGE)
+        if (getAttributeMap().is(ENRAGED) && System.currentTimeMillis() - getAttributeMap().getOrDefault(TIME_OF_ENRAGE)
                 >= TimeUnit.SECONDS.toMillis(ENRAGED_DURATION)) {
-            getAttributes().put(ENRAGED, false);
+            getAttributeMap().put(ENRAGED, false);
             retransform();
         }
     }
 
     private boolean enrageIsAvailable() {
-        return getAttributes().isNot(ENRAGED) && System.currentTimeMillis() -
-                getAttributes().getOrDefault(TIME_OF_ENRAGE) >= ENRAGED_COOL_DOWN;
+        return getAttributeMap().isNot(ENRAGED) && System.currentTimeMillis() -
+                getAttributeMap().getOrDefault(TIME_OF_ENRAGE) >= ENRAGED_COOL_DOWN;
     }
 
     private void reset() {
         getEventHandler().stopIfEventEquals(walkingEvent);
         walkingEvent = null;
-        getAttributes().put(STATE, TektonState.WALKING_TO_ANVIL);
+        getAttributeMap().put(STATE, TektonState.WALKING_TO_ANVIL);
         setFacingEntityDisabled(true);
         transform(TektonTransformation.WALKING);
         resetFollowing();
@@ -267,10 +265,10 @@ public class Tekton extends Npc {
     }
 
     private void trigger() {
-        if (getAttributes().getOrDefault(STATE) == TektonState.HAMMERING && fireAttackEvent == null) {
-            getAttributes().put(STATE, TektonState.WALKING_TO_TARGET);
+        if (getAttributeMap().getOrDefault(STATE) == TektonState.HAMMERING && fireAttackEvent == null) {
+            getAttributeMap().put(STATE, TektonState.WALKING_TO_TARGET);
             transform(TektonTransformation.WALKING);
-            getAttributes().put(TRIGGERED, true);
+            getAttributeMap().put(TRIGGERED, true);
         }
     }
 
@@ -282,17 +280,17 @@ public class Tekton extends Npc {
     }
 
     private void retransform() {
-        transform(getAttributes().getOrDefault(TRANSFORMATION));
+        transform(getAttributeMap().getOrDefault(TRANSFORMATION));
     }
 
     private void transform(TektonTransformation transformation) {
         transform(transformation.getType());
-        getAttributes().put(TRANSFORMATION, transformation);
+        getAttributeMap().put(TRANSFORMATION, transformation);
 
-        if (transformation == TektonTransformation.HAMMERING && getAttributes().is(ENRAGED)) {
-            getAttributes().put(ENRAGED, false);
+        if (transformation == TektonTransformation.HAMMERING && getAttributeMap().is(ENRAGED)) {
+            getAttributeMap().put(ENRAGED, false);
         }
-        int animation = getAttributes().is(ENRAGED) ? transformation.getEnragedIdleAnimation() : transformation.getIdleAnimation();
+        int animation = getAttributeMap().is(ENRAGED) ? transformation.getEnragedIdleAnimation() : transformation.getIdleAnimation();
 
         setIdleAnimation(animation);
         requestAnimation(animation);

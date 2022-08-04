@@ -140,7 +140,7 @@ public final class BossInstanceController {
                     new Location(2604, 0, 3166)
             ));
         } else {
-            player.getPA().sendMessage("You need at least " + boss.price + " tickets to instance this boss.");
+            player.getPA().sendPlainMessage("You need at least " + boss.price + " tickets to instance this boss.");
         }
     }
 

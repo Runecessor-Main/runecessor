@@ -226,7 +226,7 @@ public abstract class Entity {
 		this.visible = visible;
 	}
 
-	public AttributeMap getAttributes() {
+	public AttributeMap getAttributeMap() {
 		return attributes;
 	}
 }

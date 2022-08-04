@@ -7,7 +7,6 @@ import game.content.interfaces.AreaInterface;
 import game.content.miscellaneous.Skull;
 import game.content.miscellaneous.TradeAndDuel;
 import game.content.skilling.Runecrafting;
-import game.content.starter.GameMode;
 import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.player.Player;
@@ -82,7 +81,7 @@ public class WearItemPacket implements PacketType {
 		}
 		switch (wearId) {
 			case 22111: // Dragonbone necklace
-				player.getAttributes().put(Player.DRAGONBONE_NECKLACE_TIMER, System.currentTimeMillis());
+				player.getAttributeMap().put(Player.DRAGONBONE_NECKLACE_TIMER, System.currentTimeMillis());
 				break;
 			case 22557:
 				if (!Skull.isSkulled(player)) {

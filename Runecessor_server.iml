@@ -54,5 +54,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="bson4jackson-2.7.0" level="project" />
+    <orderEntry type="library" name="rshd-entity-1.0.0" level="project" />
   </component>
 </module>

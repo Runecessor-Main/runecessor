@@ -736,8 +736,8 @@ public class AttackPlayer {
 	 */
 	public static void resetAttackData(Player attacker) {
 		attacker.armadylCrossbowSpecial = false;
-		attacker.getAttributes().put(Player.MORRIGANS_JAVS_SPECIAL, false);
-		attacker.getAttributes().put(Player.MORRIGANS_AXE_SPECIAL, false);
+		attacker.getAttributeMap().put(Player.MORRIGANS_JAVS_SPECIAL, false);
+		attacker.getAttributeMap().put(Player.MORRIGANS_AXE_SPECIAL, false);
 		attacker.setUsingMediumRangeRangedWeapon(false);
 		attacker.againstPlayer = false;
 		attacker.setIsWieldingRangedWeaponWithNoArrowSlotRequirement(false);

@@ -9,7 +9,6 @@ import game.item.GameItem;
 import game.npc.CustomNpcComponent;
 import game.npc.Npc;
 import game.player.Player;
-import game.player.PlayerHandler;
 import game.type.GameTypeIdentity;
 
 /**
@@ -60,7 +59,7 @@ public class BlackChinchompaHunterCreature extends HunterCreature {
 	public void onDeath() {
 		super.onDeath();
 
-		if (getAttributes().getOrDefault(HunterCreature.CAUGHT)) {
+		if (getAttributeMap().getOrDefault(HunterCreature.CAUGHT)) {
 			return;
 		}
 		for (Player loop : getLocalPlayers()) {

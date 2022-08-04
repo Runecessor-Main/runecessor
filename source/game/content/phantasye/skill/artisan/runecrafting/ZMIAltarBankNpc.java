@@ -32,7 +32,7 @@ public final class ZMIAltarBankNpc {
                             if (removedRunesFor(player)) {
                                 player.getPA().stopAllActions();
                                 Bank.openUpBank(player, player.getLastBankTabOpened(), true, true);
-                                player.getPA().sendMessage("You have opened the bank.");
+                                player.getPA().sendPlainMessage("You have opened the bank.");
                             } else {
                                 player.receiveMessage("You need at least 20 of one of your selected runes.");
                                 player.getPA().closeInterfaces(true);

@@ -1257,7 +1257,7 @@ public class CombatNpc {
                 && attacker.getCombatStyle(ServerConstants.DEFENSIVE)) {
             return;
         }
-        ChargeableCollection collection = attacker.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY);
+        ChargeableCollection collection = attacker.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY);
 
         Chargeable chargeable = Chargeable.valueOfCharged(attacker.getWieldedWeapon());
 

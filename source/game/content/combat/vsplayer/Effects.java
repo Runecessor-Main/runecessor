@@ -49,7 +49,7 @@ public class Effects {
 		// Victim the one being damaged
 		// When it comes to recoil, the attacker gets damaged.
 		if (damage > 0 && victim.getRecoilCharges() > 0 && (ItemAssistant.hasItemEquipped(victim, 2550) || ItemAssistant.hasItemEquipped(victim, 20657)
-					&& victim.getAttributes().getOrDefault(Player.RING_OF_SUFFERING_ENABLED))) {
+					&& victim.getAttributeMap().getOrDefault(Player.RING_OF_SUFFERING_ENABLED))) {
 			if (victim.getDead() && victim.getHeight() == 20) {
 				return;
 			}

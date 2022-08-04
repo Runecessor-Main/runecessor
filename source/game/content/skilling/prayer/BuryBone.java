@@ -4,7 +4,6 @@ import core.GameType;
 import core.ServerConstants;
 import game.content.achievement.Achievements;
 import game.content.combat.Combat;
-import game.content.miscellaneous.RandomEvent;
 import game.content.music.SoundSystem;
 import game.content.skilling.Skilling;
 import game.content.skilling.SkillingStatistics;
@@ -104,7 +103,7 @@ public class BuryBone {
 	}
 
 	public static void dragonboneEffect(Player player, int id) {
-		long timer = player.getAttributes().getOrDefault(Player.DRAGONBONE_NECKLACE_TIMER);
+		long timer = player.getAttributeMap().getOrDefault(Player.DRAGONBONE_NECKLACE_TIMER);
 		if (System.currentTimeMillis() - timer > Misc.getSecondsToMilliseconds(7)) {
 			for (Bones data : Bones.values()) {
 				if (data.getItemId() == id) {

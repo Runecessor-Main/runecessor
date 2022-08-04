@@ -33,9 +33,8 @@ import game.content.phantasye.item.degradable.impl.DragonboneNecklace;
 import game.content.phantasye.minigame.instance.boss.BossInstance;
 import game.content.phantasye.minigame.pirate.PirateMinigame;
 import game.content.phantasye.skill.AbstractSkillBase;
-import game.content.phantasye.skill.gathering.TestSkill;
-import game.content.phantasye.skill.gathering.mining.Mining;
 import game.content.phantasye.skill.artisan.runecrafting.Runecrafting;
+import game.content.phantasye.skill.gathering.mining.Mining;
 import game.content.phantasye.skill.support.slayer.SlayerUnlocks;
 import game.content.phantasye.skill.support.slayer.task.PlayerSlayerTask;
 import game.content.prayer.Prayer;
@@ -45,6 +44,10 @@ import game.content.prayer.book.regular.RegularPrayer;
 import game.content.quest.Quest;
 import game.content.quest.QuestHandler;
 import game.content.quest.QuestReward;
+import game.content.runehub.entity.player.PlayerCharacterAttribute;
+import game.content.runehub.entity.player.PlayerCharacterContext;
+import game.content.runehub.entity.player.PlayerCharacterContextDataAccessObject;
+import game.content.runehub.markup.MarkupParser;
 import game.content.shop.ShopAssistant;
 import game.content.skilling.HitPointsRegeneration;
 import game.content.skilling.Skill;
@@ -101,8 +104,11 @@ import org.menaphos.model.world.content.shop.model.PurchaseRequest;
 import org.menaphos.model.world.content.shop.model.shopper.session.ShoppingSession;
 import org.menaphos.model.world.location.Location;
 import org.menaphos.util.StopWatch;
-import org.menaphos.util.StringUtils;
 import org.phantasye.RepositoryManager;
+import org.rhd.api.action.Action;
+import org.rhd.api.action.impl.interaction.Interactable;
+import org.rhd.api.action.impl.interaction.Interaction;
+import org.rhd.api.entity.user.character.player.PlayerCharacterEntity;
 import utility.FileUtility;
 import utility.ISAACRandomGen;
 import utility.Misc;
@@ -113,7 +119,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Everything declared in this class will belong to the individual player.
  */
-public class Player extends Entity implements PlayableCharacter, Customer {
+public class Player extends Entity implements PlayableCharacter, Customer, PlayerCharacterEntity {
 
     private long attackTime;
     private long bankDelay;
@@ -206,6 +212,8 @@ public class Player extends Entity implements PlayableCharacter, Customer {
                 new PlayerDetailsRepositoryManager();
         repositoryManager.getRepository().create(playerDetails);
         repositoryManager.updateRepository();
+        this.getContext().getPlayerSaveData().setLogoutTimestamp(System.currentTimeMillis());
+        PlayerCharacterContextDataAccessObject.getInstance().update(context);
     }
 
     @Override
@@ -393,7 +401,7 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 //				return shoppingSession.getShop().sell(id, amount);
 //			}
         }
-        this.receiveMessage("You can not afford that. (" + StringUtils.formatInteger(cost) + " GP)");
+        this.receiveMessage("You can not afford that. (" + cost + " GP)");
         return Optional.empty();
     }
 
@@ -492,12 +500,12 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     @Override
     public void sendMessage(String s) {
-        this.forcedChat(s, true, true);
+        this.forcedChat(MarkupParser.parseMarkup(s).getText(), true, true);
     }
 
     @Override
     public void receiveMessage(String s) {
-        this.getPA().sendMessage(s);
+        this.getPA().sendPlainMessage(s);
     }
 
     @Override
@@ -8000,6 +8008,9 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         Movement.resetWalkingQueue(this);
         valuableLoot = GameType.isOsrsPvp() ? 10 : 5000;
         setAbleToEditCombat(GameType.isOsrsPvp() ? true : false);
+
+        this.attributes = new PlayerCharacterAttribute(this);
+
     }
 
     /**
@@ -8091,7 +8102,7 @@ public class Player extends Entity implements PlayableCharacter, Customer {
 
     public void sendDebugMessage(String message) {
         if (ServerConfiguration.DEBUG_MODE) {
-            playerAssistant.sendMessage(message);
+            playerAssistant.sendPlainMessage(message);
         }
     }
 
@@ -8824,4 +8835,44 @@ public class Player extends Entity implements PlayableCharacter, Customer {
         this.dwarfMultiCannon = dwarfMultiCannon;
     }
 
+    @Override
+    public PlayerCharacterAttribute getAttributes() {
+        return attributes;
+    }
+
+    @Override
+    public PlayerCharacterContext getContext() {
+        return context;
+    }
+
+    public PlayerCharacterAttribute getPlayerAttributes() {
+        return attributes;
+    }
+
+    public void setContext(PlayerCharacterContext context) {
+        this.context = context;
+    }
+
+    private final PlayerCharacterAttribute attributes;
+    private PlayerCharacterContext context;
+
+    @Override
+    public org.rhd.api.item.container.ItemContainer inventory() {
+        return null;
+    }
+
+    @Override
+    public void perform(Action<?> action) {
+
+    }
+
+    @Override
+    public void interact(Interactable interactable) {
+
+    }
+
+    @Override
+    public Interaction onInteraction() {
+        return null;
+    }
 }

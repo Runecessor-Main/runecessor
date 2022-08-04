@@ -26,12 +26,12 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
 
     @Override
     public boolean canAttack(Entity attacker, Entity defender) {
-        return attacker.getAttributes().getOrDefault(Tekton.STATE) != TektonState.HAMMERING;
+        return attacker.getAttributeMap().getOrDefault(Tekton.STATE) != TektonState.HAMMERING;
     }
 
     @Override
     public boolean canBeAttacked(Entity attacker, Entity defender) {
-        return defender.getAttributes().getOrDefault(Tekton.STATE) != TektonState.HAMMERING;
+        return defender.getAttributeMap().getOrDefault(Tekton.STATE) != TektonState.HAMMERING;
     }
 
     @Override
@@ -39,8 +39,8 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
         if (attacker.getType() == EntityType.NPC && defender.getType() == EntityType.PLAYER) {
             Npc attackerAsNpc = (Npc) attacker;
 
-            if (attackerAsNpc.getAttributes().getOrDefault(Tekton.STATE) == TektonState.WALKING_TO_ANVIL
-                || attackerAsNpc.getAttributes().getOrDefault(Tekton.STATE) == TektonState.WALKING_TO_TARGET) {
+            if (attackerAsNpc.getAttributeMap().getOrDefault(Tekton.STATE) == TektonState.WALKING_TO_ANVIL
+                || attackerAsNpc.getAttributeMap().getOrDefault(Tekton.STATE) == TektonState.WALKING_TO_TARGET) {
                 return 1;
             }
         }
@@ -60,7 +60,7 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
                             calculateNpcMeleeDamage(attackerAsNpc, defenderAsPlayer, -1, attackerAsNpc.getDefinition().maximumDamage),
                             -1, p -> targetPosition.distanceTo(p.getX(), p.getY()) < 2, null, null));
                 }
-                attacker.getAttributes().increase(Tekton.CONSECUTIVE_ATTACKS);
+                attacker.getAttributeMap().increase(Tekton.CONSECUTIVE_ATTACKS);
             }
         }
     }
@@ -75,7 +75,7 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
 
     @Override
     public int calculateCustomCombatDefence(Entity attacker, Entity defender, int defence, int attackType) {
-        if (defender.getAttributes().is(Tekton.ENRAGED)) {
+        if (defender.getAttributeMap().is(Tekton.ENRAGED)) {
             return defence + 200;
         }
         return defence;
@@ -89,7 +89,7 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
             if (attackerAsNpc.oldIndex <= 0) {
                 return;
             }
-            if (attackerAsNpc.getAttributes().getOrDefault(Tekton.STATE) != TektonState.ATTACKING) {
+            if (attackerAsNpc.getAttributeMap().getOrDefault(Tekton.STATE) != TektonState.ATTACKING) {
                 return;
             }
             Player defenderAsPlayer = PlayerHandler.players[attackerAsNpc.oldIndex];
@@ -126,11 +126,11 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
             attackType = Misc.random(TektonAttackType.values());
 
             if (attackType == TektonAttackType.SLASH) {
-                return attackerAsNpc.getAttributes().is(Tekton.ENRAGED) ? Tekton.ENRAGED_SLASH_ANIMATION : Tekton.SLASH_ANIMATION;
+                return attackerAsNpc.getAttributeMap().is(Tekton.ENRAGED) ? Tekton.ENRAGED_SLASH_ANIMATION : Tekton.SLASH_ANIMATION;
             } else if (attackType == TektonAttackType.SMASH) {
-                return attackerAsNpc.getAttributes().is(Tekton.ENRAGED) ? Tekton.ENRAGED_SMASH_ANIMATION : Tekton.SMASH_ANIMATION;
+                return attackerAsNpc.getAttributeMap().is(Tekton.ENRAGED) ? Tekton.ENRAGED_SMASH_ANIMATION : Tekton.SMASH_ANIMATION;
             } else if (attackType == TektonAttackType.POKE) {
-                return attackerAsNpc.getAttributes().is(Tekton.ENRAGED) ? Tekton.ENRAGED_POKE_ANIMATION : Tekton.POKE_ANIMATION;
+                return attackerAsNpc.getAttributeMap().is(Tekton.ENRAGED) ? Tekton.ENRAGED_POKE_ANIMATION : Tekton.POKE_ANIMATION;
             }
         }
         return 65535;
@@ -143,7 +143,7 @@ public class TektonCombatStrategy extends NpcCombatStrategy {
 
     @Override
     public boolean canFindTarget(Entity attacker) {
-        TektonState state = attacker.getAttributes().getOrDefault(Tekton.STATE);
+        TektonState state = attacker.getAttributeMap().getOrDefault(Tekton.STATE);
 
         return state != TektonState.HAMMERING && state != TektonState.WALKING_TO_ANVIL && state != TektonState.WALKING_TO_TARGET;
     }

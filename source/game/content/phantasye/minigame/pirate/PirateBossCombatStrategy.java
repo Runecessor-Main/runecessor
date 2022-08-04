@@ -9,7 +9,6 @@ import game.entity.combat_strategy.impl.NpcCombatStrategy;
 import game.npc.Npc;
 import game.npc.combat.Damage;
 import game.npc.combat.DamageQueue;
-import game.npc.impl.zulrah.ZulrahTransformationState;
 import game.player.Player;
 import game.player.event.impl.TimedCameraShakeReset;
 

@@ -247,7 +247,7 @@ public class Slayer {
 
 				if (superior != null) {
 					if (superior instanceof SuperiorNpc) {
-						superior.getAttributes().put(SuperiorNpc.SPAWNED_FOR, player.getPlayerName());
+						superior.getAttributeMap().put(SuperiorNpc.SPAWNED_FOR, player.getPlayerName());
 						player.getPA().sendMessage("A superior foe has appeared...");
 					} else {
 						superior.setItemsDroppable(false);

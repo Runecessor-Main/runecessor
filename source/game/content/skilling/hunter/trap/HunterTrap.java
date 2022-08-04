@@ -45,7 +45,7 @@ public abstract class HunterTrap extends Object implements HunterTrapTechnique {
 
 	public boolean trap(Player hunter, HunterCreature creature) {
 		if (tick <= 0 || triggered || trapped != null || hunter == null || hunter.isDisconnected()
-		    || creature == null || creature.isDead() || creature.getAttributes().getOrDefault(HunterCreature.CAUGHT, false)) {
+		    || creature == null || creature.isDead() || creature.getAttributeMap().getOrDefault(HunterCreature.CAUGHT, false)) {
 			return false;
 		}
 		boolean captured = style.getTechnique().capture(hunter, creature, this);

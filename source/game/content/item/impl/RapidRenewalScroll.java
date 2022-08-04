@@ -36,7 +36,7 @@ public class RapidRenewalScroll implements ItemInteraction {
 		/*
 		 * Whether unlocked
 		 */
-		boolean unlocked = player.getAttributes().getOrDefault(SCROLL_UNLOCKED) == 1;
+		boolean unlocked = player.getAttributeMap().getOrDefault(SCROLL_UNLOCKED) == 1;
 		/*
 		 * Already unlocked
 		 */
@@ -62,7 +62,7 @@ public class RapidRenewalScroll implements ItemInteraction {
 					if (option == 1) {
 						ItemAssistant.deleteItemFromInventory(player, 18_343, 1);
 						player.getPA().sendFrame36(1073, 1, false);
-						player.getAttributes().put(SCROLL_UNLOCKED, 1);
+						player.getAttributeMap().put(SCROLL_UNLOCKED, 1);
 						player.getPA().sendMessage(
 								"You read the scroll and unlock the ability to use the Rapid Renewal prayer.");
 					}

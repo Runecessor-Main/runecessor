@@ -205,7 +205,7 @@ public class BabyTroll implements ItemInteraction {
 	 */
 	private static void setTrollName(Player player, int id, String trollName, Npc npc) {
 		ItemAssistant.deleteItemFromInventory(player, id, 1);
-		player.getAttributes().put(TROLL_NAME, trollName);
+		player.getAttributeMap().put(TROLL_NAME, trollName);
 		player.getPA().sendMessage("You have named your pet troll: " + trollName);
 		npc.forceChat("YUM! Me Like " + trollName + "!");
 	}
@@ -226,7 +226,7 @@ public class BabyTroll implements ItemInteraction {
 			/*
 			 * The trolls name
 			 */
-			String name = player.getAttributes().getOrDefault(TROLL_NAME);
+			String name = player.getAttributeMap().getOrDefault(TROLL_NAME);
 			/*
 			 * Not named
 			 */

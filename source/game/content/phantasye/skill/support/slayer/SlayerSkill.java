@@ -2,7 +2,6 @@ package game.content.phantasye.skill.support.slayer;
 
 import core.ServerConstants;
 import game.content.dialogue.DialogueChain;
-import game.content.dialogue.listener.impl.ClickOptionDialogueListener;
 import game.content.miscellaneous.Teleport;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
@@ -23,7 +22,9 @@ import org.menaphos.action.impl.item.BaseItemOnItemAction;
 import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.model.world.location.Location;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SlayerSkill {
@@ -409,8 +410,8 @@ public class SlayerSkill {
             player.setUnderAttackBy(superior.npcType);
             if (superior != null) {
                 if (superior instanceof SuperiorNpc) {
-                    superior.getAttributes().put(SuperiorNpc.SPAWNED_FOR, player.getPlayerName());
-                    player.getPA().sendMessage("A superior foe has appeared...");
+                    superior.getAttributeMap().put(SuperiorNpc.SPAWNED_FOR, player.getPlayerName());
+                    player.getPA().sendPlainMessage("A superior foe has appeared...");
                 } else {
                     superior.setItemsDroppable(false);
                     superior.killIfAlive();

@@ -4,7 +4,6 @@ import core.Server;
 import core.ServerConstants;
 import game.content.combat.Combat;
 import game.content.phantasye.RegionUtils;
-import game.object.ObjectEvent;
 import game.object.custom.Object;
 import game.player.Player;
 import game.player.PlayerHandler;

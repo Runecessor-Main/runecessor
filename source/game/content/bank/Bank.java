@@ -4,8 +4,6 @@ import core.GameType;
 import core.ServerConstants;
 import game.content.achievement.Achievements;
 import game.content.combat.Combat;
-import game.content.consumable.Food;
-import game.content.consumable.Potions;
 import game.content.interfaces.InterfaceAssistant;
 import game.content.miscellaneous.RunePouch;
 import game.content.starter.GameMode;
@@ -18,7 +16,6 @@ import game.item.ItemAssistant;
 import game.item.ItemDefinition;
 import game.player.Area;
 import game.player.Player;
-import game.player.PlayerSave;
 import game.player.event.CycleEvent;
 import game.player.event.CycleEventContainer;
 import game.player.event.CycleEventHandler;
@@ -31,7 +28,7 @@ public class Bank {
 	public static final AttributeKey<Boolean> ALWAYS_PLACEHOLDER = new PermanentAttributeKey<>(false, "permanent-placeholder");
 
 	public static void setAlwaysPlaceholder(Player player, boolean alwaysBank) {
-		player.getAttributes().put(ALWAYS_PLACEHOLDER, alwaysBank);
+		player.getAttributeMap().put(ALWAYS_PLACEHOLDER, alwaysBank);
 	}
 
 	private static void setBankScrollLengthNormal(Player player, boolean search, boolean mainTab) {
@@ -221,7 +218,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems.length; i++) {
 			if (player.bankItems[i] == itemId && player.bankItemsN[i] >= amount) {
 				player.bankItemsN[i] -= amount;
-				if (player.bankItemsN[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItemsN[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems[i] = 0;
 				}
 				return true;
@@ -231,7 +228,7 @@ public class Bank {
 
 			if (player.bankItems1[i] == itemId && player.bankItems1N[i] >= amount) {
 				player.bankItems1N[i] -= amount;
-				if (player.bankItems1N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems1N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems1[i] = 0;
 				}
 				return true;
@@ -241,7 +238,7 @@ public class Bank {
 
 			if (player.bankItems2[i] == itemId && player.bankItems2N[i] >= amount) {
 				player.bankItems2N[i] -= amount;
-				if (player.bankItems2N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems2N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems2[i] = 0;
 				}
 				return true;
@@ -250,7 +247,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems3.length; i++) {
 			if (player.bankItems3[i] == itemId && player.bankItems3N[i] >= amount) {
 				player.bankItems3N[i] -= amount;
-				if (player.bankItems3N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems3N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems3[i] = 0;
 				}
 				return true;
@@ -259,7 +256,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems4.length; i++) {
 			if (player.bankItems4[i] == itemId && player.bankItems4N[i] >= amount) {
 				player.bankItems4N[i] -= amount;
-				if (player.bankItems4N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems4N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems4[i] = 0;
 				}
 				return true;
@@ -268,7 +265,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems5.length; i++) {
 			if (player.bankItems5[i] == itemId && player.bankItems5N[i] >= amount) {
 				player.bankItems5N[i] -= amount;
-				if (player.bankItems5N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems5N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems5[i] = 0;
 				}
 				return true;
@@ -277,7 +274,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems6.length; i++) {
 			if (player.bankItems6[i] == itemId && player.bankItems6N[i] >= amount) {
 				player.bankItems6N[i] -= amount;
-				if (player.bankItems6N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems6N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems6[i] = 0;
 				}
 				return true;
@@ -286,7 +283,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems7.length; i++) {
 			if (player.bankItems7[i] == itemId && player.bankItems7N[i] >= amount) {
 				player.bankItems7N[i] -= amount;
-				if (player.bankItems7N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems7N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems7[i] = 0;
 				}
 				return true;
@@ -295,7 +292,7 @@ public class Bank {
 		for (int i = 0; i < player.bankItems8.length; i++) {
 			if (player.bankItems8[i] == itemId && player.bankItems8N[i] >= amount) {
 				player.bankItems8N[i] -= amount;
-				if (player.bankItems8N[i] == 0 && !player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
+				if (player.bankItems8N[i] == 0 && !player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false)) {
 					player.bankItems8[i] = 0;
 				}
 				return true;
@@ -556,7 +553,7 @@ public class Bank {
 			}
 		}
 		if (player.getOutStream() != null) {
-			player.getPA().sendFrame36(835, player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false) ? 1 : 0, false);
+			player.getPA().sendFrame36(835, player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false) ? 1 : 0, false);
 			ItemAssistant.resetItems(player, 5064); // Spawning items while banking. Must be kept here to update inventory once.
 			player.bankingTab = tab;
 			sendTabs(player, false);
@@ -1286,7 +1283,7 @@ public class Bank {
 			return;
 		}
 		if (!placeholder) {
-			if (player.getAttributes().getOrDefault(ALWAYS_PLACEHOLDER, false)) {
+			if (player.getAttributeMap().getOrDefault(ALWAYS_PLACEHOLDER, false)) {
 				placeholder = true;
 			}
 		}

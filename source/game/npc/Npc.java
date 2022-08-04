@@ -3,7 +3,6 @@ package game.npc;
 
 import core.Server;
 import core.ServerConstants;
-import game.position.Position;
 import game.content.combat.damage.queue.impl.PlayerToNpcDamageQueue;
 import game.content.minigame.barrows.Barrows;
 import game.entity.Entity;
@@ -17,23 +16,19 @@ import game.player.Player;
 import game.player.PlayerHandler;
 import game.player.event.CycleEventContainer;
 import game.player.movement.Follow;
+import game.position.Position;
+import network.packet.Stream;
+import org.rhd.api.model.LootContainerType;
+import org.runehub.api.io.load.impl.LootTableContainerDefinitionLoader;
+import org.runehub.api.io.load.impl.LootTableContainerLoader;
+import org.runehub.api.model.entity.item.loot.LootTableContainer;
+import org.runehub.api.model.entity.item.loot.LootTableContainerDefinition;
+import utility.Misc;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import network.packet.Stream;
-import org.menaphos.action.ActionInvoker;
-import org.menaphos.entity.impl.impl.NonPlayableCharacter;
-import org.menaphos.entity.impl.impl.PlayableCharacter;
-import org.menaphos.model.loot.Loot;
-import org.menaphos.model.loot.LootableContainer;
-import org.menaphos.model.loot.factory.LootFactory;
-import org.menaphos.model.world.location.Location;
-import org.menaphos.util.StopWatch;
-import utility.Misc;
-
-public class Npc extends Entity implements NonPlayableCharacter {
+public class Npc extends Entity {
 
     private final PlayerToNpcDamageQueue incomingPlayerDamage = new PlayerToNpcDamageQueue();
 
@@ -876,91 +871,96 @@ public class Npc extends Entity implements NonPlayableCharacter {
     }
 
 
-    @Override
-    public void dropLootFor(PlayableCharacter player) {
-        final int RARE_DROP_TABLE_ID = 701;
-        final int HERB_DROP_TABLE_ID = 2;
-        final int SEED_DROP_TABLE_ID = 3;
-        final LootableContainer lootable = LootFactory.getLootableNpc(this.getId());
-        if (lootable != null) {
-            final List<Loot> constants = lootable.receiveConstants();
-            final Loot loot = lootable.open(player.getMagicFind());
-            final Location dropLocation = new Location(this.getDropPosition().getX(), this.getDropPosition().getY(), this.getDropPosition().getZ());
-            constants.forEach(constant -> player.receiveDropFrom(this, constant, dropLocation));
-            if (loot.getItem().getId() == RARE_DROP_TABLE_ID) {
-                final Loot rareDrop = LootFactory.getLootableItem(701).open();
-                player.receiveDropFrom(this, rareDrop, dropLocation);
-                player.receiveMessage("You've received a drop from the rare drop table!");
-            } else if (loot.getItem().getId() == HERB_DROP_TABLE_ID) {
-                final Loot rareDrop = LootFactory.getLootableItem(HERB_DROP_TABLE_ID).open();
-                player.receiveDropFrom(this, rareDrop, dropLocation);
-                player.receiveMessage("You've received a drop from the herb drop table!");
-            } else if (loot.getItem().getId() == SEED_DROP_TABLE_ID) {
-                final Loot rareDrop = LootFactory.getLootableItem(SEED_DROP_TABLE_ID).open();
-                player.receiveDropFrom(this, rareDrop, dropLocation);
-                player.receiveMessage("You've received a drop from the seed drop table!");
-            } else {
-                player.receiveDropFrom(this, loot, dropLocation);
-
-            }
+    public void dropLootFor(Player player) {
+        final Position dropLocation = new Position(this.getX(), this.getY(), player.getHeight());
+        final LootTableContainerDefinition definition = LootTableContainerDefinitionLoader.getInstance().readAll()
+                .stream().filter(lootTableContainerDefinition -> lootTableContainerDefinition.getContainerId() == npcType)
+                .filter(lootTableContainerDefinition -> lootTableContainerDefinition.getType() == LootContainerType.NPC.ordinal())
+                .findFirst().orElse(null);
+        if (definition != null) {
+            final LootTableContainer container = LootTableContainerLoader.getInstance().read(definition.getId());
+            container.roll(player.getAttributes().getMagicFind()).stream()
+                    .forEach(loot -> {
+                        Server.itemHandler.createGroundItem(
+                                player,
+                                Math.toIntExact(loot.getId()),
+                                dropLocation.getX(),
+                                dropLocation.getY(),
+                                dropLocation.getZ(),
+                                Math.toIntExact(loot.getAmount()),
+                                false,
+                                0,
+                                true,
+                                "",
+                                "",
+                                "",
+                                "",
+                                "drop");
+                    });
+//        Logger.getGlobal().info("Dropping Loot @: X:" + this.getX() + " Y: " + this.getY() + " Height: " + player.getHeight());
+//        final LootTableContainer container = LootContainerLoader.getInstance().getLootContainer(this.npcType, LootContainerType.NPC);
+//        if (container != null && container.getLootTables().size() > 0) {
+//            final LootTable lootTable = container.roll(player.getContext().getPlayerSaveData().getMagicFind().value());
+//            final long metricId = LootContainerContextProducer.getInstance(LootContainerType.NPC).get(container.getId()).getMetricId();
+//            final AdjustableNumber<Long> rolls = new AdjustableLong(
+//                    LootMetricProducer.getInstance().get(metricId) != null ?
+//                            LootMetricProducer.getInstance().get(metricId).getRolls().value() :
+//                            0L
+//            );
+//            rolls.increment();
+//            final double mf = WorldSettingsController.getInstance().getWorldSettings().getDoubleDropRateTimer().value() > 0 ?
+//                    player.getContext().getPlayerSaveData().getMagicFind().value() * 2 : player.getContext().getPlayerSaveData().getMagicFind().value();
+//            lootTable.roll(mf)
+//                    .forEach(loot -> {
+//                        final double tier = lootTable.getPotentialItems().stream().filter(potentialItem ->
+//                                potentialItem.getItemId() == loot.getItemId()).findAny().orElseThrow(() -> new NullPointerException("Error")).getRoll();
+//                        if (lootTable.getTableId() == 1 || lootTable.getTableId() == 2 || lootTable.getTableId() == 3 || lootTable.getTableId() == 4
+//                                || lootTable.getTableId() == 5) {
+//                            player.sendMessage("You received a drop from the rare drop table!");
+//                        }
+//                        switch (Tier.getRarityForValue(tier)) {
+//                            case VERY_RARE:
+//                                break;
+//                            case LEGENDARY:
+//                                break;
+//                            case MYTHIC:
+//                                break;
+//                        }
+//                        Server.getLootMetrics().add(
+//                                new LootMetric(
+//                                        metricId,
+//                                        System.currentTimeMillis(),
+//                                        player.getPlayerName(),
+//                                        container.getId(),
+//                                        lootTable.getTableId(),
+//                                        loot.getItemId(),
+//                                        loot.getAmount(),
+//                                        tier,
+//                                        rolls.value(),
+//                                        LootContainerType.NPC.ordinal(),
+//                                        player.getContext().getPlayerSaveData().getMagicFind().value() //TODO replace with mf variable
+//                                )
+//                        );
+//                        Server.itemHandler.createGroundItem(
+//                                player,
+//                                loot.getItemId(),
+//                                dropLocation.getX(),
+//                                dropLocation.getY(),
+//                                dropLocation.getZ(),
+//                                loot.getAmount(),
+//                                false,
+//                                0,
+//                                true,
+//                                "",
+//                                "",
+//                                "",
+//                                "",
+//                                "drop");
+////                        Server.getDropManager().create(player, new Location3D(dropLocation.getX(), dropLocation.getY(), dropLocation.getZ()), loot);
+//                    });
         } else {
-            throw new NullPointerException("Missing Drop Data");
+            throw new NullPointerException("Missing Drop");
         }
-    }
-
-    @Override
-    public int getId() {
-        return npcType;
-    }
-
-    @Override
-    public boolean addItemToInventory(int i, int i1) {
-        return false;
-    }
-
-    @Override
-    public boolean removeItemFromInventory(int i, int i1) {
-        return false;
-    }
-
-    @Override
-    public boolean pickupItem(int i, int i1) {
-        return false;
-    }
-
-    @Override
-    public void sendMessage(String s) {
-        forceChat(s);
-    }
-
-    @Override
-    public void receiveMessage(String s) {
-
-    }
-
-    @Override
-    public boolean hasItem(int i, int i1) {
-        return false;
-    }
-
-    @Override
-    public void performAnimation(int i) {
-        requestAnimation(i);
-    }
-
-    @Override
-    public StopWatch getStopWatch() {
-        return null;
-    }
-
-    @Override
-    public ActionInvoker getActionInvoker() {
-        return null;
-    }
-
-    @Override
-    public boolean moveTo(Location location) {
-        return walkTileInDirection(location.getXCoordinate(), location.getZCoordinate());
     }
 
     enum NextWalkingDirecitonTileSearch {
@@ -1558,4 +1558,6 @@ public class Npc extends Entity implements NonPlayableCharacter {
     public NpcDefinition getDefinition() {
         return NpcDefinition.DEFINITIONS[npcType];
     }
+
+
 }

@@ -1,9 +1,7 @@
 package game.content.phantasye.commands;
 
 import core.ServerConstants;
-import game.content.phantasye.actions.RankPlayerAction;
 import game.content.worldevent.BloodKey;
-import game.content.worldevent.Tournament;
 import game.player.Player;
 import game.player.PlayerHandler;
 import org.apache.commons.cli.CommandLine;
@@ -75,7 +73,7 @@ public class UpdateCommandListener extends AdministratorCommandListener {
                 if (loop == null) {
                     continue;
                 }
-                loop.getPA().sendMessage(":packet:readwebsite");
+                loop.getPA().sendPlainMessage(":packet:readwebsite");
             }
         } catch (Exception e) {
 

@@ -13,19 +13,15 @@ import game.npc.NpcHandler;
 import game.npc.pet.BossPetDrops;
 import game.player.Player;
 import game.type.GameTypeIdentity;
-import org.menaphos.Menaphos;
 import org.menaphos.action.ActionInvoker;
 import org.menaphos.entity.impl.impl.NonPlayableCharacter;
+import org.menaphos.entity.impl.impl.PlayableCharacter;
 import org.menaphos.entity.impl.item.container.ItemContainer;
-import org.menaphos.entity.impl.item.container.impl.DefaultItemContainerImpl;
-
 import org.menaphos.entity.impl.item.container.impl.MerchandiseItemContainerImpl;
-
-import org.menaphos.model.loot.Loot;
 import org.menaphos.model.math.AdjustableNumber;
 import org.menaphos.model.math.impl.AdjustableInteger;
-import org.menaphos.model.task.Task;
 import org.menaphos.model.world.location.Location;
+import org.menaphos.util.StopWatch;
 import utility.Misc;
 
 import java.text.NumberFormat;
@@ -337,6 +333,11 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
     }
 
     @Override
+    public StopWatch getStopWatch() {
+        return null;
+    }
+
+    @Override
     public ActionInvoker getActionInvoker() {
         return actionInvoker;
     }
@@ -362,5 +363,10 @@ public class DiceNPCBase extends Npc implements NonPlayableCharacter {
 
     public void setWageTimer(Timer wageTimer) {
         this.wageTimer = wageTimer;
+    }
+
+    @Override
+    public void dropLootFor(PlayableCharacter playableCharacter) {
+
     }
 }

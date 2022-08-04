@@ -146,11 +146,11 @@ public class DropItemPacket implements PacketType {
 		if (itemId == 20657) {
 			player.setDialogueChainAndStart(new DialogueChain().option((p, option) -> {
 				if (option == 1) {
-					final boolean enabled = p.getAttributes().getOrDefault(Player.RING_OF_SUFFERING_ENABLED);
+					final boolean enabled = p.getAttributeMap().getOrDefault(Player.RING_OF_SUFFERING_ENABLED);
 
 					player.setDialogueChainAndStart(new DialogueChain().option((p1, option1) -> {
 						if (option1 == 1) {
-							p.getAttributes().put(Player.RING_OF_SUFFERING_ENABLED, !enabled);
+							p.getAttributeMap().put(Player.RING_OF_SUFFERING_ENABLED, !enabled);
 							p.getPA().sendMessageF("You change the state of your ring to %s.", enabled ? "disabled" : "enabled");
 						}
 						p1.getPA().closeInterfaces(true);

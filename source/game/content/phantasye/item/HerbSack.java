@@ -1,9 +1,7 @@
 package game.content.phantasye.item;
 
-import game.content.bank.Bank;
 import game.content.phantasye.dialogue.DialogueOptionPaginator;
 import game.content.phantasye.dialogue.DialoguePaginatorClickListener;
-import game.item.Item;
 import game.item.ItemAssistant;
 import game.player.Player;
 import org.menaphos.model.math.AdjustableNumber;
@@ -85,7 +83,7 @@ public class HerbSack {
                                 final int herbId = new ArrayList<>(player.getPlayerDetails().getHerbSack().keySet()).get(actualOption - 1);
                                 final int herbAmt = player.getPlayerDetails().getHerbSack().get(herbId).value();
                                 player.getOutStream().createFrame(27);
-                                player.getPA().sendMessage(":packet:enteramounttext Enter Amount to Withdraw");
+                                player.getPA().sendPlainMessage(":packet:enteramounttext Enter Amount to Withdraw");
                                 player.xRemoveSlot = 0;
                                 player.setxInterfaceId(420);
                                 player.xRemoveId = herbId;

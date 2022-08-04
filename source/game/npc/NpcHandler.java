@@ -1,7 +1,9 @@
 package game.npc;
 
-import core.*;
-import game.content.achievement.AchievementStatistics;
+import core.GameType;
+import core.Plugin;
+import core.ServerConfiguration;
+import core.ServerConstants;
 import game.content.achievement.Achievements;
 import game.content.combat.Combat;
 import game.content.combat.Poison;
@@ -17,12 +19,7 @@ import game.content.minigame.RecipeForDisaster;
 import game.content.minigame.WarriorsGuild;
 import game.content.minigame.barrows.Barrows;
 import game.content.minigame.zombie.Zombie;
-import game.content.miscellaneous.BraceletOfEthereum;
-import game.content.miscellaneous.FightCaves;
-import game.content.miscellaneous.GameTimeSpent;
-import game.content.miscellaneous.GodWarsDungeonInterface;
-import game.content.miscellaneous.OverlayTimer;
-import game.content.miscellaneous.SpecialAttackTracker;
+import game.content.miscellaneous.*;
 import game.content.music.SoundSystem;
 import game.content.phantasye.metric.NpcMetric;
 import game.content.phantasye.metric.NpcMetricFactory;
@@ -37,13 +34,7 @@ import game.entity.MovementState;
 import game.entity.combat_strategy.EntityCombatStrategy;
 import game.item.ItemAssistant;
 import game.log.GameTickLog;
-import game.npc.data.NpcDefinition;
-import game.npc.data.NpcDefinitionCleverJSON;
-import game.npc.data.NpcDefinitionCombatJSON;
-import game.npc.data.NpcDefinitionNonCombatJSON;
-import game.npc.data.NpcSpawnBossJSON;
-import game.npc.data.NpcSpawnCombatJSON;
-import game.npc.data.NpcSpawnNonCombatJSON;
+import game.npc.data.*;
 import game.npc.impl.ChaosFanatic;
 import game.npc.impl.KrakenCombat;
 import game.npc.impl.VenenatisTest;
@@ -56,6 +47,8 @@ import game.player.Player;
 import game.player.PlayerHandler;
 import game.player.movement.Follow;
 import game.player.movement.Movement;
+import utility.Misc;
+import utility.WebsiteLogInDetails;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -63,9 +56,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Consumer;
-
-import utility.Misc;
-import utility.WebsiteLogInDetails;
 
 public class NpcHandler {
 
@@ -1996,7 +1986,7 @@ public class NpcHandler {
         try {
             npc.dropLootFor(player);
         } catch (NullPointerException e) {
-            player.receiveMessage("This NPC is missing it's drops. Please contact an administrator. [ID:" + npc.getId() + "]");
+            player.receiveMessage("This NPC is missing it's drops. Please contact an administrator. [ID:" + npc.npcType + "]");
 //            e.printStackTrace();
 //            NpcDrops.giveDropTableDrop(player, false, npc.npcType, npc.getDropPosition());
 //            NpcDrops.otherDrops(npc, player);
@@ -2729,7 +2719,7 @@ public class NpcHandler {
                     switch (anti) {
                         case 0:
                             damage = ThreadLocalRandom.current().nextInt(2, 61);
-                            player.playerAssistant.sendMessage("You are badly burnt by the dragon fire!");
+                            player.playerAssistant.sendPlainMessage("You are badly burnt by the dragon fire!");
                             break;
                         case 1:
                             damage = ThreadLocalRandom.current().nextInt(0, 9);
@@ -2761,8 +2751,8 @@ public class NpcHandler {
                 switch (protection) {
                     case 0:
                         damage = Misc.random(37) + 2;
-                        player.playerAssistant.sendMessage("The wyvern's ice breath chills you to the bone!");
-                        player.playerAssistant.sendMessage("You should equip an elemental, mind or dragonfire shield.");
+                        player.playerAssistant.sendPlainMessage("The wyvern's ice breath chills you to the bone!");
+                        player.playerAssistant.sendPlainMessage("You should equip an elemental, mind or dragonfire shield.");
                         player.forcedChat("Ow!", false, false);
                         break;
                     case 1:
@@ -2948,7 +2938,7 @@ public class NpcHandler {
     private static void ringOfRecoilNpc(Player player, Npc npc, int damage) {
         if (damage > 0 && player.getRecoilCharges() > 0
                 && (ItemAssistant.hasItemEquipped(player, 2550) || ItemAssistant.hasItemEquipped(player, 20657)
-                && player.getAttributes().getOrDefault(Player.RING_OF_SUFFERING_ENABLED))) {
+                && player.getAttributeMap().getOrDefault(Player.RING_OF_SUFFERING_ENABLED))) {
             int recoilDamage = damage / 10;
             if (recoilDamage < 1) {
                 recoilDamage = 1;
@@ -2968,7 +2958,7 @@ public class NpcHandler {
                 player.setRecoilCharges(40);
                 if (!ItemAssistant.hasItemEquipped(player, 20657)) {
                     ItemAssistant.deleteEquipment(player, 2550, ServerConstants.RING_SLOT);
-                    player.playerAssistant.sendMessage("Your ring of recoil turns to dust.");
+                    player.playerAssistant.sendPlainMessage("Your ring of recoil turns to dust.");
                 }
             }
         }

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="rshd-entity-1.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/rshd-entity-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/rshd-io-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/rshd-loot-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/runehub-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/sqlite-jdbc-3.32.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

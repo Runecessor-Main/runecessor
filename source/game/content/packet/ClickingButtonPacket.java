@@ -6,7 +6,6 @@ import java.util.List;
 import core.GameType;
 import core.Plugin;
 import core.Server;
-import core.ServerConfiguration;
 import core.ServerConstants;
 import game.content.achievement.Achievements;
 import game.content.achievement.PlayerTitle;
@@ -42,7 +41,6 @@ import game.content.interfaces.donator.DonatorMainTab;
 import game.content.interfaces.donator.DonatorShop;
 import game.content.minigame.AutoDice;
 import game.content.miscellaneous.CompletionistCape;
-import game.content.miscellaneous.EditCombatSkill;
 import game.content.miscellaneous.GnomeGlider;
 import game.content.miscellaneous.GuideBook;
 import game.content.miscellaneous.LootingBag;
@@ -63,7 +61,6 @@ import game.content.quest.QuestHandler;
 import game.content.quest.tab.ActivityTab;
 import game.content.quest.tab.InformationTab;
 import game.content.quest.tab.PanelTab;
-import game.content.quicksetup.Presets;
 import game.content.quicksetup.QuickSetUp;
 import game.content.skilling.Cooking;
 import game.content.skilling.Skilling;
@@ -84,7 +81,6 @@ import game.content.skilling.smithing.Smithing;
 import game.content.starter.GameMode;
 import game.content.starter.NewPlayerContent;
 import game.content.tradingpost.TradingPost;
-import game.content.worldevent.Tournament;
 import game.item.DestroyItem;
 import game.item.ItemAssistant;
 import game.npc.pet.Pet;
@@ -346,11 +342,11 @@ public class ClickingButtonPacket implements PacketType {
 			player.getPA().openWebsite("www.Runecessor.com/forum/topic/7843-wilderness-rules/", false);
 			break;
 		case 164081:
-			player.getAttributes().put(Player.WILDERNESS_RULES_WARNING_ENABLED, false);
+			player.getAttributeMap().put(Player.WILDERNESS_RULES_WARNING_ENABLED, false);
 			player.getPA().sendFrame36(1250, 1, false);
 			break;
 		case 164070:
-			if (player.getAttributes().getOrDefault(Player.WILDERNESS_RULES_WARNING_ENABLED, true)) {
+			if (player.getAttributeMap().getOrDefault(Player.WILDERNESS_RULES_WARNING_ENABLED, true)) {
 				player.getDH().sendStatement("You must click the tick box before doing this.");
 			} else {
 				player.getPA().closeInterfaces(true);
@@ -377,13 +373,13 @@ public class ClickingButtonPacket implements PacketType {
 			break;
 
 		case 136174:
-			boolean alwaysPlaceholder = player.getAttributes().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false);
+			boolean alwaysPlaceholder = player.getAttributeMap().getOrDefault(Bank.ALWAYS_PLACEHOLDER, false);
 
 			alwaysPlaceholder = !alwaysPlaceholder;
 
 			player.getPA().sendFrame36(835, alwaysPlaceholder ? 1 : 0, false);
 
-			player.getAttributes().put(Bank.ALWAYS_PLACEHOLDER, alwaysPlaceholder);
+			player.getAttributeMap().put(Bank.ALWAYS_PLACEHOLDER, alwaysPlaceholder);
 			break;
 		case 72038:
 			if (GameType.isOsrsEco()) {

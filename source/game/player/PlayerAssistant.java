@@ -17,6 +17,7 @@ import game.content.miscellaneous.HackLog;
 import game.content.miscellaneous.PmLog;
 import game.content.packet.ClickNpcPacket;
 import game.content.packet.PrivateMessagingPacket;
+import game.content.runehub.markup.MarkupParser;
 import game.content.skilling.Skilling;
 import game.content.skilling.agility.AgilityAssistant;
 import game.content.staff.PrivateAdminArea;
@@ -127,7 +128,7 @@ public class PlayerAssistant {
 	 */
 	public void openWebsite(String website, boolean closeInterfaces) {
 		
-		player.getPA().sendMessage(":packet:website " + website);
+		player.getPA().sendPlainMessage(":packet:website " + website);
 		if (closeInterfaces) {
 			player.getPA().closeInterfaces(true);
 		}
@@ -189,22 +190,22 @@ public class PlayerAssistant {
 		if (dialogue) {
 			player.getDH().sendStatement("Bots have been turned: " + option + ".");
 		} else {
-			player.getPA().sendMessage("Bots have been turned: " + option + ".");
+			player.getPA().sendPlainMessage("Bots have been turned: " + option + ".");
 		}
 	}
 
 	public void updateDisplayBots() {
 		String option = player.displayBots ? "on" : "off";
-		player.getPA().sendMessage(":packet:displaybots:" + option);
+		player.getPA().sendPlainMessage(":packet:displaybots:" + option);
 	}
 
 	public void setInterfaceClicked(int parentInterfaceId, int interfaceId, boolean clicked) {
-		player.getPA().sendMessage(":packet:setclicked " + parentInterfaceId + " " + interfaceId + " " + clicked);
+		player.getPA().sendPlainMessage(":packet:setclicked " + parentInterfaceId + " " + interfaceId + " " + clicked);
 	}
 
 	public void setTextClicked(int interfaceId, boolean clicked) {
 		player.textClickedInterfaceId = interfaceId;
-		player.getPA().sendMessage(":packet:settextclicked " + interfaceId + " " + clicked);
+		player.getPA().sendPlainMessage(":packet:settextclicked " + interfaceId + " " + clicked);
 	}
 
 	public void alertNotSameIp() {
@@ -564,7 +565,7 @@ public class PlayerAssistant {
 			return;
 		}
 		if (player.getOutStream() != null && player != null) {
-			player.playerAssistant.sendMessage(":npctype" + player.getNpcType());
+			player.playerAssistant.sendPlainMessage(":npctype" + player.getNpcType());
 			player.getOutStream().createFrame(200);
 			player.getOutStream().writeWord(MainFrame);
 			player.getOutStream().writeWord(SubFrame);
@@ -752,13 +753,13 @@ public class PlayerAssistant {
 
 		// Tell client to prioritize the target.
 		if (id >= 0) {
-			player.getPA().sendMessage(":packet:prioritizetarget " + id);
+			player.getPA().sendPlainMessage(":packet:prioritizetarget " + id);
 		}
 		if (player.getOutStream() != null && player != null) {
 			if (id >= 0) {
 				Player target = PlayerHandler.players[id];
 				if (target != null) {
-					player.getPA().sendMessage(":packet:targethint:" + target.getX() + ":" + target.getY() + ":" + id);
+					player.getPA().sendPlainMessage(":packet:targethint:" + target.getX() + ":" + target.getY() + ":" + id);
 				}
 
 			}
@@ -838,7 +839,7 @@ public class PlayerAssistant {
 			player.setDialogueChain(null);
 			player.popUpSearchTerm = "";
 			if (!player.doNotClosePmInterface) {
-				player.getPA().sendMessage(":packet:closepminterface");
+				player.getPA().sendPlainMessage(":packet:closepminterface");
 			}
 			player.doNotClosePmInterface = false;
 		}
@@ -1629,22 +1630,22 @@ public class PlayerAssistant {
 			for (int j = 0; j < PlayerHandler.players.length; j++) {
 				if (PlayerHandler.players[j] != null) {
 					Player c3 = PlayerHandler.players[j];
-					c3.playerAssistant.sendMessage(ServerConstants.DARK_RED_COL + message);
-					c3.playerAssistant.sendMessage(ServerConstants.DARK_RED_COL + text);
+					c3.playerAssistant.sendPlainMessage(ServerConstants.DARK_RED_COL + message);
+					c3.playerAssistant.sendPlainMessage(ServerConstants.DARK_RED_COL + text);
 				}
 			}
 		} else {
 			for (int j = 0; j < PlayerHandler.players.length; j++) {
 				if (PlayerHandler.players[j] != null) {
 					Player c3 = PlayerHandler.players[j];
-					c3.playerAssistant.sendMessage(ServerConstants.DARK_RED_COL + message);
+					c3.playerAssistant.sendPlainMessage(ServerConstants.DARK_RED_COL + message);
 				}
 			}
 		}
 	}
 
 	public void sendMessageF(String message, Object... parameters) {
-		sendMessage(String.format(message, parameters));
+		sendPlainMessage(String.format(message, parameters));
 	}
 
 	/**
@@ -1652,7 +1653,7 @@ public class PlayerAssistant {
 	 *
 	 * @param message The message to send.
 	 */
-	public void sendMessage(String message) {
+	public void sendPlainMessage(String message) {
 		if (player.bot) {
 			return;
 		}
@@ -1667,6 +1668,21 @@ public class PlayerAssistant {
 		}
 	}
 
+	public void sendMessage(String message) {
+		if (player.bot) {
+			return;
+		}
+		if (player.doNotSendMessage) {
+			player.doNotSendMessage = false;
+			return;
+		}
+		if (player.getOutStream() != null) {
+			player.getOutStream().createFrameVarSize(253);
+			player.getOutStream().writeString(MarkupParser.parseMarkup(message).getText());
+			player.getOutStream().endFrameVarSize();
+		}
+	}
+
 	public void sendDelayedMessage(String message, int delay) {
 		player.getEventHandler().addEvent(player, new CycleEvent<Entity>() {
 
@@ -1677,7 +1693,7 @@ public class PlayerAssistant {
 
 			@Override
 			public void stop() {
-				sendMessage(message);
+				sendPlainMessage(message);
 			}
 		}, delay);
 	}
@@ -1743,14 +1759,14 @@ public class PlayerAssistant {
 		String originalMessage = message;
 		message = LoadTextWidth.shortenText(message);
 		if (!message.equals(originalMessage)) {
-			sendMessage(message + "-");
+			sendPlainMessage(message + "-");
 			originalMessage = originalMessage.replace(message, "");
 			if (originalMessage.startsWith(" ")) {
 				originalMessage = originalMessage.replaceFirst(" ", "");
 			}
-			sendMessage(originalMessage);
+			sendPlainMessage(originalMessage);
 		} else {
-			sendMessage(message);
+			sendPlainMessage(message);
 		}
 	}
 
@@ -1844,7 +1860,7 @@ public class PlayerAssistant {
 		if (alreadyHasColourInFrame(colour, id)) {
 			return;
 		}
-		player.getPA().sendMessage(":packet:textcolour " + id + " " + colour);
+		player.getPA().sendPlainMessage(":packet:textcolour " + id + " " + colour);
 	}
 
 	public void sendKillScreenshot(Player attacker, Player victim, boolean instant) {
@@ -1853,7 +1869,7 @@ public class PlayerAssistant {
 		}
 		String name = victim.getPlayerName().toLowerCase().replaceAll(" ", "_");
 		if (instant) {
-			player.getPA().sendMessage(":packet:screenshot: " + name + " kill_screenshots");
+			player.getPA().sendPlainMessage(":packet:screenshot: " + name + " kill_screenshots");
 			return;
 		}
 		CycleEventHandler.getSingleton().addEvent(player, new CycleEvent() {
@@ -1864,7 +1880,7 @@ public class PlayerAssistant {
 
 			@Override
 			public void stop() {
-				player.getPA().sendMessage(":packet:screenshot: " + name + " kill_screenshots");
+				player.getPA().sendPlainMessage(":packet:screenshot: " + name + " kill_screenshots");
 			}
 		}, 1);
 	}
@@ -1873,7 +1889,7 @@ public class PlayerAssistant {
 		if (tickDelay == 0) {
 			String screenshotName1 = screenshotName.toLowerCase();
 			screenshotName1 = screenshotName1.replaceAll(" ", "_");
-			player.getPA().sendMessage(":packet:screenshot: " + screenshotName1 + " game_screenshots");
+			player.getPA().sendPlainMessage(":packet:screenshot: " + screenshotName1 + " game_screenshots");
 			return;
 		}
 		// Has to be on an event or when i get a rare drop, it won't show the drop for some reason.
@@ -1887,7 +1903,7 @@ public class PlayerAssistant {
 			public void stop() {
 				String screenshotName1 = screenshotName.toLowerCase();
 				screenshotName1 = screenshotName1.replaceAll(" ", "_");
-				player.getPA().sendMessage(":packet:screenshot: " + screenshotName1 + " game_screenshots");
+				player.getPA().sendPlainMessage(":packet:screenshot: " + screenshotName1 + " game_screenshots");
 			}
 		}, tickDelay);
 	}
@@ -1924,7 +1940,7 @@ public class PlayerAssistant {
 
 	public void quickChat(String string) {
 		if (player.secondsBeenOnline < 30) {
-			player.getPA().sendMessage("You cannot talk for 30 seconds after joining.");
+			player.getPA().sendPlainMessage("You cannot talk for 30 seconds after joining.");
 			return;
 		}
 		if (Mute.isMuted(player)) {
@@ -1942,9 +1958,9 @@ public class PlayerAssistant {
 			return;
 		}
 		player.getPA()
-				.sendMessage(ServerConstants.PURPLE_COL + "Osrs in inventory: " + DonationManager.getOsrsInInventory() + ", Osrs rates: " + DonationManager.OSRS_DONATION_MULTIPLIER + "$");
+				.sendPlainMessage(ServerConstants.PURPLE_COL + "Osrs in inventory: " + DonationManager.getOsrsInInventory() + ", Osrs rates: " + DonationManager.OSRS_DONATION_MULTIPLIER + "$");
 		if (player.tank) {
-			player.getPA().sendMessage(ServerConstants.RED_COL + "Tank mode is on.");
+			player.getPA().sendPlainMessage(ServerConstants.RED_COL + "Tank mode is on.");
 		}
 
 	}

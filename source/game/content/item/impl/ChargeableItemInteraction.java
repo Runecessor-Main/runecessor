@@ -23,7 +23,7 @@ public class ChargeableItemInteraction implements ItemInteraction {
             int resource = uncharged.getUnchargedId() == id ? useWith : id;
 
             if (uncharged.getRequiredResources().stream().anyMatch(required -> required.getId() == resource)) {
-                player.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).charge(player, uncharged);
+                player.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).charge(player, uncharged);
                 return true;
             }
             return false;
@@ -35,7 +35,7 @@ public class ChargeableItemInteraction implements ItemInteraction {
             int resource = charged.getChargedId() == id ? useWith : id;
 
             if (charged.getResources().stream().anyMatch(r -> r.getId() == resource)) {
-                player.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).addCharge(player, charged, resource);
+                player.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).addCharge(player, charged, resource);
                 return true;
             }
             return false;
@@ -58,7 +58,7 @@ public class ChargeableItemInteraction implements ItemInteraction {
             Chargeable charged = Chargeable.valueOfCharged(id);
 
             if (charged != null) {
-                player.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).check(player, charged);
+                player.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).check(player, charged);
                 return true;
             }
         }
@@ -77,7 +77,7 @@ public class ChargeableItemInteraction implements ItemInteraction {
         Chargeable charged = Chargeable.valueOfCharged(id);
 
         if (charged != null) {
-            player.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).uncharge(player, charged);
+            player.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY).uncharge(player, charged);
             return true;
         }
         return false;

@@ -12,7 +12,7 @@ public class SuperiorNpcCombatStrategy extends NpcCombatStrategy {
 
     @Override
     public boolean canBeAttacked(Entity attacker, Entity defender) {
-        String owner = defender.getAttributes().getOrDefault(SuperiorNpc.SPAWNED_FOR);
+        String owner = defender.getAttributeMap().getOrDefault(SuperiorNpc.SPAWNED_FOR);
 
         if (owner == null) {
             return false;
@@ -32,7 +32,7 @@ public class SuperiorNpcCombatStrategy extends NpcCombatStrategy {
     @Override
     public boolean canAttack(Entity attacker, Entity defender) {
         if (defender.getType() == EntityType.PLAYER) {
-            String owner = attacker.getAttributes().getOrDefault(SuperiorNpc.SPAWNED_FOR);
+            String owner = attacker.getAttributeMap().getOrDefault(SuperiorNpc.SPAWNED_FOR);
 
             if (owner == null) {
                 return false;
@@ -48,11 +48,11 @@ public class SuperiorNpcCombatStrategy extends NpcCombatStrategy {
 
     @Override
     public void onDamageDealt(Entity attacker, Entity defender, int damage, int attackType) {
-        attacker.getAttributes().put(SuperiorNpc.LAST_INTERACTION, System.currentTimeMillis());
+        attacker.getAttributeMap().put(SuperiorNpc.LAST_INTERACTION, System.currentTimeMillis());
     }
 
     @Override
     public void onDamageTaken(Entity attacker, Entity defender, int damage, int entityAttackType) {
-        attacker.getAttributes().put(SuperiorNpc.LAST_INTERACTION, System.currentTimeMillis());
+        attacker.getAttributeMap().put(SuperiorNpc.LAST_INTERACTION, System.currentTimeMillis());
     }
 }

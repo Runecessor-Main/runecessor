@@ -69,15 +69,15 @@ public class CelestialSurgeBox implements ItemInteraction {
 		/*
 		 * The air runes
 		 */
-		int air = player.getAttributes().getOrDefault(CELESTIAL_AIR_RUNE);
+		int air = player.getAttributeMap().getOrDefault(CELESTIAL_AIR_RUNE);
 		/*
 		 * The blood runes
 		 */
-		int blood = player.getAttributes().getOrDefault(CELESTIAL_BLOOD_RUNE);
+		int blood = player.getAttributeMap().getOrDefault(CELESTIAL_BLOOD_RUNE);
 		/*
 		 * The death rune
 		 */
-		int death = player.getAttributes().getOrDefault(CELESTIAL_DEATH_RUNE);
+		int death = player.getAttributeMap().getOrDefault(CELESTIAL_DEATH_RUNE);
 		player.getPA().sendMessage("Air: " + air + ", blood: " + blood + ", death: " + death);
 	}
 
@@ -90,35 +90,35 @@ public class CelestialSurgeBox implements ItemInteraction {
 		/*
 		 * The air runes
 		 */
-		int air = player.getAttributes().getOrDefault(CELESTIAL_AIR_RUNE);
+		int air = player.getAttributeMap().getOrDefault(CELESTIAL_AIR_RUNE);
 		/*
 		 * The blood runes
 		 */
-		int blood = player.getAttributes().getOrDefault(CELESTIAL_BLOOD_RUNE);
+		int blood = player.getAttributeMap().getOrDefault(CELESTIAL_BLOOD_RUNE);
 		/*
 		 * The death rune
 		 */
-		int death = player.getAttributes().getOrDefault(CELESTIAL_DEATH_RUNE);
+		int death = player.getAttributeMap().getOrDefault(CELESTIAL_DEATH_RUNE);
 		/*
 		 * The air runes
 		 */
 		if (air > 0 && ItemAssistant.canAdd(player, AIR_RUNE, air)) {
 			ItemAssistant.addItem(player, AIR_RUNE, air);
-			player.getAttributes().put(CELESTIAL_AIR_RUNE, 0);
+			player.getAttributeMap().put(CELESTIAL_AIR_RUNE, 0);
 		}
 		/*
 		 * The blood runes
 		 */
 		if (blood > 0 && ItemAssistant.canAdd(player, BLOOD_RUNE, blood)) {
 			ItemAssistant.addItem(player, BLOOD_RUNE, blood);
-			player.getAttributes().put(CELESTIAL_BLOOD_RUNE, 0);
+			player.getAttributeMap().put(CELESTIAL_BLOOD_RUNE, 0);
 		}
 		/*
 		 * The death runes
 		 */
 		if (death > 0 && ItemAssistant.canAdd(player, DEATH_RUNE, death)) {
 			ItemAssistant.addItem(player, DEATH_RUNE, death);
-			player.getAttributes().put(CELESTIAL_DEATH_RUNE, 0);
+			player.getAttributeMap().put(CELESTIAL_DEATH_RUNE, 0);
 		}
 	}
 
@@ -131,19 +131,19 @@ public class CelestialSurgeBox implements ItemInteraction {
 		/*
 		 * The mode
 		 */
-		String mode = player.getAttributes().getOrDefault(CELESTIAL_MODE);
+		String mode = player.getAttributeMap().getOrDefault(CELESTIAL_MODE);
 		/*
 		 * The air runes
 		 */
-		int air = player.getAttributes().getOrDefault(CELESTIAL_AIR_RUNE);
+		int air = player.getAttributeMap().getOrDefault(CELESTIAL_AIR_RUNE);
 		/*
 		 * The blood runes
 		 */
-		int blood = player.getAttributes().getOrDefault(CELESTIAL_BLOOD_RUNE);
+		int blood = player.getAttributeMap().getOrDefault(CELESTIAL_BLOOD_RUNE);
 		/*
 		 * The death rune
 		 */
-		int death = player.getAttributes().getOrDefault(CELESTIAL_DEATH_RUNE);
+		int death = player.getAttributeMap().getOrDefault(CELESTIAL_DEATH_RUNE);
 		/*
 		 * Charging wave
 		 */
@@ -183,8 +183,8 @@ public class CelestialSurgeBox implements ItemInteraction {
 			/*
 			 * Increases casts
 			 */
-			player.getAttributes().put(CELESTIAL_AIR_RUNE, (air + (airAvailable * 5)));
-			player.getAttributes().put(CELESTIAL_BLOOD_RUNE, (blood + bloodAvailable));
+			player.getAttributeMap().put(CELESTIAL_AIR_RUNE, (air + (airAvailable * 5)));
+			player.getAttributeMap().put(CELESTIAL_BLOOD_RUNE, (blood + bloodAvailable));
 		} else {
 			/*
 			 * The air runes available
@@ -244,9 +244,9 @@ public class CelestialSurgeBox implements ItemInteraction {
 			/*
 			 * Increases casts
 			 */
-			player.getAttributes().put(CELESTIAL_AIR_RUNE, (air + (airAvailable * 7)));
-			player.getAttributes().put(CELESTIAL_BLOOD_RUNE, (blood + bloodAvailable));
-			player.getAttributes().put(CELESTIAL_DEATH_RUNE, (death + deathAvailable));
+			player.getAttributeMap().put(CELESTIAL_AIR_RUNE, (air + (airAvailable * 7)));
+			player.getAttributeMap().put(CELESTIAL_BLOOD_RUNE, (blood + bloodAvailable));
+			player.getAttributeMap().put(CELESTIAL_DEATH_RUNE, (death + deathAvailable));
 		}
 	}
 
@@ -259,16 +259,16 @@ public class CelestialSurgeBox implements ItemInteraction {
 		/*
 		 * The mode
 		 */
-		String mode = player.getAttributes().getOrDefault(CELESTIAL_MODE);
+		String mode = player.getAttributeMap().getOrDefault(CELESTIAL_MODE);
 		/*
 		 * Switch
 		 */
-		player.getAttributes().put(CELESTIAL_MODE, mode.equalsIgnoreCase("wave") ? "Surge" : "Wave");
+		player.getAttributeMap().put(CELESTIAL_MODE, mode.equalsIgnoreCase("wave") ? "Surge" : "Wave");
 		/*
 		 * Notify
 		 */
 		player.getPA().sendMessage("You switch the surgebox type. It is now: "
-				+ player.getAttributes().getOrDefault(CELESTIAL_MODE));
+				+ player.getAttributeMap().getOrDefault(CELESTIAL_MODE));
 	}
 
 	/**
@@ -281,7 +281,7 @@ public class CelestialSurgeBox implements ItemInteraction {
 		/*
 		 * The mode
 		 */
-		String mode = player.getAttributes().getOrDefault(CELESTIAL_MODE);
+		String mode = player.getAttributeMap().getOrDefault(CELESTIAL_MODE);
 		/*
 		 * Wave mode
 		 */
@@ -289,11 +289,11 @@ public class CelestialSurgeBox implements ItemInteraction {
 			/*
 			 * The air runes available
 			 */
-			int airAvailable = player.getAttributes().getOrDefault(CELESTIAL_AIR_RUNE) / 5;
+			int airAvailable = player.getAttributeMap().getOrDefault(CELESTIAL_AIR_RUNE) / 5;
 			/*
 			 * The blood runes available
 			 */
-			int bloodAvailable = player.getAttributes().getOrDefault(CELESTIAL_BLOOD_RUNE);
+			int bloodAvailable = player.getAttributeMap().getOrDefault(CELESTIAL_BLOOD_RUNE);
 			/*
 			 * Fixes amount
 			 */
@@ -311,15 +311,15 @@ public class CelestialSurgeBox implements ItemInteraction {
 			/*
 			 * The air runes available
 			 */
-			int airAvailable = player.getAttributes().getOrDefault(CELESTIAL_AIR_RUNE) / 7;
+			int airAvailable = player.getAttributeMap().getOrDefault(CELESTIAL_AIR_RUNE) / 7;
 			/*
 			 * The blood runes available
 			 */
-			int bloodAvailable = player.getAttributes().getOrDefault(CELESTIAL_BLOOD_RUNE);
+			int bloodAvailable = player.getAttributeMap().getOrDefault(CELESTIAL_BLOOD_RUNE);
 			/*
 			 * The death runes available
 			 */
-			int deathAvailable = player.getAttributes().getOrDefault(CELESTIAL_DEATH_RUNE);
+			int deathAvailable = player.getAttributeMap().getOrDefault(CELESTIAL_DEATH_RUNE);
 			/*
 			 * Fixes amount blood
 			 */
@@ -363,15 +363,15 @@ public class CelestialSurgeBox implements ItemInteraction {
 		/*
 		 * The mode
 		 */
-		String mode = player.getAttributes().getOrDefault(CELESTIAL_MODE);
+		String mode = player.getAttributeMap().getOrDefault(CELESTIAL_MODE);
 		/*
 		 * The air runes
 		 */
-		int air = player.getAttributes().getOrDefault(CELESTIAL_AIR_RUNE);
+		int air = player.getAttributeMap().getOrDefault(CELESTIAL_AIR_RUNE);
 		/*
 		 * The blood runes
 		 */
-		int blood = player.getAttributes().getOrDefault(CELESTIAL_BLOOD_RUNE);
+		int blood = player.getAttributeMap().getOrDefault(CELESTIAL_BLOOD_RUNE);
 		/*
 		 * Wave mode
 		 */
@@ -379,19 +379,19 @@ public class CelestialSurgeBox implements ItemInteraction {
 			/*
 			 * Deleterunes
 			 */
-			player.getAttributes().put(CELESTIAL_AIR_RUNE, (air - 5));
-			player.getAttributes().put(CELESTIAL_BLOOD_RUNE, (blood - 1));
+			player.getAttributeMap().put(CELESTIAL_AIR_RUNE, (air - 5));
+			player.getAttributeMap().put(CELESTIAL_BLOOD_RUNE, (blood - 1));
 		} else {
 			/*
 			 * The death rune
 			 */
-			int death = player.getAttributes().getOrDefault(CELESTIAL_DEATH_RUNE);
+			int death = player.getAttributeMap().getOrDefault(CELESTIAL_DEATH_RUNE);
 			/*
 			 * Delete runes
 			 */
-			player.getAttributes().put(CELESTIAL_AIR_RUNE, (air - 7));
-			player.getAttributes().put(CELESTIAL_BLOOD_RUNE, (blood - 1));
-			player.getAttributes().put(CELESTIAL_DEATH_RUNE, (death - 1));
+			player.getAttributeMap().put(CELESTIAL_AIR_RUNE, (air - 7));
+			player.getAttributeMap().put(CELESTIAL_BLOOD_RUNE, (blood - 1));
+			player.getAttributeMap().put(CELESTIAL_DEATH_RUNE, (death - 1));
 		}
 	}
 

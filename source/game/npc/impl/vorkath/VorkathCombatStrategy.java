@@ -106,7 +106,7 @@ public class VorkathCombatStrategy extends NpcCombatStrategy {
 	 */
 	@Override
 	public boolean canAttack(Entity attacker, Entity defender) {
-		if (attacker.getAttributes().getOrDefault(Vorkath.STATE_ATTRIBUTE, VorkathState.UNPOKED) != VorkathState.POKED) {
+		if (attacker.getAttributeMap().getOrDefault(Vorkath.STATE_ATTRIBUTE, VorkathState.UNPOKED) != VorkathState.POKED) {
 			return false;
 		}
 		if (attacker.getType() != EntityType.NPC) {
@@ -138,7 +138,7 @@ public class VorkathCombatStrategy extends NpcCombatStrategy {
 	 */
 	@Override
 	public boolean canBeAttacked(Entity attacker, Entity defender) {
-		return defender.getAttributes().getOrDefault(Vorkath.STATE_ATTRIBUTE, VorkathState.UNPOKED) == VorkathState.POKED;
+		return defender.getAttributeMap().getOrDefault(Vorkath.STATE_ATTRIBUTE, VorkathState.UNPOKED) == VorkathState.POKED;
 	}
 
 	/**

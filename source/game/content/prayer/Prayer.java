@@ -110,7 +110,7 @@ public enum Prayer {
 			/*
 			 * Hasn't unlocked rapid renewal
 			 */
-			if (player.getAttributes().getOrDefault(RapidRenewalScroll.SCROLL_UNLOCKED) == 0) {
+			if (player.getAttributeMap().getOrDefault(RapidRenewalScroll.SCROLL_UNLOCKED) == 0) {
 				player.getDH().sendStatement("You do not have rapid renewal unlocked.");
 				return false;
 			}

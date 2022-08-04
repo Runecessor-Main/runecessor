@@ -63,7 +63,7 @@ public class AbyssalSireTentacle extends Npc implements EntityCombatStrategy {
 	 */
 	@Override
 	public boolean canAttack(Entity attacker, Entity defender) {
-		return getAttributes().getOrDefault(AbyssalSire.AWAKE, false);
+		return getAttributeMap().getOrDefault(AbyssalSire.AWAKE, false);
 	}
 
 	/**

@@ -8,28 +8,20 @@ import game.content.interfaces.donator.DonatorShop;
 import game.content.miscellaneous.ServerShutDownUpdate;
 import game.content.music.SoundSystem;
 import game.content.skilling.Skilling;
-import game.entity.Entity;
 import game.item.ItemAssistant;
 import game.log.GameTickLog;
 import game.npc.Npc;
 import game.npc.NpcHandler;
 import game.object.clip.Region;
-import game.player.event.CycleEventAdapter;
-import game.player.event.CycleEventContainer;
 import game.player.movement.Movement;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import network.packet.Stream;
 import utility.HighestPlayerCount;
 import utility.Misc;
 import utility.TimeChanged;
+
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class PlayerHandler {
 
@@ -55,6 +47,12 @@ public class PlayerHandler {
 	public ArrayList<Integer> playersPidList = new ArrayList<Integer>();
 	public static ArrayList<String> disconnectReason = new ArrayList<String>();
 	public static ArrayList<String> individualPlayerPacketLog = new ArrayList<String>();
+
+	public static void executeGlobalMessage(String message) {
+		Player[] clients = new Player[players.length];
+		System.arraycopy(players, 0, clients, 0, players.length);
+		Arrays.asList(clients).stream().filter(Objects::nonNull).forEach(player -> player.sendMessage(message));
+	}
 
 	private static Player[] copyPlayers() {
 		Player[] clients = new Player[players.length];

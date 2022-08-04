@@ -190,7 +190,7 @@ public class TrackingHelmet implements ItemInteraction {
 		 * The kills
 		 */
 		int kills =
-				player.getAttributes().getOrDefault(helm.isWildStalker() ? EDGE_KILLS : DUEL_KILLS);
+				player.getAttributeMap().getOrDefault(helm.isWildStalker() ? EDGE_KILLS : DUEL_KILLS);
 		/*
 		 * Not enough kills
 		 */
@@ -238,12 +238,12 @@ public class TrackingHelmet implements ItemInteraction {
 				/*
 				 * The kills
 				 */
-				int kills = player.getAttributes()
+				int kills = player.getAttributeMap()
 						.getOrDefault(helm.isWildStalker() ? EDGE_KILLS : DUEL_KILLS);
 				/*
 				 * The deaths
 				 */
-				int deaths = player.getAttributes()
+				int deaths = player.getAttributeMap()
 						.getOrDefault(helm.isWildStalker() ? EDGE_DEATHS : DUEL_DEATHS);
 				player.getPA().sendMessage("Kills: " + kills + ". Deaths: " + deaths);
 				/*

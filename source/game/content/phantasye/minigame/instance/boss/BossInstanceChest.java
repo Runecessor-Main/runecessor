@@ -1,16 +1,11 @@
 package game.content.phantasye.minigame.instance.boss;
 
-import game.content.shop.ShopAssistant;
-import game.item.GameItem;
-import game.item.ItemAssistant;
 import game.object.custom.Object;
 import game.player.Player;
 import org.menaphos.entity.impl.item.Item;
-import org.menaphos.model.finance.transaction.currency.Currency;
 import org.menaphos.model.finance.transaction.currency.CurrencyFactory;
 import org.menaphos.model.world.content.shop.Shop;
 import org.menaphos.model.world.content.shop.ShopContext;
-import org.menaphos.model.world.content.shop.model.shopper.session.ShoppingSession;
 
 import java.util.ArrayList;
 import java.util.HashMap;

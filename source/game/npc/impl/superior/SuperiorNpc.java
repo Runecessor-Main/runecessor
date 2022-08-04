@@ -32,7 +32,7 @@ public abstract class SuperiorNpc extends Npc {
 
     public SuperiorNpc(int npcId, int npcType) {
         super(npcId, npcType);
-        getAttributes().put(LAST_INTERACTION, System.currentTimeMillis());
+        getAttributeMap().put(LAST_INTERACTION, System.currentTimeMillis());
     }
 
     public abstract int parent();
@@ -41,11 +41,11 @@ public abstract class SuperiorNpc extends Npc {
     public void onSequence() {
         super.onSequence();
 
-        if (!isDead() && System.currentTimeMillis() - getAttributes().getOrDefault(LAST_INTERACTION) >= TimeUnit.MINUTES.toMillis(2)) {
+        if (!isDead() && System.currentTimeMillis() - getAttributeMap().getOrDefault(LAST_INTERACTION) >= TimeUnit.MINUTES.toMillis(2)) {
             setItemsDroppable(false);
             killIfAlive();
 
-            Player player = PlayerHandler.getPlayerForName(getAttributes().getOrDefault(SPAWNED_FOR, ""));
+            Player player = PlayerHandler.getPlayerForName(getAttributeMap().getOrDefault(SPAWNED_FOR, ""));
 
             if (player == null) {
                 return;
@@ -63,7 +63,7 @@ public abstract class SuperiorNpc extends Npc {
         }
         Player player = PlayerHandler.players[getKilledBy()];
 
-        if (player == null || !player.getPlayerName().equalsIgnoreCase(getAttributes().getOrDefault(SPAWNED_FOR, ""))) {
+        if (player == null || !player.getPlayerName().equalsIgnoreCase(getAttributeMap().getOrDefault(SPAWNED_FOR, ""))) {
             return;
         }
         Slayer.Task task = Slayer.getTask(parent());

@@ -1,6 +1,5 @@
 package game.content.phantasye.skill.chain.impl;
 
-import game.content.phantasye.actions.skill.gathering.AbstractGatheringSkillAction;
 import game.content.phantasye.skill.Skill;
 import game.player.Player;
 

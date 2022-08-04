@@ -18,7 +18,7 @@ public class ButterflyNetTrap implements HunterTrapTechnique {
 
 	@Override
 	public boolean trap(Player hunter, HunterCreature creature) {
-		if (creature.getAttributes().getOrDefault(HunterCreature.CAUGHT, false)) {
+		if (creature.getAttributeMap().getOrDefault(HunterCreature.CAUGHT, false)) {
 			return false;
 		}
 		boolean captured = style().getTechnique().capture(hunter, creature, this);
@@ -33,7 +33,7 @@ public class ButterflyNetTrap implements HunterTrapTechnique {
 
 	@Override
 	public void onCapture(Player hunter, HunterCreature creature) {
-		creature.getAttributes().put(HunterCreature.CAUGHT, true);
+		creature.getAttributeMap().put(HunterCreature.CAUGHT, true);
 		Skilling.addSkillExperience(hunter, creature.experienceGained(), Skill.HUNTER.getId(), false);
 		Stream.of(creature.captureReward()).forEach(item -> Skilling.addHarvestedResource(hunter, item.getId(), 1));
 		creature.killIfAlive();

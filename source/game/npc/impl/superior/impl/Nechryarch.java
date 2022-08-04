@@ -41,7 +41,7 @@ public class Nechryarch extends SuperiorNpc {
     public void afterDeath() {
         super.afterDeath();
 
-        Set<Npc> npcs = getAttributes().getOrDefault(MINIONS);
+        Set<Npc> npcs = getAttributeMap().getOrDefault(MINIONS);
 
         for (Npc npc : npcs) {
             npc.setItemsDroppable(false);
@@ -116,7 +116,7 @@ public class Nechryarch extends SuperiorNpc {
 
                         Npc spawn = NpcHandler.spawnNpc(defenderAsPlayer, npc, location.getX(), location.getY(), location.getZ(), true, false);
 
-                        Set<Npc> minions = attackerAsNpc.getAttributes().getOrDefault(Nechryarch.MINIONS);
+                        Set<Npc> minions = attackerAsNpc.getAttributeMap().getOrDefault(Nechryarch.MINIONS);
 
                         minions.add(spawn);
                     }

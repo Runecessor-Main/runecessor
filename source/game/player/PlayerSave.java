@@ -114,7 +114,7 @@ public class PlayerSave {
 								Object decoded = gson.fromJson(token2, attributeForToken.defaultValue().getClass());
 
 								if (decoded != null) {
-									player.getAttributes().put(attributeForToken, decoded);
+									player.getAttributeMap().put(attributeForToken, decoded);
 								}
 							} catch (Exception e) {
 								e.printStackTrace();
@@ -2170,7 +2170,7 @@ public class PlayerSave {
 				characterfile.write(String.format("player-pet-state1 = %s", player.getPlayerPetState().encode()));
 				characterfile.newLine();
 			}
-			for (Map.Entry<AttributeKey<?>, Object> entry : player.getAttributes().entries()) {
+			for (Map.Entry<AttributeKey<?>, Object> entry : player.getAttributeMap().entries()) {
 				AttributeKey<?> key = entry.getKey();
 
 				Object value = entry.getValue();

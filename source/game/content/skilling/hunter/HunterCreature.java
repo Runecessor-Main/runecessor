@@ -44,7 +44,7 @@ public abstract class HunterCreature extends Npc {
 	}
 
 	public void lookForTrap() {
-		if (getAttributes().getOrDefault(CAUGHT, false)) {
+		if (getAttributeMap().getOrDefault(CAUGHT, false)) {
 			return;
 		}
 		HunterTrap trapFound = HunterTrapObjectManager.getSingleton().getObjects().stream().filter(

@@ -132,7 +132,7 @@ public class SpecialAttackOsrs {
 
 				break;
 			case 22636: // morrigan javelin
-				attacker.getAttributes().put(Player.MORRIGANS_JAVS_SPECIAL, true);
+				attacker.getAttributeMap().put(Player.MORRIGANS_JAVS_SPECIAL, true);
 				RangedAmmoUsed.deleteAmmo(attacker);
 				attacker.startAnimation(806);
 				attacker.gfx100(1621);
@@ -150,7 +150,7 @@ public class SpecialAttackOsrs {
 				break;
 
 			case 22634: // morrigan axe
-				attacker.getAttributes().put(Player.MORRIGANS_AXE_SPECIAL, true);
+				attacker.getAttributeMap().put(Player.MORRIGANS_AXE_SPECIAL, true);
 				RangedAmmoUsed.deleteAmmo(attacker);
 				attacker.startAnimation(929);
 				attacker.gfx100(1626);

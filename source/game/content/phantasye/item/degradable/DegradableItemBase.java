@@ -2,8 +2,6 @@ package game.content.phantasye.item.degradable;
 
 import org.menaphos.model.math.impl.AdjustableDouble;
 
-import java.text.NumberFormat;
-
 public abstract class DegradableItemBase implements Degradable {
 
     private final int itemId;

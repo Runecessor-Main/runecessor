@@ -107,7 +107,7 @@ public final class WildernessChestController {
 
     public void openChest(Player player) {
         lootList.stream().forEach(loot ->
-                player.getPA().sendMessage("You receive x"
+                player.getPA().sendPlainMessage("You receive x"
                         + loot.getItem().getAmount()
                         + " "
                         + ItemAssistant.getItemName(loot.getItem().getId())));

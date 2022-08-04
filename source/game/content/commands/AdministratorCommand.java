@@ -526,9 +526,9 @@ public class AdministratorCommand {
             Npc npc = NpcHandler.spawnNpc(player, task.getSuperiorNpc(), player.getX(), player.getY() - 1,
                     player.getHeight(), false, false);
 
-            npc.getAttributes().put(SuperiorNpc.SPAWNED_FOR, player.getPlayerName());
+            npc.getAttributeMap().put(SuperiorNpc.SPAWNED_FOR, player.getPlayerName());
 
-            Misc.print("SpawnedFor: " + npc.getAttributes().getOrDefault(SuperiorNpc.SPAWNED_FOR));
+            Misc.print("SpawnedFor: " + npc.getAttributeMap().getOrDefault(SuperiorNpc.SPAWNED_FOR));
             return true;
         }
         if (command.equals("sql")) {

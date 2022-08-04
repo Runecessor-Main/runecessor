@@ -139,7 +139,7 @@ public class ChargeableCollection {
 
         ItemAssistant.addItem(player, chargeable.getChargedId(), 1);
 
-        player.getAttributes().put(Player.CHARGEABLE_COLLECTION_KEY, this);
+        player.getAttributeMap().put(Player.CHARGEABLE_COLLECTION_KEY, this);
 		for (GameItem item : chargeable.getRequiredResources()) {
 			player.getPA().sendMessageF("You charge your %s with <col=00a000>%s <col=000000>%s.", ItemDefinition.getDefinitions()[chargeable.getChargedId()].name, Misc.formatNumber(item.getAmount()), item.getDefinition().name);
 		}
@@ -172,7 +172,7 @@ public class ChargeableCollection {
         this.charges.remove(chargeable.getId());
         ItemAssistant.deleteItemFromInventory(player, chargeable.getChargedId(), 1);
         ItemAssistant.addItem(player, chargeable.getUnchargedId(), 1);
-        player.getAttributes().put(Player.CHARGEABLE_COLLECTION_KEY, this);
+        player.getAttributeMap().put(Player.CHARGEABLE_COLLECTION_KEY, this);
     }
 
     /**
@@ -238,7 +238,7 @@ public class ChargeableCollection {
 			if (victim == null) {
 				return;
 			}
-			final ChargeableCollection collection = victim.getAttributes().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY);
+			final ChargeableCollection collection = victim.getAttributeMap().getOrDefault(Player.CHARGEABLE_COLLECTION_KEY);
 
 			final Collection<GameItem> charges = collection.getCharges(chargeable);
 
@@ -266,7 +266,7 @@ public class ChargeableCollection {
 				killer.getPA().sendMessage("" + dropped);
 			}
 			collection.clear(chargeable);
-			victim.getAttributes().put(Player.CHARGEABLE_COLLECTION_KEY, collection);
+			victim.getAttributeMap().put(Player.CHARGEABLE_COLLECTION_KEY, collection);
 		}
 	}
 

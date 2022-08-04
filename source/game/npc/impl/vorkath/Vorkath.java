@@ -47,13 +47,13 @@ public class Vorkath extends Npc {
 		if (player.getHeight() == 0) {
 			return;
 		}
-		VorkathState state = getAttributes().getOrDefault(STATE_ATTRIBUTE);
+		VorkathState state = getAttributeMap().getOrDefault(STATE_ATTRIBUTE);
 
 		if (state == VorkathState.POKED || state == VorkathState.POKING) {
 			return;
 		}
 		player.startAnimation(827);
-		getAttributes().put(STATE_ATTRIBUTE, VorkathState.POKING);
+		getAttributeMap().put(STATE_ATTRIBUTE, VorkathState.POKING);
 		getEventHandler().addEvent(this, new CycleEvent<Entity>() {
 			@Override
 			public void execute(CycleEventContainer<Entity> container) {
@@ -62,7 +62,7 @@ public class Vorkath extends Npc {
 				} else if (container.getExecutions() >= 6) {
 					container.stop();
 
-					getAttributes().put(STATE_ATTRIBUTE, VorkathState.POKED);
+					getAttributeMap().put(STATE_ATTRIBUTE, VorkathState.POKED);
 					requestAnimation(7948);
 					transform(8061);
 					setFacingEntityDisabled(false);
@@ -82,10 +82,10 @@ public class Vorkath extends Npc {
 	}
 
 	public void reset() {
-		if (getAttributes().getOrDefault(STATE_ATTRIBUTE) == VorkathState.UNPOKED) {
+		if (getAttributeMap().getOrDefault(STATE_ATTRIBUTE) == VorkathState.UNPOKED) {
 			return;
 		}
-		getAttributes().put(STATE_ATTRIBUTE, VorkathState.UNPOKED);
+		getAttributeMap().put(STATE_ATTRIBUTE, VorkathState.UNPOKED);
 		transform(8059);
 		setIdleAnimation(7946);
 		setFacingEntityDisabled(true);
@@ -95,7 +95,7 @@ public class Vorkath extends Npc {
 	public void onAddToLocalList(Player player) {
 		super.onAddToLocalList(player);
 
-		VorkathState state = getAttributes().getOrDefault(STATE_ATTRIBUTE);
+		VorkathState state = getAttributeMap().getOrDefault(STATE_ATTRIBUTE);
 
 		setIdleAnimation(state == VorkathState.POKED ? 7948 : 7946);
 		transform(state == VorkathState.POKED ? 8061 : 8058);

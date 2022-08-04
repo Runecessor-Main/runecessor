@@ -1,6 +1,5 @@
 package game.content.phantasye.dialogue.impl;
 
-import core.ServerConstants;
 import game.content.dialogue.DialogueChain;
 import game.content.dialogueold.DialogueHandler;
 import game.content.miscellaneous.Teleport;

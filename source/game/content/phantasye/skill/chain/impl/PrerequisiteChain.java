@@ -1,13 +1,9 @@
 package game.content.phantasye.skill.chain.impl;
 
-import game.content.phantasye.actions.skill.AbstractSkillAction;
 import game.content.phantasye.actions.skill.gathering.AbstractGatheringSkillAction;
-import game.content.phantasye.actions.skill.gathering.impl.GatherNodeAction;
 import game.content.phantasye.skill.Skill;
 import game.content.phantasye.skill.chain.SkillChain;
 import game.player.Player;
-
-import java.util.List;
 
 public class PrerequisiteChain implements SkillChain {
 

@@ -84,7 +84,7 @@ public class GiantMoleCombatStrategy extends NpcCombatStrategy {
 		}
 		Npc attackerAsNpc = (Npc) attacker;
 
-		int attacksSinceBurrow = attackerAsNpc.getAttributes().getOrDefault(ATTACKS_SINCE_BURROWED);
+		int attacksSinceBurrow = attackerAsNpc.getAttributeMap().getOrDefault(ATTACKS_SINCE_BURROWED);
 
 		if (attackerAsNpc.getCurrentHitPoints() <= attackerAsNpc.maximumHitPoints / 2) {
 			if (attacksSinceBurrow >= 3 && Misc.hasPercentageChance(50)) {
@@ -132,7 +132,7 @@ public class GiantMoleCombatStrategy extends NpcCombatStrategy {
 
 		if (attackerAsNpc.attackType == ServerConstants.MAGIC_ICON && burrowState == GiantMoleBurrowState.UNBURROWED) {
 			burrowState = GiantMoleBurrowState.BURROWING;
-			attacker.getAttributes().put(ATTACKS_SINCE_BURROWED, 0);
+			attacker.getAttributeMap().put(ATTACKS_SINCE_BURROWED, 0);
 			attackerAsNpc.getEventHandler().addEvent(attackerAsNpc, new CycleEvent<Entity>() {
 				@Override
 				public void execute(CycleEventContainer<Entity> container) {
@@ -153,7 +153,7 @@ public class GiantMoleCombatStrategy extends NpcCombatStrategy {
 				}
 			}, 1);
 		} else {
-		    attacker.getAttributes().increase(ATTACKS_SINCE_BURROWED);
+		    attacker.getAttributeMap().increase(ATTACKS_SINCE_BURROWED);
 			DamageQueue.add(new Damage(defenderAsPlayer, attackerAsNpc, ServerConstants.MELEE_ICON, 1, 7, -1));
 		}
 	}

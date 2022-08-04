@@ -1,6 +1,5 @@
 package game.content.phantasye.minigame.pirate;
 
-import game.entity.Entity;
 import game.npc.Npc;
 import game.player.Player;
 

@@ -92,11 +92,11 @@ public class AbyssalSire extends Npc implements EntityCombatStrategy {
 		phase = AbyssalSirePhase.AWAKE;
 		respiratorySystems.forEach(npc -> {
 			npc.transform(5915);
-			npc.getAttributes().put(AWAKE, true);
+			npc.getAttributeMap().put(AWAKE, true);
 		});
 		tentacles.forEach(npc -> {
 			npc.transform(5912);
-			npc.getAttributes().put(AWAKE, true);
+			npc.getAttributeMap().put(AWAKE, true);
 		});
 		setIdleAnimation(4529);
 	}
@@ -105,10 +105,10 @@ public class AbyssalSire extends Npc implements EntityCombatStrategy {
 		phase = AbyssalSirePhase.AWAKE;
 		tentacles.forEach(npc -> {
 			npc.transform(5912);
-			npc.getAttributes().put(AWAKE, true);
+			npc.getAttributeMap().put(AWAKE, true);
 		});
 		respiratorySystems.forEach(npc -> {
-			npc.getAttributes().put(AWAKE, false);
+			npc.getAttributeMap().put(AWAKE, false);
 		});
 		setIdleAnimation(4529);
 		disorientation = 0;
@@ -120,11 +120,11 @@ public class AbyssalSire extends Npc implements EntityCombatStrategy {
 		phase = AbyssalSirePhase.SLEEPING;
 		tentacles.forEach(npc -> {
 			npc.transform(5909);
-			npc.getAttributes().put(AWAKE, false);
+			npc.getAttributeMap().put(AWAKE, false);
 		});
 		respiratorySystems.forEach(npc -> {
 			npc.transform(5914);
-			npc.getAttributes().put(AWAKE, false);
+			npc.getAttributeMap().put(AWAKE, false);
 		});
 		spawns.stream().filter(n -> !n.isDead() && !n.needRespawn).forEach(n -> n.setDead(true));
 		spawns.clear();
@@ -153,10 +153,10 @@ public class AbyssalSire extends Npc implements EntityCombatStrategy {
 		phase = AbyssalSirePhase.DISORIENTED;
 		tentacles.forEach(npc -> {
 			npc.transform(5909);
-			npc.getAttributes().put(AWAKE, false);
+			npc.getAttributeMap().put(AWAKE, false);
 		});
 		respiratorySystems.forEach(npc -> {
-			npc.getAttributes().put(AWAKE, true);
+			npc.getAttributeMap().put(AWAKE, true);
 		});
 		if (phaseProgressionEvent != null) {
 			phaseProgressionEvent.stop();

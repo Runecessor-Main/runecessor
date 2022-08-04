@@ -30,7 +30,6 @@ import game.content.prayer.combat.impl.Wrath;
 import game.content.skilling.Skill;
 import game.content.skilling.Skilling;
 import game.content.skilling.agility.AgilityAssistant;
-import game.content.starter.GameMode;
 import game.content.worldevent.BloodKey;
 import game.item.ItemAssistant;
 import game.npc.Npc;
@@ -373,8 +372,8 @@ public class Combat {
 		player.setUsingDarkBowNormalAttack(false);
 		player.armadylCrossbowSpecial = false;
 		player.dragonCrossbowSpecial = false;
-		player.getAttributes().put(Player.MORRIGANS_AXE_SPECIAL, false);
-		player.getAttributes().put(Player.MORRIGANS_JAVS_SPECIAL, false);
+		player.getAttributeMap().put(Player.MORRIGANS_AXE_SPECIAL, false);
+		player.getAttributeMap().put(Player.MORRIGANS_JAVS_SPECIAL, false);
 	}
 
 	/**
@@ -2718,9 +2717,9 @@ public class Combat {
 			case 22547: // Craw's bow (u)
 				return 1574;
 			case 22634: // Morrigan's throwing axe
-				return player.getAttributes().getOrDefault(Player.MORRIGANS_AXE_SPECIAL) ? 1625 : 1623;
+				return player.getAttributeMap().getOrDefault(Player.MORRIGANS_AXE_SPECIAL) ? 1625 : 1623;
 			case 22636: // Morrigain's javelin
-				return player.getAttributes().getOrDefault(Player.MORRIGANS_JAVS_SPECIAL) ? 1622 : 1620;
+				return player.getAttributeMap().getOrDefault(Player.MORRIGANS_JAVS_SPECIAL) ? 1622 : 1620;
 		}
 
 		// Armadyl crossbow.
