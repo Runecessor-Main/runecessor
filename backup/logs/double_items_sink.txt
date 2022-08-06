@@ -1,4 +1,3 @@
-13307#=#61895792#=#Blood money
 11802#=#852#=#Armadyl godsword
 20997#=#25#=#Twisted bow
 12817#=#25#=#Elysian spirit shield
@@ -16,7 +15,9 @@
 21006#=#3#=#Kodai wand
 11785#=#19#=#Armadyl crossbow
 4153#=#105#=#Granite maul
+19564#=#18#=#Royal seed pod
 11832#=#20#=#Bandos chestplate
+13307#=#61895792#=#Blood money
 12006#=#49#=#Abyssal tentacle
 1053#=#1#=#Green h'ween mask
 12791#=#11#=#Rune pouch
@@ -32,9 +33,8 @@
 22002#=#2#=#Dragonfire ward
 21018#=#1#=#Ancestral hat
 13441#=#6746#=#Anglerfish
-19564#=#18#=#Royal seed pod
+5698#=#153#=#Dragon dagger (p++)
 21034#=#1#=#Dexterous prayer scroll
-391#=#9219#=#Manta ray
 11804#=#5#=#Bandos godsword
 12931#=#6#=#Serpentine helm
 14889#=#351#=#Ancient psaltery bridge
@@ -43,6 +43,7 @@
 20368#=#1#=#Armadyl godsword (or)
 14890#=#363#=#Bronzed dragon claw
 21012#=#3#=#Dragon hunter crossbow
+19484#=#522#=#Dragon javelin
 12426#=#1#=#3rd age longsword
 12695#=#996#=#Super combat potion(4)
 11838#=#8#=#Saradomin sword
@@ -61,13 +62,12 @@
 22322#=#5#=#Avernic defender
 22328#=#1#=#Justiciar legguards
 21000#=#1#=#Twisted buckler
-5698#=#153#=#Dragon dagger (p++)
 13231#=#1#=#Primordial crystal
 11230#=#4500#=#Dragon dart
 11235#=#20#=#Dark bow
 2577#=#1#=#Ranger boots
 19544#=#1#=#Tormented bracelet
-19484#=#522#=#Dragon javelin
+391#=#9219#=#Manta ray
 14879#=#25#=#Zamorak statuette
 14880#=#25#=#Saradomin statuette
 20366#=#1#=#Amulet of torture (or)

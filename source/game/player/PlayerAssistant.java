@@ -1668,7 +1668,7 @@ public class PlayerAssistant {
 		}
 	}
 
-	public void sendMessage(String message) {
+	public void sendFormattedMessage(String message) {
 		if (player.bot) {
 			return;
 		}
@@ -1679,6 +1679,21 @@ public class PlayerAssistant {
 		if (player.getOutStream() != null) {
 			player.getOutStream().createFrameVarSize(253);
 			player.getOutStream().writeString(MarkupParser.parseMarkup(message).getText());
+			player.getOutStream().endFrameVarSize();
+		}
+	}
+
+	public void sendMessage(String message) {
+		if (player.bot) {
+			return;
+		}
+		if (player.doNotSendMessage) {
+			player.doNotSendMessage = false;
+			return;
+		}
+		if (player.getOutStream() != null) {
+			player.getOutStream().createFrameVarSize(253);
+			player.getOutStream().writeString(message);
 			player.getOutStream().endFrameVarSize();
 		}
 	}

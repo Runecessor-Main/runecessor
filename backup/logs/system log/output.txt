@@ -19951,3 +19951,36 @@
 [25/09/2019, 04:14: PM] Server content save took: 150 ms
 [25/09/2019, 04:34: PM] [Main loop took: 3 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
 [25/09/2019, 04:34: PM] Uptime: 2 hours.
+[04/08/2022, 01:53: PM] Server starting up...
+[04/08/2022, 01:53: PM] [WARNING]: Gambling npc missing.
+[04/08/2022, 01:53: PM] 
+[04/08/2022, 01:53: PM] Server finished loading: 6.9 seconds.
+[04/08/2022, 01:53: PM] Client version: 0
+[04/08/2022, 01:53: PM] Port: 5555
+[04/08/2022, 01:53: PM] Mode: Economy
+[04/08/2022, 01:53: PM] Running as live mode
+[04/08/2022, 01:53: PM] Logged in: Mr E
+[04/08/2022, 01:53: PM] Logged Out: Mr E
+[04/08/2022, 02:13: PM] Uptime: 20 minutes.
+[04/08/2022, 02:13: PM] Server content save took: 191 ms
+[04/08/2022, 02:23: PM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[04/08/2022, 02:33: PM] Uptime: 40 minutes.
+[04/08/2022, 02:33: PM] Server content save took: 178 ms
+[04/08/2022, 02:53: PM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[04/08/2022, 02:53: PM] Uptime: 1 hour.
+[04/08/2022, 02:53: PM] Server content save took: 171 ms
+[04/08/2022, 03:13: PM] Uptime: 1 hour.
+[04/08/2022, 03:13: PM] Server content save took: 163 ms
+[04/08/2022, 03:23: PM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[04/08/2022, 03:33: PM] Uptime: 1 hour.
+[04/08/2022, 03:33: PM] Server content save took: 160 ms
+[04/08/2022, 03:53: PM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[04/08/2022, 03:53: PM] Uptime: 2 hours.
+[04/08/2022, 03:53: PM] Server content save took: 166 ms
+[04/08/2022, 04:13: PM] Uptime: 2 hours.
+[04/08/2022, 04:13: PM] Server content save took: 202 ms
+[04/08/2022, 04:23: PM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[04/08/2022, 04:33: PM] Uptime: 2 hours.
+[04/08/2022, 04:33: PM] Server content save took: 229 ms
+[04/08/2022, 04:53: PM] [Main loop took: 4 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[04/08/2022, 04:53: PM] Uptime: 3 hours.
