@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class WorldSettingsController {
 
-    public static final String SAVE_LOCATION = "Data/rune-script/world-settings.json";
+    public static final String SAVE_LOCATION = "data/runehub/world-settings.json";
 
     private static WorldSettingsController instance = null;
 

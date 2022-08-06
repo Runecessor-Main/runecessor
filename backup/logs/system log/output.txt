@@ -19984,3 +19984,40 @@
 [04/08/2022, 04:33: PM] Server content save took: 229 ms
 [04/08/2022, 04:53: PM] [Main loop took: 4 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
 [04/08/2022, 04:53: PM] Uptime: 3 hours.
+[06/08/2022, 05:17: AM] Server starting up...
+[06/08/2022, 05:17: AM] [WARNING]: Gambling npc missing.
+[06/08/2022, 05:17: AM] 
+[06/08/2022, 05:17: AM] Server finished loading: 21.7 seconds.
+[06/08/2022, 05:17: AM] Client version: 0
+[06/08/2022, 05:17: AM] Port: 5555
+[06/08/2022, 05:17: AM] Mode: Economy
+[06/08/2022, 05:17: AM] Running as live mode
+[06/08/2022, 05:19: AM] Logged in: Mr E
+[06/08/2022, 05:26: AM] Logged Out: Mr E
+[06/08/2022, 05:27: AM] Wrong password exception1.
+[06/08/2022, 05:27: AM] Wrong password exception1.
+[06/08/2022, 05:27: AM] Wrong password exception1.
+[06/08/2022, 05:27: AM] Wrong password exception1.
+[06/08/2022, 05:27: AM] Wrong password exception1.
+[06/08/2022, 05:27: AM] Wrong password exception1.
+[06/08/2022, 05:28: AM] Logged in: Mr E
+[06/08/2022, 05:28: AM] Name: Mr E used command : getpass phantasye
+[06/08/2022, 05:37: AM] Logged Out: Mr E
+[06/08/2022, 05:37: AM] Uptime: 20 minutes.
+[06/08/2022, 09:47: AM] Server starting up...
+[06/08/2022, 09:47: AM] [WARNING]: Gambling npc missing.
+[06/08/2022, 09:47: AM] 
+[06/08/2022, 09:47: AM] Server finished loading: 5.5 seconds.
+[06/08/2022, 09:47: AM] Client version: 0
+[06/08/2022, 09:47: AM] Port: 5555
+[06/08/2022, 09:47: AM] Mode: Economy
+[06/08/2022, 09:47: AM] Running as live mode
+[06/08/2022, 10:07: AM] Uptime: 20 minutes.
+[06/08/2022, 10:07: AM] Server content save took: 212 ms
+[06/08/2022, 10:17: AM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[06/08/2022, 10:27: AM] Uptime: 40 minutes.
+[06/08/2022, 10:27: AM] Server content save took: 192 ms
+[06/08/2022, 10:47: AM] [Main loop took: 2 ms] [Players online: 0] [Players online used Wilderness in past 5 mins: 0]
+[06/08/2022, 10:47: AM] Uptime: 1 hour.
+[06/08/2022, 10:47: AM] Server content save took: 178 ms
+[06/08/2022, 11:07: AM] Uptime: 1 hour.

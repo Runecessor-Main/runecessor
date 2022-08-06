@@ -140,10 +140,10 @@ public class FirstClickObject {
         if (player.getPirateMinigameSession() != null && player.getPirateMinigameSession().processClick(objectId, objectX, objectY)) {
             return;
         }
-        if (LootFactory.getLootableObject(objectId) != null) {
-            player.loot(LootFactory.getLootableObject(objectId));
-            return;
-        }
+//        if (LootFactory.getLootableObject(objectId) != null) {
+//            player.loot(LootFactory.getLootableObject(objectId));
+//            return;
+//        }
         if (new AbyssRunecrafting(player).clickedObject(objectId)) {
             return;
         }

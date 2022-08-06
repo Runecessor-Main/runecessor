@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="Ported over player loading and text markup from osr">
+    <list default="true" id="72aee1c0-2f17-454c-b2ab-cf5437e95283" name="Default Changelist" comment="Fixed text markup">
+      <change afterPath="$PROJECT_DIR$/data/runehub/world-settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/coin income.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/coin income.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/double_items_sink.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/double_items_sink.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/eventdebug.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/eventdebug.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/barrows run.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/barrows run.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/berserker kills.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/berserker kills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/daily.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/daily.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/f2p kills.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/f2p kills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/hybrid kills.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/hybrid kills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/melee kills.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/melee kills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/pker.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/pker.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/pure kills.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/pure kills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/pvm.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/pvm.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/ranged tank kills.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/ranged tank kills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/total level gladiator.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/total level gladiator.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/total level.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/total level.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/highscores/tournament.json" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/highscores/tournament.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/player base/last date.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/player base/last date.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/staff/staff_presence_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/staff/staff_presence_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/error/history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/system log/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/logs/system log/packetloglag.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/packetloglag.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/logs/system log/save log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/system log/save log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/logs/tournament event.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backup/logs/tournament event.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$Action1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$Action2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$Action3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$Action3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$GameTickTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$GameTickTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server$TextInputField.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server$TextInputField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/core/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/core/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/content/packet/FirstClickItemPacket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/Npc$NextWalkingDirecitonTileSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/Npc$NextWalkingDirecitonTileSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/npc/Npc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/npc/Npc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$SendFrame34aConfigStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$SendFrame34aConfigStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$SendFrame36ConfigStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/PlayerAssistant$SendFrame36ConfigStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game/player/PlayerAssistant.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game/player/PlayerAssistant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/npc-metrics.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/npc-metrics.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/core/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/core/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/packet/FirstClickItemPacket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/content/runehub/world/WorldSettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/content/runehub/world/WorldSettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/npc/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/npc/Npc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/source/game/object/click/FirstClickObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582247989610" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/runehub" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -66,11 +76,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java\projects\Runecessor\server\data\runehub" />
       <recent name="E:\java\projects\Runecessor\server\libraries" />
       <recent name="E:\java\projects\Runecessor\server\data" />
       <recent name="E:\java\projects\Runecessor\server\source\game\player" />
       <recent name="E:\java\projects\Runecessor\server\source\game\npc" />
-      <recent name="E:\java\projects\Runecessor\server\source\game\content" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="game.content.phantasye.minigame.pirate" />
@@ -167,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659642949372</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed text markup">
+      <created>1659784718373</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659784718373</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -224,7 +241,8 @@
     <MESSAGE value="Update - Added ::rank command under the new command system. Allows admins to rank a player and specified rank. Usage: ::rank -player phantasye -amount 33" />
     <MESSAGE value="Update - Re-wrote the mining skill to handle ore respawning and slower mining times." />
     <MESSAGE value="Ported over player loading and text markup from osr" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ported over player loading and text markup from osr" />
+    <MESSAGE value="Fixed text markup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed text markup" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

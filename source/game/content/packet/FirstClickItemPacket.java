@@ -93,10 +93,10 @@ public class FirstClickItemPacket implements PacketType {
         }
 
         player.setFirstItemClicked(itemId);
-        if (LootFactory.getLootableItem(itemId) != null) {
-            player.loot(LootFactory.getLootableItem(itemId));
-            return;
-        }
+//        if (LootFactory.getLootableItem(itemId) != null) {
+//            player.loot(LootFactory.getLootableItem(itemId));
+//            return;
+//        }
         if (ItemInteractionManager.handleItemAction(player, itemId, 1)) {
             return;
         }

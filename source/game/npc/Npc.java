@@ -21,6 +21,8 @@ import network.packet.Stream;
 import org.rhd.api.model.LootContainerType;
 import org.runehub.api.io.load.impl.LootTableContainerDefinitionLoader;
 import org.runehub.api.io.load.impl.LootTableContainerLoader;
+import org.runehub.api.io.load.impl.LootTableLoader;
+import org.runehub.api.model.entity.item.loot.LootTable;
 import org.runehub.api.model.entity.item.loot.LootTableContainer;
 import org.runehub.api.model.entity.item.loot.LootTableContainerDefinition;
 import utility.Misc;
@@ -873,29 +875,39 @@ public class Npc extends Entity {
 
     public void dropLootFor(Player player) {
         final Position dropLocation = new Position(this.getX(), this.getY(), player.getHeight());
-        final LootTableContainerDefinition definition = LootTableContainerDefinitionLoader.getInstance().readAll()
-                .stream().filter(lootTableContainerDefinition -> lootTableContainerDefinition.getContainerId() == npcType)
-                .filter(lootTableContainerDefinition -> lootTableContainerDefinition.getType() == LootContainerType.NPC.ordinal())
-                .findFirst().orElse(null);
+        final LootTableContainerDefinition definition =
+                LootTableContainerDefinitionLoader.getInstance().readAll().stream()
+                .filter(lootTableContainerDefinition -> lootTableContainerDefinition.getContainerId() == npcType)
+                .filter(lootTableContainerDefinition -> lootTableContainerDefinition.getType() == 0)
+                .findFirst()
+                .orElse(null);
+
+        System.out.println("Npc ID: " + npcType);
+        System.out.println("Definition: " + definition);
+
         if (definition != null) {
             final LootTableContainer container = LootTableContainerLoader.getInstance().read(definition.getId());
             container.roll(player.getAttributes().getMagicFind()).stream()
                     .forEach(loot -> {
-                        Server.itemHandler.createGroundItem(
-                                player,
-                                Math.toIntExact(loot.getId()),
-                                dropLocation.getX(),
-                                dropLocation.getY(),
-                                dropLocation.getZ(),
-                                Math.toIntExact(loot.getAmount()),
-                                false,
-                                0,
-                                true,
-                                "",
-                                "",
-                                "",
-                                "",
-                                "drop");
+                        LootTable lootTable = LootTableLoader.getInstance().read(loot.getId());
+
+                        lootTable.roll(player.getAttributes().getMagicFind()).stream().forEach(drop -> {
+                            Server.itemHandler.createGroundItem(
+                                    player,
+                                    Math.toIntExact(drop.getId()),
+                                    dropLocation.getX(),
+                                    dropLocation.getY(),
+                                    dropLocation.getZ(),
+                                    Math.toIntExact(drop.getAmount()),
+                                    false,
+                                    0,
+                                    true,
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "drop");
+                        });
                     });
 //        Logger.getGlobal().info("Dropping Loot @: X:" + this.getX() + " Y: " + this.getY() + " Height: " + player.getHeight());
 //        final LootTableContainer container = LootContainerLoader.getInstance().getLootContainer(this.npcType, LootContainerType.NPC);

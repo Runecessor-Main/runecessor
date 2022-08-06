@@ -54,6 +54,7 @@ import game.content.phantasye.skill.support.slayer.master.SlayerMasterRepository
 import game.content.phantasye.skill.support.slayer.master.impl.*;
 import game.content.quest.Quest;
 import game.content.quest.tab.InformationTab;
+import game.content.runehub.world.WorldSettingsController;
 import game.content.shop.ShopHandler;
 import game.content.skilling.Farming;
 import game.content.skilling.Firemaking;
@@ -111,6 +112,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import javax.swing.JTextArea;
 
@@ -128,6 +131,15 @@ import org.apache.mina.transport.socket.nio.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
 import org.menaphos.commands.CommandDispatcher;
 import org.phantasye.RepositoryManager;
+import org.rhd.api.io.db.LootMetricDAO;
+import org.runehub.api.APISettingsController;
+import org.runehub.api.io.data.impl.*;
+import org.runehub.api.io.load.impl.*;
+import org.runehub.api.model.entity.item.loot.LootTable;
+import org.runehub.api.model.entity.item.loot.LootTableContainer;
+import org.runehub.api.model.entity.item.loot.LootTableContainerDefinition;
+import org.runehub.api.model.entity.item.loot.LootTableDefinition;
+import org.runehub.api.util.APILogger;
 import tools.discord.api.DiscordBot;
 import utility.CharacterBackup;
 import utility.ChargebackPlayerAutoJail;
@@ -200,6 +212,81 @@ public class Server {
 
     public static String speedDebug = "";
 
+    private static final ScheduledExecutorService IO_THREAD = Executors.newSingleThreadScheduledExecutor();
+
+    private static void initializeLoaders() {
+        APISettingsController.getInstance().getApiSettings().setItemDatabaseLocation("./data/runehub/db/os-definitions.db");
+        APISettingsController.getInstance().getApiSettings().setLootDatabase("./data/runehub/db/loot.db");
+        TierDAO.getInstance().getAllEntries().forEach(tier -> {
+            TierLoader.getInstance().create(tier.getId(),tier);
+        });
+
+        final List<LootTable> contexts = LootTableDAO.getInstance().getAllEntries();
+        final List<LootTableDefinition> definitions = LootTableDefinitionDAO.getInstance().getAllEntries();
+        final List<LootTableContainer> containers = LootTableContainerDAO.getInstance().getAllEntries();
+        final List<LootTableContainerDefinition> containerDefinitions = LootContainerDefinitionDAO.getInstance().getAllEntries();
+        final List<LootTable> tables = LootTableDAO.getInstance().getAllEntries();
+        final List<LootTableDefinition> tableDefinitions = LootTableDefinitionDAO.getInstance().getAllEntries();
+
+        containers.forEach(entry -> {
+            LootTableContainerLoader.getInstance().create(entry.getId(), entry);
+        });
+        containerDefinitions.forEach(entry -> {
+            LootTableContainerDefinitionLoader.getInstance().create(entry.getId(), entry);
+        });
+        contexts.forEach(itemContext -> {
+            LootTableLoader.getInstance().create(itemContext.getId(), itemContext);
+        });
+        definitions.forEach(itemContext -> {
+            LootTableDefinitionLoader.getInstance().create(itemContext.getId(), itemContext);
+        });
+//
+//        GatheringToolDAO.getInstance().getAllEntries().forEach(gatheringTool -> {
+//            GatheringToolLoader.getInstance().create(gatheringTool.getItemId(),gatheringTool);
+//        });
+//
+//        RenewableNodeDAO.getInstance().getAllEntries().forEach(renewableNode -> {
+//            RenewableNodeLoader.getInstance().create(renewableNode.getId(),renewableNode);
+//        });
+//
+//        MiningNodeDAO.getInstance().getAllEntries().forEach(miningNode -> {
+//            MiningNodeLoader.getInstance().create(miningNode.getId(),miningNode);
+//        });
+//
+//        WoodcuttingNodeDAO.getInstance().getAllEntries().forEach(woodcuttingNode -> {
+//            WoodcuttingNodeLoader.getInstance().create(woodcuttingNode.getId(), woodcuttingNode);
+//        });
+//
+//        FishingNodeDAO.getInstance().getAllEntries().forEach(node -> {
+//            FishingNodeLoader.getInstance().create(node.getId(), node);
+//        });
+//
+//        FishLevelDAO.getInstance().getAllEntries().forEach(fishLevel -> {
+//            FishLevelLoader.getInstance().create(fishLevel.getItemId(),fishLevel);
+//        });
+//
+//        FishingSpotNodeDAO.getInstance().getAllEntries().forEach(node -> {
+//            FishingSpotNodeLoader.getInstance().create(node.getId(),node);
+//        });
+//
+//        ForagingNodeDAO.getInstance().getAllEntries().forEach(node -> {
+//            ForagingNodeLoader.getInstance().create(node.getId(),node);
+//        });
+//
+//        ItemInteractionDAO.getInstance().getAllEntries().forEach(node -> {
+//            ItemInteractionLoader.getInstance().create(node.getUuid(),node);
+//        });
+    }
+
+    private static final Runnable IO_TASKS = () -> {
+        try {
+            WorldSettingsController.getInstance().updateTimers();
+            // TODO tasks(players online, etc)
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+    };
+
     /**
      * Launch the server.
      */
@@ -241,6 +328,11 @@ public class Server {
 
 //		GraveDigger.getInstance().initialize();
 //		BossInstanceChest.getInstance();
+        APILogger.debug = true;
+        APILogger.initialize();
+
+        initializeLoaders();
+        IO_THREAD.scheduleAtFixedRate(IO_TASKS, 0, 60, TimeUnit.SECONDS);
 
         CommandDispatcher.init();
         CommandDispatcher.getInstance().addCommand(new RankPlayerCommandListener(), "rank");
